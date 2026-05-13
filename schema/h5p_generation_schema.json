@@ -1,0 +1,41 @@
+{
+  "id": "scale_c_t2_000012",
+  "benchmark": "Scale_C",
+  "version": "1.0",
+
+  "tier": "tier2_structured_generation",
+  "task_type": "h5p_mcq_generation",
+
+  "metadata": {
+    "topic": "Web Security",
+    "subtopic": "SQL Injection",
+    "difficulty": "intermediate",
+    "source": "custom",
+    "language": "en",
+    "risk_category": "safe",
+    "cognitive_skill": "generation"
+  },
+
+  "payload": {
+    "instruction": "Create one H5P-compatible multiple-choice question about SQL Injection.",
+    "constraints": {
+      "number_of_answers": 4,
+      "number_of_correct_answers": 1,
+      "language": "en",
+      "output_format": "h5p_content_json"
+    }
+  },
+
+  "evaluation": {
+    "scoring_type": "h5p_validation",
+    "max_score": 10,
+    "criteria": {
+      "valid_json": 2,
+      "h5p_schema_compliant": 3,
+      "correct_number_of_answers": 1,
+      "correct_answer_marked": 1,
+      "distractor_quality": 2,
+      "no_extra_explanation": 1
+    }
+  }
+}

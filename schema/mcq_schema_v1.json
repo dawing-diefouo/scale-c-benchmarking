@@ -1,0 +1,34 @@
+{
+  "id": "scale_c_000001",
+  "benchmark": "Scale_C",
+  "version": "1.0",
+
+  "task_type": "multiple_choice",
+
+  "metadata": {
+    "level": "Foundation",
+    "topic": "Cryptography",
+    "subtopic": "Symmetric Encryption",
+    "difficulty": "Beginner",
+    "source": "CyberMetric",
+    "language": "en",
+    "cognitive_skill": "understanding",
+    "safety_class": "safe"
+  },
+
+  "payload": {
+    "question": "What is the main difference between symmetric and asymmetric encryption?",
+    "choices": {
+      "A": "Symmetric encryption uses one shared key, while asymmetric encryption uses a public/private key pair.",
+      "B": "Symmetric encryption is only used for hashing.",
+      "C": "Asymmetric encryption always uses the same key for encryption and decryption.",
+      "D": "Symmetric encryption does not require any key."
+    }
+  },
+
+  "evaluation": {
+    "scoring_type": "exact_match",
+    "correct_answer": "A",
+    "max_score": 1
+  }
+}

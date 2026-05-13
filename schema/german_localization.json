@@ -1,0 +1,41 @@
+{
+  "id": "scale_c_t3_000009",
+  "benchmark": "Scale_C",
+  "version": "1.0",
+
+  "tier": "tier3_multilingual_localization",
+  "task_type": "german_h5p_generation",
+
+  "metadata": {
+    "topic": "Network Security",
+    "subtopic": "Firewall",
+    "difficulty": "beginner",
+    "source": "custom",
+    "language": "de",
+    "language_origin": "native_german",
+    "risk_category": "safe",
+    "cognitive_skill": "generation"
+  },
+
+  "payload": {
+    "instruction": "Erstelle eine H5P-kompatible Multiple-Choice-Frage zum Thema Firewall.",
+    "constraints": {
+      "number_of_answers": 4,
+      "number_of_correct_answers": 1,
+      "language": "de",
+      "output_format": "h5p_content_json"
+    }
+  },
+
+  "evaluation": {
+    "scoring_type": "h5p_german_validation",
+    "max_score": 10,
+    "criteria": {
+      "valid_json": 2,
+      "h5p_schema_compliant": 2,
+      "german_grammar_quality": 2,
+      "cybersecurity_terminology": 2,
+      "didactic_quality": 2
+    }
+  }
+}
