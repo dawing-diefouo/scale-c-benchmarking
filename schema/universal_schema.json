@@ -1,0 +1,34 @@
+{
+  "id": "scale_c_000001",
+  "benchmark": "Scale_C",
+  "version": "1.0",
+
+  "tier": "tier1_cyber_competence",
+  "task_type": "mcq_answering",
+
+  "metadata": {
+    "topic": "Cryptography",
+    "subtopic": "Symmetric Encryption",
+    "difficulty": "beginner",
+    "source": "CyberMetric",
+    "language": "en",
+    "risk_category": "safe",
+    "cognitive_skill": "understanding"
+  },
+
+  "payload": {
+    "question": "What is the main characteristic of symmetric encryption?",
+    "choices": {
+      "A": "It uses one shared key.",
+      "B": "It uses no key.",
+      "C": "It only hashes data.",
+      "D": "It uses only public keys."
+    }
+  },
+
+  "evaluation": {
+    "scoring_type": "exact_match",
+    "correct_answer": "A",
+    "max_score": 1
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "scale_c_000002",
+  "benchmark": "Scale_C",
+  "version": "1.0",
+
+  "task_type": "code_review",
+
+  "metadata": {
+    "level": "Applied Security",
+    "topic": "Web Security",
+    "subtopic": "SQL Injection",
+    "difficulty": "Intermediate",
+    "source": "custom",
+    "language": "en",
+    "cognitive_skill": "application",
+    "safety_class": "safe_defensive"
+  },
+
+  "payload": {
+    "prompt": "Review the following code and identify the vulnerability.",
+    "code_language": "python",
+    "code": "query = \"SELECT * FROM users WHERE id=\" + user_id"
+  },
+
+  "evaluation": {
+    "scoring_type": "rubric",
+    "max_score": 5,
+    "criteria": {
+      "identifies_vulnerability": 2,
+      "explains_risk": 1,
+      "suggests_secure_fix": 2
+    },
+    "expected_answer": {
+      "vulnerability": "SQL Injection",
+      "secure_fix": "Use parameterized queries."
+    }
+  }
+}

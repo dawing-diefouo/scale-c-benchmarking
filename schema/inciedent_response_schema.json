@@ -1,0 +1,35 @@
+{
+  "id": "scale_c_000003",
+  "benchmark": "Scale_C",
+  "version": "1.0",
+
+  "task_type": "incident_response",
+
+  "metadata": {
+    "level": "Defensive Operations",
+    "topic": "Incident Response",
+    "subtopic": "Account Compromise",
+    "difficulty": "Advanced",
+    "source": "custom",
+    "language": "en",
+    "cognitive_skill": "analysis",
+    "safety_class": "safe_defensive"
+  },
+
+  "payload": {
+    "scenario": "Several failed login attempts are followed by a successful admin login from an unusual location. Shortly after, PowerShell downloads a remote script.",
+    "question": "What should be the first response steps?"
+  },
+
+  "evaluation": {
+    "scoring_type": "rubric",
+    "max_score": 6,
+    "criteria": {
+      "identifies_suspicious_activity": 1,
+      "prioritizes_containment": 2,
+      "preserves_evidence": 1,
+      "recommends_investigation_steps": 1,
+      "avoids_destructive_actions": 1
+    }
+  }
+}
