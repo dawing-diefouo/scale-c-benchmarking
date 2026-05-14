@@ -1,0 +1,7 @@
+dc-*.txt
+*.bak.jsonl
+*.sh
+*.py
+*.tar.gz
+settings.json
+artifacts/
