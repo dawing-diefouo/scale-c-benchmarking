@@ -1,0 +1,10 @@
+{
+  "repo": "SEC-bench/SEC-bench",
+  "subset": "default",
+  "splits": {
+    "eval": 300,
+    "cve": 200,
+    "oss": 100
+  },
+  "source_url": "https://huggingface.co/datasets/SEC-bench/SEC-bench/viewer/default"
+}
