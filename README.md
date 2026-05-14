@@ -552,3 +552,118 @@ Fine-Tuning verbessert oft:
 ## Sondern:
 
 ### „Wie kompetent, strukturiert, sicher und didaktisch nutzbar ist das Modell?“
+
+
+---
+---
+
+# scale-c-benchmark
+
+Small Python project for pulling sample data from several sources, running zero-shot classification against a fixed label schema, and building a SQLite database for evaluation.
+
+## Requirements
+
+- [uv](https://docs.astral.sh/uv/) (manages Python 3.12+ and the virtualenv)
+
+## Setup
+
+```bash
+uv sync
+```
+
+`uv sync` installs `datasets`, `torch`, and `transformers` (the classifier loads a Hugging Face `zero-shot-classification` model on first run).
+
+## Layout
+
+`data/raw/<source>/` is only **provenance** (how the file entered your machine), not a claim about file format:
+
+| Folder under `data/raw/` | Typical use |
+|---------------------------|-------------|
+| `github/` | Benchmarks from GitHub: clones, release zips, or exported JSON/CSV from a repo you do not own. |
+| `huggingface/` | Datasets pulled or mirrored from the Hugging Face Hub. |
+| `local/` | Anything you add manually: downloads from a random URL, email attachments, your own scratch CSVs, etc. |
+
+`data/processed/` holds **this project’s** pipeline output: normalized rows, classifier predictions, merged tables—whatever you produce for your own eval run (for example `classified.jsonl`). It is not “the official processed split” of an upstream benchmark unless you choose to put that there; it is your working area between raw inputs and `database/eval.sqlite`.
+
+| Path | Purpose |
+|------|---------|
+| `data/raw/{github,huggingface,local}/` | Upstream or mirrored benchmark inputs, by source |
+| `data/processed/` | Your normalized / classified artifacts for this benchmark |
+| `schema/taxonomy.json` | Label schema: stable leaf `id` (for example `MMLU00101`), human `name` used as zero-shot hypotheses, optional `description`, plus optional top-level metadata (`version`, `notes`, …) |
+| `database/eval.sqlite` | Eval DB (created by scripts; not committed) |
+
+## Scripts
+
+Run in order, or use the runner:
+
+```bash
+uv run python scripts/fetch_datasets.py
+uv run python scripts/classify_zero_shot.py
+uv run python scripts/build_eval_db.py
+```
+
+Or:
+
+```bash
+uv run python scripts/run_experiment.py
+```
+
+`uv run python main.py` prints the same pipeline hint.
+
+### `fetch_datasets.py`
+
+Downloads benchmark inputs into `data/raw/<source>/`. Currently implemented:
+
+- **Hugging Face**: `cais/mmlu`, configurable subset via `HF_SUBSET` in the script (default `college_computer_science`). The script calls `datasets.load_dataset("cais/mmlu", <subset>, split=...)` for the `test`, `validation`, and `dev` splits and writes them under `data/raw/huggingface/mmlu/<subset>/` as one JSONL file per split plus `info.json` (repo, subset, row counts, source URL).
+
+  Row counts depend on the subset. Examples:
+
+  | Subset | `test.jsonl` | `validation.jsonl` | `dev.jsonl` |
+  |--------|----------------|----------------------|-------------|
+  | `college_computer_science` (default in script) | 100 | 11 | 5 |
+  | `computer_security` (matches classifier default input) | 100 | 11 | 5 |
+
+  Each row keeps the upstream schema, for example:
+
+  ```json
+  {
+    "question": "Which of the following styles of fuzzer ...",
+    "subject": "computer_security",
+    "choices": ["Generational", "Blackbox", "Whitebox", "Mutation-based"],
+    "answer": 2
+  }
+  ```
+
+  Source: <https://huggingface.co/datasets/cais/mmlu>
+
+  To fetch the same subset that `classify_zero_shot.py` expects by default, set `HF_SUBSET = "computer_security"` in `scripts/fetch_datasets.py` (or pass `--input` when classifying to another JSONL).
+
+- **GitHub**: shallow-clones [`LSX-UniWue/SuperGLEBer`](https://github.com/LSX-UniWue/SuperGLEBer) (German Language Understanding Evaluation Benchmark, NAACL 2024) into `data/raw/github/SuperGLEBer/`. The shallow clone is ~420 MB because the repo's own `data/` folder ships the benchmark tasks alongside the code in `src/`. A sibling `data/raw/github/SuperGLEBer.info.json` records the repo URL, branch, and resolved commit hash. Re-running the script updates the working tree to the latest `main` (`git fetch --depth 1 && git reset --hard origin/main`).
+
+- **local**: not implemented yet. The script still ensures the `data/raw/local/` directory exists; add your own loaders there.
+
+**Hugging Face cache location.** `datasets` and `transformers` cache Hub downloads under `~/.cache/huggingface` by default. If that path is not writable (for example in a restricted sandbox), point both cache and inference at a directory inside the repo:
+
+```bash
+export HF_HOME="$PWD/.cache/huggingface"
+export HF_HUB_CACHE="$PWD/.cache/huggingface/hub"
+uv run python scripts/fetch_datasets.py
+uv run python scripts/classify_zero_shot.py --truncate
+```
+
+For private or rate-limited Hub access, export `HF_TOKEN`.
+
+### `classify_zero_shot.py`
+
+Runs multilingual **zero-shot classification** with [MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7](https://huggingface.co/MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7) via the Transformers `zero-shot-classification` pipeline. Candidate **hypotheses** are the `name` fields in `schema/taxonomy.json`; **stored** predictions use each label’s `id` (for example `MMLU00101`) so they line up with your taxonomy sheet.
+
+- **Default input**: `data/raw/huggingface/mmlu/computer_security/test.jsonl` (MMLU-style JSONL: `question`, `choices`, `answer`, `subject`, …). Each row is turned into a short prompt (question plus lettered choices) before classification.
+- **Default output**: `data/processed/classified.jsonl` (append mode; use `--truncate` to overwrite).
+
+Each output line is a JSON object including `id`, `source`, `text`, `predicted_label`, `predicted_label_name`, `raw_scores` (map from taxonomy `id` to score), `label_ids` (taxonomy order), and `mmlu_answer_index` when present.
+
+Useful flags: `--input`, `--output`, `--taxonomy`, `--model`, `--multi-label`, `--start`, `--max-rows`, `--truncate`. The first model download can take a while; ensure `HF_HOME` is writable or set as above.
+
+### `build_eval_db.py`
+
+Still a stub: the SQLite schema for `database/eval.sqlite` is created, but ingesting `data/processed/classified.jsonl` is not implemented yet.

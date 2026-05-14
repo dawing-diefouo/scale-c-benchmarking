@@ -1,0 +1,10 @@
+{
+  "repo": "cais/mmlu",
+  "subset": "computer_security",
+  "splits": {
+    "test": 100,
+    "validation": 11,
+    "dev": 5
+  },
+  "source_url": "https://huggingface.co/datasets/cais/mmlu/viewer/computer_security"
+}

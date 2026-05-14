@@ -1,0 +1,10 @@
+{
+  "repo": "cais/mmlu",
+  "subset": "college_computer_science",
+  "splits": {
+    "test": 100,
+    "validation": 11,
+    "dev": 5
+  },
+  "source_url": "https://huggingface.co/datasets/cais/mmlu/viewer/college_computer_science"
+}
