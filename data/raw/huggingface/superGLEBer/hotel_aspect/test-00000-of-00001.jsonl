@@ -1,0 +1,851 @@
+{"text": "Somit – Jederzeit gerne wieder.", "labels": "HOTEL:positiv"}
+{"text": "Insgesamt wirkt das Hotel daher stark abgewohnt.", "labels": "HOTEL:negativ"}
+{"text": "Großzügig eingerichtete Zimmer. Charakter.", "labels": "ZIMMER:positiv"}
+{"text": "Das Frühstücksbüffett und der Service sind prima.", "labels": "SERVICE:positiv"}
+{"text": "Ich hatte wirklich den Eindruck, das hier jeder gerne arbeitet ! Genügend freie Parkplätze, supergutes Bett.", "labels": "HOTEL:positiv"}
+{"text": "Das Zimmer war leider etwas verwohnt hinsichtlich Türrahmen und Anstrich.", "labels": "ZIMMER:negativ"}
+{"text": "Die Umstellung der Wlan Codes war noch bisschen ungewohnt für mich aber toll gelöst vom Personal.", "labels": "SERVICE:positiv"}
+{"text": "Das Hotel liegt in einem Gewerbegebiet, aber gerade für Geschäftsreisende ist das ja geografisch sogar häufig besser.", "labels": "LAGE:positiv"}
+{"text": "Das Frühstück war auch gut und der Service aller Teammitglieder, denen wir begegnet sind, war ausgezeichnet - sehr freundliche Teammitglieder.", "labels": "SERVICE:positiv"}
+{"text": "Zum Entladen kann man aber auch unmittelbar vor dem Hotel kurzfristig stehen.", "labels": "HOTEL:positiv"}
+{"text": "Durchweg sehr freundliches Personal.", "labels": "SERVICE:positiv"}
+{"text": "Professionell ist etwas anderes.", "labels": "SERVICE:negativ"}
+{"text": "Schoener Biergarten direkt an der Donau.", "labels": "LAGE:positiv"}
+{"text": "WiFi in Loby kostenlos.", "labels": "HOTEL:positiv"}
+{"text": "Dies ist eines der besten Hotels, in denen ich bisher gewohnt habe in $CITY$.", "labels": "HOTEL:positiv"}
+{"text": "Sogar ein schönen Samsung LCD Schirm.", "labels": "ZIMMER:positiv"}
+{"text": "Sehr gute Lage direkt an der steinernen Brücke.", "labels": "SERVICE:positiv"}
+{"text": "Bei der Benachrichtigung an der Rezeption, am Morgen, sie gaben uns sehr schnell ein anderes Zimmer auf der Rückseite des Gebäudes, die fantastisch war.", "labels": "SERVICE:positiv"}
+{"text": "Als Aperitif entschieden wir uns für eine „Spritzer“ mit Brombeeren.", "labels": "ESSEN&TRINKEN:neutral"}
+{"text": "Parkplätze am Haus sind sehr komfortabel.", "labels": "HOTEL:positiv"}
+{"text": "Sehr netter Empfang an der Rezeption.", "labels": "SERVICE:positiv"}
+{"text": "Auch das Frühstück war vielseitig und lecker.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Ordentliche Garage.", "labels": "HOTEL:positiv"}
+{"text": "sehr gutes hotel in zentraler lage.", "labels": "HOTEL:positiv"}
+{"text": "Taxi in die Innenstadt kostet rund 12 Euro, aber man erreicht sie auch mit dem Bus.", "labels": "LAGE:neutral"}
+{"text": "Verfügbarkeit von günstigen mehrstöckiges Parkhaus willkommen.", "labels": "HOTEL:positiv"}
+{"text": "Dennoch überzeugende Zimmer.", "labels": "ZIMMER:positiv"}
+{"text": "Ein sehr gutes Frühstücksbüffet, sogar mit Weißwürsten.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Gutes Cityhotel, nur 15 Minuten bis zur Altstadt.", "labels": "LAGE:positiv"}
+{"text": "Die Zimmer sind modern und gemütlich eingerichtet, zum wohl fühlen.", "labels": "ZIMMER:positiv"}
+{"text": "Der Service ist bescheiden und das Management kann Gäste die sich daneben benehmen nicht zur Ordnung rufen.", "labels": "SERVICE:negativ"}
+{"text": "\"Der Mitarbeiter am Check-In war mehr mit \"\"rumblödeln\"\" mit seinen Kolleginen? beschäftigt als sich um uns zu kümmern.\"", "labels": "SERVICE:negativ"}
+{"text": "Im Gewerbepark ist zwar nicht viel los, aber mit dem Bus kommt man schnell in die Stadt und auch Restaurants gibt es hier.", "labels": "LAGE:positiv"}
+{"text": "Sauberes Zimmer, Frühstück Auswahl ok.", "labels": "ZIMMER:positiv"}
+{"text": "zentral direkt an der Eisenbahn und Hauptverkehrsstraße gelegen, bietet dieses Hotel ein buntes Geräuschkulissenspektrum wenn das Fenster auf und die Klimaanlage ihre notwendigen Funktionen nicht erfüllt kann weil Winter befohlen und somit dieses Ding nur noch heizen darf.", "labels": "ZIMMER:negativ"}
+{"text": "Mit dem Aufzug vom Bahnsteig, dann am dort gelegenen Einkaufszentrum entlang und man muß nur noch eine Straße überqueren und kommt ohne jegliche Stufen zur Rezeption des Hotels.", "labels": "LAGE:neutral"}
+{"text": "Das Hotel liegt zentral und doch ruhig, tolles Frühstücksbuffet, genügend Parkplätze, hilfsbereites Personal.", "labels": "HOTEL:positiv"}
+{"text": "Restaurant und Bar bieten Ihnen eine Karte für mittlere und gehobene Ansprüche.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Zimmer zur Donauseite war sehr komfortabel leider aber keine Minibar(denke Corona bedingt).", "labels": "ZIMMER:negativ"}
+{"text": "Zimmer großzügig.", "labels": "ZIMMER:positiv"}
+{"text": "Das Hotel liegt sehr verkehrsgünstig in unmittelbarer Nähe zu einer Autobahnausfahrt.", "labels": "LAGE:positiv"}
+{"text": "vom begrüßungsdrink bis zum toast war alles 1 A! trotz blick auf eine hauptstraße: kein ton kommt durch.", "labels": "HOTEL:positiv"}
+{"text": "Kaffe gibt es nach Geschmack frisch gemahlen aus der Maschine.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Zimmer der Abfluss verstopft war.", "labels": "ZIMMER:negativ"}
+{"text": "Wir waren doch etwas enttäuscht von der kargen Atmosphäre des Hotels und des Zimmers.", "labels": "HOTEL:negativ"}
+{"text": "com üblich erst bei Ankunft abgebucht wird! Kurze Zeit später wurde für Oktober der volle Preis abgezogen- ds. 4 Monate vor der Ankunft.", "labels": "SERVICE:negativ"}
+{"text": "Zu den Zimmern: Unseres war schon etwas älter und wirkte dadurch schmuddelig, auch wenn es das vielleicht gar nicht ist.", "labels": "ZIMMER:negativ"}
+{"text": "Leider hört man den Verkehrs-und Zuglärm durch das geschlossene Fenster, bei den Zimmern, die an der Hauptstrasse liegen.", "labels": "ZIMMER:negativ"}
+{"text": "Allein: die Brötchen und Laugensachen haben noch viel Platz nach oben.", "labels": "ESSEN&TRINKEN:negativ"}
+{"text": "Geschäftlich vor Ort gewesen, Hotel liegt etwas abseits in einen Gewerbepark.", "labels": "LAGE:neutral"}
+{"text": "Fühlte mich großartig und luxuriös. Schade, dass die Straßen super laut sind, was es schwierig macht, gut zu schlafen.", "labels": "LAGE:negativ"}
+{"text": "Das Hygienekonzept wird wunderbar umgesetzt, man fühlt sich sehr gut aufgehoben.", "labels": "HOTEL:positiv"}
+{"text": "Trotz der hohen Temperaturen Dank der Klimaanlage sehr angenehmer Aufenthalt.", "labels": "HOTEL:positiv"}
+{"text": "Dann finden sie am Anreisetag meine Reservierung nicht und es stellt sich raus: Buchung ab Montag für eine Nacht!!! Hätten sie nicht zufällig noch was frei gehabt, wäre ich die Woche sehr blöd dagestanden! Das Hotel liegt in einem Gewerbegebiet, recht nett an einem schön angelegten Teich.", "labels": "LAGE:positiv"}
+{"text": "Wir waren für ein paar Nächte und genossen die Bequemlichkeit, in der Altstadt.", "labels": "LAGE:positiv"}
+{"text": "Ein phantastisches Hotel, ruhig mit hervorragendem Service, zuvorkommendes Personal, obwohl etwas früher als die normalen 15.00 Uhr eingecheckt.", "labels": "HOTEL:positiv"}
+{"text": "Das Personal ist außerordentlich freundlich! Am Frühstück gibt es auch nichts auszusetzen: Es gibt eine sehr große Auswahl und dennoch leidet die Qualität nicht.", "labels": "SERVICE:positiv"}
+{"text": "Etwas ausserhalb der Stadt liegend kann ich dieses Hotel empfehlen.", "labels": "HOTEL:positiv"}
+{"text": "Das Bad ist modern eingerichtet und von normaler Größe.", "labels": "ZIMMER:positiv"}
+{"text": "Die Zimmer sind sauber, das Personal ist sehr freundlich und ansonsten ist auch alles in Ordnung.", "labels": "SERVICE:positiv"}
+{"text": "Der Innenhof ist eine Freude, dass Abendessen an einem warmen Abend!", "labels": "HOTEL:positiv"}
+{"text": "Die Mitarbeiter sind sachkundig und freundlich - ich fühlte mich als willkommener Gast.", "labels": "SERVICE:positiv"}
+{"text": "Der Elan der Herrschaften an der Rezeption und in der Hotelbar war so lala.", "labels": "SERVICE:neutral"}
+{"text": "Die Zimmer sind angemessen groß, vernünftig ausgestattet und ruhig.", "labels": "ZIMMER:positiv"}
+{"text": "Busverbindung in die Altstadt vor der Tür.", "labels": "LAGE:neutral"}
+{"text": "Ich war bereits mehrfach im $HOTEL$, allerdings zum ersten Mal in der Dependance.", "labels": "HOTEL:neutral"}
+{"text": "Die Ansprechpartner vor Ort erfüllen einem jeden Wunsch und machen fast Alles möglich! Es stehen sowohl kleinere als auch ein großer Schulungsraum mit entsprechender Technik zur Verfügung! Pausen super organisiert.", "labels": "HOTEL:positiv"}
+{"text": "Böden bei den Eingängen, Teppiche in den Zimmern und Aufzugkabine schlecht gereinigt bzw tlw in die Jahre gekommen.", "labels": "HOTEL:negativ"}
+{"text": "Internet WLAN kostenlos, keine Diskussion - wieviel Stunden kostet das.", "labels": "HOTEL:positiv"}
+{"text": "Gute Wahl.", "labels": "HOTEL:positiv"}
+{"text": "\"Noch einmal, nicht ein Problem für uns, da was man dafür bekam war ein entspannendes Hotel in ruhiger Lage mit sehr gut parken und ein tolles Frühstück! Das Zimmer war sehr komfortabel, ruhig und das kostenlose \"\"\"\" im Zimmer \"\"\"\" das WiFi funktionierte toll! Auf jeden Fall das Geld wert und wir würden wahrscheinlich wieder hier übernachten, wenn wir wieder in $CITY$.\"", "labels": "HOTEL:positiv"}
+{"text": "Ich habe bereits zweimal zu besuchen Freunde in der Stadt gewesen wäre.", "labels": "HOTEL:positiv"}
+{"text": "modernes, funktionales Ambiente, mitten im Gewerbepark, Nähe Autobahnanschluss, gute Infrastruktur, verschiedene Restaurants und Shopping-Möglichkeiten in Fußnähe, jede Menge freie und kostenlose Parkplätze in unmittelbarer Nähe.", "labels": "LAGE:positiv"}
+{"text": "Das Gedränge am Buffet kann da durchaus stören.", "labels": "ESSEN&TRINKEN:negativ"}
+{"text": "Die Zimmer sind sehr geräumig und das Bett war sehr komfortabel.", "labels": "ZIMMER:positiv"}
+{"text": "Schönes Hotel direkt am Dom in $CITY$.", "labels": "HOTEL:positiv"}
+{"text": "Sehr verschachteltes altes Gebäude mit sehr schönem ruhigen Biergarten.", "labels": "HOTEL:positiv"}
+{"text": "Für einen Städtetrip ein schönes Hotel zum Zwischenstopp.", "labels": "HOTEL:positiv"}
+{"text": "Die größte Enttäuschung war das Buffet-Frühstück: Einheitsangebot auf günstigstem Preisniveau - nur die hausgemachte Pflaumenkonfitüre war ein einsamer Hinweis auf die früher angebotenen regionalen Spezialitäten.", "labels": "ESSEN&TRINKEN:negativ"}
+{"text": "Für jeden der geschäftlich unterwegs ist und nicht die Zeit hat ein Wellness Paket zu nutzen, der ideale Platz.", "labels": "HOTEL:positiv"}
+{"text": "Die Nähe zum Bahnhof ist schon beinahe optimal.", "labels": "LAGE:positiv"}
+{"text": "Die Bushaltestelle befindet sich direkt vor dem Hotel, obwohl man auch in ca. 30 Minuten ins Zentrum laufen kann.", "labels": "LAGE:positiv"}
+{"text": "Das Zimmer war sauber und sehr geräumig.", "labels": "ZIMMER:positiv"}
+{"text": "Es gibt eine gute Anbindung um in die Stadt zu fahren, der Bus ist kein 3 Minuten vom Hotel entfernt.", "labels": "LAGE:positiv"}
+{"text": "Veranstaltungsservice ebenfalls.", "labels": "SERVICE:positiv"}
+{"text": "Das Personal ist sehr freundlich und das Buffet wird.", "labels": "SERVICE:positiv"}
+{"text": "Sind bereits zum 3. Mal dort einquartiert gewesen,hatten diesmal ein Zimmer für drei Personen, ist alles bestens, aber ein paar kleine Kritikpunkte muss ich noch anfügen:", "labels": "ZIMMER:negativ"}
+{"text": "Das Frühstücksbuffet war hervorragend und über den üblichen Standard hinaus bestückt.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Personal extrem freundlich und kompetent.", "labels": "SERVICE:positiv"}
+{"text": "Das moderne Design (Innen) sieht aus wie der Gefängnistrakt in einer Vollzugsanstalt.", "labels": "ZIMMER:negativ"}
+{"text": "Was für uns auch sehr hilfreich war, dass es beim Frühstück glutenfreies Brot und Lactose freie Produkte gab,dass für Allergiker sehr wichtig ist.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Zur Entspannung steht auch ein Saunabereich zur Verfügung der allerdings sehr klein ist; somit nicht wundern wenn alle Liegen besetzt sind.", "labels": "HOTEL:neutral"}
+{"text": "Was am meisten ärgert, ist die fehlende Entschuldigung der Mitarbeiter, die nicht dafür können, aber für solche Probleme geschult sein sopllten.", "labels": "SERVICE:negativ"}
+{"text": "Auch ist es wunderschön im kühlen, weil schattigen Innenhof, zu sitzen und zu essen, oder einfach nur ein Bier zu trinken.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Außergewöhnliche Sauna mit Ruheraum in liebevoll gestaltetem Obergeschoß.", "labels": "HOTEL:positiv"}
+{"text": "Die Sauberkeit des Zimmers ist leider mangelhaft: Haare in der Badewanne und auf dem Badezimmer-Fussboden, Shampoo-Spritzer an den Fließen, WC-Ablagerungen, Teppich nicht gesaugt.", "labels": "ZIMMER:negativ"}
+{"text": "Das Hotel hat ein altes Stil Restaurant mit Kellnerinnen in traditionell bayerische Kleid.", "labels": "HOTEL:neutral"}
+{"text": "Wegen der schönen Lage am WAsser und den günstigen Parkmöglichkeiten habe ich immer schon gerne im Atrium Hotel in Regendburg übernachtet, aber jetzt.", "labels": "HOTEL:positiv"}
+{"text": "Schade denn die Betten sind ausgesprochen bequem.", "labels": "ZIMMER:positiv"}
+{"text": "Internet und Parkplätze sind kostenlos.", "labels": "HOTEL:positiv"}
+{"text": "$HOTEL$ Premier Hotel $CITY$ ist sehr modern im futuristischen Design.", "labels": "HOTEL:positiv"}
+{"text": "Sehr lecker ist das selbstgemachte Bircher Müsli.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "In der Nähe ein Kino, Bahnhofs-Einkaufspassage, viele Lokale in der Nähe.", "labels": "LAGE:positiv"}
+{"text": "Wir waren in der Sarmannina Suite, denn wir haben uns verwöhnt, waren aber so froh, weil es eine Klimaanlage hatte.", "labels": "ZIMMER:positiv"}
+{"text": "Auf mein Unverständnis kam die Antwort, man könne keine Plätze garantieren, wenn die Garage voll sei, müsse ich mir selbst einen auf der Straße suchen.", "labels": "HOTEL:negativ"}
+{"text": "Das Hotel ist modern und super eingerichtet! Das Personal ist zuvorkommend und sehr nett! Das Frühstück ist reichhaltig und sehr lecker, vor allem die kleinen Pancakes mit Ahornsirup.", "labels": "HOTEL:positiv"}
+{"text": "Dieses Hotel ist 3 Gehminuten vom Bahnhof, was uns sehr gut passte.", "labels": "LAGE:positiv"}
+{"text": "Mit den Linienbussen schnell in der Altstadt.", "labels": "LAGE:positiv"}
+{"text": "Preis/Leistung bestens.", "labels": "HOTEL:positiv"}
+{"text": "Dass das Hotel direkt in der Mitte der Altstadt, in unmittelbarer Nachbarschaft zum Dom liegt, macht es besonders attraktiv.", "labels": "LAGE:positiv"}
+{"text": "Die Mitarbeiter sehr sehr freundlich, hilfsbereit und zuvorkommend.", "labels": "SERVICE:positiv"}
+{"text": "Man konnte alles über den gesamten Raum verstehen was am anderen Ende posaunt wurde und darüber hinaus um mehrere Ecken bis zum Aufzug und Treppenhaus.", "labels": "ZIMMER:negativ"}
+{"text": "Das Hotel befindet sich in einer tollen Lage.", "labels": "LAGE:positiv"}
+{"text": "Aßen im angrenzenden Hotel zweimal. Toller freundlicher Service und gute.", "labels": "SERVICE:positiv"}
+{"text": "Als sie wieder kam hatte sie die Schocki für meine Tochter vergessen. Dieser schmeckte dann als er wieder kam wässerig.", "labels": "SERVICE:negativ"}
+{"text": "Uns gefiel insbesondere die Lage und dass man auch noch nach Mitternacht an der Bar Getränke zu günstigen Preisen erhalten kann.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Ein anderer Mitarbeiter, Herr Andre Frank, wer ist verantwortlich für das Esszimmer, sahen mein Mann und ich draußen zu sitzen und studiert eine Karte der Gegend.", "labels": "SERVICE:positiv"}
+{"text": "Das Hotel liegt in unmittelbarer Nähe zur Stadt, die in wenigen Minuten erreichbar ist.", "labels": "LAGE:positiv"}
+{"text": "Uns kam es zunächst so vor, als lägen wir mitten in einem Gewerbegebiet, aber mit dem Bus war man in wenigen Minuten in der historischen Altstadt.", "labels": "LAGE:neutral"}
+{"text": "Kompetentes und hilfsbereites Personal am Empfang.", "labels": "SERVICE:positiv"}
+{"text": "Frühstücksbuffet ist hinsichtlich Auswahl völlig ausreichend und qualitativ in Ordnung.", "labels": "ESSEN&TRINKEN:neutral"}
+{"text": "Das Hotel befindet sich mitten in $CITY$. Einfach perfekt.", "labels": "LAGE:positiv"}
+{"text": "qualität des frühstücks entspricht dem standard.", "labels": "ESSEN&TRINKEN:neutral"}
+{"text": "Man bekommt Kaffee und Tee ganztägig aufs Haus.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Das $HOTEL$-Insel Hotel liegt ideal nahe an der Steineren Bruecke.", "labels": "LAGE:positiv"}
+{"text": "Zur großen Freude der Oldiefahrer gibt es eine Tiefgarage, was in der $CITY$er Altstadt sonst eher selten der Fall ist.", "labels": "HOTEL:positiv"}
+{"text": "Ich hatte ein behindertengerechtes Zimmer, das riesig war.", "labels": "ZIMMER:positiv"}
+{"text": "Das Personal ist sehr kompetent und freundlich. Die Lage ist perfekt und die Deluxe Zimmer einfach super!", "labels": "SERVICE:positiv"}
+{"text": "Parkplätze direkt am Hotel sind kostenfrei.", "labels": "HOTEL:positiv"}
+{"text": "Etwas laut und heiß, mit Blick auf unser Fenster auf die Straße.", "labels": "ZIMMER:negativ"}
+{"text": "Das war die richtige Entscheidung, da alles neu, geräumig und sauber war.", "labels": "HOTEL:positiv"}
+{"text": "Man ist aber auch schnell zu Fuß in der Altstadt.", "labels": "LAGE:positiv"}
+{"text": "Wir haben himmlisch geschlafen, was schon ein großes Kompliment ist, da wir nicht in jedem Bett schlafen können.", "labels": "HOTEL:positiv"}
+{"text": "Es war ein Queensize-Bett, was uns das schlafen etwas erschwerrte, daher hier leichter Punktabzug.", "labels": "ZIMMER:negativ"}
+{"text": "Beim Auschecken wurden wir vorbildlich behandelt.", "labels": "SERVICE:positiv"}
+{"text": "Die Zimmer sind geräumig, recht groß und komfortabel.", "labels": "ZIMMER:positiv"}
+{"text": "Das Frühstück war sehr gut und das Personal beim Frühstück absolut zuvorkommend.", "labels": "SERVICE:positiv"}
+{"text": "Hervorragende Unterbringungsmöglichkeiten für Gepäck und Garderobe.", "labels": "HOTEL:positiv"}
+{"text": "Ich war geschäftlich in $CITY$, und war das erste mal im $HOTEL$ Hotel.", "labels": "HOTEL:neutral"}
+{"text": "Check-in und out verliefen reibungslos.", "labels": "SERVICE:positiv"}
+{"text": "keine Frage nach der Anreise, ob Hilfe mit dem Gepäck gewünscht wird oder Infos zum W-Lan, Restaurants oder Ähnlichem.", "labels": "SERVICE:negativ"}
+{"text": "Das schlechteste $HOTEL$ in dem ich je war.", "labels": "HOTEL:negativ"}
+{"text": "Da kann sich der Manager freuen über sein Personal.", "labels": "SERVICE:positiv"}
+{"text": "Hier würde ein Raumteiler zum Eingang helfen.", "labels": "HOTEL:negativ"}
+{"text": "Mir gefiel dieses Hotel.", "labels": "HOTEL:positiv"}
+{"text": "Große, moderne Zimmer mit Blick auf Donau und Altstadt.", "labels": "ZIMMER:positiv"}
+{"text": "zimmer mit 2 einzelbetten (für unseren geschmack beide polster zu hoch und zu hart), mit sofa, sitzgarnitur, an der straßenabgewandten seite, eckzimmer, ruhig; lieferung ca 6:30 morgens im hof weckt aber auf, wenn lieferwagen nach rückwärts fährt, waren aber ohnehin wach.", "labels": "ZIMMER:negativ"}
+{"text": "Wir bedanken uns beim gesamten Personal für die schönen Tage und freuen uns auf ein baldiges Wiedersehen.", "labels": "SERVICE:positiv"}
+{"text": "Die Zimmer sind recht geräumig, Bad ist ok.", "labels": "ZIMMER:neutral"}
+{"text": "Frühstück prima, alles da! Atmosphäre im Frühstücksraum etwas ungemütlich.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Das Zimmer was ich bekommen hab, war ruhig, sehr sauber und die Ausstattung hat mir sehr gefallen, da alles modern ist.", "labels": "ZIMMER:positiv"}
+{"text": "Die Nachtruhe ist erstklassig und wir haben in den bequemen Betten sehr gut geschlafen.", "labels": "ZIMMER:positiv"}
+{"text": "Wenn Sie auf dem Weg sind per Auto , eine gute Lage zu halten.", "labels": "LAGE:positiv"}
+{"text": "Frühstück war auch gut.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Zimmer ruhig, trotz Lage zur Strasse.", "labels": "ZIMMER:positiv"}
+{"text": "Wirkt alles ein bisschen 90ties.", "labels": "HOTEL:neutral"}
+{"text": "Parkplätze stehen keine zur Verfügung, für die Garage muss man extra (viel) bezahlen.", "labels": "HOTEL:negativ"}
+{"text": "Unser Zimmer war sehr ruhig, hell, sauber, normal ausgestattet, bequemes Bett, schönes Bad.", "labels": "ZIMMER:positiv"}
+{"text": "Die ruhigen Zimmer sind mit schönen Stilmöbel ausgestattet.", "labels": "ZIMMER:positiv"}
+{"text": "Die Mitarbeiter am Empfang waren sehr freundlich und hilfsbereit.", "labels": "SERVICE:positiv"}
+{"text": "Zimmer gut, sauber und zweckmäßíg, ich liebe die guten Betten, immer sehr gut darin geschlafen.", "labels": "ZIMMER:positiv"}
+{"text": "Das Hotel ist von dem Service, Ambiente und der Gastronomie super! Auf Kundenwünsche wird auf jeden Fall eingegangen und Problemlösungen werden professionell angegangen.", "labels": "SERVICE:positiv"}
+{"text": "Der Bahnhof ist nur wenige Meter entfernt.", "labels": "LAGE:neutral"}
+{"text": "Daher lerne: nur wenn man ein ruhiges Zimmer bei Buchung anfordert, darf man auch eines erwarten.", "labels": "HOTEL:neutral"}
+{"text": "Das Hotel $HOTEL$ Premier liegt sehr verkehrsgünstig in der Nähe der Autobahnausfahrt.", "labels": "LAGE:positiv"}
+{"text": "Auf dem Weg zu unserem Zimmer ist uns aufgefallen, das auf unserer Karte ein anderer Name und ein anderer Zeitraum vermerkt war.", "labels": "SERVICE:negativ"}
+{"text": "Tip von mir: der Nachtpförtner läuft gegen 22 Uhr durchs Haus.", "labels": "SERVICE:neutral"}
+{"text": "In der Nähe des Bahnhofs und des Einkaufszentrums 10-15 Minuten zu Fuß vom Zentrum entfernt.", "labels": "LAGE:positiv"}
+{"text": "Ich war hier für 3 Tage und die Lage ist einfach unglaublich!", "labels": "LAGE:positiv"}
+{"text": "Es befinden sich genügend Ablagemöglichkeiten und ein Schreibtisch im Raum.", "labels": "ZIMMER:positiv"}
+{"text": "Das Hotel ist ziemlich verbaut, sodass man die u.U.die Treppenhäuser wechseln muss, wenn man auf sein Zimmer will.", "labels": "HOTEL:neutral"}
+{"text": "Das ist aber wirklich jammern auf hohem Niveau und bis hierhin war alles ok und min. 5 Sterne.", "labels": "HOTEL:positiv"}
+{"text": "Nettes Business Hotel.", "labels": "HOTEL:positiv"}
+{"text": "Fast direkt gegenüber eine Bushaltestelle um die Altstadt zu erkunden.", "labels": "LAGE:neutral"}
+{"text": "Man erreicht die Altstadt sehr schnell zu Fuss.", "labels": "LAGE:positiv"}
+{"text": "Das Personal an der Rezeption sprach ausgezeichnet Englisch.", "labels": "SERVICE:positiv"}
+{"text": "Sehr schönes Inn Side Garden mit guten Biere und bayerische Küche, unter den Bäumen und die Türme des Doms.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Einfache Ausstattung.", "labels": "HOTEL:neutral"}
+{"text": "Das Zimmer ist nicht so groß und natürlich um 6 o'clock der Klang der Glocken. Ich verstehe, dass dies ist das beste Hotel in $CITY$, aber es ist nur ein 3-4 Sterne.", "labels": "ZIMMER:negativ"}
+{"text": "Hatten ein sehr ruhiges Zimmer mit Blick auf die Donau.", "labels": "ZIMMER:positiv"}
+{"text": "Erstens: sie haben eine Parkgarage.", "labels": "HOTEL:positiv"}
+{"text": "Traditionsreich in historischen Räumen, aber mit allem Komfort.", "labels": "HOTEL:positiv"}
+{"text": "Prima Service, sehr schöne Zimmer, sehr gute Matrazen, jederzeit zu empfehlen, sehr gutes Preis- Leistungsverhältnis, gutes Frühstück, leider konnte ich nicht alle Annehmlichkeiten genießen.", "labels": "HOTEL:positiv"}
+{"text": "Hund war willkommen , Gassi gehen ist gleich gegenüber gut möglich.", "labels": "HOTEL:positiv"}
+{"text": "Das ist einfach ärgerlich, da diese Kleinigkeiten wirklich einen schlechten ersten Eindruck machen.", "labels": "HOTEL:negativ"}
+{"text": "Sollte man Glück haben und eines der im hinteren Bereich liegenden Zimmer zu erwischen muss man Glück haben und hoffen, dass die Nachbarn nicht all zu laut sind und vorallem nicht Schnarchen!!! Denn ich hatte bisher drei Mal das Glück.", "labels": "ZIMMER:neutral"}
+{"text": "Gerne kommen wir wieder.", "labels": "HOTEL:positiv"}
+{"text": "Der Service war ausgezeichnet.", "labels": "SERVICE:positiv"}
+{"text": "Trotz der Innenstadtlage kann man parken, weil sich direkt im Innenhof eine Tiefgarage befindet, welche jedoch nicht im Hotepreis enthalten ist.", "labels": "HOTEL:negativ"}
+{"text": "Schönes Hotel, top Lage, freundliches Personal, gutes Restaurant.", "labels": "HOTEL:positiv"}
+{"text": "Hotel macht generell einen guten Eindruck, sieht man genauer hin muss man leider feststellen das die Sauberkeit nicht zufriedenstellend ist und einige bauliche Mängel vorliegen.", "labels": "HOTEL:negativ"}
+{"text": "Selten ein solches Tagungszentrum erlebt, sehr professionelle Ausstattung, aufmerksamer und freundlicher Service.", "labels": "HOTEL:positiv"}
+{"text": "Die Altstadt kann man in kurzer Zeit zu Fuß erreichen.", "labels": "LAGE:positiv"}
+{"text": "Das Hotel brüstet sich mit 4 Sternen; ich frage mich nach dem Aufenthalt: wofür 4 Sterne ? 1.) Das Hotel hat keine Klimaanlage; die Luft im gesamten Hotel ist deshalb heiß und stickig, in den Zimmern ist es genauso.", "labels": "HOTEL:negativ"}
+{"text": "Personal sehr freundlich.", "labels": "SERVICE:positiv"}
+{"text": "Ein super Preis-Leistungsverhältnis.", "labels": "HOTEL:positiv"}
+{"text": "Dies ist ein reizendes Hotel im Zentrum der Stadt in einer tollen Lage, gleich neben der Kathedrale.", "labels": "HOTEL:positiv"}
+{"text": "Wir kommen wieder, grosses Kino.", "labels": "HOTEL:positiv"}
+{"text": "Hervorzuheben ist die Möglichkeit, ein privates Fitnessstudio kostenlos mitnutzen zu können, gute Ausstattung und sehr aufmerksames Personal.", "labels": "HOTEL:positiv"}
+{"text": "Das Zimmer war sauber und gut ausgestattet, das Badezimmer war aber definitiv zu klein.", "labels": "ZIMMER:negativ"}
+{"text": "Im Schlafraum war sehr viel Staub.", "labels": "ZIMMER:negativ"}
+{"text": "Die Lobby war schön zum ersten Eindruck, aber danach waren die Halle und die Zimmer haben einen kalten Beton mit Böden, die den billigsten zu sein schien.", "labels": "HOTEL:negativ"}
+{"text": "Sehr empfehlenswertes Hotel sowohl für Urlaub als auch für Geschäftsreisen.", "labels": "HOTEL:positiv"}
+{"text": "- Ältliche Duschwanne, die spez. für bewegungseingeschränkte Gäste nur unter Gefahr zu stürzen zugänglich ist.", "labels": "ZIMMER:negativ"}
+{"text": "Relativ altes Gebäude, Zimmer relativ klein.", "labels": "ZIMMER:negativ"}
+{"text": "Das Frühstück war gut und es war vielseitig.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Ich war beeindruckt, mit all der Säfte angeboten, ich bin ein Saft Gerümpel und so habe ich sehr zu schätzen gewusst.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Dusche & WC sind sauber.", "labels": "ZIMMER:positiv"}
+{"text": "Personal durchweg sehr freundlich.", "labels": "SERVICE:positiv"}
+{"text": "Wir waren für eine Übernachtung im Atrium-Hotel und empfanden unseren Aufenthalt dort ausgesprochen angenehm.", "labels": "HOTEL:positiv"}
+{"text": "Es ist erstklassig und preisgünstig.", "labels": "HOTEL:positiv"}
+{"text": "Das Schlafzimmer, der nach hinten raus war sehr ruhig und die Qualität der Schlafzimmer und Bad waren sehr gut.", "labels": "ZIMMER:positiv"}
+{"text": "- gut organisierter Seminarbetrieb - hoch technische Ausstattung der Seminarräume - kolo Internetrechner mit Drucker im Seminarbereich - helle Seminarräume mit Klima.", "labels": "HOTEL:positiv"}
+{"text": "Jedes Zimmer hat seinen eigenen Stil, passt aber gut zur Gesamtsuite. Das Bad ist traumhaft groß und super schön eingerichtet, lediglich das (offenbar bekannte) Problem mit der Badewannenarmatur sollte mal gelöst werden.", "labels": "SERVICE:neutral"}
+{"text": ":-/ Das Zimmer ist sehr sauber und komfortabel.", "labels": "ZIMMER:positiv"}
+{"text": "Zimmer sind modern und großzügig Eingerichtet.", "labels": "ZIMMER:positiv"}
+{"text": "Es liegt sehr zentral, ist sauber und wir kommen immer wieder gerne hier hin.", "labels": "HOTEL:positiv"}
+{"text": "Allerdings konnte man so kalt stellen, wie man wollte, es wurde nicht kühl.", "labels": "ZIMMER:negativ"}
+{"text": "Gutes und freundliches Hotel, Personal war freundlich von A – Z.", "labels": "HOTEL:positiv"}
+{"text": "Einzige Mankos: Alergiker-Kopfkissen sind sehr hart, viele Teppichstellen haben Flecken und das Haus besitzt nur einen Fahrstuhl (der in letzter Zeit Probleme gemacht hat) jedoch auch nur 3 Obergeschosse.", "labels": "HOTEL:negativ"}
+{"text": "Die Sauberkeit hingegen war sehr gut und nachdem wir bereits online eingecheckt hatten, dauerte der c/i im Hotel ca. 30 Sekunden.", "labels": "SERVICE:positiv"}
+{"text": "Eine erholsame Nacht auf der Heimreise aus dem Urlaub.", "labels": "HOTEL:positiv"}
+{"text": "Von Flachbild Fernseher bis Minibar, die zwar nicht üppig bestückt, aber dafür im Preis inbegriffen ist.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Für die Stadtbesichtigung ist die Lage einerseits in Bahnhofsnähe, andererseits direkt vor dem Stadtzentrum, das leicht zu Fuß zu erreichen ist, einfach ideal.", "labels": "LAGE:positiv"}
+{"text": "Die Mitarbeiter sind sehr nett.", "labels": "SERVICE:positiv"}
+{"text": "Sehr schönes Hotel mit großen geräumigen Zimmern.", "labels": "ZIMMER:positiv"}
+{"text": "Gute Lage zum Bahnhof.", "labels": "LAGE:positiv"}
+{"text": "Frühstück ok - aber nur eine Sorte schwarzer Tee.", "labels": "ESSEN&TRINKEN:neutral"}
+{"text": "Einmal in jeder Zone im Hotel. Das erste Mal war es eine neue Zimmer mit Klimaanlage und Lift, aber beim zweiten Mal hatten wir eine Suite.", "labels": "ZIMMER:neutral"}
+{"text": "Zudem gabs Internet kostenlos und kostenlose Parkplätze findet man in der Gegend auch genügend.", "labels": "HOTEL:positiv"}
+{"text": "Die Matratzenqualität ist sehr gut, habe bestens geschlafen.", "labels": "ZIMMER:positiv"}
+{"text": "Die Gutscheine für den Willkommendrink (Silber-Member) wurden auch nicht ausgehändigt.", "labels": "SERVICE:negativ"}
+{"text": "Positiv: nähe zum Konferenzzentru, Frühstück abwechselungsreich,, kostenloses Parken, gutes gastronomisches Angebot im fussläufigem Umkreis Negativ: Keine Zimmer mit Badewanne, Nur ein Aufzug bei 6 Etagen, Frühstück unübersichtlich, nur eine Kaffemaschine.", "labels": "ZIMMER:negativ"}
+{"text": "Moderne Einrichtung in den Zimmer, erstklassiges Frühstücksbuffet (sowohl von der Qualität als auch von der Auswahl).", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Das Frühstück ist rein qualitativ nicht so sehr hochwertig aber auf jeden Fall vielseitig, ausreichend und lecker.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Der $HOTEL$ ist ein tolles Hotel mit perfekter Gastronomie und einer himmlischen Ruhe (bei der Nähe zum Dom...) mitten $CITY$.", "labels": "HOTEL:positiv"}
+{"text": "Lage des Hotel für uns optimal.", "labels": "LAGE:positiv"}
+{"text": "Nur zum Schlafen ist das ok, wer allerdings etwas in der $CITY$er Altstadt erleben will, sollte sich ein anderes, zentral gelegenes Hotel suchen.", "labels": "LAGE:negativ"}
+{"text": "Dieses war gut aber in keinem Fall 10--€ wert.", "labels": "ESSEN&TRINKEN:negativ"}
+{"text": "Wir haben dieses Hotel und Restaurant im Frühling und Sommer oft besucht, um ein ausgezeichnetes Mittagessen im Innenhof zu genießen.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Abends beim Check-in vollkommen überforderte, gerade angelernte und alleine den Laden inkl.", "labels": "SERVICE:negativ"}
+{"text": "Die Zimmmertür lies sich nicht öffnen, was wohl häufiger vorkommt, wie eine Mitarbeiterin sagte.", "labels": "ZIMMER:negativ"}
+{"text": "Check in und Check out verliefen ohne Probleme.", "labels": "SERVICE:positiv"}
+{"text": "Das Frühstücksbuffet bietet eine gute Auswahl an Speisen und Getränken, mit warmen Speisen wenn man Glück hat erreichen kann.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Wir waren im 4 Stock, da war es sehr warm.", "labels": "ZIMMER:negativ"}
+{"text": "Das Hotel befindet sich im Herzen von $CITY$ Altstadt , $HOTEL$ am Dom ist die perfekte Lage für einen Besuch der, unter UNESCO-Welterbe , Altstadt.", "labels": "LAGE:positiv"}
+{"text": "Ein Taxi aus der Altstadt zurück zum Hotel kostet ca. 15-20 Euro.", "labels": "LAGE:neutral"}
+{"text": "das Frühstück ist im Hotel Goliath wesentlich besser, es gehört zur gleichen Familie.", "labels": "ESSEN&TRINKEN:negativ"}
+{"text": "Haben vor diesem Hotel im mercure 1 Nacht verbracht und im Vergleich zum Atrium wären wir lieber diese 2 Nächte noch dort.", "labels": "HOTEL:negativ"}
+{"text": "Freies WLAN.", "labels": "HOTEL:positiv"}
+{"text": "Das Hotel ist großartig!", "labels": "HOTEL:positiv"}
+{"text": "Die Heizung war nur über die Klimaanlage zu steuern, etwas kompliziert und mit der Folge, dass die Luft im Zimmer sehr trocken war.", "labels": "ZIMMER:negativ"}
+{"text": "Die Lage ist toll vor allem für Gäste, die Veranstaltungen in der Donau-Arena besuchen wollen (Fußweg 10 Minuten).", "labels": "LAGE:positiv"}
+{"text": "und Wir waren schnell führte zu der wunderbaren U-Parkplatz innerhalb der Anlage.", "labels": "HOTEL:positiv"}
+{"text": "Und es liegt zu Fuß etwa acht Minuten entfernt von der Innenstadt und sieben Minuten entfernt vom Museum für bayerische Geschichte, also gut geeignet für Stadtbesichtigungen.", "labels": "LAGE:positiv"}
+{"text": "Sauna und fitnessbereich haben wir nicht genutzt.", "labels": "HOTEL:neutral"}
+{"text": "Auf den ersten Blick schaut das Innere des Hotels aus wie in einem amerikanischen Gefängnis.", "labels": "HOTEL:negativ"}
+{"text": "Netter Empfang.", "labels": "SERVICE:positiv"}
+{"text": "Zimmer neu renoviert und daher in Topzustand.", "labels": "ZIMMER:positiv"}
+{"text": "Wir kommen schon seit Jahren in der Vorweihnachtszeit nach $CITY$ und übernachten meist im $HOTEL$.", "labels": "HOTEL:positiv"}
+{"text": "Es war trotz über 30Grad draußen um Zimmer angenehm.", "labels": "ZIMMER:positiv"}
+{"text": "Das Bad ist mit einer Glasschiebetür vom Wohnraum abgetrennt.", "labels": "ZIMMER:neutral"}
+{"text": "Der Parkplatz war sehr gut.", "labels": "LAGE:positiv"}
+{"text": "Große Tiefgarage, die auch bei gut besetztem Hotel noch freie Kapazität hat, relativ günstig.", "labels": "HOTEL:positiv"}
+{"text": "Personal freundlich.", "labels": "SERVICE:positiv"}
+{"text": "Die Zimmer sind ziemlich groß, die villgratental ist zuverlässig.", "labels": "ZIMMER:positiv"}
+{"text": "Super Preis/Leistungsverhältnis.", "labels": "HOTEL:positiv"}
+{"text": "Großer öffentlicher Parkplatz direkt neben dem Hotel.", "labels": "LAGE:positiv"}
+{"text": "Man fühlt sich wohl, bekommt was man möchte, und kann sich von den Reisestrapazen, Stadtbesichtigung uswgut erholen.", "labels": "SERVICE:positiv"}
+{"text": "Die Angestellten waren hilfsbereit und sehr angenehm, es gab eine Tiefgarage im Umkreis von 20 Metern um das Hotel, es gab jedoch große negative Probleme. d.", "labels": "HOTEL:positiv"}
+{"text": "Das Personal ist bemüht, der Service entspricht einem guten Mittelmaß.", "labels": "SERVICE:neutral"}
+{"text": "Hatten zwar eine Suite - aber das Wohnzimmer meiner Ureltern sah besser aus.", "labels": "ZIMMER:negativ"}
+{"text": "Frühstück und Mittagsbuffet umfangreich und von sehr guter Qualität.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Einzigartig der wunderschöne Park mit kleinem See direkt am Hotel.", "labels": "LAGE:positiv"}
+{"text": "Täglich musste ein neues Passwort für das WLAN angefordert werden.", "labels": "SERVICE:negativ"}
+{"text": "Ich empfehle das Hotel gerne weiter.", "labels": "HOTEL:positiv"}
+{"text": "Restaurant gibt es keines aber eine kleine eher lieblos eingerichtete Bar.", "labels": "ESSEN&TRINKEN:negativ"}
+{"text": "Das Hotel liegt mitten in einem Gewerbepark.", "labels": "LAGE:neutral"}
+{"text": "Fazit: Ein Hotel, dass eher 3-Sterne verdient hat und für Städtereisen aufgrund der Lage sich nicht so gut eignet.", "labels": "HOTEL:negativ"}
+{"text": "Die Zimmer sind tadellos und sehr grosszügig, hatten eine neue Corner Suite, waren beeindruckt.", "labels": "ZIMMER:positiv"}
+{"text": "Fuer einen Stadtaufenthalt sehr zu empfehlen.", "labels": "HOTEL:positiv"}
+{"text": "Durch die Lage im Gewerbepark konnten wir jeden Stadtteil gut mit dem Auto erreichen.", "labels": "LAGE:positiv"}
+{"text": "Das Hotel liegt sowohl autobahn- als auch stadtnah, hat eine große Tiefgarage und das Personal ist immer höflich, zuvorkommend und hilfsbereit.", "labels": "HOTEL:positiv"}
+{"text": "Werden Ihr Hotel weiterempfehlen.", "labels": "HOTEL:positiv"}
+{"text": "Sehr sauber, sehr angenehme Matratze, gute Frühstücksauswahl und ein sehr freundliches Personal.", "labels": "HOTEL:positiv"}
+{"text": "Wir waren zwar nur eine Nacht im $HOTEL$ Hotel in $CITY$, hatten aber einen sehr guten Eindruck.", "labels": "HOTEL:positiv"}
+{"text": "Das zeichnet ein gutes Hotel aus.", "labels": "HOTEL:positiv"}
+{"text": "Das Hotel liegt im Gewerbepark und verfügt über sehr gute Gratisparkmöglichkeiten.", "labels": "LAGE:positiv"}
+{"text": "Lediglich die dusche in der Badwanne ist finde ich falsch platziert, so dass wein duschen nur mit Handbrause möglich war.", "labels": "ZIMMER:negativ"}
+{"text": "Großes modernes Zimmer, tolles Bad und super Frühstück sowie sehr nette Mitarbeiter.", "labels": "SERVICE:positiv"}
+{"text": "Bier und Essen ausgezeichnet. Perfekte Lage.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "sehr freundliches Personal, die Zimmer sind geräumig und sehr sauber und schön.", "labels": "SERVICE:positiv"}
+{"text": "Die Fensterseite des Gebäudes schmiegt sich direkt an die Fassade des Doms an.", "labels": "HOTEL:neutral"}
+{"text": "Vier Sterne, kein Kühlschrank, keine Minibar, keine Gläser im Zimmer.", "labels": "ZIMMER:negativ"}
+{"text": "An der Rezeption wird man sehr nett begrüßt und alle sind sehr freundlich und zuvorkommend.", "labels": "SERVICE:positiv"}
+{"text": "Leider ist das gemütliche Bad nur durch eine Milchglasscheibe vom Zimmer getrennt.", "labels": "ZIMMER:negativ"}
+{"text": "Zwar am Stadtrand gelegen, aber gute Erreichbarkeit der Innenstadt.", "labels": "LAGE:positiv"}
+{"text": "Leider keine Übersicht/ Kontrolle beim Frühstück.", "labels": "ESSEN&TRINKEN:negativ"}
+{"text": "Vergleichbare Hotels haben entweder niedrigere Zimmerpreise oder Frühstückspreise.", "labels": "ZIMMER:negativ"}
+{"text": "Sehr freundliches und aufmerksames Personal-tolles Frühstück-gut bestückte Bar!!Wir können dieses Hotel (10 Personen) auf jeden Fall weiter empfehlen und werden bestimmt noch einmal wieder kommen-Auch die Anbindung mit Bussen ist recht gut.", "labels": "SERVICE:positiv"}
+{"text": "Das Hotel ist bereits in die Jahre gekommen, d.h.die Zimmer sind abgenutzt und klein, haben aber alles, was man für einen Kurzaufenthalt braucht.", "labels": "ZIMMER:negativ"}
+{"text": "Unsere Familie wohnte in einer der Suiten für ein schönes langes Wochenende.", "labels": "ZIMMER:neutral"}
+{"text": "Wer die Parkplatzpreise in $CITY$ kennt, sowohl die der öffentlichen als auch die der anderen Hotels, findet 5,50€ für eine Nacht in der hoteleigenen Tiefgarage ok.", "labels": "HOTEL:neutral"}
+{"text": "Das Frühstück ist mehr als reichhaltig, man ist sehr bemüht selbst aufs Ende des Frühstückszeitraums zu den sehr hohen Standard zu halten (eine Dame ergänzte fortwährend fehlende Esswaren).", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Gutes Doppelbett.", "labels": "ZIMMER:positiv"}
+{"text": "Zu Fuß kommt man in wenigen Minuten zum Bahnhof, in das Einkaufszentrum gegenüber und in die Altstadt.", "labels": "LAGE:positiv"}
+{"text": "Alles war für mich gut zu Fuss erreichbar.", "labels": "LAGE:positiv"}
+{"text": "Tolle Zimmer.", "labels": "ZIMMER:positiv"}
+{"text": "Das Hotel liegt unweit der A 93 und hat somit eine tolle Anbindung an das Autobahnnetz.", "labels": "LAGE:positiv"}
+{"text": "Sehr freundliche, aufmerksame Mitarbeiter.", "labels": "SERVICE:positiv"}
+{"text": "Es liegt direkt gegenüber der historischen cathdedral Form.", "labels": "LAGE:neutral"}
+{"text": "Leider liess sich ein Fenster nicht ganz schliessen ,so das der Strassenlärm eindringen konnte.", "labels": "LAGE:negativ"}
+{"text": "Das $HOTEL$ Hotel in $CITY$ ist ein sehr sauberes 2 Sterne Hotel für wenig Geld.", "labels": "HOTEL:positiv"}
+{"text": "Das Essen ist sehr gut.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Das einchecken verlief völlig reibungslos und freundlich.", "labels": "SERVICE:positiv"}
+{"text": "Zimmer für Kurzaufenthalt empfehlenswert, sehr sauber, Empfang höflich und freundlich, Zahlung wird im vorhinein erwünscht, nur ein paar Schritte von der $CITY$er Arkade entfernt.", "labels": "HOTEL:positiv"}
+{"text": "Das Personal war stets freundlich und hilfsbereit.", "labels": "SERVICE:positiv"}
+{"text": "Zum Glück konnte das Fenster geöffnet werden.", "labels": "ZIMMER:positiv"}
+{"text": "Süßigkeiten am Empfang finde ich sehr aufmerksam.", "labels": "SERVICE:positiv"}
+{"text": "Ich werde bei Gelegenheit sicher wieder im $HOTEL$ $CITY$ übernachten.", "labels": "HOTEL:positiv"}
+{"text": "Es gab zwei Badezimmer: eines mit Toilette und Waschbecken, das andere mit einer großen Dusche, Waschbecken und Spiegelschrank.", "labels": "ZIMMER:neutral"}
+{"text": "Die Lage ist zwar außerhalb aber die Innenstadt schnell zu erreichen.", "labels": "LAGE:positiv"}
+{"text": "Schönes Café im Freien und tolles Zimmer!", "labels": "HOTEL:positiv"}
+{"text": "Sehr gepflegtes Ambiente, grosszügige, sehr saubere Zimmer.", "labels": "HOTEL:positiv"}
+{"text": "Das bekannte $HOTEL$-Niveau: es hat mir jedoch sehr gut gefallen: Sauberkeit des Zimmers, Freundlichkeit und Qualifikation der Mitarbeiter,", "labels": "SERVICE:positiv"}
+{"text": "Das Frühstück ist sehr gut wenn man es mit anderen Hotels vergleicht.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Die Parkgebühr von 7,-- € pro Tag ist unverschämt und steht in keinem Verhältnis zur Leistung! Frühstück war ok.", "labels": "HOTEL:negativ"}
+{"text": "Der Kurzaufenthalt begann mit einem sehr freundlichen Empfang an der Rezeption.", "labels": "SERVICE:positiv"}
+{"text": "Parkplatz Extrakosten bei hohen Übernachtungspreis.", "labels": "HOTEL:negativ"}
+{"text": "Super Preis-Leistungs-Verhältnis, sehr gute Betten (mit weicher Auflage, sehr kuschelig!).", "labels": "HOTEL:positiv"}
+{"text": "Frühstück ist sehr gut insbesondere die Aussenterrasse bei Sonne.", "labels": "HOTEL:positiv"}
+{"text": "Für Urlauber liegt der Standort evt. ein wenig zu weit außerhalb.", "labels": "LAGE:negativ"}
+{"text": "Der Service eher mittelmäßig.", "labels": "SERVICE:neutral"}
+{"text": "besonders lecker war der selbstgemachte Schokoladenpudding, tolle Bar, (super Aussicht vom Glasaufzug), abends beleuchtet, wir kommen wieder.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Es liegt verkehrsgünstig in der Nähe der Autobahn, zum Stadtzentrum sind es allerdings ca. 4 km, aber einfach zu erreichen.", "labels": "LAGE:neutral"}
+{"text": "Für 13 Euro parkt man in den Katakomben ohne direkten Zugang zum Hotel....alledings hilft eine der Hausdamen mit einem Wägelchen das Gepäck über den Hof bis auf das Zimmer zu schaffen.", "labels": "HOTEL:negativ"}
+{"text": "Schönes Hotel mit Stil in perfekter Lage.", "labels": "HOTEL:positiv"}
+{"text": "Schönes, sauberes Hotel, saubere Zimmer.", "labels": "HOTEL:positiv"}
+{"text": "sein müssen, um nicht auf eine Tour, da die Rezeption empfahl uns Sehenswürdigkeiten im Regansburg und gaben detaillierte/ freundlich Wegbeschreibungen.", "labels": "SERVICE:positiv"}
+{"text": "Alles hat tadellos funktioniert und auch das Hotel war in Ordnung.", "labels": "HOTEL:neutral"}
+{"text": "Alles in allem ein sehr komfortables Bett zu schlafen in der Nähe von $CITY$.", "labels": "ZIMMER:positiv"}
+{"text": "Ausstattung und Design waren sehr hochwertig, Speisen und Getränke sehr gut bei angemessenem Preis-/Leistungsverhältnis.", "labels": "HOTEL:positiv"}
+{"text": "Negativ ist lediglich der hohe Zusatzpreis für Frühstück (10 €) und Parken (7€).", "labels": "HOTEL:negativ"}
+{"text": "Es vergingen ca. 30 Minunten bis erstmals eine Bestellung aufgenommen wurde, eine Stunde verging bis die Vorspeise serviert wurde und eine weitere bis der Hauptgang serviert wurde.", "labels": "SERVICE:negativ"}
+{"text": "Sonst aber kein schlechtes Hotel für eine Durchreise oder wenn man geschäftlich unterwegs ist.", "labels": "HOTEL:positiv"}
+{"text": "Fenster sollte man nicht öffnen.", "labels": "ZIMMER:negativ"}
+{"text": "Sowohl diie Tellergerichte Pasta und Wrap als auch das Buffet waren sehr gut bis ausgezeichnet.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Das Personal ist sehr hilfsbereit und freundlich.", "labels": "SERVICE:positiv"}
+{"text": "Noch ein Tipp zur Garage: Vor der Anreise die Beschreibung auf der Homepage studieren und mitbringen!", "labels": "HOTEL:neutral"}
+{"text": "Das Hotel macht von außen einen modernen Eindruck und auch innen wird man nicht enttäuscht.", "labels": "HOTEL:positiv"}
+{"text": "Um das Hotel finden sich viele verschiedene Essensmöglichkeiten (Pizzeria, Subway, McDonalds).", "labels": "ESSEN&TRINKEN:neutral"}
+{"text": "Wir haben ein Wochenende in $CITY$ verbracht, um Weltkulturerbe und das Haus der Bayerischen Geschichte zu sehen.", "labels": "HOTEL:neutral"}
+{"text": "Aber das Zimmer sieht etwas in die Jahre gekommen aus, war aber sehr sauber.", "labels": "ZIMMER:negativ"}
+{"text": "Hotelliegt super im Zentrum,schnoener Biergarten,schoene Zimmer in verschiedenen Ausstagtungen mit Domblick und so....gutes ausreichendes Fruehstueck,Essen im Restaurand sei ganz gut sagten die Gaeste.", "labels": "HOTEL:positiv"}
+{"text": "Sehr freundliches und hilfsbereites Personal.", "labels": "SERVICE:positiv"}
+{"text": "Das nennt man Abzocke.", "labels": "HOTEL:negativ"}
+{"text": "Ideal gelegen in der Nähe vom Hauptbahnhof und auf der anderen Straßenseite von einem herrlichen Einkaufszentrum gelegen, ist das $HOTEL$ eine gute Wahl bei einem Besuch in $CITY$.", "labels": "LAGE:positiv"}
+{"text": "Zimmer sind zwar nicht groß, aber völlig ausreichend.", "labels": "ZIMMER:neutral"}
+{"text": "Der Preis von 10 € ist für das Frühstück angemessen.", "labels": "ESSEN&TRINKEN:neutral"}
+{"text": "Wir werden auf jeden Fall wieder hier übernachten, wenn ich in $CITY$.", "labels": "HOTEL:positiv"}
+{"text": "Gerne buche ich den nächsten Aufenthalt wieder hier, da ich zufrieden war mit den Leistungen.", "labels": "HOTEL:positiv"}
+{"text": "Lediglich die Lage in einem Gewerbegebiet am Rande von $CITY$ könnte dies verhindern.", "labels": "LAGE:negativ"}
+{"text": "Sehr freundliches und zuvorkommendes Personal.", "labels": "SERVICE:positiv"}
+{"text": "Standard $HOTEL$-Hotel mit guter Lage.", "labels": "LAGE:positiv"}
+{"text": "Tolle Zimmer mit allem was man braucht, leise, sauber.", "labels": "ZIMMER:positiv"}
+{"text": "Das Zimmer war groß, modern eingerichtet mit einem guten Bett und schönem Bad.", "labels": "ZIMMER:positiv"}
+{"text": "Nettes und zuvorkommendes Personal mit Anschluß an das öffentliche Nahverkehrsnetz.", "labels": "SERVICE:positiv"}
+{"text": "Fast alles war aus dem Rollstuhl erreichbar, hilfsbereites Personal war zur.", "labels": "SERVICE:positiv"}
+{"text": "Aus beruflichen Gründen habe ich in $CITY$ übernachtet, ich kam erst recht spät im Hotel an, ein Einchecken war selbst um die Zeit einfach und schnell - die Mitarbeiter waren sehr freundlich und hilfsbereit.", "labels": "SERVICE:positiv"}
+{"text": "Das armselige Gratis-WLAN ist im Zimmer nicht verfügbar - Signal zu schwach.", "labels": "ZIMMER:negativ"}
+{"text": "Sehr nette Begrüßung.", "labels": "SERVICE:positiv"}
+{"text": "Leider war die EDV bei Ankunft ausgefallen und eine Key Karte konnte erst später erstellt werden.", "labels": "HOTEL:negativ"}
+{"text": "Zimmerservice (auch nachts).", "labels": "SERVICE:positiv"}
+{"text": "Kurzum es war ein angenehmer Aufenthalt.", "labels": "HOTEL:positiv"}
+{"text": "Das Hotel ist modern und sauber.", "labels": "HOTEL:positiv"}
+{"text": "Ausreichend Parkplätze im Hotel, schneller problemloser check in, das größte Zimmer, das ich jemals in einem $HOTEL$ bewohnt habe, in ruhiger Lage wie zuvor gewünscht, angenehme Räumlichkeiten, sehr freundlicher Service, Lage des Hotels in Fußnähe zur Altstadt, alles bestens hier!", "labels": "HOTEL:positiv"}
+{"text": "Da wir nur für eine Nacht war, waren wir sehr zufrieden und haben eine einfache Unterkunft.", "labels": "HOTEL:positiv"}
+{"text": "Das Frühstück könnte sich mehr abwechseln (alle 2 Monate ist zu wenig).", "labels": "ESSEN&TRINKEN:negativ"}
+{"text": "Die Lage des Hotels ist für einen $CITY$-Besuch spitze und kaum zu übertreffen.", "labels": "LAGE:positiv"}
+{"text": "Zimmer sind sehr sauber und trotz Zentraler Lage sehr ruhig! Service ist auch nicht zu verachten! Ausreichend Parkplätze zu günstigen Preis sind auch direkt am Hotel.", "labels": "HOTEL:positiv"}
+{"text": "Das Bad war modern ausgestattet.", "labels": "ZIMMER:positiv"}
+{"text": "Was ich mir noch - nicht nur in diesem Hotel - wünschte, wäre die Bereitstellung von Kaffee/Tee und einem Wasserkocher nach englischem Vorbild.", "labels": "ESSEN&TRINKEN:negativ"}
+{"text": "Wir sind leider mitten in die Renovierungsarbeiten von Stockwerk 2,3 und 4 angereist.", "labels": "HOTEL:negativ"}
+{"text": "So wurde ich auch dieses mal nicht enttäuscht und der Service wir das Früstück war super.", "labels": "HOTEL:positiv"}
+{"text": "Einen Abend, wo wir auf der Hochzeit waren haben wir die Fenster geöffnet bei Dunkelheit in der Hoffnung auf Abkühlung.", "labels": "ZIMMER:negativ"}
+{"text": "Die zentrale Lage direkt am Domplatz ist zwar ideal für Stadterkundungen - birgt aber auch ein großes Problem!", "labels": "LAGE:positiv"}
+{"text": "Da ich am ersten Tag aufgrund eines frühen Termin ist nicht am Frühstück teilnehmen konnte, erhielt ich ein Lunchpaket.", "labels": "SERVICE:positiv"}
+{"text": "Parken in der hoteleigenen Tiefgarage- kostenpflichtig (etwas schwer zu finden: Um das Hotel herum und durch die Bögen fahren).", "labels": "HOTEL:negativ"}
+{"text": "Die Zimmer sind im Vergleich zum Teppich im Flur sehr ansprechend und modern eingerichtet, der Service ist sehr freundlich und unkompliziert.", "labels": "SERVICE:positiv"}
+{"text": "Ein rundum sehr empfehlenswertes Hotel auch bei privaten Reisen.", "labels": "HOTEL:positiv"}
+{"text": "Mit Sicherheit wird das nicht das letzte mal gewesen sein!!! Vom Service bis zum Ausblick über die Donau auf den Dom alles Hervorragend!!! Das Frühstück war einfach spitze.", "labels": "SERVICE:positiv"}
+{"text": "Das Personal ist, wie bereits erwähnt, sehr freundlich und gehen auf jedes Anliegen professionell ein.", "labels": "SERVICE:positiv"}
+{"text": "Das Frühstück war außergewöhnlich gut und ließ keine Wünsche offen.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Das $HOTEL$ Premier Novina Hotel in $CITY$ hat uns deswegen überzeugt: zuvorkommende und unkomplizierte Buchung, vernünftige Kalkulation, sehr gute Betreuung während des Seminars - und das in Corona-Zeiten! Dazu super erreichbar gelegen.", "labels": "HOTEL:positiv"}
+{"text": "Egal ob geschäftlich oder privat, absolut empfehlenswert.", "labels": "HOTEL:positiv"}
+{"text": "Das Personal ist sehr freundlich, Parkplatz gegen Gebühr vorhanden.", "labels": "SERVICE:positiv"}
+{"text": "Die Zimmer sind sauber und komfortabel.", "labels": "ZIMMER:positiv"}
+{"text": "Stets daran interessiert, nicht weit vom Ankunftsort der Bahn auch ein Hotel zu finden, bot sich das $HOTEL$ in $CITY$ als optimale Lösung an, zumal auf der Südseite des Bahnhofs zugleich eine Einkaufsarcade liegt.", "labels": "LAGE:positiv"}
+{"text": "Check-out verlief ebenfalls zügig und alle Servicekräfte waren sehr freundlich.", "labels": "SERVICE:positiv"}
+{"text": "Es hatte auch eine Klimaanlage.", "labels": "ZIMMER:positiv"}
+{"text": "Würde es jederzeit wieder buchen, die Altstadt ist zu Fuß gut zu erreichen.", "labels": "LAGE:positiv"}
+{"text": "Kostenloses Fitness, was will Man(n) mehr ! Nettes Personal an allen Stellen.", "labels": "HOTEL:positiv"}
+{"text": "Guter und freundlicher Service, großzügige und mit allem, was man benötigt ausgestattete Zimmer (Laptop-Safe, großer Schreibtisch, gutes Licht), ruhig, sehr sauber und ein ordentliches Frühstück.", "labels": "SERVICE:positiv"}
+{"text": "Der Service am Empfang und der Hotelbar war einwandfrei.", "labels": "SERVICE:positiv"}
+{"text": "Mein Zimmer war schön.", "labels": "ZIMMER:positiv"}
+{"text": "Das Hotel ist nur einen kurzen Fußweg entfernt (400 m) von der Altstadt entfernt (Altstadt).", "labels": "LAGE:positiv"}
+{"text": "Auch die Reception ist überfordert wenns um abhilfe geht.", "labels": "SERVICE:negativ"}
+{"text": "Preis / Leistung und Lage sowie Sauberkeit sehr gut.", "labels": "HOTEL:positiv"}
+{"text": "Frühstücksbuffet ist vielfältig und schmeckt gut.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Großer Schreibtisch mit allen Anschlüssen, die man braucht.", "labels": "ZIMMER:positiv"}
+{"text": "Auch war es kein Problem das Zimmer zu wechseln,da im 1.", "labels": "SERVICE:positiv"}
+{"text": "Alle Sehenswürdigkeiten der Stadt sind zu Fuß erreichbar; Parkplatz neben dem Hotel - in der Tiefgarage zum ermäßigten Preis von 13 €/ Tag;", "labels": "HOTEL:positiv"}
+{"text": "Das Hotel lag ideal, direkt an der Steinernen Brücke, in Wurfweite der wunderschönen Altstadt.", "labels": "LAGE:positiv"}
+{"text": "saubere Zimmer, leider etwas spartanische Ausstattung (zB.nur 2 große Handtücher) Frühstück: absolut gute Auswahl / Qualität der Speisen/Getränke! Äußerst freundliches Personal (checkIN, Frühstücks-Servicepersonal).", "labels": "SERVICE:positiv"}
+{"text": "Etwas außerhalb und doch zentral.", "labels": "LAGE:neutral"}
+{"text": "Das Personal war sehr freundlich Personal - absolut zu empfehlen. -------------------------------.", "labels": "SERVICE:positiv"}
+{"text": "Es gibt keine Balkone.", "labels": "ZIMMER:negativ"}
+{"text": ".. Keine Minibar und lächerlichen kleines Bad, aber überteuert. Gutes Frühstück mit externen Sitzecken Parkmöglichkeiten geben.", "labels": "ZIMMER:negativ"}
+{"text": "Der Parkplatz und der eigentliche Eingang des Hotels liegen auf der Rückseite und man muss eine Seitenstraße vorher rechts abbiegen, damit man dorthin kommt (vorausgesetzt man kommt auf der Seite von Neutraubling auf der Furtmayerstraße in die Stadt rein).", "labels": "LAGE:neutral"}
+{"text": "Eine Taxifahrt vom Bahnhof zum Hotel kostet 11 €.", "labels": "LAGE:neutral"}
+{"text": "Zimmer klassischer $HOTEL$ Stil, klein aber sauber, Bad gut beleuchtet und sauber und ausreichend groß.", "labels": "ZIMMER:positiv"}
+{"text": "Extrem unkompliziert, niemand nervt, niemand stellt hundert Fragen, viele freundlich, viel Leben dennoch im Hotel, Bar okay, Frühstück auch.", "labels": "SERVICE:positiv"}
+{"text": "Wenn wir nochmals nach $CITY$ fahren, werden wir definitiv wieder das $HOTEL$-Hotel nehmen.", "labels": "HOTEL:positiv"}
+{"text": "Das Frühstück ist sehr gut und bietet sogar frisch gemachte Eierspeisen auf Bestellung.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Frühstück für den Preis sehr gut.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Das Zimmer war ordentlich, ausreichend groß und sauber.", "labels": "ZIMMER:positiv"}
+{"text": "Sehr angenehmer Aufenthalt in ruhigem und gut klimatisiertem Doppelzimmer - Schallisolierung trotz Bahnhofsnähe und zentraler Hotellage im Sdtverkehr perfekt Empfang, Service und Betreuung sehr gut.", "labels": "SERVICE:positiv"}
+{"text": "Es war alles sehr gut.", "labels": "HOTEL:positiv"}
+{"text": "Das Hiotel ist wunderschön inmitten der $CITY$er Altstadt gelegen.", "labels": "LAGE:positiv"}
+{"text": "Fitnessraum in der Nähe früh um 8 Uhr.", "labels": "HOTEL:neutral"}
+{"text": "Das Empfangspersonal war nicht sehr serviceorientiert und bereits mit der Frage nach einem Restaurant in der Nähe überfordert.", "labels": "SERVICE:negativ"}
+{"text": "Das Hotel befindet sich in einem historischen Gebäude neben der Kathedrale.", "labels": "LAGE:neutral"}
+{"text": "Sehr angenehm für Business-Reisende: ausreichend Parkplätze direkt am Hotel.", "labels": "LAGE:positiv"}
+{"text": "Personal ist freundlich und hilfsbereit mit Ausnahme im Frühstücksbereich.", "labels": "SERVICE:positiv"}
+{"text": "Die Zimmer bieten Komfort guten Standards, ich bekam während meiner beiden Aufenthalte im Hotel helle und saubere Zimmer zugewiesen.", "labels": "ZIMMER:positiv"}
+{"text": "Hat sich die letzten Jahre absolut gemacht.", "labels": "HOTEL:positiv"}
+{"text": "Das Team war sehr hilfsbereit.", "labels": "SERVICE:positiv"}
+{"text": "Das Zimmer selbst war trotz fehlender Klimaanlage bei Außentemperaturen von 32° angenehm kühl.", "labels": "ZIMMER:negativ"}
+{"text": "Das passte! Die Zimmer sind großzügig geschnitten, die in der Minibar verfügbaren nicht-alkoholischen Getränke kostenlos! Den Kuraufenthalt rundete ein ausgewogenes, gutes Frühstück ab.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Alles gut aber für den Preis nicht herausragend.", "labels": "HOTEL:negativ"}
+{"text": "Ich werde dieses Hotel auf jeden Fall in Zukunft wieder aufsuchen.", "labels": "HOTEL:positiv"}
+{"text": "Die Lage ist perfekt, da man nur 5 Minuten in die Stadt braucht.", "labels": "LAGE:positiv"}
+{"text": "Das Personal ist sehr nett und hilfsbereit.", "labels": "SERVICE:positiv"}
+{"text": "Ich war ziemlich frustriert, als ich im Hotel ankam, aber Herr sondern war so eine wunderbare Person und seine Einstellung und Freundlichkeit machten mir völlig vergessen Sie all den Stress hatte ich durch in, es zu finden!", "labels": "SERVICE:positiv"}
+{"text": "Die Bauform des Hotels, auch wenn dies etwas unpassend klingt, erinnert innen ein bisschen an ein Gefängnis, mit Lichthof und Innenflur der rundum begehbar ist und man von oben bis runter in die Bar schauen kann.", "labels": "HOTEL:negativ"}
+{"text": "Das $HOTEL$ Premier ist nur wenige Jahre alt und liegt etwas ausserhalb der Stadt in einer Autobahnauffahrt.", "labels": "HOTEL:positiv"}
+{"text": "Daher hatten wir an diesem heißen Spätsommerwochenende ein mollig warmes Zimmer.", "labels": "ZIMMER:negativ"}
+{"text": "Sehr zu empfehlen ist das Frühstücksbuffet, welches keine Wünsche offen lässt (von Prosecco über Weißwürste und frischem Obst).", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Seminarräume ca. 50 m vom Hotel entfernt.", "labels": "LAGE:neutral"}
+{"text": "Das Hotel ist in der Nähe des Hauptbahnhofs gelegen.", "labels": "LAGE:neutral"}
+{"text": "Es ist fast unmöglich zu sehen Sie den Eingang.", "labels": "HOTEL:negativ"}
+{"text": "Sehr schöne Zimmer, freundliches Personal, reichhaltiges und ausgezeichnetes Frühstück.", "labels": "SERVICE:positiv"}
+{"text": "Die Lage und Entfernung zur Innenstadt/Altstadt war für uns insoweit in Ordnung, da wir unsere Räder dabei hatten und dadurch sehr flexibel waren.", "labels": "LAGE:neutral"}
+{"text": "Nette Hotel Bar und reichhaltiges Frühstück.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Das Hotel ist etwas außerhalb von $CITY$, aber wenn man mit dem Auto anreist ist es ideal, wenn man dort kostenlos parken kann.", "labels": "HOTEL:positiv"}
+{"text": "Sauber, super Personal und das Frühstück war super.", "labels": "HOTEL:positiv"}
+{"text": "Überall findet man schöne Posters und Wandbilder von $CITY$.", "labels": "HOTEL:positiv"}
+{"text": "Das Frühstück gibts in Buffetform und lässt keine Wünsche offen.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Das Personal hätte freundlicher sein können.", "labels": "SERVICE:negativ"}
+{"text": "Die Zimmer sind allerdings schon etwas abgewohnt und die Einzelzimmer haben auch nur ein Minibad.", "labels": "ZIMMER:negativ"}
+{"text": "Ich fühle mich der Preis pro Nacht ist zu teuer für das, was man bekommt.", "labels": "HOTEL:negativ"}
+{"text": "Erfreulich ist, das die meiste Mitarbeiter sehr freundlich und zuvorkommend sind.", "labels": "SERVICE:positiv"}
+{"text": "Die Zimmer waren sauber und funktionell, die Lage ist perfekt für den Zugang zu allen Gebieten und allen Einrichtungen hoher Qualität.", "labels": "ZIMMER:positiv"}
+{"text": "Und zum Joggen an der Donau ist es auch nicht weit.", "labels": "LAGE:positiv"}
+{"text": "Die Betten wirklich schön.", "labels": "ZIMMER:positiv"}
+{"text": "Das rückwärtige Gebäude hat keinen Aufzug.", "labels": "HOTEL:negativ"}
+{"text": "Das Frühstück war wie immer sehr vielfältig und gut.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Auf dem Zimmer wird das Internet für 9€/24 h berechnet.", "labels": "ZIMMER:neutral"}
+{"text": "Angenehmer Aufenthalt im $HOTEL$ $CITY$! Zimmer für 2Personen ein bisschen klein aber Preis Leistung ok.", "labels": "HOTEL:neutral"}
+{"text": "Die Angestellten sind professionell und freundlich.", "labels": "SERVICE:positiv"}
+{"text": "Wir haben sehr gut geschlafen und zum Frühstück konnten wir alles genießen, was wir uns erhofft haben.", "labels": "HOTEL:positiv"}
+{"text": "Das Hotel ist zu empfehlen, wenn man nicht zum ersten mal in $CITY$ ist, da man in die Stadt eine weile braucht.", "labels": "LAGE:neutral"}
+{"text": "Nach einer so langen Reise, waren wir froh, dass es leicht zu finden war.", "labels": "LAGE:positiv"}
+{"text": "Eine sehr kurz angebundene jg. Dame (im sehr offenen Dirndl) - Sie sind auf dem Parkplatz ? = macht 7,00 Euro, ohne Frühstück ? kostet 20,00Euro! Mit Treppe od.", "labels": "SERVICE:negativ"}
+{"text": "Verkehrsgünstig zur Autobahn oder Bahnhof gelegen.", "labels": "LAGE:positiv"}
+{"text": "Ansonsten war an Schlaf nicht zu denken.", "labels": "ZIMMER:negativ"}
+{"text": "So konnten wir zwischen einem Teller-Frühstück, das uns im Frückstücksraum serviert wurde und einem Lunchpaket wählen.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Die Bett waren bequem und gaben eine gute Nachtruhe.", "labels": "ZIMMER:positiv"}
+{"text": "Meine einzige Enttäuschung, die wir mit dem Personal war, dass niemand.", "labels": "SERVICE:negativ"}
+{"text": "Nur die Klimaanlage hat nicht sehr gut gekühlt, aber es war auch um die 35 Grad draußen als wir da waren.", "labels": "ZIMMER:negativ"}
+{"text": "So durften unsere Zimmer während unseres Aufenthalts nicht gesäubert werden, und das Frühstücksbuffet durfte ebenfalls nicht angeboten wurde.", "labels": "HOTEL:negativ"}
+{"text": "Die Zimmer und vor allem das Bad sind bereits etwas in die Jahre gekommen.", "labels": "ZIMMER:negativ"}
+{"text": "Toll umgebaut.", "labels": "HOTEL:positiv"}
+{"text": "Das Hotel glänzt durch seine Lage: Nur wenige Minuten vom Hauptbahnhof entfernt (Tipp: Nehmen Sie den kürzeren südlichen Ausgang durch die $CITY$ Arcaden!) und direkt an einer Bushaltestelle, von wo aus man gleich in der Altstadt ist.", "labels": "LAGE:positiv"}
+{"text": "Mit den ÖV (Haltestelle direkt vor dem Hotel) ist das Stadtzentrum in 10 Minuten sehr gut erreichbar.", "labels": "LAGE:positiv"}
+{"text": "Ein schönes Businesshotel mit sehr freundlichem Empfang und Personal.", "labels": "HOTEL:positiv"}
+{"text": "Das Frühstück war gut und es gab eine angemessene Auswahl.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Internet ist gratis.", "labels": "HOTEL:positiv"}
+{"text": "Lage des Hotels wirklich sehr sehr schön.", "labels": "LAGE:positiv"}
+{"text": "Dabei vergaß man, dass man sich eigentlich im Gewerbepark von Rgbg befindet.", "labels": "LAGE:neutral"}
+{"text": "Das Frühstück war für uns als Veganer nicht sehr geeignet.", "labels": "ESSEN&TRINKEN:negativ"}
+{"text": "Absolut fantastisch Unterkunft.", "labels": "HOTEL:positiv"}
+{"text": "Das Frühstück war gut.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Eine echte Überraschung war das leckere Frühstücksbüffet für uns Vielreisende.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Preis-Leistung stimmt hier.", "labels": "HOTEL:positiv"}
+{"text": "Parken kostenlos in der Nähe.", "labels": "LAGE:positiv"}
+{"text": "Derjenige, der an der Türe schläft bekommt selbst bei geschlossener Türe alle Badgerüche mit - nicht schön.", "labels": "ZIMMER:negativ"}
+{"text": "Tiefgarage mit viel Platz.", "labels": "HOTEL:positiv"}
+{"text": "Übernachtung (28.08.2014) mit sehr freundl. Personal und ordentlichem Zimmer.", "labels": "SERVICE:positiv"}
+{"text": "Das Fenster konnte leider nicht geöffnet werden wegen der Lautstärke (Strassenverkehr, Bars in der Nähe ).", "labels": "ZIMMER:negativ"}
+{"text": "Das Frühstücksbuffet ist sehr umfangreich.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Der Frühstücksraum ist sehr groß, das Angebot war reichhaltig.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Die Zimmer sind ausgesprochen großzügig gehalten und modern eingerichtet.", "labels": "ZIMMER:positiv"}
+{"text": "Sehr nettes freundliches Personal.", "labels": "SERVICE:positiv"}
+{"text": "Spätes Einchecken nach telefonischer Zimmernachfrage/ Reservierung von unterwegs, beim freundlichen aufmerksamen Empfangspersonal absolut schnell und unkompliziert.", "labels": "SERVICE:positiv"}
+{"text": "Die Zimmer haben einen neuen, sehr schönen Boden erhalten.", "labels": "ZIMMER:positiv"}
+{"text": "Ca.25 Minuten Fußweg zur Altstadt Unglückliche Lage hinter dem Hauptbahnhof.", "labels": "LAGE:negativ"}
+{"text": "Haben uns sehr wohl gefühlt und beim Frühstück war für jeden was dabei.", "labels": "HOTEL:positiv"}
+{"text": "Das Frühtück war gut, lästig waren die Gummihandschuhe.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Lediglich die fehlende Klimaanlage in den Zimmern (es soll auch welche mit geben?) bzw.", "labels": "ZIMMER:negativ"}
+{"text": "ich hatte das Pech und eine sehr schlechte W-lan Verbindung.", "labels": "ZIMMER:negativ"}
+{"text": "Obwohl wir ein Zimmer im zweiten Stock mit Fenster zur viel befahrenen Kreuzung hatten, war es nachts absolut ruhig! Ausstattung des Zimmers war für eine Übernachtung absolut okay, alles sauer, das Bad ausreichend groß.", "labels": "ZIMMER:positiv"}
+{"text": "Das Frühstück ist im Preis inbegriffen und ist recht gut.", "labels": "HOTEL:positiv"}
+{"text": "Die Location ist wunderbar, minuten von Steinerebrucke und die Altstadt.", "labels": "LAGE:positiv"}
+{"text": "Haus macht sehr hellen ung guten Eindruck.", "labels": "HOTEL:positiv"}
+{"text": "Sehr enges Parkhaus.", "labels": "HOTEL:negativ"}
+{"text": "Das Preis-/Leistungsverhältnis ist unschlagbar günstig.", "labels": "HOTEL:positiv"}
+{"text": "Sehr moderne Zimmer, mit relativ offenem Bad und Toilette.", "labels": "ZIMMER:positiv"}
+{"text": "\"Frühstück auf \"\"\"\"normalem\"\"\"\" 4-Sterne-Niveau.\"", "labels": "ESSEN&TRINKEN:neutral"}
+{"text": "Der nach außen gebogene Schreibtisch macht es schwierig, Flipcharts zu beschriften.", "labels": "ZIMMER:negativ"}
+{"text": "Zimmer einfach , Bad eher klein und zur Straße gelegen sehr laut.", "labels": "ZIMMER:negativ"}
+{"text": "Leider Fenster zur Anlieferung mir viel Radau.", "labels": "ZIMMER:negativ"}
+{"text": "Personal sehr freundlich und zuvorkommend, Top-Lage nahe der Altstadt, gut isolierte Fenster, auch mit Fliegengitter, der techn.", "labels": "SERVICE:positiv"}
+{"text": "Der Service war im Allgemeinen gut bis sehr gut.", "labels": "SERVICE:positiv"}
+{"text": "Zimmer, Flure,Lift sehr gepflegt.", "labels": "HOTEL:positiv"}
+{"text": "In der Lobby / Bar reicht das Signal für ein paar wenige MBit.", "labels": "HOTEL:negativ"}
+{"text": "Das Haus ist wirklich sehenswert und die Zimmer in historischen Räumlichkeiten.", "labels": "HOTEL:positiv"}
+{"text": "Die Lage des Hotel ist durchschnittlich, man braucht zu Fuß über eine Brücke in die Innenstadt gelangen aber auf der anderen Straßenseite ist ein großes Einkaufszentrum und Theater.", "labels": "LAGE:neutral"}
+{"text": "Ich bin sehr zufrieden in ihrem Haus.", "labels": "HOTEL:positiv"}
+{"text": "Die Sauna ist klein aber sehr gemütlich.", "labels": "HOTEL:positiv"}
+{"text": "Nahe BAB, gute Lage, alles NEU!!! Alles Klasse - sehr gutes Personal, inkl.", "labels": "HOTEL:positiv"}
+{"text": "Das Hotel $HOTEL$ $CITY$ City befindet sich in hervorragender Lage, unmittelbar am Hauptbahnhof mit kurzem Weg in das Zentrum der Stadt, Parkplatz direkt nebenan.", "labels": "LAGE:positiv"}
+{"text": "Ich verstehe nicht, warum bevor herausgewischt wird, nicht kurz vorher mal gesaugt wird, vor allem auch im Bad.", "labels": "ZIMMER:negativ"}
+{"text": "Ein gutes $HOTEL$hotel ! ! Die extra bestellten Doppelzimmer mit zwei Betten sind groß, 1a Betten, und liegen alle zur Hauptverkehrsstrasse mit Riesenverkehr.", "labels": "HOTEL:positiv"}
+{"text": "Meldeformular war vorab ausgefüllt.", "labels": "SERVICE:positiv"}
+{"text": "Von der Minute beim Betreten dieses Hotels - alles, was ich sagen kann ist WOW! Der Angestellte an der Rezeption, der Manager, nichts war zu schwierig für sie - alles wurde mit einem Lächeln und sehr professionell.", "labels": "SERVICE:positiv"}
+{"text": "Ein sehr angenehmes Hotel mit sehr gutem Preis/Leistungs-Verhältnis.", "labels": "HOTEL:positiv"}
+{"text": "Vom Frühstück waren wir mehr als begeistert - trotz Corona ein tolles Buffet, dass auch um 10:00 Uhr nochmal nachgefüllt wurde - super! Die Tiefgarage haben wir nicht genutzt, da wir eine Straße weiter einen Parkplatz gefunden hatten.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Gute Badezimmerausstattung, die Beleuchtung am Spiegel könnte etwas besser sein.", "labels": "ZIMMER:positiv"}
+{"text": "Ein Ventilator steht unmotiviert im November im Zimmer.", "labels": "ZIMMER:negativ"}
+{"text": "Das Badezimmer mit Dusche WC und Waschbecken ist geschmackvoll renoviert worden.", "labels": "ZIMMER:positiv"}
+{"text": "Das Preis-/Leistungsverhältnis wirklich top!", "labels": "HOTEL:positiv"}
+{"text": "Parken in einem lokalen Parkplatz ca. 5 Minuten zu Fuß vom Hotel entfernt, gegen eine geringe Gebühr.", "labels": "HOTEL:neutral"}
+{"text": "Allerdings muss man sich wegen der Lärmbelästigung keine Gedanken machen.", "labels": "LAGE:positiv"}
+{"text": "Der $HOTEL$ am Dom ist einfach klasse!", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Und diese war sehr schön, eine richtige Wohnung mit direkten Blick auf den Dom. Personal sehr freundlich Frühstück normal.", "labels": "SERVICE:positiv"}
+{"text": "Dies ist ein gutes Hotel, sauber und mit guten Bedingungen.", "labels": "HOTEL:positiv"}
+{"text": "Das Hotel ist bereits etwas in die Jahre gekommen.", "labels": "HOTEL:negativ"}
+{"text": "Es gibt im Hotel eine Tiefgarage, so dass man auch keine weiten Wege mit dem Gepäck oder Unterlagen zurücklegen muss.", "labels": "HOTEL:positiv"}
+{"text": "Der 5. Punkt fehlt nur, weil es kein Neubau ist.", "labels": "HOTEL:neutral"}
+{"text": "Ist nicht zu empfehlen, wenn man im muffigen Nebengebäude unterkommt.", "labels": "HOTEL:negativ"}
+{"text": "Das Deluxe-Doppelzimmer machte seinem Namen alle Ehre.", "labels": "ZIMMER:positiv"}
+{"text": "Frühstück sehr gut.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Es gibt keine Klimaanlage, aber man hat kleine Lüfter auf den Zimmern verteilt.", "labels": "ZIMMER:positiv"}
+{"text": "Die Zimmer sind modern gestaltet, die Bäder ebenfalls up-to-date und es ist alles noch so schön neu.", "labels": "ZIMMER:positiv"}
+{"text": "Der Service ist sehr freundlich und zuvorkommend.", "labels": "SERVICE:positiv"}
+{"text": "An der Rezeption vorbei geradeaus befinden sich Bar und diverse gemütliche Sitzgelegenheiten, auf Wunsch werden die großen Flatscreens angeschaltet für Fussball etc.", "labels": "HOTEL:positiv"}
+{"text": "Auch das Frühstücksbuffet war gut.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Parkplatz am Haus für 7 €.", "labels": "HOTEL:neutral"}
+{"text": "Hotel sehr sauber.", "labels": "HOTEL:positiv"}
+{"text": "Das ist nach meiner Meinung ein sehr solides, ruhiges Hotel mit allem was man erwartet und einem leckeren, unkomplizierten Frühstück.", "labels": "HOTEL:positiv"}
+{"text": "Lage sehr gut.", "labels": "LAGE:positiv"}
+{"text": "Das Housekeeping war unzureichend.", "labels": "ZIMMER:negativ"}
+{"text": "Die Lobby hatte eine wunderschöne Weihnachtsbäumen und Dekorationen.", "labels": "HOTEL:positiv"}
+{"text": "Allerdings fährt wochenends nur alle Stunde ein Bus, d.h. wer mit Bus und Bahn ausserhalb des Stadtzentrums (5 km Umkreis um den Dom) in $CITY$ unterwegs ist, sollte lieber eine Taxifahrt und die Kosten dafür einplanen.", "labels": "LAGE:negativ"}
+{"text": "Sehr gute Lage direkt neben der Kathedrale.", "labels": "LAGE:positiv"}
+{"text": "Frühstück ebenso mit allem was man möchte.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Die Bar ist exzellent geführt und das Frühstück bietet einen perfekten Start in den Tag.", "labels": "HOTEL:positiv"}
+{"text": "Busverbindung spätabends 1x pro Std. lässt zu wünschen übrig.", "labels": "LAGE:negativ"}
+{"text": "Zimmer perfekt für diesen kurzen Aufenthalt Lage des Hotes genau richtig, nicht zu weit weg von der Innenstadt und gleich für Zugreisende am Bahnhhof.", "labels": "LAGE:positiv"}
+{"text": "Unprofessioneller Empfang.", "labels": "SERVICE:negativ"}
+{"text": "Wir waren mit Freunden unterwegs und haben wir uns alle in $HOTEL$ $CITY$ sehr wohl gefühlt.", "labels": "HOTEL:positiv"}
+{"text": "Sehr modernes Design und liebt die kostenlosen Getränke im Zimmer Bar.", "labels": "HOTEL:positiv"}
+{"text": "Ein gepflegtes Hotel mit Hartboden.", "labels": "HOTEL:positiv"}
+{"text": "Mein Zimmer war modern eingerichtet und verfügt über einen neueren Fernseher (Flachbildschirm) mit SKY Programm.", "labels": "ZIMMER:positiv"}
+{"text": "Wir hatten ein Deluxe Zimmer und wären gerne gesehen eine Suite!", "labels": "ZIMMER:negativ"}
+{"text": "Der Service an der Rezeption sowie Bar war effizient und sehr freundlich.", "labels": "SERVICE:positiv"}
+{"text": "So blieb uns nur, bei offenem Fenster zu schlafen.", "labels": "ZIMMER:negativ"}
+{"text": "Die Zimmer sind sehr modern eingerichtet, sehr sauber und extrem gemütlich.", "labels": "ZIMMER:positiv"}
+{"text": "Die Tür hat keinen Spion und der Fluchtplan ist etwas merkwürdig.", "labels": "ZIMMER:negativ"}
+{"text": "Für ein Wochenendtrip oder Kurzaufenthalt kann man das Hotel empfehlen.", "labels": "HOTEL:positiv"}
+{"text": "Ein schmuckes Hotel direkt auf der Donauinsel.", "labels": "HOTEL:positiv"}
+{"text": "So ruhig! Dieses Hotel ist einen kurzen Fußweg vom Bahnhof entfernt, wir landeten wir durch die Shopping Mall und 10 Minuten zu Fuß von der Altstadt entfernt.", "labels": "LAGE:positiv"}
+{"text": "Das $HOTEL$ Hotel sieht sehr schön und modern, aber auf den zweiten Blick war es etwas heruntergekommen.", "labels": "HOTEL:negativ"}
+{"text": "Die Zimmer sind gut, die Küche ausgezeichnet.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Das Frühstück war gut und die Bar war in Ordnung (aber ein bisschen seelenlos aber zweckmäßig).", "labels": "HOTEL:negativ"}
+{"text": "Parkplätze reichlich vorhanden.", "labels": "LAGE:positiv"}
+{"text": "Besonders das Personal an der Rezeption möchte ich hier hervorheben.", "labels": "SERVICE:positiv"}
+{"text": "Erstklassiges Frühstücksbuffet und noch ein Tip für Abends: Wenn Bedarf besteht wird ein außergewöhnlich gutes Babequeu Grill Buffet ´all you can eat´ angeboten - teilnehmen, es lohnt sich.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Dinge die in diesem Kontext negativ auffielen: - Fenster in einer Höhe, wo jemand Minimum 175cm sein muss, ob es bedienen zu können - Kleiderschrank mit ein solch hoch angebrachten Kleiderstange, dass man ebenfalls mind. 175 cm sein muss.", "labels": "ZIMMER:negativ"}
+{"text": "\"Das Hotel ganz französisch, Bistro-Stil, abgewohnt \"\" vielleicht gewünscht? Die Zimmer alle unterschiedlich museal eingerichtet, teilweise mit schönen Bildern und Antiquitäten.\"", "labels": "ZIMMER:positiv"}
+{"text": "Das Hotel ist recht einfach konstruiert, aber mit sehr schönen Zimmern.", "labels": "HOTEL:neutral"}
+{"text": "Wir haben auf unseren Deutschlandtouren schon etliche Hotels aufgesucht und finden, dass dieses Hotel ein prima Mittelklasse-Hotel ist, bei dem das Preis-Leistungsverhältnis absolut stimmt.", "labels": "HOTEL:positiv"}
+{"text": "5 min zu Fuß bis zur Innenstadt.", "labels": "LAGE:neutral"}
+{"text": "Die Räumlichkeiten waren in Ordnung, sauber.", "labels": "HOTEL:positiv"}
+{"text": "Lage ist besser als vorher gedacht, grün mit Teich und nicht zu laut.", "labels": "LAGE:positiv"}
+{"text": "Die Mitarbeiter am Empfang waren nett und hilfsbereit.", "labels": "SERVICE:positiv"}
+{"text": "Parkmöglichkeiten reichlich vorhanden.", "labels": "HOTEL:positiv"}
+{"text": "Die Lage des Hotels ist sehr stadtnah in einer ruhigen Umgebung.", "labels": "LAGE:positiv"}
+{"text": "Alles in allem war es ein angenehmer Aufenthalt, sehr gutes Abendesen und Frühstück, das Servicepersonal sehr aufmerksam.", "labels": "HOTEL:positiv"}
+{"text": "Wir waren 2 Tage im Hotel eingecheckt und hatten einen wunderschönes Zimmer im Domherrenhaus.", "labels": "ZIMMER:positiv"}
+{"text": "Insgesamt entspricht das Hotel aber nicht dem üblichen 4 Sterne-Standard.", "labels": "HOTEL:negativ"}
+{"text": "Leider war mein Zimmer auf der Seite einer sehr stark befahrenen Straße und somit war es bereits früh morgens sehr laut.", "labels": "ZIMMER:positiv"}
+{"text": "Das Zimmer war gross, der TV auch, es könnten aber mehr Programme vorhanden sein.", "labels": "ZIMMER:positiv"}
+{"text": "Die anschließende Übernacht ein krönender Abschluss.", "labels": "HOTEL:positiv"}
+{"text": "Der Service professionell und stets tadellos.", "labels": "SERVICE:positiv"}
+{"text": "Das Zimmer war modern eingerichtet und ausreichend groß.", "labels": "ZIMMER:positiv"}
+{"text": "Diese war zwar groß aber angestaubt, Flecken an den Wänden, im Schrank und auf den Ablagen kein Staub gewischt, abgeplatzte Stellen in der Badewanne.", "labels": "ZIMMER:negativ"}
+{"text": "Wir waren übers Wochenende, Check in und Check out sehr angenehm, Zimmer modern, bei der Minibar die alkoholfreien Getränke inklusive, Frühstück mit großer Auswahl und gutem Service, gute Anbindung zur Autobahn, Zimmer war trotzdem ruhig gelegen.", "labels": "SERVICE:positiv"}
+{"text": "\"Leckeres Frühstpcksbüffet, absehen von den schrecklichen \"\"\"\"Croissants\"\"\"\". Servicepersonal sehr freundlich, Chefin persönlich verabschiedete uns - mit einer Marillenmarmelade als Geschenk.\"", "labels": "SERVICE:positiv"}
+{"text": "Man erhält hier einen Service und Zimmer, die über dem durchschnittlichen Standard bei 2 Sternen sind.", "labels": "HOTEL:positiv"}
+{"text": "So war unsere erste Nacht ein wenig unbequem.", "labels": "HOTEL:negativ"}
+{"text": "Fantastisch gelegen auf der Donauinsel gegenüber der Altstadt, mit Blick auf Dom, Altstadt, Rathausturm, Steinerne Brücke - besser geht's nicht.", "labels": "LAGE:positiv"}
+{"text": "Sehr geschmackvoll eingerichtet und komfortabel.", "labels": "ZIMMER:positiv"}
+{"text": "Während der Sommermonate bei Schönwetter brodelt es ja eh in der Altstadt von $CITY$.", "labels": "LAGE:positiv"}
+{"text": "Die Zimmer sind sauber und modern eingerichtet.", "labels": "ZIMMER:positiv"}
+{"text": "Einige nette Rsstaurants nahe zum Hotel.", "labels": "LAGE:positiv"}
+{"text": "Alles in Allem ein sehr empfehlenswertes Hotel, nicht nur für Geschäftsreisende.", "labels": "HOTEL:positiv"}
+{"text": "Unser Zimmer befand sich in der Dependance und war wegen der Nass- und Toilettenräume, die zum Zimmer hin durchsichtige Glaswände aufwiesen und deren Beleuchtung über einen Bewegungsmelder gesteuert ist eine Zumutung, da nachts bei jedem Toilettengang das Zimmer hell erleuchtet wurde und der Toilettenbenutzer von allen Seiten sichtbar war.", "labels": "ZIMMER:negativ"}
+{"text": "Das Frühstück entspricht der 4 Sterne Kategorie, das Servierpersonal ist überaus freundlich und sehr bemüht.", "labels": "SERVICE:positiv"}
+{"text": "Sehr geräumiges Zimmer, sehr gute Lage neben dem Arcaden Shupping Mall und Hauptbahnhof.", "labels": "LAGE:positiv"}
+{"text": "frühstück sehr grosszügig in menge und auswahl,gute service.", "labels": "SERVICE:positiv"}
+{"text": "Das Hotel eignet sich eher für Seminare und Tagungen, da auch Standort im Gewerbegebiet.", "labels": "LAGE:neutral"}
+{"text": "Das Personal an der Rezeption war freundlich und professionell, wie der Rest des Personals.", "labels": "SERVICE:positiv"}
+{"text": "Das Personal ist freundlich und unkompliziert.", "labels": "SERVICE:positiv"}
+{"text": "Wunderbarer Aufenthalt.", "labels": "HOTEL:positiv"}
+{"text": "Die Einrichtung, die Teppiche, auch die in den Zimmern haben definitiv bessere Zeiten gesehen und zudem keinen hygienischen Eindruck hinterlassen.", "labels": "HOTEL:negativ"}
+{"text": "Die Einschränkung wurden aber sehr professionell gemeistert.", "labels": "SERVICE:positiv"}
+{"text": "Nur mit dem Bus zur Verfügung, und es hat nicht häufig fahren.", "labels": "LAGE:negativ"}
+{"text": "Die Zimmer sind modern eingerichtet.", "labels": "ZIMMER:positiv"}
+{"text": "Leider ist es nicht in der Nähe des Zentrums, es erfordert eine Fahrt mit dem Taxi für die meisten Dinge.", "labels": "LAGE:negativ"}
+{"text": "Vom Hotel ist man in ca. Minuten zur Donau Arena gelaufen.", "labels": "LAGE:neutral"}
+{"text": "frühstück mit breitem angebot, inklusive frischgemachtem, auf wunsch.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Die Lage ist gut - nahe Bahnhof und in Fussweite (etwa 10 Minuten) in die Stadt.", "labels": "LAGE:positiv"}
+{"text": "Einziges Manko: die Brötchen waren echt mäßig.", "labels": "ESSEN&TRINKEN:negativ"}
+{"text": "Leider ist die Dusche nicht schimmelfrei und auch unter dem Toilettenrand ist es nicht sauber genug.", "labels": "ZIMMER:negativ"}
+{"text": "Trotzdem ruhige Zimmer.", "labels": "ZIMMER:positiv"}
+{"text": "Das Personal war überaus freundlich und das morgentl.", "labels": "SERVICE:positiv"}
+{"text": "Die Sauberkeit im Zimmer lässt zu wünschen übrig.", "labels": "ZIMMER:negativ"}
+{"text": "Jedoch kein Verkehrslärm hörbar.", "labels": "LAGE:positiv"}
+{"text": "Alles in allem einfach zu empfehlen. Und das Schöne ist ja, dass man das alles mitten in der Stadt hat.", "labels": "HOTEL:positiv"}
+{"text": "Der $HOTEL$, das Mutterhotel vom Goliath ist ein ausgezeichnetes Hotel mitten im Zentrum von $CITY$ mit einem nicht zu unterschätzenden Vorteil für Reisende mit eigenem Auto.", "labels": "HOTEL:positiv"}
+{"text": "Bad und Dusche sind eher klein geraten aber es ist sauber und alles was man braucht ist vorhanden.", "labels": "ZIMMER:neutral"}
+{"text": "\"Das angeschlossene Restaurant \"\"\"\"alte Ziegelei\"\"\"\" ist auch zu empfehlen!!!\"", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Hervorragendes Frühstück mit wirklich gutem Kaffee.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Die Junior Suite war wirklich fantastisch, wir wären gerne noch ein paar Tage geblieben.", "labels": "ZIMMER:positiv"}
+{"text": "Der allg. Service schlecht freiwillig hat keiner geholfen.", "labels": "SERVICE:negativ"}
+{"text": "Zur Donau und zur steinernen Brücke sind es nur 2-3 Minuten Fußweg. 4.", "labels": "LAGE:positiv"}
+{"text": "Das Badezimmer wirkte durch die braun/beige farbenen Waschbecken etwas veraltet.", "labels": "ZIMMER:negativ"}
+{"text": "trotzt strasse in der nähe sehr ruhig.", "labels": "LAGE:positiv"}
+{"text": "Gute Lage direkt an Bahnhof und Autobahn.", "labels": "LAGE:positiv"}
+{"text": "Wie alle $HOTEL$-Hotels ist auch dieses für einen Städtetrip ideal.", "labels": "HOTEL:positiv"}
+{"text": "Für uns dieses Hotel, immer wieder gerne.", "labels": "HOTEL:positiv"}
+{"text": "Sehr saubere Zimmer, kein Lärm, effizienter Ausstattung.", "labels": "ZIMMER:positiv"}
+{"text": "lage zwar nicht in altstadt, die aber mit auto in kürzester zeit zu erreichen ist, es gibt jede menge parkhäuser dort.", "labels": "LAGE:positiv"}
+{"text": "Die Garage direkt im Hotel ist günstig.", "labels": "HOTEL:positiv"}
+{"text": "Gutes Preis/Leistungsverhältnis.", "labels": "HOTEL:positiv"}
+{"text": "Das Frühstück war typisch für diese Art von Unterkunft, aber die warmen Speisen (Rührei, Baked Beans etc) nicht sehr einladend.", "labels": "ESSEN&TRINKEN:negativ"}
+{"text": "Die Zimmer waren von sehr guter Qualität, sauber und das Bett war komfortabel.", "labels": "ZIMMER:positiv"}
+{"text": "Modernes Hotel, excellente Mitarbeiter, Super Komfort, großzügiges Frühstück das mit 4,80 € auf der Rechnung ausgewiesen wird.", "labels": "HOTEL:positiv"}
+{"text": "Der Empfang war sehr herzlich.", "labels": "SERVICE:positiv"}
+{"text": "Der Service war sehr aufmerksam.", "labels": "SERVICE:positiv"}
+{"text": "In der Nacht, es gab keine Möglichkeit, t Lärm und ich konnte sehr gut schlafen konnte.", "labels": "ZIMMER:positiv"}
+{"text": "Altstadt $CITY$ gut zu erreichen.", "labels": "LAGE:positiv"}
+{"text": "Bei schönem Wetter ist auch der Biergarten im Innenhof eine Augenweide.", "labels": "HOTEL:positiv"}
+{"text": "Gutes WLAN.", "labels": "HOTEL:positiv"}
+{"text": "Preis absolut ok.", "labels": "HOTEL:neutral"}
+{"text": "Die Putzfrau meldet sich etwas früh, ist aber verständnisvoll.", "labels": "SERVICE:neutral"}
+{"text": "Nicht ganz durchdacht die schlecht schliessende Milchglas-Schiebetür direkt neben einem Bett.", "labels": "ZIMMER:negativ"}
+{"text": "Personal sehr freundlich, hilfsbereit, Service gut. Lage sehr zentral. Kostenpflichtiger Parkplatz (Tiefgarage).", "labels": "SERVICE:positiv"}
+{"text": "Wir fragten im Hotel a City Guide zu buchen.", "labels": "SERVICE:neutral"}
+{"text": "Dem Personal war es offensichtlich egal.", "labels": "SERVICE:negativ"}
+{"text": "Die Nähe zur A93 macht es auch infrastrukturell zu einem guten Ausgangspunkt.", "labels": "LAGE:positiv"}
+{"text": "Sehr freundliches Personal Zimmer ausreichend groß für kürzere Aufenthalte Frühstücksbuffet für 10 Euro absolut in Ordnung Gute Lage zur Altstadt (10 - 15 minzu Fuß) Wenn $CITY$, dann wieder $HOTEL$.", "labels": "SERVICE:positiv"}
+{"text": "Wenige Minuten vom Zentrum entfernt.", "labels": "LAGE:positiv"}
+{"text": "Alles in alleim kann ich das Hotel mit gutem Gewissen empfehlen.", "labels": "HOTEL:positiv"}
+{"text": "Um einen Gin Tonic zu bekommen, muss man sich an den Ausschank des angeschlossenen Restaurants begeben.", "labels": "HOTEL:negativ"}
+{"text": "Das Hotel liegt etwas ausserhalb des Stadtzentrums.", "labels": "LAGE:neutral"}
+{"text": "Betten waren 10 cm auseinander geschoben und die Betten nur 90 cm breit. Ein Sessel mit separatem Hocker und ein Stuhl am Schreibtisch vorhanden.", "labels": "ZIMMER:neutral"}
+{"text": "Alles wirkt neu, obwohl das Haus schon 3 Jahre alt ist.", "labels": "HOTEL:positiv"}
+{"text": "So erhellt die Badezimmerbeleuchtung nachts auch das Bett der 2. Person.", "labels": "ZIMMER:negativ"}
+{"text": "Leider fußläufig sehr weit von der Innenstadt weg (45 Minuten) und die Umgebung (Gewerbepark) ist natürlich auch alles andere als ansprechend.", "labels": "LAGE:negativ"}
+{"text": "Die Hotel ist verkehrstechnisch sehr gut gelegen.", "labels": "LAGE:positiv"}
+{"text": "Ein Kühlschrank und die Möglichkeit sich kostenlos Tee zuzubereiten zu können, fehlten.", "labels": "ZIMMER:negativ"}
+{"text": "In der Ecke des Raumes steht ein kleiner Fernseher, der laut Info sogar Sky-Programme zeigt (wurde nicht genutzt).", "labels": "ZIMMER:neutral"}
+{"text": "Zu bemängeln ist nur der hohe Einstieg in die sehr rutschige Wanne, der fehlende Safe und zu wenige Ablagen im Schrank und Bad.", "labels": "ZIMMER:negativ"}
+{"text": "Das Hotel trägt den Namen 'City', wenngleich es doch noch etwas bis zur City ist.", "labels": "LAGE:negativ"}
+{"text": "Von den Zimmern bis zum special Personal der Service war überwältigend.", "labels": "SERVICE:positiv"}
+{"text": "Geschmackvoll eingerichtete Zimmer, modernes Bad mit Mut zum Design.", "labels": "ZIMMER:positiv"}
+{"text": "Das Hotel ist sehr zu empfehlen.", "labels": "HOTEL:positiv"}
+{"text": "Dieses $HOTEL$ hebt sich wohltuend von den anderen ab.", "labels": "HOTEL:positiv"}
+{"text": "Bei dieser Hotelkategorie absolute Spitzenklasse, was hier aus Auswahl und Qualität geboten wird.", "labels": "HOTEL:positiv"}
+{"text": "Das Frühstück, sowie der Service dort sind hervorragend.", "labels": "SERVICE:positiv"}
+{"text": "Park Möglichkeit für VW Busse schwierig.", "labels": "LAGE:negativ"}
+{"text": "Zimmer haben Minibar, Flatscreen, keine durchgelegenen Betten(!), freies W-Lan, Fön, Wasserkocher, Kaffeemaschiene.", "labels": "ZIMMER:neutral"}
+{"text": "Unser Zimmer war ziemlich klein, aber das war zu erwarten.", "labels": "ZIMMER:negativ"}
+{"text": "In direkter Nähe zur Autobahn, dennoch sehr ruhig.", "labels": "LAGE:positiv"}
+{"text": "Das Personal ist höflich und professionell, das Frühstück ordentlich, aber bei manchen Produkten noch verbesserungswürdig gmessen an der Hotelkategorie.", "labels": "SERVICE:positiv"}
+{"text": "Restaurant mit kleiner Karte vorhanden.", "labels": "ESSEN&TRINKEN:neutral"}
+{"text": "Preis-Leistungsverhältnis stimmt!", "labels": "HOTEL:positiv"}
+{"text": "Die Zimmer sind sehr sauber, ordentlich und groß genug.", "labels": "ZIMMER:positiv"}
+{"text": "Schickes Interieur.", "labels": "HOTEL:positiv"}
+{"text": "Gute Betten, gutes Wlan, ausreichend Parkplätze.", "labels": "HOTEL:positiv"}
+{"text": "Sehr gutes gastronomisches Angebot zu einem fairen Preis/ Leistungsverhältniss.", "labels": "HOTEL:positiv"}
+{"text": "Teilweise mit herrlichem Blick über die Donau.", "labels": "LAGE:positiv"}
+{"text": "Reichhaltiges, gutes Frühstück.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Eigentlich Schade aber zu viele Kleinigkeiten, die den Gesamteintrug nachhaltig schmälern.", "labels": "HOTEL:negativ"}
+{"text": "Wir mussten Ohrstöpsel benutzen, um zu schlafen.", "labels": "ZIMMER:negativ"}
+{"text": "Freundliche Angestellte an der Rezeption und einen sehr schönen Ausblick von Domblick Suite.", "labels": "SERVICE:positiv"}
+{"text": "Reichhaltiges Frühstück.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "parken in garage - unterm hotel- kostet €8/nacht, ein- und ausfahrt jederzeit möglich.", "labels": "HOTEL:neutral"}
+{"text": "Lage sehr gut, Altstadt in wenigen Minuten fussläufig zu erreichen.", "labels": "LAGE:positiv"}
+{"text": "Das Hotel bietet eine der besten Innenstadt-Lagen, faire Preise, schöne Zimmer und sehr nettes Personal.", "labels": "HOTEL:positiv"}
+{"text": "Hotelservice und Frühstück waren akzeptabel.", "labels": "SERVICE:neutral"}
+{"text": "Genau dies erwarte ich von einem **-Hotel! Dusche und Zimmer sind sauber.", "labels": "HOTEL:positiv"}
+{"text": "Was ich vermißt habe, war ein Radiowecker oder eine Uhr, wo man nachts auch mal die Zeit ablesen kann, aber ansonsten war das Zimmer super ausgestattet, sogar mit kostenlosen alkoholfreien Getränken in der Minibar.", "labels": "ZIMMER:positiv"}
+{"text": "Das Essen war ziemlich gut und der Koch macht es etwas anders.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Gut ist auch, dass es genügend kostenlose Parkplätze gibt.", "labels": "HOTEL:positiv"}
+{"text": "Das Hotel bietet ein exzellentes Preis-Leistunsverhältnis.", "labels": "HOTEL:positiv"}
+{"text": "Eine Minibar ist vorhanden, die alkoholfreien Getränke sind kostenlos, die anderen kosten 2,50 Euro.", "labels": "ZIMMER:positiv"}
+{"text": "Das Bad war sauber und durch verschiedene Lichtmöglichkeiten sehr angenehm.", "labels": "ZIMMER:positiv"}
+{"text": "Geräumige Tiefgarage.", "labels": "HOTEL:positiv"}
+{"text": "Schönes Hotel für Hotelgästen steht - nicht viele Unterhaltungsprogramme Wahl.", "labels": "HOTEL:positiv"}
+{"text": "Zimmer sind modern eingerichtet und geräumig.", "labels": "ZIMMER:positiv"}
+{"text": "Der Kontakt im Vorfeld per Telefon war sehr freundlich.", "labels": "SERVICE:positiv"}
+{"text": "Ansonsten war der Aufenthalt im Hotel angenehm, das Frühstück war soweit gut, die Rühreier haben nicht so ganz frisch und nach Ei geschmeckt, eventuell wurde da etwas unsorgfältig gearbeitet.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Check out 12 Uhr prima, aber wenn man das Gerpäck schon eingeladen hat kurz noch um 10 Uhr etwas einkaufen geht, nicht ausgecheckt hat und das Zimmer dann offen steht Bettwäsche gewechselt wurde und private Reiseunterlagen nicht mehr da sind ist das nicht empfehlungswert.", "labels": "SERVICE:negativ"}
+{"text": "Großzügige Zimmer mit bequemen Betten.", "labels": "ZIMMER:positiv"}
+{"text": "Das Hotel hat eine große Gruppe als ich dort war und es war sehr laut bis früh in den Morgen wegen der offenen Atrium Design.", "labels": "ZIMMER:negativ"}
+{"text": "$CITY$ ist Weltkulturerbe und dies vollkommen zurecht.", "labels": "LAGE:neutral"}
+{"text": "Gutes und ausreichendes Früchstück, nettes Personal.", "labels": "SERVICE:positiv"}
+{"text": "Damit passt das Preis-Leistungsverhältnis nicht mehr.", "labels": "HOTEL:negativ"}
+{"text": "Kompetentes Personal. Und im Sommer im herrlichen Kastaniengarten, in direkter Nachbarschaft zum Dom, bei Bier und Radi zu entspannen, das hat was!", "labels": "SERVICE:positiv"}
+{"text": "Die Matratzen empfinde ich als etwas zu hart, ist aber Geschmackssache.", "labels": "ZIMMER:negativ"}
+{"text": "Wir hatten einen kurzen aber schönen Aufenthalt.", "labels": "HOTEL:positiv"}
+{"text": "Werde immer freundliche empfangen und man sieht das Lächeln auch unter der Maske.", "labels": "SERVICE:positiv"}
+{"text": "Ich bin zum erneutem Mal in dem Hotel und habe mich gefreut auf den Aufenthalt.", "labels": "HOTEL:positiv"}
+{"text": "Frühstück dagegen hervorragend.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "auch den ein oder anderen Kaffee-/Teebeutel;-) Als Gast mit Aufenthalt von So-Mi ist es allerdings nicht möglich, am Abend im Restaurant zu essen, da dieses nur von Do-Sa geöffnet ist; Alternativen wie z.B.Snacks werden nicht angeboten Hervorheben möchte ich aber auch die Freundlichkeit des Personals und die einzigartige Lage.", "labels": "HOTEL:negativ"}
+{"text": "Alles in allem eine wirklich sehr angenehmer Aufenthalt.", "labels": "HOTEL:positiv"}
+{"text": "Das Frühstück war super und das Personal sehr freundlich, das Zimmer war sehr sauber und ausreichend groß.", "labels": "SERVICE:positiv"}
+{"text": "Unser Frühstück war, wie schon das letzte mal vielfältig, reichhaltig und lecker.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Das Personal war freundlich und die Lage ist natürlich super zentral.", "labels": "SERVICE:positiv"}
+{"text": "Die Erreichbarkeit von der Autobahn ist super, obwohl diese nicht hört.", "labels": "LAGE:positiv"}
+{"text": "Hotel macht einen sehr sauberen Eindruck und die Zimmer sind auch in Ordnung.", "labels": "HOTEL:positiv"}
+{"text": "Die Zimmer sind ausreichend groß mit Minibar (alkoholfrei Getränke sind gratis).", "labels": "ZIMMER:neutral"}
+{"text": "Taxi (problemlos); Kosten z.B.zum Dom ca. 20- €.", "labels": "LAGE:neutral"}
+{"text": "Einziges Manko: Bessere Beschilderung um das Hotel in der $CITY$er Altstadt zu finden.", "labels": "LAGE:negativ"}
+{"text": "Zur Rückseite des Hotels gibt.", "labels": "HOTEL:neutral"}
+{"text": "Wir hatten ein Zimmer im dritten Stock etwas abseits vom Hauptflur.", "labels": "ZIMMER:neutral"}
+{"text": "Da fühlt sich nicht nur der Hund direkt zu Hause, zumal nette Kleinigkeiten für uns auch bereitstanden.", "labels": "SERVICE:positiv"}
+{"text": "super schöner Ausblick auf die Donau und den $CITY$er Dom.", "labels": "LAGE:positiv"}
+{"text": "Parkplatz , nur in der Garage, aber erschwinglich zu entrichten ist.", "labels": "HOTEL:positiv"}
+{"text": "Der Aufenthalt für ein, zwei Tage ist völlig ok, haut dich nicht vom Hocker, aber ok.", "labels": "HOTEL:neutral"}
+{"text": "Die Zimmer waren modern, Sauber und man konnte sich wohlfühlen.", "labels": "ZIMMER:positiv"}
+{"text": "Alles in allem ein zu empfehlenswertes Stadthotel für eine Kurzreise.", "labels": "HOTEL:positiv"}
+{"text": "Rings um das Hotel sind genügend Parkplätze vorhanden.", "labels": "HOTEL:positiv"}
+{"text": "hier ist alles leicht zu Fuß zu erreichen, noch zu, dass das Hotel ist sehr gut.", "labels": "HOTEL:positiv"}
+{"text": "Das neue Zimmer lag zur Rückseite des Hotels und war angenehm ruhig.", "labels": "ZIMMER:positiv"}
+{"text": "Sicherlich mit bevorzugter Lage mitten in $CITY$ !", "labels": "LAGE:positiv"}
+{"text": "Die kleine Hotelsauna ist sehr sauber, kostenlose kalte Getränke gehören zum Service.", "labels": "HOTEL:positiv"}
+{"text": "Empfehlenswert.", "labels": "HOTEL:positiv"}
+{"text": "Ewig lange diskutiert u schlussendlich ein neues Zimmer bekommen.", "labels": "SERVICE:negativ"}
+{"text": "Es war klein, aber die Betten waren sehr komfortabel.", "labels": "ZIMMER:positiv"}
+{"text": "Positiv: Ankunft um 01:30 Uhr, trotzdem sehr zuvorkommender Empfang.", "labels": "SERVICE:positiv"}
+{"text": "Ich hatte eine der vier Suiten und wie sie an den Fotos erkennen können, sehr schön.", "labels": "ZIMMER:positiv"}
+{"text": "Das Hotel selbst war großartig.", "labels": "HOTEL:positiv"}
+{"text": "Wir kamen nach einem kleinen Rundgang in $CITY$ um 13.50 Uhr wieder ins Hotel zurück.", "labels": "HOTEL:neutral"}
+{"text": "Hotel liegt zentral am Hbf und Busbahnhof.", "labels": "LAGE:positiv"}
+{"text": "Der Preis ist meist zu hoch für die Leistung und wird nicht durch die gute Lage gerechtfertigt.", "labels": "HOTEL:negativ"}
+{"text": "Das $HOTEL$hotel $CITY$ City liegt in unmittelbarer Nähe des Bahnhofs und zu Fuß einige Meter zur historischen Altstadt.", "labels": "LAGE:neutral"}
+{"text": "Die Lage ist optimal für eine Altstadtbesichtigung.", "labels": "LAGE:positiv"}
+{"text": "Der Service im ganzen Haus war freundlich und zuvorkommend. Von Beginn an fühlte man sich wohl.", "labels": "SERVICE:positiv"}
+{"text": "Das Frühstück kostet extra und war auch ok.", "labels": "ESSEN&TRINKEN:neutral"}
+{"text": "Schlafkomfort ist sehr gut, gute Matratzen und auch das Frühstücksbuffet ist für diesen Preis ( 10 Euro/Person) völlig in Ordnung.", "labels": "ZIMMER:positiv"}
+{"text": "dom ist nebenan und von vielen Zimmern zu sehen.", "labels": "LAGE:positiv"}
+{"text": "Das Hotel befindet sich ganz in der Nähe vom Norden auf der Auffahrt auf die Autobahn - gebunden.", "labels": "LAGE:neutral"}
+{"text": "Freundliches Personal und gutes Frühstück.", "labels": "SERVICE:positiv"}
+{"text": "Die Fensterrahmen( in einem klimatisierten Zimmer) braun wie im Raucherzimmer sind und die Gardienen mit toten Mücken bestückt sind.", "labels": "ZIMMER:negativ"}
+{"text": "Am Rande der Stadt gelegenes Buisness-Hotel, modern, mit Tiefgarage.", "labels": "HOTEL:positiv"}
+{"text": "Die Ausstattung (Empfang, Zimmer, aber auch Restaurant) ist sehr modern, fast nüchtern.", "labels": "HOTEL:negativ"}
+{"text": "Der Service ist gut. Sie haben ein Parkhaus, das ist sehr praktisch.", "labels": "HOTEL:positiv"}
+{"text": "Nachmittags bis ca. 17:30 ist die Heizung wieder kalt.", "labels": "ZIMMER:negativ"}
+{"text": "Es gab auch einige ess+trinklokale fussläufig zu erreichen, ausserdem das donau-ekz.", "labels": "LAGE:positiv"}
+{"text": "Die Zimmer sind frisch renoviert und mit tollen Bildern der Altstadt dekoriert.", "labels": "ZIMMER:positiv"}
+{"text": "Das Hotel ist sehr gut.", "labels": "HOTEL:positiv"}
+{"text": "Sehr freundliche, kompetente Mitarbeiter.", "labels": "SERVICE:positiv"}
+{"text": "\"Das gibt es in anderen gleichwertigen Hotels alles unter dem \"\"\"\"Service-Aspekt\"\"\"\" ohne nachfragen. Extrem.\"", "labels": "SERVICE:neutral"}
+{"text": "Die Nacht war ruhig, keine Geräusche von draußen zu hören.", "labels": "ZIMMER:positiv"}
+{"text": "Zimmer ausreichend groß ( für 1 Nacht) Frühstück nicht genutzt-11€/Person!- ggüber lag ein Bäcker mit lecker Frühstück für die Hälfte an Geld.", "labels": "ESSEN&TRINKEN:negativ"}
+{"text": "Check in tadellos, Parken in Tiefgarage sehr günstig, auch in der Tiefgarage sehr sauber.", "labels": "HOTEL:positiv"}
+{"text": "Also uns hats sehr gut gefallen und überzeugenderweise werden wir auch wieder in einem unserer nächsten Urlaube in diesem Hotel nächtigen.", "labels": "HOTEL:positiv"}
+{"text": "Das Zimmer war sehr sauber und gut ausgestattet. Sehr empfehlenswert!", "labels": "ZIMMER:positiv"}
+{"text": "Der Schrankraum könnte größer sein und die Dame an der Rezeption etwas verbindlicher - aber die Suite ist schon top.", "labels": "ZIMMER:negativ"}
+{"text": "Fazit: Sowohl für Geschäftsleute als auch Besucher der Stadt $CITY$ eine ideale Unterkunft mit sehr gutem Preis-/Leistungsverhältnis.", "labels": "HOTEL:positiv"}
+{"text": "Der $HOTEL$ liegt unmittelbar neben dem $CITY$er Dom, mithin in toller zentraler Lage.", "labels": "LAGE:positiv"}
+{"text": "Die Lüftung hat auch nicht funktioniert.", "labels": "HOTEL:negativ"}
+{"text": "Klimaanlage im Zimmer, sehr gutes und reichhaltiges Frühstücksbuffet.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Definitiv eine Empfehlung wert.", "labels": "HOTEL:positiv"}
+{"text": "Frühstück perfekt.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Die Hotelgarage ist preiswert und sicher.", "labels": "HOTEL:positiv"}
+{"text": "Der Service ist trotz einiger Restaurants rundum nett.", "labels": "SERVICE:positiv"}
+{"text": "Frühstück lässt keine Wünsche offen, insbesondere das frische Bircher Muesli.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Das Hotel ist leicht zu finden und in Fußnähe verbunden zur Innenstadt mit Einkaufszentrum,Altstadt und Donau.", "labels": "LAGE:positiv"}
+{"text": "Gerne würden wir öffter so gut nächtigen für diesen Preis.", "labels": "HOTEL:positiv"}
+{"text": "Die gute Erfahrung mit diesem Hotel fing bereits mit einem sehr freundlichen Empfang am Check-in an.", "labels": "HOTEL:positiv"}
+{"text": "Zimmer gut & sauber.", "labels": "ZIMMER:positiv"}
+{"text": "Gute Parkmöglichkeit (gratis).", "labels": "HOTEL:positiv"}
+{"text": "Wir waren von „$HOTEL$ Hotel“ und deren Team mal wieder begeistert! Toller Service, herrliches Zimmer und oberleckeres Frühstück, und nochmals toller Service durch ein sehr aufmerksames und freundliches Team.", "labels": "SERVICE:positiv"}
+{"text": "Oft ist die Tiefgarage auch noch komplett belegt und man muss zwischen Baufahrzeugen im Innenhof für 13 €/Tag parken.", "labels": "HOTEL:negativ"}
+{"text": "Super! Die Zimmer sind modern, tadellos und zweckmäßig eingerichtet.", "labels": "ZIMMER:positiv"}
+{"text": "Die Zimmer sind sehr geräumig, sauber und gut eingerichtet.", "labels": "ZIMMER:positiv"}
+{"text": "Nachdem ich vor einigen Jahren schon mal dort übernachtet habe, hat sich der Standart der Zimmer sehr verbessert.", "labels": "ZIMMER:positiv"}
+{"text": "Matratzen müssen ausgetauscht werden, gutes Frühstück mit großzügigem Buffet.", "labels": "ZIMMER:negativ"}
+{"text": "Freundliches Servicepersonal bei überschaubarem Frühstücksbuffet.", "labels": "SERVICE:positiv"}
+{"text": "Zimmer und Bad waren tip-top sauber.", "labels": "ZIMMER:positiv"}
+{"text": "Unser Zimmer (325) war gut ausgestattet und komfortabel. Ruhige fit für den Zweck, nichts Besonderes! Die Angestellten sind wirklich sehr freundlich und einladend.", "labels": "SERVICE:positiv"}
+{"text": "Das Frühstück für 12,50€ ist ok aber nichts besonderes.", "labels": "ESSEN&TRINKEN:neutral"}
+{"text": "WiFi war schnell.", "labels": "HOTEL:positiv"}
+{"text": "Die Lage des Hotels ist im Hinblick auf die Anbindungen gut.", "labels": "LAGE:positiv"}
+{"text": "Das Bad war sauber und ausreichend groß.", "labels": "ZIMMER:neutral"}
+{"text": "Hier gibt es volle 5 Sterne! Das Zimmer hätte sauberer sein können, Staub auf dem Tisch in den Steckdosen für Telefon wie auch auf dem Boden.", "labels": "ZIMMER:neutral"}
+{"text": "Wäre schöner gewesen, wenn man umgehend das Zimmer.", "labels": "ZIMMER:neutral"}
+{"text": "Abgesehen von der Parkplatz-Situation kann ich das Haus für Ihren Kurzaufenthalt gerne empfehlen.", "labels": "HOTEL:negativ"}
+{"text": "Tolles Ambiente, toller Service und ein gratisgetränk extra.", "labels": "HOTEL:positiv"}
+{"text": "Bad und Dusche waren sehr sauber und modern.", "labels": "ZIMMER:positiv"}
+{"text": "Die Rezeption war immer sehr hilfsbereit das Gepäck konnten wir am Abreisetag problemlos bis zum späten Nachmittag kostenlos unterstellen.", "labels": "SERVICE:positiv"}
+{"text": "Aufgrund einer Tagung hatte ich die Möglichkeit auch das Essen auszuprobieren, was sehr gut geschmeckt hat.", "labels": "ESSEN&TRINKEN:positiv"}
+{"text": "Wir haben mal wieder eine ruhige Nacht hier verbracht.", "labels": "ZIMMER:positiv"}
+{"text": "(Wenn auch immer mehr gespart wird : Süddeutsche Zeitung, Willkommensbier, die Übernachtungspreise bleiben meist im Rahmen).", "labels": "HOTEL:neutral"}
+{"text": "\"Hier hat man durch die schmale \"\"\"\"Strassenschlucht\"\"\"\" auf der Donauseite bei offenem Fenster mit Lärm zu rechnen.\"", "labels": "ZIMMER:negativ"}
+{"text": "In das Toilettenpapier könnte man ruhig ein paar cent mehr investieren.", "labels": "HOTEL:negativ"}
+{"text": "Den einen Punkt Abzug gibt es nur, weil die Zimmer keine Klimaanlage haben.", "labels": "ZIMMER:negativ"}
+{"text": "Die Zimmer sind ausreichend groß und modern und gehalten.", "labels": "ZIMMER:positiv"}
+{"text": "Gute Verbindung mit öffentlichen Verkehrsmitteln in die Stadt.", "labels": "LAGE:positiv"}
+{"text": "Dieses Jahr wurde wohl komplett renoviert.", "labels": "HOTEL:neutral"}
+{"text": "Aber sonst überhaupt nichts zu klagen, Gut geschlafen und danach ein knappes aber richtig ausreichendes Frühstück gehabt.", "labels": "ESSEN&TRINKEN:neutral"}
+{"text": "Einziges Manko: Die Zimmer in Richtung Süden heizen sich im Sommer etwas auf.", "labels": "ZIMMER:negativ"}
+{"text": "Dienst war bei einem kleinen Problem sehr schnell da und konnte helfen.", "labels": "SERVICE:positiv"}
+{"text": "Die Zimmer befinden sich in 3 unterschiedlichen Lagen: im Haupttrakt des Hotels zum Innenhof, im Haupttrakt zur Altstadtgasse Unter den Schwibbögen (mit moderatem Autoverkehr) und in der sog. Dependance im Trakt gegenüber unmittelbar an der Außenwand des Doms (wohl ohne Aussicht).", "labels": "ZIMMER:neutral"}
+{"text": "Unser Zimmer war tip top.", "labels": "ZIMMER:positiv"}
+{"text": "Es fährt ein Stadtbus.", "labels": "LAGE:neutral"}
+{"text": "Die Zimmer sind klein, aber für eine Person ideal bei zwei Personen ist es sehr eng, nur Platz für einen Koffer, nur ein Stuhl.", "labels": "ZIMMER:negativ"}
+{"text": "Bettqualität war ok.", "labels": "ZIMMER:neutral"}
+{"text": "Einziger kleiner Minuspunkt geht an die Zimmer die zur Straße hin liegen, hier sollte man das Fenster geschlossen halten, alles andere Top!", "labels": "LAGE:negativ"}
+{"text": "Tolle Lage, um die Stadt zu erkunden das Juwel, dass $CITY$ ist.", "labels": "LAGE:positiv"}
+{"text": "Alles soweit ok.", "labels": "HOTEL:neutral"}
+{"text": "Ein Anruf an der Rezeption brachte uns einen Ersatz Stuhl in 9 Minuten.", "labels": "SERVICE:positiv"}
+{"text": "Das Frühstück ist sehr reichhaltig, insbesondere die besonders freundliche Dame, die den Service macht gehört erwähnt - aber auch sonst ist alles freundlich und nett.", "labels": "SERVICE:positiv"}
+{"text": "Der See hinterm Hotel ist gerade mit Hund (oder auch ohne) schön zum spazieren gehen.", "labels": "LAGE:positiv"}
+{"text": "Die Tiefgarage ist gut befahrbar und sehr günstig.", "labels": "HOTEL:positiv"}
