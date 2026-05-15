@@ -66,4 +66,3 @@ cover/
 # experiment outputs
 database/*.sqlite
 database/*.db
-data/processed/*.jsonl
