@@ -1,0 +1,1487 @@
+{"tokens": ["bitte", "spiel", "meine", "beste", "musik"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["das", "ist", "eines", "der", "besten", "lieder"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["stell", "einen", "wecker", "für", "zwölf"], "tags": ["-", "-", "-", "-", "time"]}
+{"tokens": ["spiel", "ein", "bisschen", "coldplay"], "tags": ["-", "-", "-", "artist_name"]}
+{"tokens": ["den", "künstler", "des", "lieds", "bitte"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["wenn", "kommt", "meine", "bestellung", "an"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["verringere", "die", "helligkeit"], "tags": ["-", "-", "-"]}
+{"tokens": ["ich", "hätte", "jetzt", "lust", "auf", "etwas", "kaffee"], "tags": ["-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["stell", "einen", "wecker", "für", "zehn", "uhr"], "tags": ["-", "-", "-", "-", "time", "time"]}
+{"tokens": ["und", "das", "licht", "begann"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["olly", "ist", "es", "draußen", "am", "regnen"], "tags": ["-", "-", "-", "-", "weather_descriptor", "weather_descriptor"]}
+{"tokens": ["stell", "einen", "wecker", "für", "vier", "uhr", "am", "nachmittag"], "tags": ["-", "-", "-", "-", "time", "-", "-", "timeofday"]}
+{"tokens": ["benachrichtige", "mich", "um", "fünfzehn", "uhr", "dass", "ich", "zum", "konzert", "gehen", "soll"], "tags": ["-", "-", "-", "time", "time", "-", "-", "-", "event_name", "-", "-"]}
+{"tokens": ["wie", "ist", "das", "wetter", "in", "berlin"], "tags": ["-", "-", "-", "-", "-", "place_name"]}
+{"tokens": ["mach", "das", "licht", "an"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["setz", "die", "lichter", "auf", "volle", "kraft"], "tags": ["-", "-", "-", "change_amount", "change_amount", "change_amount"]}
+{"tokens": ["glücklich"], "tags": ["-"]}
+{"tokens": ["leiser"], "tags": ["-"]}
+{"tokens": ["ich", "habe", "heute", "einem", "armen", "hilflosen", "geholfen", "olly"], "tags": ["-", "-", "date", "-", "-", "-", "-", "-"]}
+{"tokens": ["kannst", "du", "mir", "die", "aktuelle", "zeit", "sagen"], "tags": ["-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["sag", "mir", "ob", "das", "nächste", "über", "das", "wetter", "stimt"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["prüfe", "die", "wetter", "app", "um", "zu", "shen", "ob"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["ändere", "meine", "zimmer", "lichter", "zu", "blau"], "tags": ["-", "-", "-", "-", "-", "color_type"]}
+{"tokens": ["was", "sind", "die", "letzten", "news"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["wird", "es", "heute", "regnen"], "tags": ["-", "-", "date", "weather_descriptor"]}
+{"tokens": ["ich", "möchte", "jazz", "hören"], "tags": ["-", "-", "music_genre", "-"]}
+{"tokens": ["was", "ist", "ein", "blöder", "witz", "den", "du", "kennst"], "tags": ["-", "-", "-", "joke_type", "-", "-", "-", "-"]}
+{"tokens": ["wie", "spät", "ist", "es", "in", "stockholm"], "tags": ["-", "-", "-", "-", "-", "place_name"]}
+{"tokens": ["wie", "spät", "ist", "es", "in", "köln"], "tags": ["-", "-", "-", "-", "-", "place_name"]}
+{"tokens": ["wie", "lange", "dauert", "es", "die", "bestellung", "vorzubereiten"], "tags": ["-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["ich", "brauche", "einen", "erinnerungswecker", "um", "eins"], "tags": ["-", "-", "-", "-", "-", "time"]}
+{"tokens": ["schalte", "einen", "wecker", "für", "neun", "uhr", "morgens", "ein"], "tags": ["-", "-", "-", "-", "time", "time", "time", "-"]}
+{"tokens": ["änderung", "der", "licht", "farbe"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["wiederhol", "das", "selbe", "lied", "zehn", "mal"], "tags": ["player_setting", "-", "-", "media_type", "-", "-"]}
+{"tokens": ["kann", "ich", "die", "fünfzig", "hits", "anhören", "die", "man", "jetzt", "in", "den", "radios", "hören", "kann"], "tags": ["-", "-", "-", "music_descriptor", "music_descriptor", "-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["lautstärke", "herunterdrehen"], "tags": ["-", "-"]}
+{"tokens": ["wie", "wird", "das", "wetter", "am", "dienstag", "sein"], "tags": ["-", "-", "-", "-", "-", "date", "-"]}
+{"tokens": ["zeige", "das", "wetter", "für", "die", "woche", "an"], "tags": ["-", "-", "-", "-", "-", "time", "-"]}
+{"tokens": ["ändere", "diese", "uhrzeit", "zu", "berlin"], "tags": ["-", "-", "-", "-", "place_name"]}
+{"tokens": ["geht", "der", "sommer", "weiter"], "tags": ["-", "-", "weather_descriptor", "-"]}
+{"tokens": ["sound", "von", "den", "lautsprechern", "aus"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["sage", "mir", "die", "neuesten", "nachrichten", "von", "sport", "bild"], "tags": ["-", "-", "-", "-", "-", "-", "media_type", "media_type"]}
+{"tokens": ["schalte", "den", "staubsaugerroboter", "ein"], "tags": ["-", "-", "device_type", "-"]}
+{"tokens": ["welche", "wecker", "sind", "jetzt", "gestellt"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["schalte", "das", "licht", "heller"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["essens", "bestellung", "von", "grubhub"], "tags": ["-", "-", "-", "app_name"]}
+{"tokens": ["spiel", "jetzt", "musik"], "tags": ["-", "-", "-"]}
+{"tokens": ["wie", "werden", "die", "temperaturen", "für", "die", "nächste", "woche", "sein"], "tags": ["-", "-", "-", "weather_descriptor", "-", "-", "date", "date", "-"]}
+{"tokens": ["speichere", "bitte", "dieses", "lied"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["ich", "will", "den", "wecker", "auf", "sechs", "uhr", "gestellt"], "tags": ["-", "-", "-", "-", "-", "time", "-", "-"]}
+{"tokens": ["aktuelle", "welt", "nachrichten"], "tags": ["-", "place_name", "-"]}
+{"tokens": ["öffne", "die", "heutigen", "nachrichten", "von", "n.", "t.", "v."], "tags": ["-", "date", "date", "-", "-", "media_type", "media_type", "media_type"]}
+{"tokens": ["öffne", "bitte", "die", "nachrichten", "app"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["jede", "classic", "music", "einzel", "irgendwelche", "spielen", "musik"], "tags": ["-", "music_genre", "-", "-", "-", "-", "-"]}
+{"tokens": ["dimme", "die", "beleuchtung", "vom", "wohnzimmer"], "tags": ["-", "-", "-", "-", "house_place"]}
+{"tokens": ["welche", "nachrichten", "hast", "du", "heute"], "tags": ["-", "-", "-", "-", "date"]}
+{"tokens": ["kannst", "du", "lieder", "über", "trennungen", "spielen"], "tags": ["-", "-", "-", "-", "music_descriptor", "-"]}
+{"tokens": ["spiel", "dieses", "lied", "nicht", "nochmal"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["gib", "mir", "das", "morgige", "wetterupdate"], "tags": ["-", "-", "date", "date", "-"]}
+{"tokens": ["gehe", "zu", "bild", "punkt", "d.", "e."], "tags": ["-", "-", "media_type", "media_type", "media_type", "media_type"]}
+{"tokens": ["spiel", "meine", "guten", "morgen", "playlist"], "tags": ["-", "-", "playlist_name", "playlist_name", "playlist_name"]}
+{"tokens": ["sage", "mir", "die", "heutige", "luftfeuchtigkeit", "in", "der", "innenstadt"], "tags": ["-", "-", "-", "date", "weather_descriptor", "-", "-", "place_name"]}
+{"tokens": ["nutze", "den", "staubsauger", "im", "flur"], "tags": ["-", "-", "device_type", "-", "house_place"]}
+{"tokens": ["habe", "ich", "irgendwelche", "musik", "von", "nena"], "tags": ["-", "-", "-", "-", "-", "artist_name"]}
+{"tokens": ["spiele", "meine", "playlist"], "tags": ["-", "-", "-"]}
+{"tokens": ["finde", "neue", "artikel", "zu", "trump", "von", "fox", "news"], "tags": ["-", "-", "-", "-", "news_topic", "-", "media_type", "media_type"]}
+{"tokens": ["spiele", "morgen", "rein", "in", "blood", "von", "slayer", "um", "fünf", "uhr", "morgens", "um", "sicher", "zu", "sein", "dass", "ich", "tatsächlich", "aufwache"], "tags": ["-", "date", "song_name", "song_name", "song_name", "-", "artist_name", "-", "time", "time", "-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["checke", "das", "wetter", "update", "für", "augsburg", "diese", "woche"], "tags": ["-", "-", "-", "-", "-", "place_name", "date", "date"]}
+{"tokens": ["ich", "möchte", "blaue", "beleuchtung"], "tags": ["-", "-", "color_type", "-"]}
+{"tokens": ["wiederhole", "dieses", "lied", "wenn", "es", "endet"], "tags": ["player_setting", "-", "-", "-", "-", "-"]}
+{"tokens": ["jetzt", "ist", "es", "wie", "spät", "in", "nürnberg"], "tags": ["-", "-", "-", "-", "-", "-", "place_name"]}
+{"tokens": ["hallo", "welche", "zeit", "ist", "jetzt"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["bitte", "informiere", "mich", "über", "das", "wetter", "dieser", "woche"], "tags": ["-", "-", "-", "-", "-", "-", "date", "date"]}
+{"tokens": ["nenn", "mir", "die", "aktuelle", "uhrzeit", "in", "der", "standard", "zeit"], "tags": ["-", "-", "-", "-", "-", "-", "-", "time_zone", "-"]}
+{"tokens": ["den", "stecker", "aus"], "tags": ["-", "-", "-"]}
+{"tokens": ["starte", "den", "smartstecker"], "tags": ["-", "-", "device_type"]}
+{"tokens": ["lauter"], "tags": ["-"]}
+{"tokens": ["spiel", "musik", "für", "mich"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["spiele", "lied", "deine", "wahl", "für", "mich"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["ich", "mag", "justin", "biebers", "musik", "bitte", "spiel", "sie"], "tags": ["-", "-", "artist_name", "artist_name", "-", "-", "-", "-"]}
+{"tokens": ["bitte", "lichter", "in", "ein", "mattes", "blau", "dimmen"], "tags": ["-", "-", "-", "-", "color_type", "color_type", "-"]}
+{"tokens": ["kannst", "du", "für", "mich", "die", "nachrichten", "von", "n.", "t.", "v.", "abspielen"], "tags": ["-", "-", "-", "-", "-", "-", "-", "media_type", "media_type", "media_type", "-"]}
+{"tokens": ["spiel", "musik", "von", "taylor", "swift"], "tags": ["-", "-", "-", "artist_name", "artist_name"]}
+{"tokens": ["olly", "bereite", "mit", "einen", "kaffee", "zu"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["mehr", "licht", "bitte"], "tags": ["-", "-", "-"]}
+{"tokens": ["speichere", "bitte", "dieses", "lied"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["sei", "still"], "tags": ["-", "-"]}
+{"tokens": ["sei", "leise"], "tags": ["-", "-"]}
+{"tokens": ["wetter"], "tags": ["-"]}
+{"tokens": ["ich", "würde", "gern", "einen", "veggie", "sub", "und", "einen", "keks", "von", "subway", "mitnehmen"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "order_type"]}
+{"tokens": ["mache", "eine", "takeaway", "bestellung", "für", "einen", "cheeseburger", "mit", "pommes", "von", "burger", "king"], "tags": ["-", "-", "order_type", "-", "-", "-", "food_type", "food_type", "food_type", "-", "business_name", "business_name"]}
+{"tokens": ["spiel", "die", "neue", "platte", "von", "lena"], "tags": ["-", "-", "-", "-", "-", "artist_name"]}
+{"tokens": ["ausschalten", "der", "wohnzimmer", "lichter"], "tags": ["-", "-", "house_place", "-"]}
+{"tokens": ["spiele", "einige", "rammstein", "musik"], "tags": ["-", "-", "artist_name", "-"]}
+{"tokens": ["um", "wie", "viel", "uhr", "kann", "ich", "mein", "essen", "abholen"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "order_type"]}
+{"tokens": ["mach", "mir", "einen", "cappuccino"], "tags": ["-", "-", "-", "coffee_type"]}
+{"tokens": ["sag", "mir", "einen", "guten", "doktor", "witz"], "tags": ["-", "-", "-", "-", "joke_type", "-"]}
+{"tokens": ["wie", "lautet", "das", "aktuelle", "datum", "heute"], "tags": ["-", "-", "-", "-", "-", "date"]}
+{"tokens": ["speichere", "meine", "meinung", "zu", "dem", "lied", "welches", "gerade", "läuft"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["auswahl", "von", "restaurants"], "tags": ["-", "-", "-"]}
+{"tokens": ["preis"], "tags": ["-"]}
+{"tokens": ["nein", "dreh", "es", "runter"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["alle", "lichter", "sollen", "während", "des", "tages", "ausgeschaltet", "sein"], "tags": ["device_type", "device_type", "-", "time", "time", "time", "-", "-"]}
+{"tokens": ["wie", "kalt", "wird", "es", "am", "dienstag", "sein"], "tags": ["-", "weather_descriptor", "-", "-", "-", "date", "-"]}
+{"tokens": ["welcher", "musik", "service", "hat", "soul", "musik", "die", "ich", "anhören", "kann"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["wer", "ist", "der", "künstler", "des", "aktuellen", "liedes"], "tags": ["-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["wie", "wird", "die", "wetterlage", "in", "den", "nächsten", "sieben", "tagen", "sein"], "tags": ["-", "-", "-", "-", "-", "-", "time", "time", "time", "-"]}
+{"tokens": ["spiele", "nur", "rock", "songs"], "tags": ["-", "-", "music_genre", "-"]}
+{"tokens": ["starte", "musik", "in", "der", "playlist"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["alexa", "großartiges", "lied", "zum", "pendeln"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["welche", "nachrichten", "hat", "r.", "t.", "l.", "aktuell"], "tags": ["-", "-", "-", "media_type", "media_type", "media_type", "media_type"]}
+{"tokens": ["mach", "die", "discobeleuchtung", "an"], "tags": ["-", "-", "device_type", "-"]}
+{"tokens": ["was", "hat", "sie", "gerade", "gesungen"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["ausschalten", "vom", "schlafzimmer", "licht"], "tags": ["-", "-", "house_place", "-"]}
+{"tokens": ["gib", "mir", "einen", "überblick", "über", "das", "heutige", "fußball", "spiel"], "tags": ["-", "-", "-", "-", "-", "date", "date", "news_topic", "news_topic"]}
+{"tokens": ["aktiviere", "den", "staubsauger"], "tags": ["-", "-", "device_type"]}
+{"tokens": ["gib", "mir", "die", "nachrichten", "zum", "bayern", "gegen", "leipzig", "spiel"], "tags": ["-", "-", "-", "-", "-", "news_topic", "news_topic", "news_topic", "news_topic"]}
+{"tokens": ["wenn", "es", "neuigkeiten", "über", "die", "politik", "gibt", "welche", "sind", "das"], "tags": ["-", "-", "-", "-", "-", "news_topic", "-", "-", "-", "-"]}
+{"tokens": ["schalte", "ganz", "schnell", "meinen", "staubsaugerroboter", "ein"], "tags": ["-", "-", "-", "-", "device_type", "-"]}
+{"tokens": ["hallo", "wie", "geht", "es", "dir"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["welche", "musik", "spielt", "gerade"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["aktueller", "status", "der", "mitnahme", "bestellung"], "tags": ["-", "-", "-", "order_type", "-"]}
+{"tokens": ["ich", "brauche", "die", "beleuchtung", "nicht"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["bring", "meinen", "iroomba", "dazu", "das", "wohnzimmer", "zu", "reinigen"], "tags": ["-", "-", "device_type", "-", "-", "house_place", "-", "-"]}
+{"tokens": ["spiel", "mir", "etwas", "jazz"], "tags": ["-", "-", "-", "music_genre"]}
+{"tokens": ["sage", "mir", "das", "dieswöchige", "wetter"], "tags": ["-", "-", "-", "date", "-"]}
+{"tokens": ["einschalten", "aller", "lichter"], "tags": ["-", "-", "-"]}
+{"tokens": ["stell", "einen", "wecker", "für", "morgen", "sechs", "uhr"], "tags": ["-", "-", "-", "-", "date", "time", "time"]}
+{"tokens": ["aufhellen", "mehr", "licht"], "tags": ["-", "-", "-"]}
+{"tokens": ["ist", "etwas", "interessantes", "in", "der", "welt", "passiert"], "tags": ["-", "-", "-", "-", "-", "place_name", "-"]}
+{"tokens": ["gib", "mir", "informationen", "über", "dieses", "lied"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["stell", "einen", "wecker"], "tags": ["-", "-", "-"]}
+{"tokens": ["was", "ist", "der", "zeitunterschied", "von", "neun", "uhr", "c.", "s.", "t.", "und", "e.", "s.", "t."], "tags": ["-", "-", "-", "-", "-", "time", "time", "place_name", "place_name", "place_name", "-", "place_name", "place_name", "place_name"]}
+{"tokens": ["bestelle", "das", "günstigste", "tofu", "im", "nyack"], "tags": ["-", "-", "-", "food_type", "-", "business_name"]}
+{"tokens": ["wie", "viele", "kilometer", "maximal", "noch", "bis", "zur", "zustellung"], "tags": ["-", "-", "-", "-", "-", "-", "-", "order_type"]}
+{"tokens": ["stelle", "einen", "alarm", "in", "zwölf", "wochen", "ab", "heute", "um", "acht", "uhr", "ein"], "tags": ["-", "-", "-", "-", "time", "time", "time", "time", "-", "time", "time", "-"]}
+{"tokens": ["mach", "kaffee", "um", "sechs", "uhr"], "tags": ["-", "-", "-", "time", "time"]}
+{"tokens": ["schick", "mir", "links", "zu", "nachrichtenartikeln", "über", "den", "protest"], "tags": ["-", "-", "-", "-", "-", "-", "-", "news_topic"]}
+{"tokens": ["ist", "es", "gerade", "am", "regnen"], "tags": ["-", "-", "-", "weather_descriptor", "weather_descriptor"]}
+{"tokens": ["am", "musikplayer", "die", "lautstärke", "auf", "sechzig", "prozent", "einstellen"], "tags": ["-", "device_type", "-", "-", "-", "change_amount", "-", "-"]}
+{"tokens": ["wer", "ist", "der", "künstler"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["ich", "möchte", "einen", "nachrichtenüberblick", "von", "der", "frankfurter", "rundschau"], "tags": ["-", "-", "-", "-", "-", "-", "media_type", "media_type"]}
+{"tokens": ["ich", "brauche", "mehr", "licht"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["wie", "ist", "gerade", "das", "wetter", "in", "kreuzberg"], "tags": ["-", "-", "-", "-", "-", "-", "place_name"]}
+{"tokens": ["verrate", "mir", "die", "uhrzeit", "in", "ungarn"], "tags": ["-", "-", "-", "-", "-", "place_name"]}
+{"tokens": ["lautstärke", "lauter", "leiser"], "tags": ["-", "-", "-"]}
+{"tokens": ["gibt", "es", "irgendwelche", "eilmeldungen", "von", "c.", "n.", "n."], "tags": ["-", "-", "-", "-", "-", "media_type", "media_type", "media_type"]}
+{"tokens": ["mache", "einen", "alarm", "für", "mich", "morgen", "fünf", "uhr"], "tags": ["-", "-", "-", "-", "-", "date", "time", "time"]}
+{"tokens": ["was", "ist", "mit", "meiner", "pizza", "passiert", "es", "ist", "eine", "stunde", "her", "dass", "ich", "bestellt", "habe"], "tags": ["-", "-", "-", "-", "food_type", "-", "-", "-", "-", "time", "-", "-", "-", "-", "-"]}
+{"tokens": ["okay", "google", "füge", "eine", "meldung", "von", "wetter", "d.", "e.", "zum", "wetter", "hinzu"], "tags": ["-", "-", "-", "-", "-", "-", "media_type", "media_type", "media_type", "-", "news_topic", "-"]}
+{"tokens": ["bei", "mcdonalds", "bestellen"], "tags": ["-", "business_name", "-"]}
+{"tokens": ["aktuelles", "datum", "bitte"], "tags": ["-", "-", "-"]}
+{"tokens": ["erzähl", "mir", "vom", "klima"], "tags": ["-", "-", "-", "news_topic"]}
+{"tokens": ["öffne", "die", "lokale", "nachrichten", "app"], "tags": ["-", "-", "media_type", "media_type", "-"]}
+{"tokens": ["spiele", "fünfzig", "lieder", "die", "ich", "am", "meisten", "höre"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["dieses", "lied", "ist", "mein", "favorit"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["spiel", "meine", "lieblingslieder", "ab"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["ich", "möchte", "den", "stecker", "nicht", "mehr", "verwenden"], "tags": ["-", "-", "-", "device_type", "-", "-", "-"]}
+{"tokens": ["bestelle", "zwei", "normale", "käse", "und", "eine", "normale", "salami", "pizza", "von", "call", "a", "pizza"], "tags": ["-", "-", "-", "food_type", "-", "-", "-", "food_type", "food_type", "-", "business_name", "business_name", "business_name"]}
+{"tokens": ["ich", "mag", "diese", "farben", "nicht", "im", "haus"], "tags": ["-", "-", "-", "-", "-", "-", "house_place"]}
+{"tokens": ["stelle", "einen", "wecker", "um", "fünf", "uhr", "dreißig"], "tags": ["-", "-", "-", "-", "time", "time", "time"]}
+{"tokens": ["ich", "möchte", "kaffee", "von", "der", "maschine"], "tags": ["-", "-", "-", "-", "-", "device_type"]}
+{"tokens": ["zeige", "mir", "nachrichten", "von", "c.", "n.", "n.", "von", "heute"], "tags": ["-", "-", "-", "-", "media_type", "media_type", "media_type", "-", "-"]}
+{"tokens": ["ich", "muss", "die", "farbe", "von", "diesem", "licht", "ändern"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["starte", "musik"], "tags": ["-", "-"]}
+{"tokens": ["ich", "würde", "gern", "essen", "zum", "mitnehmen", "bestellen"], "tags": ["-", "-", "-", "order_type", "order_type", "order_type", "-"]}
+{"tokens": ["starte", "die", "wiedergabe", "von", "jazz", "musik"], "tags": ["-", "-", "-", "-", "music_genre", "-"]}
+{"tokens": ["an", "welchem", "wochentag", "ist", "der", "zehnte", "märz"], "tags": ["-", "-", "-", "-", "-", "date", "date"]}
+{"tokens": ["auch", "ein", "vergnügen"], "tags": ["-", "-", "-"]}
+{"tokens": ["was", "ist", "die", "fünf", "tage", "vorhersage", "in", "hamburg"], "tags": ["-", "-", "-", "date", "date", "-", "-", "place_name"]}
+{"tokens": ["spiel", "das", "lied", "over", "the", "rainbow"], "tags": ["-", "-", "-", "song_name", "song_name", "song_name"]}
+{"tokens": ["koche", "mir", "eine", "tasse", "kaffee"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["schalte", "die", "lichter", "im", "wohnzimmer", "auf", "ein", "prozent"], "tags": ["-", "-", "-", "-", "house_place", "change_amount", "change_amount", "change_amount"]}
+{"tokens": ["starte", "den", "staubsauger", "um", "neun", "uhr"], "tags": ["-", "-", "device_type", "-", "time", "time"]}
+{"tokens": ["was", "ist", "mit", "meiner", "bestellung"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["wann", "wird", "meine", "bestellung", "bei", "maria", "bonita", "geliefert"], "tags": ["-", "-", "-", "-", "-", "business_name", "business_name", "-"]}
+{"tokens": ["spiele", "atmosphere", "nach", "diesem", "song"], "tags": ["-", "song_name", "-", "-", "-"]}
+{"tokens": ["alexa", "spiel", "meine", "zweite", "playlist"], "tags": ["-", "-", "-", "playlist_name", "playlist_name"]}
+{"tokens": ["spiel", "musik", "die", "zur", "musik", "die", "ich", "heute", "morgen", "gehört", "habe", "passt"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "timeofday", "-", "-", "-"]}
+{"tokens": ["liefert", "dominoes"], "tags": ["-", "business_name"]}
+{"tokens": ["bitte", "sag", "mir", "das", "wetter"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["setze", "den", "wecker", "zurück"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["was", "ist", "die", "neueste", "schlagzeile", "von", "dieser", "nachrichtenquelle"], "tags": ["-", "-", "-", "-", "-", "-", "-", "media_type"]}
+{"tokens": ["ich", "hätte", "diesen", "wecker", "gern", "dauerhaft", "entfernt"], "tags": ["-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["bestelle", "mir", "etwas", "von", "mc", "donalds"], "tags": ["-", "-", "-", "-", "business_name", "business_name"]}
+{"tokens": ["bestelle", "mir", "chicken", "nuggets", "von", "mc", "donalds"], "tags": ["-", "-", "food_type", "food_type", "-", "business_name", "business_name"]}
+{"tokens": ["spiel", "ein", "song"], "tags": ["-", "-", "-"]}
+{"tokens": ["spiele", "etwas", "rock", "musik"], "tags": ["-", "-", "music_genre", "-"]}
+{"tokens": ["spiel", "die", "klassische", "musikplaylist"], "tags": ["-", "-", "music_genre", "-"]}
+{"tokens": ["stell", "einen", "wecker", "um", "acht", "uhr", "morgens", "nächsten", "dienstag"], "tags": ["-", "-", "-", "-", "time", "time", "-", "-", "date"]}
+{"tokens": ["ist", "der", "krieg", "in", "syrien", "zu", "ende"], "tags": ["-", "-", "news_topic", "-", "place_name", "-", "-"]}
+{"tokens": ["hey", "kannst", "du", "mir", "bitte", "einen", "cremigen", "kaffee", "machen"], "tags": ["-", "-", "-", "-", "-", "-", "coffee_type", "-", "-"]}
+{"tokens": ["ich", "möchte", "lied", "eins", "anhören"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["mach", "mir", "bitte", "einen", "kaffee"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["stell", "einen", "wecker", "für", "morgen", "mittag"], "tags": ["-", "-", "-", "-", "date", "timeofday"]}
+{"tokens": ["wecker", "für", "den", "sechsten", "juni", "zweitausendundsiebzehn", "um", "fünf", "uhr", "morgens", "einstellen"], "tags": ["-", "-", "-", "date", "date", "date", "-", "time", "time", "-", "-"]}
+{"tokens": ["weißt", "du", "ob", "es", "heute", "regnen", "soll"], "tags": ["-", "-", "-", "-", "date", "weather_descriptor", "-"]}
+{"tokens": ["lösche", "den", "wecker", "für", "den", "zehnten", "märz", "zweitausendsiebzehn"], "tags": ["-", "-", "-", "-", "-", "date", "date", "date"]}
+{"tokens": ["bitte", "speicher", "meine", "bewertung", "für", "dieses", "lied", "es", "sind", "fünf", "sterne"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["entferne", "alle", "für", "heute", "eingestellten", "wecker"], "tags": ["-", "-", "-", "date", "-", "-"]}
+{"tokens": ["olly", "liefert", "das", "neue", "chinesische", "restaurant"], "tags": ["-", "-", "-", "-", "food_type", "business_type"]}
+{"tokens": ["wie", "ist", "das", "wetter", "in", "münchen"], "tags": ["-", "-", "-", "-", "-", "place_name"]}
+{"tokens": ["finde", "die", "neusten", "artikel", "zu", "robin", "alexander", "in", "der", "bild"], "tags": ["-", "-", "-", "-", "-", "person", "person", "-", "-", "media_type"]}
+{"tokens": ["schalte", "bitte", "den", "wemo", "stecker", "aus"], "tags": ["-", "-", "-", "device_type", "device_type", "-"]}
+{"tokens": ["was", "ist", "die", "uhrzeit", "in", "gotha"], "tags": ["-", "-", "-", "-", "-", "place_name"]}
+{"tokens": ["ich", "liebe", "zydeco", "jams"], "tags": ["-", "-", "music_genre", "music_genre"]}
+{"tokens": ["olly", "welche", "zeit", "ist", "es", "in", "hessen"], "tags": ["-", "-", "-", "-", "-", "-", "place_name"]}
+{"tokens": ["hast", "du", "irgendwelche", "updates", "über", "trump"], "tags": ["-", "-", "-", "-", "-", "news_topic"]}
+{"tokens": ["kannst", "du", "mir", "jetzt", "einen", "kaffee", "machen"], "tags": ["-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["bitte", "informiere", "mich", "über", "die", "aktuellen", "nachrichten", "aus", "der", "süddeutschen", "zeitung"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "media_type", "media_type"]}
+{"tokens": ["schalte", "bitte", "den", "wecker", "aus"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["spiel", "es", "lauter"], "tags": ["-", "-", "-"]}
+{"tokens": ["erstelle", "eine", "liste", "und", "spiele", "alle", "songs", "von", "diesem", "künstler"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["koche", "mir", "etwas", "kaffee"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["ich", "muss", "um", "sieben", "uhr", "aufstehen"], "tags": ["-", "-", "-", "time", "time", "-"]}
+{"tokens": ["wechsle", "zu", "meiner", "workout", "playlist"], "tags": ["-", "-", "-", "playlist_name", "playlist_name"]}
+{"tokens": ["laut"], "tags": ["-"]}
+{"tokens": ["kannst", "du", "mir", "die", "temperatur", "für", "samstag", "nacht", "sagen"], "tags": ["-", "-", "-", "-", "weather_descriptor", "-", "date", "timeofday", "-"]}
+{"tokens": ["schalte", "die", "lichter", "im", "badezimmer", "aus"], "tags": ["-", "-", "-", "-", "house_place", "-"]}
+{"tokens": ["anmachen", "von", "diesem", "schalter"], "tags": ["-", "-", "-", "device_type"]}
+{"tokens": ["die", "lautstärke", "an", "den", "lautsprechern", "verringern"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["stell", "einen", "wecker", "für", "neun", "uhr"], "tags": ["-", "-", "-", "-", "time", "time"]}
+{"tokens": ["wie", "wird", "das", "wetter", "morgen", "in", "berlin"], "tags": ["-", "-", "-", "-", "date", "-", "place_name"]}
+{"tokens": ["wetter", "für", "morgen"], "tags": ["-", "-", "date"]}
+{"tokens": ["neueste", "nachrichten", "an", "ortcars"], "tags": ["-", "-", "-", "news_topic"]}
+{"tokens": ["ich", "muss", "den", "wecker", "für", "die", "kirche", "sonntags", "um", "elf", "uhr", "löschen"], "tags": ["-", "-", "-", "-", "-", "-", "-", "date", "-", "time", "time", "-"]}
+{"tokens": ["kannst", "du", "nach", "chinesischem", "essen", "zum", "mitnehmen", "hier", "in", "der", "nähe", "gucken"], "tags": ["-", "-", "-", "food_type", "order_type", "order_type", "order_type", "-", "-", "-", "-", "-"]}
+{"tokens": ["wird", "es", "morgen", "sonnig"], "tags": ["-", "-", "date", "weather_descriptor"]}
+{"tokens": ["was", "sind", "die", "neusten", "regionalnachrichten"], "tags": ["-", "-", "-", "-", "media_type"]}
+{"tokens": ["kannst", "du", "sarah", "connor", "anmachen"], "tags": ["-", "-", "artist_name", "artist_name", "-"]}
+{"tokens": ["kann", "ich", "vapiano", "to", "go", "bestellen"], "tags": ["-", "-", "business_name", "-", "-", "-"]}
+{"tokens": ["wie", "viele", "stunden", "in", "stockholm", "voraus"], "tags": ["-", "-", "-", "-", "place_name", "-"]}
+{"tokens": ["ändere", "meine", "alarme", "zur", "standardzeit"], "tags": ["-", "-", "-", "-", "time_zone"]}
+{"tokens": ["was", "sind", "neuigkeiten", "in", "meiner", "nähe"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["wann", "ist", "der", "nächste", "feiertag"], "tags": ["-", "-", "-", "event_name", "event_name"]}
+{"tokens": ["weiß"], "tags": ["color_type"]}
+{"tokens": ["ändere", "bitte", "die", "farbe", "der", "lichter", "ich", "werde", "die", "sagen", "wann", "du", "aufhören", "sollst"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["bietet", "dieses", "lokal", "essen", "zum", "mitnehmen", "an"], "tags": ["-", "-", "-", "order_type", "order_type", "order_type", "-"]}
+{"tokens": ["aktiviere", "den", "staubsaugerroboter"], "tags": ["-", "-", "device_type"]}
+{"tokens": ["stelle", "meine", "lautsprecher", "auf", "lautlos", "für", "eine", "minute", "ich", "muss", "einen", "anruf", "machen"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["was", "wird", "morgen", "die", "höchsttemperatur", "in", "köln", "sein"], "tags": ["-", "-", "date", "-", "-", "-", "place_name", "-"]}
+{"tokens": ["welche", "wecker", "sind", "auf", "dem", "handy", "gestellt"], "tags": ["-", "-", "-", "-", "-", "device_type", "-"]}
+{"tokens": ["bitte", "abonniere", "für", "mich", "updates", "für", "aktuelle", "nachrichten"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["hey", "siri", "erzähle", "mir", "von", "den", "heutigen", "nachrichten"], "tags": ["-", "-", "-", "-", "-", "-", "date", "-"]}
+{"tokens": ["hey", "olly", "hast", "du", "zuletzt", "irgendwelche", "lustigen", "witze", "gehört"], "tags": ["-", "-", "-", "-", "-", "-", "joke_type", "-", "-"]}
+{"tokens": ["könntest", "du", "bitte", "das", "wetter", "in", "köln", "prüfen"], "tags": ["-", "-", "-", "-", "-", "-", "place_name", "-"]}
+{"tokens": ["stell", "meine", "uhr", "von", "meiner", "aktuellen", "zeitzone", "auf", "die", "zentrale", "zeitzone", "um"], "tags": ["-", "-", "-", "-", "time_zone", "time_zone", "time_zone", "-", "-", "time_zone", "-", "-"]}
+{"tokens": ["kann", "ich", "wissen", "wie", "spät", "es", "ist"], "tags": ["-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["wie", "ist", "jetzt", "das", "wetter"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["lautstärke", "aufdrehen"], "tags": ["-", "-"]}
+{"tokens": ["wie", "viele", "witze", "kennst", "du"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["i", "wie", "top", "vierzig", "musik"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["ich", "mag", "soft", "rock", "musik"], "tags": ["-", "-", "music_genre", "music_genre", "-"]}
+{"tokens": ["sprich", "lauter"], "tags": ["-", "-"]}
+{"tokens": ["bitte", "finden", "für", "mich", "die", "neuesten", "nachrichten", "über"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["wie", "ist", "die", "uhrzeit", "in", "dortmund"], "tags": ["-", "-", "-", "-", "-", "place_name"]}
+{"tokens": ["verrate", "mir", "die", "zeit", "in", "paris"], "tags": ["-", "-", "-", "-", "-", "place_name"]}
+{"tokens": ["welches", "lied", "höre", "ich", "gerade"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["welcher", "tag", "ist", "der", "zweiundzwanzigste"], "tags": ["-", "-", "-", "-", "time"]}
+{"tokens": ["spiel", "meine", "trainingsplaylist", "auf", "spotify"], "tags": ["-", "-", "playlist_name", "-", "app_name"]}
+{"tokens": ["kann", "ich", "sandalen", "anziehen"], "tags": ["-", "-", "weather_descriptor", "-"]}
+{"tokens": ["um", "welche", "zeit", "wird", "mich", "mein", "alarm", "wecken"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["verschiebe", "meinen", "wecker", "um", "fünfzehn", "minuten"], "tags": ["-", "-", "-", "-", "time", "time"]}
+{"tokens": ["bitte", "einstellungen", "entmuten"], "tags": ["-", "-", "-"]}
+{"tokens": ["ich", "möchte", "wissen", "wie", "spät", "es", "ist"], "tags": ["-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["wann", "ist", "meine", "bestellung", "fertig"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["wie", "nah", "sind", "wir", "an", "zwanzig", "uhr"], "tags": ["-", "-", "-", "-", "-", "time", "time"]}
+{"tokens": ["wie", "viel", "uhr", "ist", "es", "in", "der", "schweiz"], "tags": ["-", "-", "-", "-", "-", "-", "-", "place_name"]}
+{"tokens": ["wie", "lautet", "die", "beschreibung", "für", "den", "um", "elf", "uhr", "gestellten", "wecker"], "tags": ["-", "-", "-", "-", "-", "-", "-", "time", "time", "-", "-"]}
+{"tokens": ["was", "sind", "jetzt", "gerade", "die", "großen", "berichte", "in", "der", "frankfurter", "rundschau"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "media_type", "media_type"]}
+{"tokens": ["erzähle", "mir", "die", "top", "berichte", "aus", "der", "frankfurter", "allgemeine"], "tags": ["-", "-", "-", "-", "-", "-", "-", "media_type", "media_type"]}
+{"tokens": ["bestelle", "eine", "normale", "pizza", "mit", "pepperoni", "und", "bacon"], "tags": ["-", "-", "-", "food_type", "-", "food_type", "food_type", "food_type"]}
+{"tokens": ["spiel", "die", "playlist", "postal", "service"], "tags": ["-", "-", "-", "playlist_name", "playlist_name"]}
+{"tokens": ["kannst", "du", "meine", "zeit", "zone", "zu", "mitteleuropa", "ändern"], "tags": ["-", "-", "-", "-", "-", "-", "time_zone", "-"]}
+{"tokens": ["ich", "möchte", "essen", "zum", "mitnehmen", "bestellen"], "tags": ["-", "-", "order_type", "order_type", "order_type", "-"]}
+{"tokens": ["suche", "nach", "berichten", "über", "trump"], "tags": ["-", "-", "-", "-", "person"]}
+{"tokens": ["wir", "die", "temperatur", "morgen", "über", "fünfzig", "sein"], "tags": ["-", "-", "weather_descriptor", "date", "weather_descriptor", "weather_descriptor", "-"]}
+{"tokens": ["spiel", "etwas", "klassische", "rockmusik", "bevor", "ich", "durchdrehe"], "tags": ["-", "-", "music_genre", "music_genre", "-", "-", "-"]}
+{"tokens": ["ist", "die", "pizza", "bald", "hier"], "tags": ["-", "-", "food_type", "-", "-"]}
+{"tokens": ["mache", "bitte", "die", "lichter", "blau"], "tags": ["-", "-", "-", "-", "color_type"]}
+{"tokens": ["stell", "einen", "wecker", "für", "donnerstag", "um", "sieben", "uhr", "abends", "ein"], "tags": ["-", "-", "-", "-", "date", "-", "time", "time", "time", "-"]}
+{"tokens": ["was", "ist", "der", "status", "meiner", "essens", "bestellung"], "tags": ["-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["feuer", "in", "münchen", "bayern"], "tags": ["news_topic", "-", "place_name", "place_name"]}
+{"tokens": ["brauche", "ich", "heute", "sonnencreme"], "tags": ["-", "-", "date", "weather_descriptor"]}
+{"tokens": ["ich", "möchte", "das", "unk", "lied", "unk", "hören"], "tags": ["-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["kannst", "du", "musik", "von", "kraftwerk", "spielen"], "tags": ["-", "-", "-", "-", "artist_name", "-"]}
+{"tokens": ["was", "ist", "der", "nächste", "alarm", "bitte"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["ist", "es", "mittag", "in", "köln"], "tags": ["-", "-", "timeofday", "-", "place_name"]}
+{"tokens": ["prüfe", "die", "neuesten", "nachrichten"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["was", "ist", "mein", "meistgespieltes", "lied"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["wie", "ist", "das", "wetter", "heute"], "tags": ["-", "-", "-", "-", "date"]}
+{"tokens": ["was", "ist", "die", "derzeitige", "temperatur", "draußen"], "tags": ["-", "-", "-", "-", "weather_descriptor", "-"]}
+{"tokens": ["spiel", "reinhard", "mey"], "tags": ["-", "artist_name", "artist_name"]}
+{"tokens": ["rock", "von", "herbert", "grönemeyer"], "tags": ["music_genre", "-", "-", "artist_name"]}
+{"tokens": ["besorg", "mir", "die", "aktuellen", "nachrichten"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["ausmachen", "der", "lichter", "im", "schlafzimmer", "zwei"], "tags": ["-", "-", "-", "-", "house_place", "house_place"]}
+{"tokens": ["meine", "bewertung"], "tags": ["-", "-"]}
+{"tokens": ["medien", "lautstärke", "runter"], "tags": ["-", "-", "-"]}
+{"tokens": ["heutige", "witze"], "tags": ["date", "-"]}
+{"tokens": ["temperatur", "in", "münchen", "bayern"], "tags": ["weather_descriptor", "-", "place_name", "place_name"]}
+{"tokens": ["mussd", "den", "regenschirm", "heute", "abend", "mitnehmen"], "tags": ["-", "-", "weather_descriptor", "timeofday", "timeofday", "-"]}
+{"tokens": ["brauche", "ich", "diesen", "nachmittag", "eine", "jacke"], "tags": ["-", "-", "timeofday", "timeofday", "-", "weather_descriptor"]}
+{"tokens": ["wecker", "zeit", "zwölf", "uhr"], "tags": ["-", "-", "time", "time"]}
+{"tokens": ["etwas", "soft", "jazz", "spielen"], "tags": ["-", "music_genre", "music_genre", "-"]}
+{"tokens": ["empfiehl", "künstlerinnen", "ähnlich", "zu", "helene", "fischer"], "tags": ["-", "-", "-", "-", "artist_name", "artist_name"]}
+{"tokens": ["stelle", "einen", "wecker", "für", "sechs", "uhr", "ein"], "tags": ["-", "-", "-", "-", "time", "time", "-"]}
+{"tokens": ["die", "zeit"], "tags": ["-", "-"]}
+{"tokens": ["siri", "lösche", "meine", "wecker", "für", "yoga"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["spiele", "thinking", "out", "loud", "jetzt"], "tags": ["-", "song_name", "song_name", "song_name", "-"]}
+{"tokens": ["lösche", "wecker", "wenn", "es", "welche", "gibt"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["flut", "im", "artal"], "tags": ["news_topic", "news_topic", "news_topic"]}
+{"tokens": ["gib", "mir", "bitte", "das", "heutige", "datum"], "tags": ["-", "-", "-", "-", "date", "-"]}
+{"tokens": ["mehr", "lautstärke", "bitte"], "tags": ["-", "-", "-"]}
+{"tokens": ["ich", "möchte", "klassische", "musik", "hören"], "tags": ["-", "-", "music_genre", "-", "-"]}
+{"tokens": ["informiere", "mich", "wenn", "es", "eilmeldungen", "bei", "n.", "t.", "v.", "gibt"], "tags": ["-", "-", "-", "-", "-", "-", "media_type", "media_type", "media_type", "-"]}
+{"tokens": ["füge", "dieses", "lied", "zu", "meiner", "musik", "hinzu"], "tags": ["-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["persönlicher", "digitaler", "assistent"], "tags": ["-", "-", "-"]}
+{"tokens": ["zeige", "mir", "nachrichten", "zu", "migration"], "tags": ["-", "-", "-", "-", "news_topic"]}
+{"tokens": ["gegenwärtige", "zeit", "in", "berlin"], "tags": ["-", "-", "-", "place_name"]}
+{"tokens": ["mach", "das", "licht", "etwas", "dunkler"], "tags": ["-", "-", "-", "change_amount", "-"]}
+{"tokens": ["bitte", "zeige", "mir", "details", "zum", "vorherigen", "lied"], "tags": ["-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["irgendwas", "das", "ich", "wissen", "muss"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["schalte", "bitte", "den", "wemo", "stecker", "aus"], "tags": ["-", "-", "-", "device_type", "device_type", "-"]}
+{"tokens": ["schön"], "tags": ["-"]}
+{"tokens": ["sollte", "ich", "jetzt", "einen", "regenschirm", "mitnehmen"], "tags": ["-", "-", "-", "-", "weather_descriptor", "-"]}
+{"tokens": ["alexa", "bitte", "die", "beleuchtung", "einschalten"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["wie", "viele", "stunden", "noch", "bis", "mittags"], "tags": ["-", "-", "-", "-", "-", "time"]}
+{"tokens": ["was", "sind", "die", "neuesten", "nachrichten", "zur", "gesundheitsreform"], "tags": ["-", "-", "-", "-", "-", "-", "news_topic"]}
+{"tokens": ["erzähl", "mir", "einen", "witz"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["erzähle", "einen", "witz"], "tags": ["-", "-", "-"]}
+{"tokens": ["speichere", "dieses", "lied"], "tags": ["-", "-", "-"]}
+{"tokens": ["sag", "mir", "ob", "für", "das", "treffen", "dienstags", "ein", "wecker", "gestellt", "ist"], "tags": ["-", "-", "-", "-", "-", "event_name", "date", "-", "-", "-", "-"]}
+{"tokens": ["stell", "einen", "wecker", "auf", "zwei", "uhr"], "tags": ["-", "-", "-", "-", "time", "time"]}
+{"tokens": ["öffne", "staubsauger"], "tags": ["-", "device_type"]}
+{"tokens": ["wann", "erhalte", "ich", "die", "lieferung"], "tags": ["-", "-", "-", "-", "order_type"]}
+{"tokens": ["spiel", "mp", "playlist", "vom", "anfang"], "tags": ["-", "playlist_name", "playlist_name", "-", "-"]}
+{"tokens": ["mehr", "helligkeit"], "tags": ["-", "-"]}
+{"tokens": ["spiel", "dieses", "lief", "um", "zwölf", "uhr"], "tags": ["-", "-", "-", "-", "time", "time"]}
+{"tokens": ["frag", "nach", "dem", "wetter", "heute", "morgen"], "tags": ["-", "-", "-", "-", "date", "timeofday"]}
+{"tokens": ["was", "sind", "die", "erwarteten", "temperaturen", "für", "diesen", "nachmittag"], "tags": ["-", "-", "-", "weather_descriptor", "weather_descriptor", "-", "timeofday", "timeofday"]}
+{"tokens": ["zeige", "mir", "die", "neusten", "nachrichten"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["bitte", "spielen", "meine", "top", "musik", "wiedergabeliste"], "tags": ["-", "-", "-", "playlist_name", "playlist_name", "playlist_name"]}
+{"tokens": ["werde", "ich", "sonnenblocker", "diesen", "nachmittag", "brauchen"], "tags": ["-", "-", "weather_descriptor", "timeofday", "timeofday", "-"]}
+{"tokens": ["wird", "es", "heute", "morgen", "sonnig", "bleiben"], "tags": ["-", "-", "-", "timeofday", "weather_descriptor", "weather_descriptor"]}
+{"tokens": ["kannst", "du", "das", "radio", "auf", "stumm", "stellen"], "tags": ["-", "-", "-", "device_type", "-", "-", "-"]}
+{"tokens": ["wie", "wird", "das", "wetter", "heute", "in", "der", "nacht"], "tags": ["-", "-", "-", "-", "date", "timeofday", "timeofday", "timeofday"]}
+{"tokens": ["ist", "es", "ein", "regnerischer", "und", "stürmischer", "tag"], "tags": ["-", "-", "-", "weather_descriptor", "-", "weather_descriptor", "-"]}
+{"tokens": ["was", "ist", "mit", "meinem", "essen", "zum", "mitnehmen"], "tags": ["-", "-", "-", "-", "order_type", "order_type", "order_type"]}
+{"tokens": ["aktuelle", "uhrzeit"], "tags": ["-", "-"]}
+{"tokens": ["uhrzeit"], "tags": ["-"]}
+{"tokens": ["ich", "möchte", "nach", "der", "melodie", "von", "tanzen", "mark", "forster"], "tags": ["-", "-", "-", "-", "-", "-", "-", "artist_name", "artist_name"]}
+{"tokens": ["starte", "den", "staubsaugerroboter"], "tags": ["-", "-", "-"]}
+{"tokens": ["ich", "mag", "es", "das", "lied", "zu", "hören", "es", "beruhigt", "mich"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["spiel", "als", "nächstes", "billie", "jean"], "tags": ["-", "-", "-", "song_name", "song_name"]}
+{"tokens": ["auf", "welchen", "wochentag", "fällt", "der", "vierte", "juli", "dieses", "jahr"], "tags": ["-", "-", "-", "-", "-", "date", "date", "date", "date"]}
+{"tokens": ["spiele", "sanfte", "instrumentallieder"], "tags": ["-", "music_descriptor", "music_descriptor"]}
+{"tokens": ["bitte", "erhöhe", "die", "lautstärke", "des", "lautsprechers"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["spiele", "ein", "paar", "carnatic", "songs"], "tags": ["-", "-", "-", "music_descriptor", "-"]}
+{"tokens": ["zeig", "mir", "die", "uhrzeit", "in", "new", "york", "city"], "tags": ["-", "-", "-", "-", "-", "place_name", "place_name", "place_name"]}
+{"tokens": ["muss", "ich", "heute", "warme", "sachen", "anziehen"], "tags": ["-", "-", "date", "weather_descriptor", "weather_descriptor", "-"]}
+{"tokens": ["kann", "ich", "meine", "große", "bestellung", "bei", "pizza", "hut", "abholen"], "tags": ["-", "-", "-", "-", "-", "-", "business_name", "business_name", "-"]}
+{"tokens": ["es", "wird", "bei", "der", "ausstellung", "essen", "geben"], "tags": ["-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["hallo", "bitte", "das", "licht", "ausmachen"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["kannst", "du", "die", "aktuellen", "welt", "nachrichten", "von", "gestern", "finden"], "tags": ["-", "-", "-", "-", "place_name", "-", "-", "date", "-"]}
+{"tokens": ["brauche", "ich", "heute", "eine", "jacke"], "tags": ["-", "-", "date", "-", "weather_descriptor"]}
+{"tokens": ["irgndwelche", "updates", "zu", "donald", "trump's", "twitter", "kanal"], "tags": ["-", "-", "-", "person", "person", "media_type", "-"]}
+{"tokens": ["hey", "olly", "wie", "wird", "das", "wetter", "heute", "in", "münchen", "bayern"], "tags": ["-", "-", "-", "-", "-", "-", "date", "-", "place_name", "place_name"]}
+{"tokens": ["spiel", "irgendeinen", "song", "von", "tupac", "ab"], "tags": ["-", "music_descriptor", "-", "-", "artist_name", "-"]}
+{"tokens": ["erzähl", "mir", "vom", "aktuellen", "wetter"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["wecker", "löschen"], "tags": ["-", "-"]}
+{"tokens": ["werde", "ich", "eine", "jacke", "brauchen"], "tags": ["-", "-", "-", "weather_descriptor", "-"]}
+{"tokens": ["wie", "fühlst", "du", "dich"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["wir", "hatten", "heute", "ein", "großartiges", "abendessen"], "tags": ["-", "-", "date", "-", "-", "-"]}
+{"tokens": ["was", "ist", "für", "meinen", "tag", "geplant"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["mein", "tag", "war", "stressig"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["heute", "wars", "okay"], "tags": ["date", "-", "-"]}
+{"tokens": ["rate", "was", "heute", "passiert", "ist"], "tags": ["-", "-", "date", "-", "-"]}
+{"tokens": ["hallo", "du", "gratuliere", "mir", "ich", "bin", "in", "meinem", "job", "im", "büro", "befördert", "worden"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["anruf", "bei", "bill", "um", "unser", "treffen", "umzuplanen"], "tags": ["-", "-", "person", "-", "-", "event_name", "-"]}
+{"tokens": ["olly", "ich", "hatte", "heute", "einen", "tollen", "tag"], "tags": ["-", "-", "-", "date", "-", "-", "-"]}
+{"tokens": ["zeig", "mir", "die", "orte", "wo", "ich", "war"], "tags": ["-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["ich", "habe", "heute", "morgen", "frühstück", "gehabt"], "tags": ["-", "-", "-", "timeofday", "meal_type", "-"]}
+{"tokens": ["guten", "morgen", "deutschland"], "tags": ["-", "timeofday", "place_name"]}
+{"tokens": ["hallo", "ich", "habe", "heute", "einen", "hund", "gesehen"], "tags": ["-", "-", "-", "date", "-", "-", "-"]}
+{"tokens": ["was", "machen", "wir", "heute"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["ich", "hatte", "heute", "ein", "paket", "in", "der", "post"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["ich", "hoffe", "morgen", "wird", "besser"], "tags": ["-", "-", "date", "-", "-"]}
+{"tokens": ["ich", "habe", "einen", "abgabetermin", "am", "dienstag"], "tags": ["-", "-", "-", "-", "-", "date"]}
+{"tokens": ["ich", "konnte", "richtig", "viel", "schlafen", "heute"], "tags": ["-", "-", "-", "-", "-", "date"]}
+{"tokens": ["ich", "bin", "heute", "shoppen", "gegangen", "und", "habe", "einen", "riesigen", "dildo", "gekauft"], "tags": ["-", "-", "date", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["was", "ist", "die", "dümmste", "frage", "die", "dich", "je", "jemand", "gefragt", "hat"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["bist", "du", "neidisch", "auf", "siris", "filmkarriere"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["wichtige", "politische", "nachrichten", "vom", "tag"], "tags": ["-", "news_topic", "-", "-", "-"]}
+{"tokens": ["biographien", "berühmter", "personen"], "tags": ["-", "-", "-"]}
+{"tokens": ["fühlst", "du", "dich", "eher", "wie", "ein", "mensch", "oder", "eine", "maschie"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["was", "ist", "ein", "guter", "film", "zum", "anschauen", "jetzt"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["horoskop"], "tags": ["-"]}
+{"tokens": ["was", "gibt's", "zum", "abendessen"], "tags": ["-", "-", "-", "meal_type"]}
+{"tokens": ["was", "passiert"], "tags": ["-", "-"]}
+{"tokens": ["ich", "bin", "heute", "in", "ein", "unglück", "geraten"], "tags": ["-", "-", "date", "-", "-", "-", "-"]}
+{"tokens": ["olly", "ich", "hab", "heute", "gearbeitet"], "tags": ["-", "-", "-", "date", "-"]}
+{"tokens": ["was", "glaub", "ich", "wen", "das", "interessiert"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["olly", "wovon", "träumst", "du"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["datenspeicherung"], "tags": ["-"]}
+{"tokens": ["was", "ist", "ein", "romantisches", "essen", "für", "meine", "freundin"], "tags": ["-", "-", "-", "-", "-", "-", "-", "relation"]}
+{"tokens": ["globale", "erwärmung"], "tags": ["-", "-"]}
+{"tokens": ["olly", "ich", "hatte", "einen", "langen", "harten", "tag"], "tags": ["-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["ausgaben"], "tags": ["-"]}
+{"tokens": ["weck", "mich", "sonntags", "erst", "nachdem", "die", "sonne", "aufgegangen", "ist"], "tags": ["-", "-", "-", "-", "time", "time", "time", "time", "time"]}
+{"tokens": ["was", "ist", "die", "geschichte", "von", "smartphones"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["arzttermin", "heute", "um", "vierzehn", "uhr"], "tags": ["event_name", "date", "-", "time", "time"]}
+{"tokens": ["vorschläge", "für", "die", "zukunft"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["was", "wäre", "heute", "eine", "spaßige", "unternehmung"], "tags": ["-", "-", "date", "-", "-", "-"]}
+{"tokens": ["was", "hast", "du", "heute", "auf", "dem", "herzen"], "tags": ["-", "-", "-", "date", "-", "-", "-"]}
+{"tokens": ["hey", "siri", "ich", "habe", "eben", "heute", "meine", "brieftasche", "verloren"], "tags": ["-", "-", "-", "-", "-", "date", "-", "-", "-"]}
+{"tokens": ["ich", "nehme", "mir", "den", "tag", "morgen", "frei"], "tags": ["-", "-", "-", "-", "-", "date", "-"]}
+{"tokens": ["füge", "wöchentlich", "einen", "anruf", "um", "dreizehn", "uhr", "dem", "kalender", "hinzu"], "tags": ["-", "general_frequency", "-", "event_name", "-", "time", "time", "-", "-", "-"]}
+{"tokens": ["erinnerung", "heute", "den", "neuen", "film", "zu", "gucken", "heute", "einundzwanzig", "uhr"], "tags": ["-", "date", "-", "event_name", "event_name", "-", "event_name", "-", "time", "time"]}
+{"tokens": ["erinnere", "mich", "daran", "die", "e-mail", "später", "zu", "senden"], "tags": ["-", "-", "-", "-", "event_name", "-", "-", "-"]}
+{"tokens": ["erinnere", "mich", "jede", "woche", "daran", "einkaufen", "zu", "gehen"], "tags": ["-", "-", "general_frequency", "general_frequency", "-", "event_name", "-", "-"]}
+{"tokens": ["lösche", "alle", "veranstaltungen", "heute"], "tags": ["-", "-", "-", "date"]}
+{"tokens": ["kannst", "du", "mich", "an", "den", "fitnesskurs", "in", "zwei", "stunden", "erinnern"], "tags": ["-", "-", "-", "-", "-", "event_name", "time", "time", "time", "-"]}
+{"tokens": ["olly", "ich", "muss", "daran", "erinnert", "werden", "zu", "den", "geschäften", "zu", "gehen", "bevor", "sie", "schließen"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "event_name", "-", "-", "time", "time", "time"]}
+{"tokens": ["was", "sind", "alle", "anstehenden", "veranstaltungen"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["setze", "eine", "besprechung", "mit", "bernd", "beier", "für", "vierzehn", "uhr", "dreißig", "am", "freitag", "an"], "tags": ["-", "-", "event_name", "-", "person", "person", "-", "time", "time", "time", "-", "date", "-"]}
+{"tokens": ["klicken", "speichern"], "tags": ["-", "-"]}
+{"tokens": ["wie", "lange", "dauert", "es"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["den", "termin", "für", "die", "rasenpflege", "nächsten", "monat", "streichen"], "tags": ["-", "event_name", "event_name", "event_name", "event_name", "date", "date", "-"]}
+{"tokens": ["jeden", "ersten", "des", "monats", "erinnern"], "tags": ["general_frequency", "general_frequency", "general_frequency", "general_frequency", "-"]}
+{"tokens": ["habe", "ich", "morgen", "nachmittag", "einen", "termin"], "tags": ["-", "-", "date", "timeofday", "-", "event_name"]}
+{"tokens": ["bitte", "erinnere", "mich", "an", "die", "morgige", "veranstaltung", "in", "hamburg"], "tags": ["-", "-", "-", "-", "-", "date", "event_name", "-", "place_name"]}
+{"tokens": ["kannst", "du", "meine", "nächsten", "erinnerungen", "vorlesen"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["zeige", "erinnerungen"], "tags": ["-", "-"]}
+{"tokens": ["liste", "alle", "meetings", "für", "heute", "vor", "achtzehn", "uhr", "auf"], "tags": ["-", "-", "event_name", "-", "date", "time", "time", "time", "-"]}
+{"tokens": ["lösche", "alle", "veranstaltungen", "aus", "meinem", "kalender"], "tags": ["-", "event_name", "-", "-", "-", "-"]}
+{"tokens": ["tal", "treffen", "am", "donnerstag"], "tags": ["event_name", "event_name", "-", "date"]}
+{"tokens": ["welche", "veranstaltungen", "sind", "am", "kommenden", "dienstag", "zwischen", "elf", "uhr", "und", "drei", "p.", "m.", "geplant"], "tags": ["-", "-", "-", "-", "-", "date", "-", "time", "time", "-", "time", "time", "time", "-"]}
+{"tokens": ["steht", "irgendwas", "in", "meinem", "kalender", "am", "freitag", "morgen", "wenn", "ich", "zur", "arbeit", "ehe"], "tags": ["-", "-", "-", "-", "-", "-", "date", "timeofday", "-", "-", "-", "-", "-"]}
+{"tokens": ["meine", "veranstaltungen"], "tags": ["-", "-"]}
+{"tokens": ["bitte", "lösche", "meine", "termine", "im", "kalender"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["erstelle", "ein", "treffen"], "tags": ["-", "-", "event_name"]}
+{"tokens": ["wann", "ist", "mein", "handy", "fertig"], "tags": ["-", "-", "-", "event_name", "-"]}
+{"tokens": ["trage", "meinen", "arzttermin", "am", "fünfzehnten", "ein"], "tags": ["-", "-", "event_name", "-", "date", "-"]}
+{"tokens": ["was", "ist", "an", "diesem", "datum"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["löschen"], "tags": ["-"]}
+{"tokens": ["entfernen"], "tags": ["-"]}
+{"tokens": ["treffen", "vereinbaren"], "tags": ["event_name", "-"]}
+{"tokens": ["kannst", "du", "einen", "zehn", "minuten", "timer", "stellen"], "tags": ["-", "-", "-", "time", "time", "-", "-"]}
+{"tokens": ["lösche", "das", "morgige", "meeting", "mit", "laura"], "tags": ["-", "-", "date", "event_name", "-", "person"]}
+{"tokens": ["einstellung"], "tags": ["-"]}
+{"tokens": ["erinner", "mich", "an", "den", "geburtstag", "meines", "kindes"], "tags": ["-", "-", "-", "-", "event_name", "-", "relation"]}
+{"tokens": ["morgige", "veranstaltungen", "anzeigen"], "tags": ["date", "-", "-"]}
+{"tokens": ["entferne", "die", "hip", "show", "von", "meinem", "zeitplan", "am", "zweiten", "april"], "tags": ["-", "-", "event_name", "event_name", "-", "-", "-", "-", "date", "date"]}
+{"tokens": ["donnestag", "party", "umlegen"], "tags": ["date", "event_name", "-"]}
+{"tokens": ["hey", "stelle", "bitte", "sicher", "dass", "ich", "zu", "sarahs", "geburtstagsfeier", "am", "zwölften", "gehe"], "tags": ["-", "-", "-", "-", "-", "-", "-", "person", "event_name", "-", "date", "-"]}
+{"tokens": ["erstelle", "eine", "neue", "veranstaltung", "für", "jeden", "freitag", "mittag"], "tags": ["-", "-", "-", "-", "-", "-", "date", "timeofday"]}
+{"tokens": ["kirche", "mit", "mutter", "und", "vater", "am", "sonntag"], "tags": ["event_name", "-", "relation", "-", "relation", "-", "date"]}
+{"tokens": ["gib", "mir", "einen", "tag", "vor", "dem", "pferderennen", "im", "harz", "am", "siebten", "märz", "bescheid"], "tags": ["-", "-", "-", "-", "-", "-", "event_name", "-", "place_name", "-", "date", "date", "-"]}
+{"tokens": ["ergänze", "die", "veranstaltung", "in", "meinem", "kalender"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["verlobung", "veranstaltung", "löschen"], "tags": ["event_name", "-", "-"]}
+{"tokens": ["vereinbaren", "sie", "ein", "treffen", "für", "den", "zwanzigsten", "oktober", "um", "zehn", "uhr", "dreißig"], "tags": ["-", "-", "-", "event_name", "-", "-", "date", "date", "-", "time", "time", "time"]}
+{"tokens": ["lösche", "zahnarzttermin", "diese", "woche"], "tags": ["-", "event_name", "date", "date"]}
+{"tokens": ["ich", "wüsste", "gern", "die", "neusten", "details", "in", "meinem", "kalender"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["kannst", "du", "bitte", "prüfen", "ob", "ich", "am", "donnerstag", "nachmittag", "frei", "habe", "und", "wenn", "dem", "so", "ist", "mich", "daran", "erinnern", "zum", "food", "festival", "zu", "gehen"], "tags": ["-", "-", "-", "-", "-", "-", "-", "date", "timeofday", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "event_name", "event_name", "-", "-"]}
+{"tokens": ["ist", "das", "geburtstagsessen", "für", "freitag", "im", "kalender"], "tags": ["-", "-", "event_name", "-", "date", "-", "-"]}
+{"tokens": ["zeige", "mir", "zukünftige", "events"], "tags": ["-", "-", "time", "-"]}
+{"tokens": ["fußballspiel", "in", "köln", "am", "zweiter", "januar"], "tags": ["event_name", "-", "place_name", "-", "date", "date"]}
+{"tokens": ["treffen", "bei", "der", "arbeit", "erstellen"], "tags": ["event_name", "-", "-", "-", "-"]}
+{"tokens": ["wie", "frei", "bin", "ich", "diese", "woche"], "tags": ["-", "-", "-", "-", "date", "date"]}
+{"tokens": ["füge", "meinem", "kalender", "muttis", "krimi", "dinner", "für", "den", "fünften", "mai", "hinzu"], "tags": ["-", "-", "-", "relation", "event_name", "event_name", "-", "-", "date", "date", "-"]}
+{"tokens": ["lösche", "alle", "meine", "veranstaltungen"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["kannst", "du", "bitte", "das", "gebet", "für", "zwölf", "uhr", "mittags", "jeden", "freitag", "einplanen"], "tags": ["-", "-", "-", "-", "event_name", "-", "time", "time", "time", "general_frequency", "general_frequency", "-"]}
+{"tokens": ["wo", "war", "ich", "die", "ersten", "fünfzehn", "tage", "diesen", "monat"], "tags": ["-", "-", "-", "-", "date", "date", "date", "date", "date"]}
+{"tokens": ["alexa", "ist", "ist", "heute", "auf", "meinem", "kalender"], "tags": ["-", "-", "-", "date", "-", "-", "-"]}
+{"tokens": ["wiederhole", "dieses", "ereignis", "jeden", "freitag", "in", "meinem", "kalender"], "tags": ["-", "-", "-", "general_frequency", "general_frequency", "-", "-", "-"]}
+{"tokens": ["löschen", "sie", "die", "geplante", "treffen", "auf", "vierter", "oktober", "zwölf", "p.", "m."], "tags": ["-", "-", "-", "-", "event_name", "-", "date", "date", "time", "time", "time"]}
+{"tokens": ["ich", "möchte", "jeden", "tag", "etwas", "lustiges", "machen", "bitte", "erinnere", "mich", "daran"], "tags": ["-", "-", "general_frequency", "general_frequency", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["entferne", "walters", "geburtstagsfeier", "von", "meinem", "kalender"], "tags": ["-", "person", "event_name", "-", "-", "-"]}
+{"tokens": ["entferne", "leons", "geburtstagsfeier", "von", "meinem", "kalender"], "tags": ["-", "person", "event_name", "-", "-", "-"]}
+{"tokens": ["ich", "bin", "diese", "woche", "im", "urlaub"], "tags": ["-", "-", "date", "date", "-", "event_name"]}
+{"tokens": ["erinnere", "mich", "an", "ursula", "geburtstag", "drei", "tage", "vorzeitig"], "tags": ["-", "-", "-", "person", "event_name", "date", "date", "-"]}
+{"tokens": ["um", "welche", "uhrzeit", "ist", "der", "arzt", "termin", "am", "freitag"], "tags": ["-", "-", "-", "-", "-", "relation", "event_name", "date", "date"]}
+{"tokens": ["zeig", "mir", "bevorstehende", "veranstaltungen", "im", "ruhrgebiet"], "tags": ["-", "-", "-", "-", "-", "place_name"]}
+{"tokens": ["entfern", "alle", "erinnerungen", "aus", "diesem", "kalender"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["welche", "meetings", "stehen", "heute", "in", "meinem", "kalender"], "tags": ["-", "event_name", "-", "date", "-", "-", "-"]}
+{"tokens": ["bitte", "plane", "einen", "termin", "bei", "meinem", "arzt", "für", "eine", "prostatauntersuchung", "am", "freitag"], "tags": ["-", "-", "-", "event_name", "-", "-", "relation", "-", "-", "event_name", "-", "date"]}
+{"tokens": ["habe", "ich", "irgendwelche", "termine", "für", "übernächstes", "wochenende"], "tags": ["-", "-", "-", "event_name", "-", "date", "date"]}
+{"tokens": ["was", "passiert", "heute", "um", "acht", "uhr", "und", "um", "siebzehn", "uhr"], "tags": ["-", "-", "date", "-", "time", "time", "-", "-", "time", "time"]}
+{"tokens": ["sag", "mir", "wann", "mein", "nächster", "arzttermin", "ist"], "tags": ["-", "-", "-", "-", "-", "event_name", "-"]}
+{"tokens": ["wie", "lange", "dauert", "morgen", "die", "autofahrt", "zum", "siri", "svegler", "konzert"], "tags": ["-", "-", "-", "date", "-", "-", "-", "event_name", "event_name", "event_name"]}
+{"tokens": ["wieviele", "firmenmeetings", "habe", "ich", "diese", "woche"], "tags": ["-", "event_name", "-", "-", "date", "date"]}
+{"tokens": ["erinnere", "mich", "ich", "habe", "ein", "treffen", "um", "neunzehn", "uhr"], "tags": ["-", "-", "-", "-", "-", "event_name", "-", "time", "time"]}
+{"tokens": ["erstelle", "ein", "treffen"], "tags": ["-", "-", "event_name"]}
+{"tokens": ["geplante", "veranstaltungen", "mehr", "infos"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["wo", "findet", "mein", "treffen", "statt"], "tags": ["-", "-", "-", "event_name", "-"]}
+{"tokens": ["neues", "ereignis", "mittagessen"], "tags": ["-", "-", "event_name"]}
+{"tokens": ["was", "ist", "mein", "nächster", "termin"], "tags": ["-", "-", "-", "-", "event_name"]}
+{"tokens": ["alle", "veranstaltungen", "und", "aufgaben", "heute", "löschen"], "tags": ["-", "-", "-", "-", "date", "-"]}
+{"tokens": ["lösche", "meine", "aktuellen", "termine", "aus", "dem", "kalender"], "tags": ["-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["ich", "brauche", "eine", "erinnerung", "für", "mein", "treffen", "am", "freitag"], "tags": ["-", "-", "-", "-", "-", "-", "event_name", "-", "date"]}
+{"tokens": ["erstelle", "ein", "meeting", "für", "morgen", "in", "meinen", "kalendern"], "tags": ["-", "-", "event_name", "-", "date", "-", "-", "-"]}
+{"tokens": ["wann", "ist", "mein", "zahnarzttermin", "im", "kalender"], "tags": ["-", "-", "-", "event_name", "-", "-"]}
+{"tokens": ["an", "welchem", "tag", "ist", "jans", "schulaufführung"], "tags": ["-", "-", "-", "-", "person", "event_name"]}
+{"tokens": ["wie", "viele", "leute", "kommen", "heute", "abend", "zum", "abendessen"], "tags": ["-", "-", "-", "-", "timeofday", "timeofday", "-", "meal_type"]}
+{"tokens": ["habe", "ich", "morgen", "termine"], "tags": ["-", "-", "date", "event_name"]}
+{"tokens": ["die", "zeit", "die", "treffen", "beginnen"], "tags": ["-", "-", "-", "event_name", "-"]}
+{"tokens": ["kann", "ich", "die", "erinnerung", "löschen"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["wo", "die", "besprechung", "sein", "wird"], "tags": ["-", "-", "event_name", "-", "-"]}
+{"tokens": ["alexa", "kennzeichne", "meinen", "kalender", "für", "heute", "als", "nicht", "verfügbar"], "tags": ["-", "-", "-", "-", "-", "date", "-", "-", "-"]}
+{"tokens": ["ändere", "muttis", "geburtstag", "auf", "jedes", "jahr", "am", "gleichen", "tag"], "tags": ["-", "relation", "event_name", "-", "general_frequency", "general_frequency", "-", "-", "-"]}
+{"tokens": ["erinnere", "mich", "um", "fünfzehn", "uhr", "morgen", "an", "das", "treffen", "vier", "stunden", "vorher"], "tags": ["-", "-", "-", "time", "time", "date", "-", "-", "event_name", "time", "time", "-"]}
+{"tokens": ["lösche", "meinen", "termin", "um", "ein", "uhr", "morgen"], "tags": ["-", "-", "event_name", "-", "time", "-", "date"]}
+{"tokens": ["erstelle", "eine", "erinnerung", "für", "sieben", "uhr", "für", "das", "treffen", "des", "stadtteams"], "tags": ["-", "-", "-", "-", "time", "time", "-", "-", "event_name", "event_name", "event_name"]}
+{"tokens": ["bereite", "treffen", "mit", "sandro", "vor"], "tags": ["-", "event_name", "-", "person", "-"]}
+{"tokens": ["in", "meinem", "kalender", "ein", "treffen", "mit", "frau", "bartsch", "mittwoch", "um", "acht", "uhr", "eintragen"], "tags": ["-", "-", "-", "-", "event_name", "-", "person", "person", "date", "-", "time", "time", "-"]}
+{"tokens": ["kannst", "du", "mich", "einen", "tag", "zuvor", "daran", "erinnern", "zum", "zahnarzttermin", "zu", "gehen"], "tags": ["-", "-", "-", "date", "date", "date", "-", "-", "-", "event_name", "-", "-"]}
+{"tokens": ["nichts", "zu", "tun", "am", "freitag"], "tags": ["-", "-", "-", "-", "date"]}
+{"tokens": ["erinnere", "mich", "bald", "an", "dieses", "treffen"], "tags": ["-", "-", "-", "-", "-", "event_name"]}
+{"tokens": ["habe", "ich", "diese", "woche", "irgendwelche", "freien", "tage"], "tags": ["-", "-", "date", "date", "-", "-", "-"]}
+{"tokens": ["habe", "ich", "eine", "verabredung", "zum", "mittagessen", "am", "freitag"], "tags": ["-", "-", "-", "-", "-", "meal_type", "-", "date"]}
+{"tokens": ["erstelle", "ein", "mittagessen", "treffen", "für", "nächsten", "dienstag", "mittag", "mit", "sarah", "um", "steakhaus"], "tags": ["-", "-", "meal_type", "-", "-", "-", "date", "timeofday", "-", "person", "-", "business_name"]}
+{"tokens": ["lösche", "alle", "events", "aus", "meinem", "kalender"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["treffen", "am", "fünfzehnten", "märz"], "tags": ["event_name", "-", "date", "date"]}
+{"tokens": ["füge", "einen", "termin", "zum", "kalender", "hinzu", "und", "wiederhole"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["ich", "brauche", "eine", "wiederholende", "erinnerung", "für", "jeden", "montag", "um", "fünfzehn", "uhr", "dreißig"], "tags": ["-", "-", "-", "-", "-", "-", "general_frequency", "general_frequency", "-", "time", "time", "time"]}
+{"tokens": ["kannst", "du", "mir", "mehr", "über", "das", "festival", "erzählen"], "tags": ["-", "-", "-", "-", "-", "-", "event_name", "-"]}
+{"tokens": ["füge", "workout", "von", "montag", "bis", "freitag", "von", "fünf", "bis", "sechs", "uhr", "morgens", "meinem", "kalender", "hinzu"], "tags": ["-", "-", "-", "date", "date", "date", "-", "time", "time", "time", "time", "time", "-", "-", "-"]}
+{"tokens": ["erinnere", "mich", "an", "mein", "treffen", "morgen", "um", "fünfzehn", "uhr"], "tags": ["-", "-", "-", "-", "event_name", "date", "-", "time", "time"]}
+{"tokens": ["füge", "am", "vierten", "april", "um", "siebzehn", "uhr", "ein", "treffen", "mit", "david", "an", "der", "u-bahn", "kochstraße", "hinzu"], "tags": ["-", "-", "date", "date", "-", "time", "time", "-", "-", "-", "person", "-", "-", "business_name", "place_name", "-"]}
+{"tokens": ["bin", "ich", "am", "freitag", "nachmittag", "verfügbar"], "tags": ["-", "-", "-", "date", "timeofday", "-"]}
+{"tokens": ["erinnere", "mich", "bei", "der", "arbeit", "daran", "mich", "am", "freitag", "mit", "david", "zu", "treffen"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "date", "-", "person", "-", "event_name"]}
+{"tokens": ["erinnere", "mich", "an", "meinen", "einkaufstrip", "morgen", "um", "siebzehn", "uhr"], "tags": ["-", "-", "-", "-", "event_name", "date", "-", "time", "time"]}
+{"tokens": ["olly", "füge", "abendessen", "mit", "jana", "am", "zwölften", "februar", "um", "achtzehn", "uhr", "hinzu"], "tags": ["-", "-", "meal_type", "-", "person", "-", "date", "date", "-", "time", "time", "-"]}
+{"tokens": ["füge", "janes", "geburtstagsfeier", "morgen", "um", "vierzehn", "uhr", "in", "der", "erlanger", "straße", "neun", "meinem", "kalender", "hinzu"], "tags": ["-", "person", "event_name", "date", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["füge", "geburtstagsfeier", "morgen", "um", "vierzehn", "uhr", "bei", "jenny", "hinzu"], "tags": ["-", "event_name", "date", "-", "time", "time", "-", "person", "-"]}
+{"tokens": ["bitte", "lösche", "diese", "veranstaltungen"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["was", "ist", "heute", "morgen", "in", "beirut", "passiert"], "tags": ["-", "-", "-", "timeofday", "-", "-", "-"]}
+{"tokens": ["was", "ist", "mein", "zeitlicher", "ablauf", "für", "morgen"], "tags": ["-", "-", "-", "-", "-", "-", "date"]}
+{"tokens": ["zeige", "lokale", "veranstaltungen"], "tags": ["-", "-", "-"]}
+{"tokens": ["erinnere", "mich", "am", "anfang", "von", "jedem", "monat", "daran", "meine", "rechnungen", "zu", "bezahlen"], "tags": ["-", "-", "-", "-", "-", "date", "date", "-", "event_name", "event_name", "-", "event_name"]}
+{"tokens": ["lösche", "meinen", "kalender"], "tags": ["-", "-", "-"]}
+{"tokens": ["lösche", "meinen", "kalender", "leer"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["setze", "für", "mittwoch", "um", "siebzehn", "uhr", "ein", "treffen", "mit", "phil", "an"], "tags": ["-", "-", "date", "-", "time", "time", "-", "event_name", "-", "person", "-"]}
+{"tokens": ["plane", "eine", "besprechung", "mit", "bryce", "jessie", "und", "carol", "morgen", "um", "neun", "uhr", "früh"], "tags": ["-", "-", "event_name", "-", "person", "person", "person", "person", "date", "-", "time", "time", "time"]}
+{"tokens": ["veranstaltung", "in", "mein", "kalender"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["bitte", "erinnere", "mich", "wenn", "mein", "finanztreffen", "ist"], "tags": ["-", "-", "-", "-", "-", "event_name", "-"]}
+{"tokens": ["erinnere", "mich", "am", "morgen", "meine", "mutter", "anzurufen"], "tags": ["-", "-", "-", "timeofday", "-", "relation", "-"]}
+{"tokens": ["erinnere", "mich", "bitte", "an", "meine", "besprechung", "diesen", "nachmittag"], "tags": ["-", "-", "-", "-", "-", "event_name", "timeofday", "timeofday"]}
+{"tokens": ["ich", "muss", "nicht", "mehr", "zum", "arzt", "kann", "dieser", "termin", "entfernt", "werden"], "tags": ["-", "-", "-", "-", "-", "event_name", "-", "-", "-", "-", "-"]}
+{"tokens": ["erinnere", "mich", "an", "meine", "geschäftsbesprechung", "um", "fünfzehn", "uhr", "dreißig"], "tags": ["-", "-", "-", "-", "event_name", "-", "time", "time", "time"]}
+{"tokens": ["donnerstag", "um", "sieben", "uhr", "ein", "verkaufstreffen", "planen"], "tags": ["date", "-", "time", "time", "-", "event_name", "-"]}
+{"tokens": ["bitte", "lösche", "alles", "von", "meinem", "kalender"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["wer", "geht", "zu", "meinem", "treffen", "um", "neun", "uhr"], "tags": ["-", "-", "-", "-", "event_name", "-", "time", "time"]}
+{"tokens": ["lösche", "veranstaltung"], "tags": ["-", "-"]}
+{"tokens": ["check", "den", "kalender", "nach", "veranstaltungen"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["bitte", "verschiebe", "alle", "verabredungen", "in", "den", "papierkorb"], "tags": ["-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["habe", "ich", "heute", "irgendwas", "geplant"], "tags": ["-", "-", "date", "-", "-"]}
+{"tokens": ["füge", "geschäftstreffen", "mit", "bernd", "im", "büro", "um", "zehn", "uhr", "hinzu"], "tags": ["-", "event_name", "-", "person", "place_name", "place_name", "-", "time", "time", "-"]}
+{"tokens": ["erinnere", "mich", "nächsten", "donnerstag", "daran", "dass", "ich", "die", "bank", "anrufe"], "tags": ["-", "-", "-", "date", "-", "-", "-", "event_name", "event_name", "event_name"]}
+{"tokens": ["erster", "oktober", "um", "vierzehn", "uhr", "mittagessen", "mit", "anna"], "tags": ["date", "date", "-", "time", "time", "meal_type", "-", "person"]}
+{"tokens": ["füge", "eine", "neue", "veranstaltung", "namens", "anna", "dem", "kalender", "hinzu"], "tags": ["-", "-", "-", "-", "-", "event_name", "-", "-", "-"]}
+{"tokens": ["was", "habe", "ich", "heute", "zwölf", "bis", "vierzehn", "uhr", "vor"], "tags": ["-", "-", "-", "date", "time", "time", "time", "time", "-"]}
+{"tokens": ["lösche", "jeden", "einzelnen", "veranstaltungen", "aus", "meinem", "gesamten", "kalender"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["lösche", "alles", "für", "diesen", "monat"], "tags": ["-", "-", "-", "date", "date"]}
+{"tokens": ["habe", "ich", "termine", "geplant", "am", "vierundzwanzigsten", "märz", "zweitausendundsiebzehn"], "tags": ["-", "-", "event_name", "-", "-", "date", "date", "date"]}
+{"tokens": ["gibt", "es", "im", "juni", "irgendeinen", "geburtstag"], "tags": ["-", "-", "-", "date", "-", "event_name"]}
+{"tokens": ["kannst", "du", "mir", "eine", "liste", "meiner", "termine", "zeigen"], "tags": ["-", "-", "-", "-", "-", "list_name", "list_name", "-"]}
+{"tokens": ["streiche", "meinen", "für", "juli", "geplanten", "urlaub"], "tags": ["-", "-", "-", "date", "-", "event_name"]}
+{"tokens": ["besprechungen"], "tags": ["event_name"]}
+{"tokens": ["erinnern", "in", "fünfzig", "minuten"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["jubiläum", "event", "am", "dienstag"], "tags": ["event_name", "-", "-", "date"]}
+{"tokens": ["erstelle", "eine", "geburtstagsfeier", "am", "mittwoch"], "tags": ["-", "-", "event_name", "-", "date"]}
+{"tokens": ["trage", "eine", "erntedankfest", "veranstaltung", "für", "freitag", "ein"], "tags": ["-", "-", "event_name", "-", "-", "date", "-"]}
+{"tokens": ["stimmt", "der", "geburtstag", "am", "fünfzehnten", "dieses", "monats"], "tags": ["-", "-", "event_name", "-", "date", "date", "date"]}
+{"tokens": ["morgen", "meine", "mutter", "geburtstag"], "tags": ["date", "-", "event_name", "event_name"]}
+{"tokens": ["trage", "eine", "besprechung", "um", "elf", "uhr", "im", "büro", "ein"], "tags": ["-", "-", "event_name", "-", "time", "time", "-", "place_name", "-"]}
+{"tokens": ["meine", "treffen", "nach", "einigen", "tagen"], "tags": ["-", "event_name", "date", "date", "date"]}
+{"tokens": ["ich", "möchte", "die", "hochzeitsfunktion", "von", "samstag"], "tags": ["-", "-", "-", "event_name", "-", "date"]}
+{"tokens": ["habe", "ich", "einen", "termin", "für", "der", "dritte", "januar"], "tags": ["-", "-", "-", "-", "-", "date", "date", "date"]}
+{"tokens": ["erinnere", "mich", "zwei", "stunden", "vor", "dem", "treffen"], "tags": ["-", "-", "time", "time", "-", "-", "event_name"]}
+{"tokens": ["welche", "neuen", "rock", "radiosender", "gibt", "es"], "tags": ["-", "-", "music_genre", "-", "-", "-"]}
+{"tokens": ["kannst", "du", "akustische", "musik", "ohne", "werbung", "spielen"], "tags": ["-", "-", "radio_name", "radio_name", "-", "-", "-"]}
+{"tokens": ["bitte", "einschalten", "neunhundertfünfundsiebzig", "f.", "m."], "tags": ["-", "-", "radio_name", "radio_name", "radio_name"]}
+{"tokens": ["starte", "das", "radio", "und", "gehe", "zu", "frequenz", "neunhundert", "und", "siebenundzwanzig"], "tags": ["-", "-", "-", "-", "-", "-", "-", "radio_name", "radio_name", "radio_name"]}
+{"tokens": ["suche", "nach", "einem", "radiosender", "namens", "rhythmus", "auf", "frequenz", "eins"], "tags": ["-", "-", "-", "-", "-", "radio_name", "-", "-", "-"]}
+{"tokens": ["ich", "möchte", "gern", "neunundneunzig", "komma", "fünf", "anhören"], "tags": ["-", "-", "-", "radio_name", "radio_name", "radio_name", "-"]}
+{"tokens": ["spiel", "irgendeinen", "countrymusiksender"], "tags": ["-", "-", "radio_name"]}
+{"tokens": ["spiel", "diesen", "radiosender", "für", "mich"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["bitte", "schalte", "den", "sender", "zu", "rockantenne", "um"], "tags": ["-", "-", "-", "-", "-", "radio_name", "-"]}
+{"tokens": ["stimme", "bitte", "mein", "xm", "radio", "auf", "c.", "n.", "n.", "ein"], "tags": ["-", "-", "-", "-", "-", "-", "radio_name", "radio_name", "radio_name", "-"]}
+{"tokens": ["das", "radio", "einschalten"], "tags": ["-", "-", "-"]}
+{"tokens": ["suche", "nach", "gary", "mcnamara", "im", "radio"], "tags": ["-", "-", "person", "person", "-", "-"]}
+{"tokens": ["stell", "das", "beste", "thema", "ein"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["spiel", "die", "gesundheitsshow", "auf", "meinem", "handy"], "tags": ["-", "-", "-", "-", "-", "device_type"]}
+{"tokens": ["aufgezeichnetes", "programm", "kann", "an", "zukünftigen", "tagen", "angehört", "werden"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["setze", "die", "frequenz", "vom", "radio"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["wechsel", "zu", "radio", "mango"], "tags": ["-", "-", "radio_name", "radio_name"]}
+{"tokens": ["beginn", "f.", "m.", "sechsundneunzig", "komma", "fünf", "zu", "spielen", "wenn", "es", "ein", "uhr", "ist"], "tags": ["-", "radio_name", "radio_name", "radio_name", "radio_name", "radio_name", "-", "-", "-", "-", "time", "time", "-"]}
+{"tokens": ["was", "ist", "die", "aktuelle", "fernseh", "sendung", "mit", "den", "meisten", "zuschauern"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["wechsle", "den", "sender", "zu", "neunundachtzig", "punkt", "vier"], "tags": ["-", "-", "-", "-", "radio_name", "radio_name", "radio_name"]}
+{"tokens": ["programm", "y.", "im", "radio", "b.", "b.", "c."], "tags": ["-", "-", "-", "radio_name", "radio_name", "radio_name", "radio_name"]}
+{"tokens": ["rot", "f.", "m.", "chit", "chat", "autotune"], "tags": ["radio_name", "radio_name", "radio_name", "radio_name", "radio_name", "radio_name"]}
+{"tokens": ["ich", "möchte", "programm", "eins", "auf", "lastfm", "hören"], "tags": ["-", "-", "-", "-", "-", "radio_name", "-"]}
+{"tokens": ["spiel", "einen", "guten", "film", "auf", "meinem", "fernseher"], "tags": ["-", "-", "-", "-", "-", "-", "device_type"]}
+{"tokens": ["öffne", "dieses", "programm"], "tags": ["-", "-", "-"]}
+{"tokens": ["spiel", "schrei", "von", "tokio", "hotel"], "tags": ["-", "audiobook_name", "-", "audiobook_author", "audiobook_author"]}
+{"tokens": ["fortsetzen"], "tags": ["player_setting"]}
+{"tokens": ["fortsetzen", "von", "harry", "potter", "teil", "fünf"], "tags": ["player_setting", "-", "audiobook_name", "audiobook_name", "audiobook_name", "audiobook_name"]}
+{"tokens": ["spiel", "weiter", "harry", "potter", "buch", "eins"], "tags": ["player_setting", "player_setting", "audiobook_name", "audiobook_name", "audiobook_name", "audiobook_name"]}
+{"tokens": ["fahre", "mit", "inkheart", "fort"], "tags": ["player_setting", "-", "audiobook_name", "player_setting"]}
+{"tokens": ["ich", "möchte", "endlich", "the", "mars", "trilogy", "lesen"], "tags": ["-", "-", "-", "audiobook_name", "audiobook_name", "audiobook_name", "-"]}
+{"tokens": ["spiel", "bitte", "das", "justin", "bieber", "album"], "tags": ["-", "-", "-", "artist_name", "artist_name", "media_type"]}
+{"tokens": ["fahre", "fort", "von", "wo", "wir", "in", "divergent", "aufgehört", "haben"], "tags": ["-", "-", "-", "-", "-", "-", "audiobook_name", "-", "-"]}
+{"tokens": ["das", "aktuelle", "hörbuch", "weiter", "abspielen"], "tags": ["-", "-", "media_type", "player_setting", "player_setting"]}
+{"tokens": ["sag", "mir", "wie", "man", "steak", "macht"], "tags": ["-", "-", "-", "-", "food_type", "cooking_type"]}
+{"tokens": ["wie", "kocht", "man", "am", "besten", "pasta"], "tags": ["-", "-", "-", "-", "-", "food_type"]}
+{"tokens": ["wie", "kann", "mein", "ein", "ei", "pochieren"], "tags": ["-", "-", "-", "-", "ingredient", "cooking_type"]}
+{"tokens": ["finde", "mir", "das", "rezept", "für", "beef", "stroganoff"], "tags": ["-", "-", "-", "-", "-", "food_type", "food_type"]}
+{"tokens": ["wie", "bereite", "ich", "ein", "halbgares", "steak", "zu"], "tags": ["-", "-", "-", "-", "food_type", "food_type", "-"]}
+{"tokens": ["was", "wäre", "ein", "gutes", "taco", "rezept"], "tags": ["-", "-", "-", "-", "food_type", "-"]}
+{"tokens": ["zeig", "mir", "ein", "keks", "rezept"], "tags": ["-", "-", "-", "food_type", "-"]}
+{"tokens": ["bei", "welcher", "temperatur", "backt", "man", "kekse"], "tags": ["-", "-", "-", "-", "-", "food_type"]}
+{"tokens": ["finde", "das", "das", "am", "besten", "bewertete", "rezept", "von", "chefkoch", "dot", "d.", "e.", "für", "ein", "vierkäseomelett"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "business_name", "business_name", "business_name", "business_name", "-", "-", "food_type"]}
+{"tokens": ["wie", "lange", "ein", "hartes", "ei", "kochen"], "tags": ["-", "-", "-", "-", "food_type", "-"]}
+{"tokens": ["wie", "viel", "zucker", "kommt", "in", "süßen", "tee"], "tags": ["-", "-", "food_type", "-", "-", "drink_type", "drink_type"]}
+{"tokens": ["was", "ist", "ein", "gutes", "rezept", "für", "butter"], "tags": ["-", "-", "-", "-", "-", "-", "food_type"]}
+{"tokens": ["aroma"], "tags": ["-"]}
+{"tokens": ["wie", "lange", "wird", "es", "dauern", "das", "gericht", "fertig", "zu", "kochen"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["wie", "man", "am", "besten", "lachs", "oder", "schellfisch", "zubereitet"], "tags": ["-", "-", "-", "-", "food_type", "food_type", "food_type", "-"]}
+{"tokens": ["welches", "ist", "das", "am", "besten", "schmeckende", "stück", "rindfleisch"], "tags": ["-", "-", "-", "-", "-", "-", "-", "food_type"]}
+{"tokens": ["ich", "möchte", "ein", "spiel", "mit", "dir", "spielen"], "tags": ["-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["öffne", "solitaire", "und", "spiel", "mit", "mir"], "tags": ["-", "game_name", "-", "-", "-", "-"]}
+{"tokens": ["würdest", "du", "gern", "never", "have", "i", "ever", "spielen"], "tags": ["-", "-", "-", "game_name", "game_name", "game_name", "game_name", "-"]}
+{"tokens": ["öffne", "bitte", "das", "blokus", "spiel", "ich", "möchte", "gern", "mit", "dir", "spielen"], "tags": ["-", "-", "-", "game_name", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["spiele", "eine", "partie", "schach", "mit", "mir"], "tags": ["-", "-", "-", "game_name", "-", "-"]}
+{"tokens": ["spiel", "subway", "surfer"], "tags": ["-", "game_name", "game_name"]}
+{"tokens": ["meine", "spiele", "auf", "meinen", "computern", "spielen"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["können", "wir", "twenty", "questions", "spielen"], "tags": ["-", "-", "game_name", "game_name", "-"]}
+{"tokens": ["spiele", "squash", "mit", "mir"], "tags": ["-", "game_name", "-", "-"]}
+{"tokens": ["solitare", "mit", "dir", "spielen"], "tags": ["game_name", "-", "-", "-"]}
+{"tokens": ["lass", "uns", "ein", "spiel", "spielen"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["brich", "die", "liste", "ab"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["erinnern", "an", "schinken", "kaufen", "im", "shop"], "tags": ["-", "-", "-", "-", "-", "place_name"]}
+{"tokens": ["liste", "entfernen"], "tags": ["-", "-"]}
+{"tokens": ["verrate", "mir", "was", "auf", "meiner", "liste", "übrig", "ist"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["bitte", "erstelle", "eine", "neue", "liste"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["bereite", "eine", "neue", "liste", "vor"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["lösche", "meinen", "verlauf"], "tags": ["-", "-", "event_name"]}
+{"tokens": ["was", "ist", "auf", "der", "liste"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["lösche", "alle", "lebensmittel", "mit", "dem", "präfix", "trocken", "von", "der", "liste"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["zeig", "mir", "welche", "listen", "verfügbar", "sind"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["wie", "schaut", "die", "liste", "aus", "mit", "den", "sachen", "die", "ich", "heute", "kaufen", "muss"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "date", "-", "-"]}
+{"tokens": ["autodienst", "auf", "die", "liste", "der", "heute", "zu", "erledigenden", "dinge", "setzen"], "tags": ["-", "-", "-", "-", "-", "date", "list_name", "list_name", "-", "-"]}
+{"tokens": ["setze", "hund", "sauber", "machen", "ganz", "oben", "auf", "die", "putzliste"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "list_name"]}
+{"tokens": ["verrate", "mir", "den", "nächstgelegenen", "standort"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["sag", "mir", "to", "do", "heute"], "tags": ["-", "-", "list_name", "list_name", "date"]}
+{"tokens": ["lese", "meine", "liste", "vor"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["bitte", "lösche", "diese", "datei"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["ich", "möchte", "wissen", "kannst", "du", "einen", "extra", "eintrag", "auf", "meine", "lebensmittel", "liste", "schreiben"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "list_name", "-", "-"]}
+{"tokens": ["klamotten", "kaufen"], "tags": ["-", "-"]}
+{"tokens": ["füge", "eier", "zur", "liste", "hinzu"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["lösche", "äpfel", "von", "meiner", "einkaufsliste"], "tags": ["-", "-", "-", "-", "list_name"]}
+{"tokens": ["von", "dieser", "liste", "streichen"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["lösche", "eintrag", "bitte", "von", "meiner", "liste"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["bitte", "lösch", "diese", "liste"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["kannst", "du", "mir", "sagen", "was", "auf", "der", "einkaufsliste", "ist"], "tags": ["-", "-", "-", "-", "-", "-", "-", "list_name", "-"]}
+{"tokens": ["füge", "stift", "zur", "liste", "der", "schulutensilien", "hinzu"], "tags": ["-", "-", "-", "-", "-", "list_name", "-"]}
+{"tokens": ["prüfe", "meine", "zu", "erledigen", "liste"], "tags": ["-", "-", "list_name", "list_name", "-"]}
+{"tokens": ["steht", "irgendwas", "auf", "meiner", "to", "do", "liste"], "tags": ["-", "-", "-", "-", "list_name", "list_name", "list_name"]}
+{"tokens": ["bitte", "entferne", "tomaten", "von", "meiner", "einkaufs", "liste"], "tags": ["-", "-", "-", "-", "-", "list_name", "-"]}
+{"tokens": ["welche", "artikel", "sind", "auf", "meiner", "liste"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["lebensmittel", "liste"], "tags": ["list_name", "-"]}
+{"tokens": ["ich", "würde", "gern", "meine", "listen", "hören"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["werde", "erbsen", "los"], "tags": ["-", "-", "-"]}
+{"tokens": ["lösche", "meine", "to", "do", "liste"], "tags": ["-", "-", "list_name", "list_name", "-"]}
+{"tokens": ["aktualisiere", "meine", "liste", "und", "sage", "mir", "was", "da", "ist"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["sage", "mir", "was", "ich", "auf", "meiner", "lebensmittel", "liste", "für", "diese", "woche", "habe"], "tags": ["-", "-", "-", "-", "-", "-", "list_name", "-", "-", "date", "date", "-"]}
+{"tokens": ["springe", "zur", "nächsten", "folge"], "tags": ["player_setting", "-", "podcast_descriptor", "podcast_descriptor"]}
+{"tokens": ["gehe", "zur", "nächsten", "folge"], "tags": ["-", "-", "podcast_descriptor", "podcast_descriptor"]}
+{"tokens": ["spiel", "die", "nächste", "episode", "ab"], "tags": ["-", "-", "podcast_descriptor", "podcast_descriptor", "-"]}
+{"tokens": ["spiel", "mein", "videospiel", "news", "podcast", "von", "dort", "ab", "wo", "ich", "zuletzt", "aufgehört", "hab"], "tags": ["-", "-", "podcast_name", "podcast_name", "-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["spiel", "folge", "dreiundzwanzig", "von", "compassionate", "cook"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["starte", "den", "rooster", "teeth", "podcast"], "tags": ["-", "-", "podcast_name", "podcast_name", "-"]}
+{"tokens": ["finde", "mir", "einen", "podcast", "über", "tiere"], "tags": ["-", "-", "-", "-", "-", "podcast_descriptor"]}
+{"tokens": ["fahre", "zur", "nächsten", "episode", "fort"], "tags": ["-", "-", "podcast_descriptor", "podcast_descriptor", "-"]}
+{"tokens": ["starte", "den", "podcast", "den", "ich", "zuletzt", "gehört", "habe"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["bitte", "spiel", "den", "podcast", "von", "happypeoplecom", "ab"], "tags": ["-", "-", "-", "-", "-", "podcast_name", "-"]}
+{"tokens": ["lass", "mich", "den", "neusten", "lovett", "or", "leave", "it", "podcast", "hören"], "tags": ["-", "-", "-", "podcast_descriptor", "podcast_name", "podcast_name", "podcast_name", "podcast_name", "-", "-"]}
+{"tokens": ["beginn", "die", "nächste", "episode", "zu", "spielen"], "tags": ["player_setting", "-", "podcast_descriptor", "podcast_descriptor", "-", "-"]}
+{"tokens": ["was", "ist", "heute", "abend", "los"], "tags": ["-", "-", "timeofday", "timeofday", "-"]}
+{"tokens": ["gibt", "es", "eine", "veranstaltung", "in", "der", "nähe"], "tags": ["-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["wo", "ist", "eine", "tankstelle", "im", "fünf", "kilometer", "radius"], "tags": ["-", "-", "-", "business_type", "-", "place_name", "place_name", "place_name"]}
+{"tokens": ["alle", "veranstaltungen", "in", "frankfurt"], "tags": ["-", "-", "-", "place_name"]}
+{"tokens": ["show", "heute", "nacht", "in", "köln"], "tags": ["business_type", "timeofday", "timeofday", "-", "place_name"]}
+{"tokens": ["welche", "bands", "spielen", "heute", "nacht", "in", "der", "stadt"], "tags": ["-", "-", "business_type", "timeofday", "timeofday", "-", "-", "place_name"]}
+{"tokens": ["was", "ist", "die", "beste", "fussball", "bar", "mit", "vegetarischen", "angeboten", "in", "berlin"], "tags": ["-", "-", "-", "-", "business_type", "business_type", "business_type", "business_type", "-", "-", "place_name"]}
+{"tokens": ["zeige", "orte", "in", "der", "nähe"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["was", "ist", "nah", "zum", "abendessen"], "tags": ["-", "-", "-", "-", "meal_type"]}
+{"tokens": ["suche", "nach", "events", "der", "postleitzahl", "zwölftausendeinhunderteinundzwanzig"], "tags": ["-", "-", "-", "-", "place_name", "place_name"]}
+{"tokens": ["was", "sind", "die", "spielzeiten", "von", "logan"], "tags": ["-", "-", "-", "-", "-", "movie_name"]}
+{"tokens": ["ich", "würde", "gern", "wissen", "welche", "veranstaltungen", "hier", "in", "der", "gegend", "sind"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["nenne", "mir", "einen", "romatischen", "kinofilm", "der", "in", "und", "um", "berliner", "kinos", "läuft"], "tags": ["-", "-", "-", "movie_type", "-", "-", "-", "-", "-", "place_name", "-", "-"]}
+{"tokens": ["buchmessen", "nächste", "woche", "in", "köln"], "tags": ["event_name", "date", "date", "-", "place_name"]}
+{"tokens": ["was", "ist", "in", "köln", "los"], "tags": ["-", "-", "-", "place_name", "-"]}
+{"tokens": ["olly", "empfehle", "eine", "zirkus", "veranstaltung", "in", "dieser", "woche", "im", "umkreis", "von", "zwanzig", "kilometern", "von", "berlin"], "tags": ["-", "-", "-", "event_name", "-", "-", "date", "date", "place_name", "place_name", "place_name", "place_name", "place_name", "place_name", "place_name"]}
+{"tokens": ["was", "passiert", "in", "meiner", "nähe"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["kannst", "du", "für", "mich", "ein", "straßenfest", "in", "der", "nachbarschaft", "finden"], "tags": ["-", "-", "-", "-", "-", "event_name", "-", "-", "place_name", "-"]}
+{"tokens": ["was", "sind", "ein", "paar", "gute", "restaurants", "in", "der", "nähe"], "tags": ["-", "-", "-", "-", "-", "business_type", "-", "-", "-"]}
+{"tokens": ["gibt", "es", "diese", "woche", "irgendwelche", "konzerte"], "tags": ["-", "-", "date", "date", "-", "event_name"]}
+{"tokens": ["was", "hat", "spät", "offen", "in", "berlin", "olly"], "tags": ["-", "-", "-", "-", "-", "place_name", "-"]}
+{"tokens": ["finde", "den", "beliebtesten", "laden"], "tags": ["-", "-", "-", "business_type"]}
+{"tokens": ["welche", "events", "finden", "in", "berlin", "statt"], "tags": ["-", "-", "-", "-", "place_name", "-"]}
+{"tokens": ["bitte", "zeige", "mir", "eine", "liste", "von", "unterhaltungsmöglichkeiten", "in", "meiner", "nähe"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["hey", "olly", "bitte", "zähle", "mir", "die", "lokalen", "geschäfte", "auf"], "tags": ["-", "-", "-", "-", "-", "-", "-", "business_type", "-"]}
+{"tokens": ["zeige", "mir", "alle", "geschäf", "die", "ich", "in", "hamburg", "finden", "kann"], "tags": ["-", "-", "-", "-", "-", "-", "-", "place_name", "-", "-"]}
+{"tokens": ["olly", "was", "spielt", "im", "kino"], "tags": ["-", "-", "-", "-", "place_name"]}
+{"tokens": ["geschäfte"], "tags": ["business_type"]}
+{"tokens": ["welche", "veranstaltungen", "gibt", "es", "in", "meiner", "nähe"], "tags": ["-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["zeig", "mir", "hiesige", "veranstaltungen", "bei", "mir", "in", "der", "nähe"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["zähle", "die", "geschäfte", "in", "meiner", "nähe", "auf"], "tags": ["-", "-", "business_type", "-", "-", "-", "-"]}
+{"tokens": ["finde", "ein", "einkaufszentrum", "in", "meiner", "gegend"], "tags": ["-", "-", "business_type", "-", "-", "-"]}
+{"tokens": ["was", "passiert", "diese", "woche", "in", "meiner", "nähe"], "tags": ["-", "-", "date", "date", "-", "-", "-"]}
+{"tokens": ["wo", "sind", "die", "nächsten", "guten", "restaurants"], "tags": ["-", "-", "-", "-", "-", "business_type"]}
+{"tokens": ["buche", "mir", "ein", "taxi", "siri"], "tags": ["-", "-", "-", "transport_type", "-"]}
+{"tokens": ["ruf", "mir", "ein", "taxi", "zum", "flughafen", "um", "fünf", "uhr", "morgens"], "tags": ["-", "-", "-", "transport_type", "-", "place_name", "-", "time", "time", "time"]}
+{"tokens": ["wie", "ist", "der", "verkehr", "bei", "meinem", "büro"], "tags": ["-", "-", "-", "-", "-", "-", "place_name"]}
+{"tokens": ["wie", "ist", "der", "verkehr", "petersburger", "straße"], "tags": ["-", "-", "-", "-", "place_name", "-"]}
+{"tokens": ["besorg", "mir", "ein", "zug", "ticket", "für", "nächsten", "montag", "nach", "hamburg"], "tags": ["-", "-", "-", "transport_type", "-", "-", "-", "date", "-", "place_name"]}
+{"tokens": ["reserviere", "mir", "ein", "uber", "für", "zweiundzwanzig", "uhr", "heute", "abend"], "tags": ["-", "-", "-", "transport_agency", "-", "time", "time", "timeofday", "timeofday"]}
+{"tokens": ["ich", "brauche", "ein", "uber", "an", "meinen", "aktuellen", "standort"], "tags": ["-", "-", "-", "transport_agency", "-", "-", "-", "-"]}
+{"tokens": ["die", "neusten", "nachrichten", "an", "meinem", "derzeitigen", "standort"], "tags": ["-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["plane", "eine", "strecke", "von", "hier", "zum", "enchilada"], "tags": ["-", "-", "-", "-", "-", "-", "place_name"]}
+{"tokens": ["finde", "einen", "taxi", "service", "in", "meiner", "nähe"], "tags": ["-", "-", "transport_type", "-", "-", "-", "-"]}
+{"tokens": ["finde", "ein", "uber", "auf", "der", "karl", "marx", "allee"], "tags": ["-", "-", "transport_agency", "-", "-", "date", "date", "date"]}
+{"tokens": ["rufe", "ein", "taxi"], "tags": ["-", "-", "transport_type"]}
+{"tokens": ["rufe", "mir", "ein", "taxi"], "tags": ["-", "-", "-", "transport_type"]}
+{"tokens": ["geben", "auskunft", "über", "den", "verkehr", "in", "der", "nähe", "meinem", "stelle", "bitte"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["wie", "ist", "der", "verkehr", "von", "der", "arbeit", "nach", "hause"], "tags": ["-", "-", "-", "-", "-", "-", "-", "place_name", "place_name"]}
+{"tokens": ["unfall", "oder", "normaler", "verkehr"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["zwei", "mir", "die", "heutigen", "zugzeiten", "von", "berlin", "nach", "köln"], "tags": ["-", "-", "-", "date", "transport_type", "-", "-", "-", "place_name"]}
+{"tokens": ["ich", "brauche", "ein", "zug", "ticket"], "tags": ["-", "-", "-", "transport_type", "-"]}
+{"tokens": ["könntest", "du", "ein", "zug", "ticket", "für", "mich", "klarmachen"], "tags": ["-", "-", "-", "transport_type", "-", "-", "-", "-"]}
+{"tokens": ["wann", "fährt", "der", "zug", "aus", "köln", "ab"], "tags": ["-", "-", "-", "transport_type", "-", "place_name", "-"]}
+{"tokens": ["mach", "ein", "taxi", "buchung", "in", "über"], "tags": ["-", "-", "transport_type", "-", "-", "transport_agency"]}
+{"tokens": ["zeige", "mir", "die", "richtung", "von", "diesem", "ort"], "tags": ["-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["buche", "ein", "einfaches", "zug", "tiecket", "für", "mich", "nach", "neun", "uhr", "nach", "berlin"], "tags": ["-", "-", "transport_descriptor", "transport_type", "-", "-", "-", "time", "time", "time", "-", "place_name"]}
+{"tokens": ["wie", "lange", "braucht", "der", "zug", "von", "köln", "nach", "münchen"], "tags": ["-", "-", "-", "-", "transport_type", "-", "place_name", "-", "place_name"]}
+{"tokens": ["nächste", "zug", "nach", "berlin"], "tags": ["-", "transport_type", "-", "place_name"]}
+{"tokens": ["was", "sind", "die", "abfahrtszeiten", "für", "den", "zug", "nach", "gotha"], "tags": ["-", "-", "-", "-", "-", "-", "transport_type", "-", "place_name"]}
+{"tokens": ["ist", "die", "straße", "nach", "sachsen", "frei"], "tags": ["-", "-", "-", "-", "place_name", "-"]}
+{"tokens": ["kannst", "du", "mir", "ein", "taxi", "nach", "hause", "besorgen"], "tags": ["-", "-", "-", "-", "transport_type", "place_name", "place_name", "-"]}
+{"tokens": ["was", "ist", "das", "nächste", "taxi", "zu", "mich"], "tags": ["-", "-", "-", "-", "transport_type", "-", "-"]}
+{"tokens": ["kannst", "du", "mir", "bitte", "ein", "uber", "rufen"], "tags": ["-", "-", "-", "-", "-", "transport_agency", "-"]}
+{"tokens": ["ich", "möchte", "ein", "zug", "ticket", "nach", "münchen"], "tags": ["-", "-", "-", "transport_type", "-", "-", "place_name"]}
+{"tokens": ["was", "ist", "die", "schnellste", "strecke", "nach", "stadt"], "tags": ["-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["wann", "kommt", "der", "zug", "von", "weimar", "in", "dresden", "an"], "tags": ["-", "-", "-", "transport_type", "-", "place_name", "-", "place_name", "-"]}
+{"tokens": ["was", "ist", "die", "abfahrtszeit", "für", "diesen", "zug"], "tags": ["-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["sind", "die", "züge", "um", "zehn", "planmäßig"], "tags": ["-", "-", "-", "-", "time", "-"]}
+{"tokens": ["wie", "ist", "der", "verkehr"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["bitte", "kaufe", "mir", "ein", "zug", "ticket", "nach", "hamburg"], "tags": ["-", "-", "-", "-", "transport_type", "-", "-", "place_name"]}
+{"tokens": ["sag", "mir", "wo", "ich", "zu", "diesen", "zeiten", "hin", "soll"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["wie", "lauten", "die", "letzten", "verkehrsnachrichten", "für", "siegen"], "tags": ["-", "-", "-", "-", "-", "-", "place_name"]}
+{"tokens": ["bitte", "prüfe", "die", "fahrtzeiten", "für", "den", "zug", "am", "mittwoch", "um", "siebzehn", "uhr", "nach", "jena"], "tags": ["-", "-", "-", "-", "-", "-", "transport_type", "-", "date", "-", "time", "time", "-", "place_name"]}
+{"tokens": ["buch", "bitte", "den", "fünf", "uhr", "zug", "nach", "köln"], "tags": ["-", "-", "-", "time", "time", "transport_type", "-", "place_name"]}
+{"tokens": ["buche", "mir", "ein", "uber", "in", "einer", "stunde", "von", "jetzt"], "tags": ["-", "-", "-", "transport_agency", "-", "time", "time", "-", "-"]}
+{"tokens": ["wie", "sind", "die", "fahrzeiten", "für", "den", "zug", "für", "heute"], "tags": ["-", "-", "-", "-", "-", "-", "transport_type", "-", "date"]}
+{"tokens": ["wo", "ist", "der", "die", "das", "nähe", "zug", "zu", "mich"], "tags": ["-", "-", "-", "-", "-", "-", "transport_type", "-", "-"]}
+{"tokens": ["influx"], "tags": ["-"]}
+{"tokens": ["zeigen", "sie", "mir", "den", "aktuellen", "verkehr", "in", "meiner", "nähe"], "tags": ["-", "-", "-", "-", "-", "-", "place_name", "place_name", "place_name"]}
+{"tokens": ["finde", "hamburg", "zug", "zeit"], "tags": ["-", "place_name", "transport_type", "-"]}
+{"tokens": ["alexa", "buche", "ein", "zug", "ticket", "für", "mich", "für", "heute", "nachmittag", "nach", "dresden"], "tags": ["-", "-", "-", "transport_type", "-", "-", "-", "-", "timeofday", "timeofday", "-", "place_name"]}
+{"tokens": ["gibt", "es", "verkehr"], "tags": ["-", "-", "-"]}
+{"tokens": ["uber", "bitte"], "tags": ["transport_agency", "-"]}
+{"tokens": ["hallo", "wann", "verläßt", "der", "vier", "uhr", "zug", "den", "bahnhof"], "tags": ["-", "-", "-", "-", "-", "-", "transport_type", "-", "-"]}
+{"tokens": ["du", "solltest", "davon", "wissen"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["erkläre", "mir", "wie", "sich", "der", "soziale", "status", "in", "den", "u.", "s.", "a.", "von", "dem", "in", "den", "u.", "k.", "jetzt", "und", "früher", "unterscheidet"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "place_name", "place_name", "place_name", "-", "-", "-", "-", "place_name", "place_name", "-", "-", "-", "-"]}
+{"tokens": ["definiere", "forensisch"], "tags": ["-", "definition_word"]}
+{"tokens": ["olly", "hast", "du", "einen", "rat", "für", "mich", "wie", "ich", "es", "handhaben", "sollte"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["wie", "sind", "die", "öl", "preise", "heute", "für", "ein", "barrel", "rohöl"], "tags": ["-", "-", "-", "-", "-", "date", "-", "-", "-", "-"]}
+{"tokens": ["sag", "mir", "gegen", "welchen", "politiker", "ermittelt", "wird"], "tags": ["-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["drei", "mal", "zwei", "ist", "gleich", "sechs"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["muss", "ich", "meinen", "blutdruck", "checken", "lassen"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["ich", "möchte", "ein", "gedicht", "von", "borges", "über", "den", "tod", "verstehen"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["wie", "hoch", "ist", "die", "wahrscheinlichkeit", "dass", "es", "heute", "regnen", "wird"], "tags": ["-", "-", "-", "-", "-", "-", "-", "date", "weather_descriptor", "-"]}
+{"tokens": ["wie", "sieht", "das", "neueste", "weltszenario", "zur", "globalen", "erwärmung", "aus"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["definiere", "tier"], "tags": ["-", "definition_word"]}
+{"tokens": ["finde", "heraus", "wieviel", "prozent", "dreißig", "von", "hundertdreiundsechzig", "ist"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["promi", "nachrichten"], "tags": ["-", "-"]}
+{"tokens": ["wie", "alt", "ist", "nena"], "tags": ["-", "-", "-", "person"]}
+{"tokens": ["erkläre", "mir", "das", "buch", "des", "daniel"], "tags": ["-", "-", "-", "-", "-", "person"]}
+{"tokens": ["wie", "groß", "ist", "trevor", "noah"], "tags": ["-", "-", "-", "person", "person"]}
+{"tokens": ["ich", "würde", "gerne", "den", "trend", "ausländischer", "währungskurse", "wissen"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["was", "ist", "die", "lineare", "gleichung"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["erklär", "mir", "die", "theorie", "der", "dunklen", "materie", "und", "zeig", "mir", "ihre", "anwendungen"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["wie", "buchstabiert", "man", "das", "wort", "verdreifachen"], "tags": ["-", "-", "-", "-", "-", "definition_word"]}
+{"tokens": ["was", "ist", "die", "definition", "von", "session"], "tags": ["-", "-", "-", "-", "-", "definition_word"]}
+{"tokens": ["bitte", "plane", "eine", "besprechung", "mit", "meiner", "sekretärin"], "tags": ["-", "-", "-", "event_name", "-", "-", "relation"]}
+{"tokens": ["bitte", "sag", "mir", "die", "größe", "von", "lindsey", "lohan"], "tags": ["-", "-", "-", "-", "-", "-", "person", "person"]}
+{"tokens": ["was", "ist", "drei", "plus", "vier"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["was", "ist", "der", "name", "des", "größten", "mannes"], "tags": ["-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["warum", "sind", "frauen", "so", "geheimnisvoll"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["ich", "möchte", "dass", "mein", "roboter", "weiß", "ob", "es", "im", "einkaufszentrum", "oder", "in", "einem", "geschäft", "eine", "werbeaktion", "oder", "einen", "rabatt", "gibt"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["was", "ist", "bevölkerung", "pro", "meile", "in", "asien"], "tags": ["-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["gib", "valide", "quellen", "mit", "den", "informationen", "an", "um", "leuten", "zu", "helfen", "kritisches", "denken", "zu", "lernen", "und", "dem", "ehre", "zu", "gewähren", "wem", "sie", "gebührt", "anstatt", "fake", "news", "und", "alternative", "fakten", "zu", "verbreiten"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["kannst", "du", "dreizehn", "plus", "fünf", "plus", "neun", "für", "mich", "addieren"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["was", "ist", "der", "durchschnittspreis", "eines", "haus", "in", "köln"], "tags": ["-", "-", "-", "-", "-", "-", "-", "place_name"]}
+{"tokens": ["ich", "möchte", "dass", "du", "eine", "antwort", "auf", "die", "frage", "findest"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["definier", "computer", "spiel"], "tags": ["-", "definition_word", "definition_word"]}
+{"tokens": ["was", "ist", "computerspiel"], "tags": ["-", "-", "definition_word"]}
+{"tokens": ["keanu", "reeves", "geburts", "datum"], "tags": ["person", "person", "-", "-"]}
+{"tokens": ["abhängig", "von", "der", "rolle", "die", "du", "hast", "wird", "das", "deine", "antwort", "beeinflussen"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["wie", "ist", "die", "wettervorschau", "für", "morgen", "in", "leipzig"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["wie", "viele", "seiten", "hat", "ein", "zehneck"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["benutze", "das", "wort", "in", "einem", "satz"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["was", "bedeutet", "p.", "d.", "a."], "tags": ["-", "-", "definition_word", "definition_word", "definition_word"]}
+{"tokens": ["was", "ist", "zehn", "geteilt", "durch", "fünf"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["was", "ist", "das", "gewicht", "einer", "mikrowelle"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["sag", "mir", "wer", "die", "nächste", "präsidentschaftswahl", "gewinnen", "wird"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["wie", "alt", "ist", "chuck", "norris"], "tags": ["-", "-", "-", "person", "person"]}
+{"tokens": ["wie", "alt", "ist", "chuck", "norris"], "tags": ["-", "-", "-", "person", "person"]}
+{"tokens": ["lass", "mich", "wissen", "wenn", "meine", "kreditkarte", "belastet", "wird"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["was", "sind", "sechs", "mal", "achtundsechzig"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["wann", "hat", "der", "zweite", "weltkrieg", "begonnen"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["in", "welcher", "farbe", "sollte", "ich", "meine", "nägel", "lackieren"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["countdown", "für", "den", "geburtstag", "von", "meinem", "bruder"], "tags": ["-", "-", "-", "event_name", "-", "-", "relation"]}
+{"tokens": ["was", "bedeutet", "decke"], "tags": ["-", "-", "definition_word"]}
+{"tokens": ["was", "ist", "die", "hauptstadt", "von", "frankreich"], "tags": ["-", "-", "-", "-", "-", "place_name"]}
+{"tokens": ["welchen", "film", "sollte", "ich", "anschauen"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["wie", "viele", "kilometer", "sind", "es", "von", "leipzig", "sachsen", "bis", "münchen", "bayern"], "tags": ["-", "-", "-", "-", "-", "-", "place_name", "place_name", "-", "place_name", "place_name"]}
+{"tokens": ["was", "ist", "die", "definition", "von", "business"], "tags": ["-", "-", "-", "-", "-", "definition_word"]}
+{"tokens": ["definiere", "liebe"], "tags": ["-", "definition_word"]}
+{"tokens": ["was", "bedeutet", "witz"], "tags": ["-", "-", "definition_word"]}
+{"tokens": ["wo", "auf", "der", "welt", "liegt", "köln"], "tags": ["-", "-", "-", "-", "-", "place_name"]}
+{"tokens": ["hat", "angela", "merkel", "beziehungen", "nach", "russland"], "tags": ["-", "person", "person", "-", "-", "place_name"]}
+{"tokens": ["wie", "ist", "die", "temperatur", "in", "hamburg", "gerade"], "tags": ["-", "-", "-", "-", "-", "place_name", "-"]}
+{"tokens": ["löse", "die", "gleichung", "eins", "plus", "eins"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["nenn", "mir", "lexmark's", "derzeitigen", "aktien", "preis"], "tags": ["-", "-", "business_name", "-", "-", "-"]}
+{"tokens": ["was", "ist", "mehr", "wert", "ein", "u.", "s.", "d.", "oder", "a.", "u.", "s."], "tags": ["-", "-", "-", "-", "-", "currency_name", "currency_name", "currency_name", "-", "currency_name", "currency_name", "currency_name"]}
+{"tokens": ["definiere", "computer"], "tags": ["-", "definition_word"]}
+{"tokens": ["aktueller", "währungskurs"], "tags": ["-", "-"]}
+{"tokens": ["was", "ist", "der", "längste", "fluss", "der", "welt"], "tags": ["-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["wie", "alt", "ist", "herbert", "grönemeyer"], "tags": ["-", "-", "-", "person", "person"]}
+{"tokens": ["siri", "wie", "ist", "die", "höhe", "über", "meeresspiegel", "von", "münchen", "bayern"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "place_name", "place_name"]}
+{"tokens": ["wie", "hoch", "ist", "der", "tower", "in", "london"], "tags": ["-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["nenn", "mir", "den", "neusten", "kurs", "von", "pepsi"], "tags": ["-", "-", "-", "-", "-", "-", "business_name"]}
+{"tokens": ["welche", "form", "hat", "ein", "bal"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["was", "ist", "die", "hauptstadt", "von", "new", "hampshire"], "tags": ["-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["was", "bedeutet", "problematisch"], "tags": ["-", "-", "definition_word"]}
+{"tokens": ["zeig", "mir", "den", "wechselkurs", "zwischen", "c.", "z.", "k.", "und", "dollar"], "tags": ["-", "-", "-", "-", "-", "currency_name", "currency_name", "currency_name", "-", "currency_name"]}
+{"tokens": ["wieviele", "oscars", "hat", "meryl", "streep", "gewonnen"], "tags": ["-", "-", "-", "person", "person", "-"]}
+{"tokens": ["wie", "alt", "ist", "florian", "david", "fitz"], "tags": ["-", "-", "-", "person", "person", "person"]}
+{"tokens": ["neue", "wechselrate"], "tags": ["-", "-"]}
+{"tokens": ["wo", "ist", "manuel", "neuer"], "tags": ["-", "-", "person", "person"]}
+{"tokens": ["zeige", "mir", "den", "aktuellen", "wechselkurs", "zwischen", "euro", "und", "anderen", "währungen"], "tags": ["-", "-", "-", "-", "-", "-", "currency_name", "-", "-", "-"]}
+{"tokens": ["wo", "kommt", "lena", "meyer", "landrut", "her"], "tags": ["-", "-", "person", "person", "person", "-"]}
+{"tokens": ["aktienpreis", "von", "google"], "tags": ["-", "-", "business_name"]}
+{"tokens": ["was", "ist", "das", "bermuda", "dreieck"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["wann", "war", "einstein's", "geburtstag"], "tags": ["-", "-", "person", "event_name"]}
+{"tokens": ["hatte", "prince", "kinder"], "tags": ["-", "person", "-"]}
+{"tokens": ["zeige", "den", "wechselkurs", "von", "u.", "s.", "d.", "und", "euro", "an"], "tags": ["-", "-", "-", "-", "currency_name", "currency_name", "currency_name", "-", "currency_name", "-"]}
+{"tokens": ["wie", "würde", "ich", "ausgezeichnet", "in", "einem", "satz", "benutzen"], "tags": ["-", "-", "-", "definition_word", "-", "-", "-", "-"]}
+{"tokens": ["was", "ist", "der", "beste", "tierpark", "in", "berlin"], "tags": ["-", "-", "-", "-", "-", "-", "place_name"]}
+{"tokens": ["frag", "meine", "broker"], "tags": ["-", "-", "-"]}
+{"tokens": ["in", "welcher", "stadt", "wurde", "nena", "geboren"], "tags": ["-", "-", "-", "-", "person", "-"]}
+{"tokens": ["rappt", "sido", "noch"], "tags": ["-", "person", "-"]}
+{"tokens": ["zeige", "wechselkurs", "von", "u.", "s.", "d.", "und", "i.", "n.", "r."], "tags": ["-", "-", "-", "currency_name", "currency_name", "currency_name", "-", "currency_name", "currency_name", "currency_name"]}
+{"tokens": ["was", "ist", "der", "geographische", "wert", "des", "großen", "vulkans"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["lesen", "das", "ticket", "für", "tesla"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["wo", "liegt", "indien"], "tags": ["-", "-", "place_name"]}
+{"tokens": ["suche", "den", "aktienkurs", "von", "s.", "a.", "p."], "tags": ["-", "-", "-", "-", "business_name", "business_name", "business_name"]}
+{"tokens": ["wäre", "es", "gut", "heute", "volkswagen", "aktien", "zu", "kaufen"], "tags": ["-", "-", "-", "date", "business_name", "-", "-", "-"]}
+{"tokens": ["wie", "groß", "ist", "nena"], "tags": ["-", "-", "-", "person"]}
+{"tokens": ["was", "ist", "die", "definition", "von", "gegenseitig"], "tags": ["-", "-", "-", "-", "-", "definition_word"]}
+{"tokens": ["bitte", "beschreibe", "das", "neue", "harley", "davidson", "street", "bike"], "tags": ["-", "-", "-", "-", "definition_word", "definition_word", "definition_word", "definition_word"]}
+{"tokens": ["finde", "details", "über", "die", "u.", "s.", "a."], "tags": ["-", "-", "-", "-", "place_name", "place_name", "place_name"]}
+{"tokens": ["was", "ist", "die", "heimatstadt", "der", "volksbühne"], "tags": ["-", "-", "-", "-", "-", "place_name"]}
+{"tokens": ["wo", "kann", "ich", "dieses", "wort", "nutzen"], "tags": ["-", "-", "-", "definition_word", "definition_word", "-"]}
+{"tokens": ["wie", "hoch", "ist", "die", "bevölkerung", "von", "indien"], "tags": ["-", "-", "-", "-", "-", "-", "place_name"]}
+{"tokens": ["wo", "befindet", "sich", "niedersachsen"], "tags": ["-", "-", "-", "place_name"]}
+{"tokens": ["finde", "bitte", "den", "aktienpreis", "von", "infy", "in", "der", "nasdaq", "heraus"], "tags": ["-", "-", "-", "-", "-", "business_name", "-", "-", "-", "-"]}
+{"tokens": ["wann", "hat", "david", "bowie", "geburtstag"], "tags": ["-", "-", "person", "person", "event_name"]}
+{"tokens": ["wie", "ist", "der", "wechselkurs", "für", "pfund", "und", "u.", "s.", "d."], "tags": ["-", "-", "-", "-", "-", "currency_name", "-", "currency_name", "currency_name", "currency_name"]}
+{"tokens": ["nenn", "mir", "die", "zusammenfassende", "prognose", "microsoft", "aktienprognose", "bis", "dreißig", "tage", "im", "voraus"], "tags": ["-", "-", "-", "-", "-", "business_name", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["geo", "information"], "tags": ["-", "-"]}
+{"tokens": ["derzeitige", "forex", "kurse"], "tags": ["-", "-", "-"]}
+{"tokens": ["geographie", "berlin"], "tags": ["-", "place_name"]}
+{"tokens": ["wer", "war", "der", "erste", "präsident", "der", "u.", "s.", "a."], "tags": ["-", "-", "-", "-", "-", "-", "place_name", "place_name", "place_name"]}
+{"tokens": ["welches", "land", "würde", "am", "ende", "das", "meiste", "geld", "aus", "tausend", "dollar", "umwandeln"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["erkäre", "was", "eine", "kontaktlinse", "ist"], "tags": ["-", "-", "-", "definition_word", "-"]}
+{"tokens": ["beschreibe", "headset"], "tags": ["-", "definition_word"]}
+{"tokens": ["was", "ist", "marketing"], "tags": ["-", "-", "definition_word"]}
+{"tokens": ["wie", "hoch", "ist", "roraima", "mount"], "tags": ["-", "-", "-", "place_name", "place_name"]}
+{"tokens": ["alexa", "wer", "ist", "bob", "dean"], "tags": ["-", "-", "-", "person", "person"]}
+{"tokens": ["alexa", "wie", "lautet", "der", "aktienpreis", "für", "porsche"], "tags": ["-", "-", "-", "-", "-", "-", "business_name"]}
+{"tokens": ["wann", "ist", "madonna's", "geburtstag"], "tags": ["-", "-", "person", "event_name"]}
+{"tokens": ["konvertiere", "einen", "u.", "s.", "dollar", "zu", "euro"], "tags": ["-", "-", "currency_name", "currency_name", "currency_name", "-", "currency_name"]}
+{"tokens": ["finde", "brad", "pitt's", "alter", "heraus"], "tags": ["-", "person", "person", "-", "-"]}
+{"tokens": ["was", "ist", "das", "reinvermögen", "dieses", "promis"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["wechselkurrs", "von", "us", "dollar", "zu", "indian", "rupee"], "tags": ["-", "-", "currency_name", "currency_name", "-", "currency_name", "currency_name"]}
+{"tokens": ["was", "ist", "der", "günstigste", "preis", "von", "zoella's", "erstem", "buch"], "tags": ["-", "-", "-", "-", "-", "-", "person", "-", "-"]}
+{"tokens": ["worüber", "geht", "das", "object"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["wo", "ist", "rama", "auf", "seiner", "letzten", "reise", "hingegangen"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["was", "ist", "die", "definition", "von", "vielzahl"], "tags": ["-", "-", "-", "-", "-", "definition_word"]}
+{"tokens": ["wie", "ist", "der", "wechselkurs", "von", "u.", "s.", "dollar", "zur", "rupie", "heute"], "tags": ["-", "-", "-", "-", "-", "currency_name", "currency_name", "currency_name", "-", "currency_name", "date"]}
+{"tokens": ["wird", "ein", "peugeot", "zwei", "null", "sieben", "c.", "c.", "in", "drei", "jahren", "noch", "etwas", "wert", "sein"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["für", "wieviel", "wurde", "airtel", "for", "einiger", "zeit", "verkauft"], "tags": ["-", "-", "-", "business_name", "-", "-", "-", "-"]}
+{"tokens": ["was", "bedeutet", "mein", "augapfel"], "tags": ["-", "-", "definition_word", "definition_word"]}
+{"tokens": ["geographie", "bitte"], "tags": ["-", "-"]}
+{"tokens": ["welche", "körbchengröße", "hat", "julianne", "hough"], "tags": ["-", "-", "-", "person", "person"]}
+{"tokens": ["öffne", "stocks"], "tags": ["-", "-"]}
+{"tokens": ["wie", "viel", "kostet", "die", "nestle", "firma"], "tags": ["-", "-", "-", "-", "business_name", "-"]}
+{"tokens": ["warum", "bekommen", "hungernde", "menschen", "immer", "wieder", "kinder"], "tags": ["-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["alexa", "was", "ist", "ein", "computer"], "tags": ["-", "-", "-", "-", "definition_word"]}
+{"tokens": ["hat", "lena", "geschwister"], "tags": ["-", "person", "-"]}
+{"tokens": ["was", "ist", "der", "längste", "tag", "des", "jahres"], "tags": ["-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["wieviele", "flüsse", "gibt", "es", "in", "europa"], "tags": ["-", "-", "-", "-", "-", "place_name"]}
+{"tokens": ["wie", "sieht", "ein", "elefant", "aus"], "tags": ["-", "-", "-", "definition_word", "-"]}
+{"tokens": ["prüfe", "info", "von", "jemandem"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["gehe", "zu", "social", "media", "und", "poste", "den", "folgenden", "status"], "tags": ["-", "-", "media_type", "media_type", "-", "-", "-", "-", "-"]}
+{"tokens": ["sag", "mir", "was", "aktuell", "angesagt", "ist"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["wer", "hat", "meinem", "geschäft", "in", "den", "letzten", "vierundzwanzig", "stunden", "geantwortet"], "tags": ["-", "-", "-", "-", "-", "-", "-", "time", "time", "-"]}
+{"tokens": ["wieviele", "likes", "hat", "mein", "status", "von", "gestern", "bekommen"], "tags": ["-", "-", "-", "-", "-", "-", "date", "-"]}
+{"tokens": ["tweet", "auf", "twitter", "es", "geht", "mir", "gut"], "tags": ["-", "-", "media_type", "-", "-", "-", "-"]}
+{"tokens": ["benutze", "facebook", "post"], "tags": ["-", "media_type", "-"]}
+{"tokens": ["poste", "auf", "meinem", "facebook", "konto", "ich", "habe", "mich", "verlobt"], "tags": ["-", "-", "-", "media_type", "-", "-", "-", "-", "-"]}
+{"tokens": ["hallo", "sag", "mir", "die", "neuigkeiten", "der", "zeit", "auf", "facebook"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "media_type"]}
+{"tokens": ["hey", "siri", "zeige", "mir", "das", "neuste", "foto", "von", "heidi", "klum", "auf", "instagram"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "person", "person", "-", "media_type"]}
+{"tokens": ["was", "passiert", "hier"], "tags": ["-", "-", "-"]}
+{"tokens": ["bitt", "sag", "mir", "was", "mit", "meinen", "sozialen", "medien", "los", "ist"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["checke", "meine", "benachrichtigungen"], "tags": ["-", "-", "-"]}
+{"tokens": ["hat", "anne", "gerade", "etwas", "auf", "meinem", "facebook", "feed", "gepostet"], "tags": ["-", "person", "-", "-", "-", "-", "media_type", "-", "-"]}
+{"tokens": ["olly", "erzähl", "mir", "was", "es", "neues", "gibt"], "tags": ["-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["ich", "habe", "gehört", "heidi", "klum", "hat", "eben", "geheiratet", "kannst", "du", "mir", "die", "hochzeitsbilder", "auf", "ihrem", "instagram", "zeigen"], "tags": ["-", "-", "-", "person", "person", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "media_type", "-"]}
+{"tokens": ["bitte", "schreibe", "einen", "tweet", "an", "pampers", "dass", "meine", "windeln", "auseinander", "fallen"], "tags": ["-", "-", "-", "media_type", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["twittere", "an", "apple", "dass", "das", "handy", "nicht", "funktioniert"], "tags": ["media_type", "media_type", "business_name", "-", "-", "-", "-", "-"]}
+{"tokens": ["tweete", "einsundeins", "und", "sag", "ihnen", "dass", "ihr", "service", "wieder", "mal", "aus", "ist"], "tags": ["media_type", "business_name", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["gibt", "es", "neue", "snaps"], "tags": ["-", "-", "-", "media_type"]}
+{"tokens": ["hat", "mir", "irgendjemand", "eine", "nachricht", "auf", "facebook", "geschrieben"], "tags": ["-", "-", "-", "-", "-", "-", "media_type", "-"]}
+{"tokens": ["twittere", "eine", "beschwerde", "an", "amazon", "über", "die", "verzögerte", "lieferung"], "tags": ["media_type", "-", "-", "-", "business_name", "-", "-", "-", "-"]}
+{"tokens": ["tweet", "an", "vodafone", "das", "kabelnetz", "ist", "wieder", "aus", "in", "kreuzberg"], "tags": ["media_type", "-", "business_name", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["sende", "einen", "tweet", "an", "aldi", "dass", "die", "lebensmittel", "zu", "teuer", "sind"], "tags": ["-", "-", "media_type", "-", "business_name", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["hi", "was", "hast", "du", "für", "bilder", "auf", "pinterest", "geladen"], "tags": ["-", "-", "-", "-", "-", "-", "-", "media_type", "-"]}
+{"tokens": ["öffne", "firmenname", "und", "finde", "formulare"], "tags": ["-", "business_name", "-", "-", "-"]}
+{"tokens": ["twittere", "eine", "beschwerde", "über", "die", "löcher", "im", "asphalt"], "tags": ["media_type", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["was", "sind", "die", "neuesten", "tweets", "in", "meinem", "twitter", "konto"], "tags": ["-", "-", "-", "-", "-", "-", "-", "media_type", "-"]}
+{"tokens": ["twittere", "eine", "beschwerde", "bezüglich", "meiner", "schuh", "farbe", "an", "deichmann"], "tags": ["media_type", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["poste", "neuen", "status"], "tags": ["-", "-", "-"]}
+{"tokens": ["dieser", "mai", "bringt", "uns", "probleme", "die", "klein", "für", "uns", "sind"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["es", "wäre", "nett", "wenn", "du", "den", "status", "für", "mich", "posten", "würdest"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["twittere", "an", "starbucks"], "tags": ["media_type", "-", "business_name"]}
+{"tokens": ["siri", "füge", "eine", "neue", "email", "bei", "anna", "hinzu"], "tags": ["-", "-", "-", "-", "personal_info", "-", "person", "-"]}
+{"tokens": ["nachricht", "jan", "schreibe", "ich", "komme", "zu", "spät"], "tags": ["-", "person", "-", "-", "-", "-", "-"]}
+{"tokens": ["liesmir", "die", "letzte", "email", "von", "stefan", "und", "ölwechsel", "vor"], "tags": ["-", "-", "-", "-", "-", "person", "-", "-", "-"]}
+{"tokens": ["es", "irgendeine", "neue", "email"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["habe", "ich", "irgendeine", "neue", "email"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["habe", "ich", "irgendwelche", "emails", "von", "robert"], "tags": ["-", "-", "-", "-", "-", "person"]}
+{"tokens": ["gibt", "es", "irgendwelche", "email", "updates"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["öffne", "das", "profil", "von", "alfred", "aus", "meinem", "kontakt"], "tags": ["-", "-", "personal_info", "-", "person", "-", "-", "-"]}
+{"tokens": ["finde", "alle", "kontakte", "namens", "john"], "tags": ["-", "-", "-", "personal_info", "person"]}
+{"tokens": ["schicke", "jürgen", "eine", "email", "dass", "ich", "auf", "dem", "weg", "nach", "hause", "bin"], "tags": ["-", "person", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["füge", "rebecca", "green", "zu", "meiner", "liste", "von", "meinen", "favorisierten", "kontakten", "zu"], "tags": ["-", "person", "person", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["olly", "öffne", "neue", "email", "an", "diesen", "kollegen", "mit", "dieser", "email"], "tags": ["-", "-", "-", "-", "-", "-", "relation", "-", "-", "-"]}
+{"tokens": ["schick", "mail", "an", "silvia", "für", "carolina"], "tags": ["-", "-", "-", "person", "-", "-"]}
+{"tokens": ["antworte", "gerrit", "und", "lass", "ihn", "wissen", "dass", "ich", "morgen", "frei", "habe"], "tags": ["-", "person", "-", "-", "-", "-", "-", "-", "date", "-", "-"]}
+{"tokens": ["ist", "irgendeine", "von", "meinen", "neuen", "emails", "von", "anna"], "tags": ["-", "-", "-", "-", "-", "-", "-", "person"]}
+{"tokens": ["antworte", "täglich", "auf", "alle", "emails", "die", "zwischen", "zweiundzwanzig", "uhr", "und", "sieben", "uhr", "morgens", "erhalten", "wurden"], "tags": ["-", "general_frequency", "-", "-", "-", "-", "-", "time", "time", "-", "time", "time", "time", "-", "-"]}
+{"tokens": ["sende", "mutti", "eine", "email", "dass", "ich", "zu", "der", "feier", "gehe"], "tags": ["-", "relation", "-", "-", "-", "-", "-", "-", "event_name", "-"]}
+{"tokens": ["zeige", "mir", "alle", "emails", "die", "ich", "vor", "kurzem", "bekommen", "habe"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["wo", "arbeitet", "thorsten", "aktuell"], "tags": ["-", "personal_info", "person", "-"]}
+{"tokens": ["schicke", "eine", "email", "an", "mama", "und", "sag", "ihr", "ich", "sehe", "dich", "im", "disneyland"], "tags": ["-", "-", "-", "-", "relation", "-", "-", "-", "-", "-", "-", "-", "place_name"]}
+{"tokens": ["öffne", "alle", "mails", "von", "steffi"], "tags": ["-", "-", "-", "-", "person"]}
+{"tokens": ["verknüpfe", "mich", "mit", "jans", "email"], "tags": ["-", "-", "-", "person", "personal_info"]}
+{"tokens": ["bitte", "sende", "eine", "email", "an", "larrys", "neue", "email", "larrylarry", "at", "gmail", "punkt", "com"], "tags": ["-", "-", "-", "-", "-", "person", "-", "-", "email_address", "email_address", "email_address", "email_address", "email_address"]}
+{"tokens": ["schreibe", "die", "nachricht", "in", "die", "mitarbeitergruppe"], "tags": ["-", "-", "-", "-", "-", "relation"]}
+{"tokens": ["überprüfe", "letzte", "emails", "und", "sag", "mir", "sender", "und", "thema"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["überpfüfe", "meinen", "posteingang", "auf", "alle", "neuen", "emails", "von", "robert"], "tags": ["-", "-", "email_folder", "-", "-", "-", "-", "-", "person"]}
+{"tokens": ["was", "ist", "thorstens", "telefonnummer"], "tags": ["-", "-", "person", "personal_info"]}
+{"tokens": ["irgendwelche", "emails", "in", "der", "letzten", "stunde"], "tags": ["-", "-", "-", "-", "time", "time"]}
+{"tokens": ["transkribiere", "inhalt", "der", "email"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["gibt", "es", "irgendwelche", "emails", "von", "der", "schule", "über", "meine", "konferenz"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "event_name"]}
+{"tokens": ["hey", "olly", "habe", "ich", "irgendwelche", "neuen", "emails"], "tags": ["-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["kannst", "du", "die", "email", "an", "georg", "senden"], "tags": ["-", "-", "-", "-", "-", "person", "-"]}
+{"tokens": ["hat", "mein", "chef", "mir", "heute", "neue", "emails", "geschickt"], "tags": ["-", "-", "relation", "-", "date", "-", "-", "-"]}
+{"tokens": ["nimm", "diese", "email", "adresse", "als", "kontakt"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["prüfe", "meine", "emails", "von", "lina"], "tags": ["-", "-", "-", "-", "relation"]}
+{"tokens": ["lies", "mir", "die", "email", "von", "mama", "vor", "inklusive", "den", "betreff"], "tags": ["-", "-", "-", "-", "-", "relation", "-", "-", "-", "-"]}
+{"tokens": ["bitte", "schick", "meinem", "ehemann", "eine", "email", "ich", "komme", "heute", "abend", "später"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "timeofday", "timeofday", "-"]}
+{"tokens": ["email", "an", "firmenangestellten", "wegen", "arbeitsprojekt"], "tags": ["-", "-", "relation", "-", "-"]}
+{"tokens": ["check", "neue", "emails", "innerhalb", "des", "letzten", "tages"], "tags": ["-", "-", "-", "-", "-", "date", "date"]}
+{"tokens": ["wirst", "du", "eine", "email", "an", "diese", "neue", "email", "adresse", "schicken"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["prüfe", "meinen", "email", "posteingang", "und", "sag", "mir", "ob", "ich", "neue", "emails", "habe"], "tags": ["-", "-", "-", "email_folder", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["prüfe", "meinen", "posteingang", "auf", "neue", "emails"], "tags": ["-", "-", "email_folder", "-", "-", "-"]}
+{"tokens": ["habe", "ich", "irgendeine", "neue", "email", "von", "robert"], "tags": ["-", "-", "-", "-", "-", "-", "person"]}
+{"tokens": ["irgendwelche", "emails"], "tags": ["-", "-"]}
+{"tokens": ["gibt", "es", "neue", "emails"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["neue", "emailbenachrichtigungen"], "tags": ["-", "-"]}
+{"tokens": ["meine", "mutter", "braucht", "das", "wöchentliche", "wetter", "das", "ihr", "geschickt", "wird"], "tags": ["-", "relation", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["was", "sind", "meine", "neuesten", "emails"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["füge", "mustermail", "at", "yahoo", "dot", "com", "zu", "meinen", "kontakten", "hinzu"], "tags": ["-", "email_address", "email_address", "email_address", "email_address", "email_address", "-", "-", "-", "-"]}
+{"tokens": ["emails", "von", "jana"], "tags": ["-", "-", "person"]}
+{"tokens": ["email", "an", "meinen", "freund"], "tags": ["-", "-", "-", "relation"]}
+{"tokens": ["welche", "email", "habe", "ich", "um", "fünfzehn", "uhr", "dreißig", "bekommen"], "tags": ["-", "-", "-", "-", "-", "time", "time", "time", "-"]}
+{"tokens": ["habe", "ich", "emails", "von", "dieser", "person", "erhalten"], "tags": ["-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["beantworte", "die", "letzte", "email", "hannas", "mit", "nein"], "tags": ["-", "-", "-", "-", "person", "-", "-"]}
+{"tokens": ["die", "email", "antwort", "soll", "sein"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["beantworte", "empfangene", "email"], "tags": ["-", "-", "-"]}
+{"tokens": ["schreibe", "eine", "email", "an", "meinen", "ehemann"], "tags": ["-", "-", "-", "-", "-", "relation"]}
+{"tokens": ["alexa", "email", "an", "mama", "frag", "sie", "wie", "das", "wetter", "bei", "ihr", "ist"], "tags": ["-", "-", "-", "relation", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["olly", "lasst", "uns", "email", "sandra"], "tags": ["-", "-", "-", "-", "person"]}
+{"tokens": ["ich", "brauche", "eine", "email", "kette", "an", "meine", "mutter", "ich", "plane", "sie", "zu", "besuchen", "frag", "sie", "wie", "das", "wetter", "wird"], "tags": ["-", "-", "-", "-", "-", "-", "-", "relation", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["antworte", "auf", "die", "mail", "von", "anke", "am", "morgen"], "tags": ["-", "-", "-", "-", "-", "person", "-", "timeofday"]}
+{"tokens": ["verfasse", "email", "an", "robert"], "tags": ["-", "-", "-", "person"]}
+{"tokens": ["aktualisiere", "meine", "emails"], "tags": ["-", "-", "-"]}
+{"tokens": ["füge", "eine", "neue", "email", "für", "john", "zu", "meinen", "kontakten", "hinzu"], "tags": ["-", "-", "-", "-", "-", "person", "-", "-", "-", "-"]}
+{"tokens": ["checke", "den", "posteingang", "nach", "mail", "von", "sarah"], "tags": ["-", "-", "email_folder", "-", "-", "-", "person"]}
+{"tokens": ["gibt", "es", "irgendeine", "email", "von", "meinem", "kunden"], "tags": ["-", "-", "-", "-", "-", "-", "relation"]}
+{"tokens": ["benachrichtige", "mich", "sobald", "eine", "neue", "antwort", "vom", "chef", "kommt"], "tags": ["-", "-", "-", "-", "-", "-", "-", "relation", "-"]}
+{"tokens": ["speicher", "die", "email", "in", "meinen", "kontakten", "für", "zukünftigen", "gebrauch"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["kontakte"], "tags": ["-"]}
+{"tokens": ["wie", "sieht", "mein", "posteingang", "aktuell", "aus"], "tags": ["-", "-", "-", "email_folder", "-", "-"]}
+{"tokens": ["beginne", "eine", "antwort", "an", "marleen's", "neueste", "email"], "tags": ["-", "-", "-", "-", "person", "-", "-"]}
+{"tokens": ["neue", "adresse", "in", "emailformular", "eingeben"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["öffne", "emails"], "tags": ["-", "-"]}
+{"tokens": ["spiel", "ein", "bisschen", "david", "bowie"], "tags": ["-", "-", "-", "artist_name", "artist_name"]}
+{"tokens": ["hallo", "hallo"], "tags": ["-", "-"]}
+{"tokens": ["stelle", "alarm", "morgen", "um", "sechs", "uhr"], "tags": ["-", "-", "date", "-", "time", "time"]}
+{"tokens": ["was", "ist", "in", "amerika", "los"], "tags": ["-", "-", "-", "place_name", "-"]}
+{"tokens": ["ist", "es", "jetzt", "sonnig", "in", "nürnberg"], "tags": ["-", "-", "-", "weather_descriptor", "-", "place_name"]}
+{"tokens": ["ich", "würde", "gerne", "pop", "musik", "hören"], "tags": ["-", "-", "-", "music_genre", "-", "-"]}
+{"tokens": ["schalte", "zufallswiedergabe", "aus"], "tags": ["player_setting", "player_setting", "player_setting"]}
+{"tokens": ["schicke", "mir", "aktuelle", "nachrichten", "vom", "tag"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["wie", "ist", "der", "text", "zum", "lied", "abschied", "nehmen", "von", "xavier", "naidoo"], "tags": ["-", "-", "-", "-", "-", "-", "song_name", "song_name", "-", "artist_name", "artist_name"]}
+{"tokens": ["ich", "muss", "regenbogen", "von", "lena", "meyer", "hören"], "tags": ["-", "-", "song_name", "-", "artist_name", "artist_name", "-"]}
+{"tokens": ["was", "sind", "die", "wetterupdates", "für", "dienstag"], "tags": ["-", "-", "-", "-", "-", "date"]}
+{"tokens": ["hallo"], "tags": ["-"]}
+{"tokens": ["nenn", "mir", "die", "augenblickliche", "uhrzeit", "in", "nürnberg"], "tags": ["-", "-", "-", "-", "-", "-", "place_name"]}
+{"tokens": ["musik", "an"], "tags": ["-", "-"]}
+{"tokens": ["spiel", "mir", "etwas", "pop"], "tags": ["-", "-", "-", "music_genre"]}
+{"tokens": ["stelle", "den", "alarm", "heute", "von", "zehn", "uhr", "aus"], "tags": ["-", "-", "-", "date", "-", "time", "time", "-"]}
+{"tokens": ["spiele", "musik"], "tags": ["-", "-"]}
+{"tokens": ["bitte", "leise", "sein"], "tags": ["-", "-", "-"]}
+{"tokens": ["ist", "die", "besprechung", "für", "morgen", "geplant"], "tags": ["-", "-", "event_name", "-", "date", "-"]}
+{"tokens": ["schalte", "die", "wohnzimmer", "lichter", "rot"], "tags": ["-", "-", "house_place", "-", "color_type"]}
+{"tokens": ["kannst", "du", "mir", "sagen", "wie", "spät", "es", "ist"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["hast", "du", "irgendwelche", "nachrichten", "von", "der", "taz"], "tags": ["-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["olly", "dreh", "die", "beleuchtung", "auf", "sieben", "runter"], "tags": ["-", "-", "-", "-", "change_amount", "change_amount", "-"]}
+{"tokens": ["bestelle", "essen", "zum", "mitnehmen"], "tags": ["-", "order_type", "order_type", "order_type"]}
+{"tokens": ["ich", "möchte", "ein", "bisschen", "modern", "rock", "hören"], "tags": ["-", "-", "-", "-", "music_genre", "music_genre", "-"]}
+{"tokens": ["was", "passiert", "heute", "in", "der", "welt"], "tags": ["-", "-", "date", "-", "-", "place_name"]}
+{"tokens": ["ich", "hätte", "jetzt", "gern", "kaffee"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["bitte", "starte", "den", "staubsauger"], "tags": ["-", "-", "-", "device_type"]}
+{"tokens": ["starte", "jetzt", "den", "staubsauger"], "tags": ["-", "-", "-", "device_type"]}
+{"tokens": ["neuste", "schlagzeilen", "zu", "technik"], "tags": ["-", "-", "-", "news_topic"]}
+{"tokens": ["olly", "brandheiße", "trendende", "themen"], "tags": ["-", "-", "news_topic", "-"]}
+{"tokens": ["ich", "habe", "grad", "richtig", "bock", "auf", "chinesisches", "bitte", "lass", "mich", "essen", "zum", "mitnehmen", "bestellen"], "tags": ["-", "-", "-", "-", "-", "-", "food_type", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["ausmachen", "der", "beleuchtung"], "tags": ["-", "-", "-"]}
+{"tokens": ["auf", "welche", "zeit", "ist", "mein", "aufwach", "alarm", "gestellt"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["spiel", "das", "lied", "als", "nächstes"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["siri", "spiel", "meine", "pop", "playlist"], "tags": ["-", "-", "-", "music_genre", "-"]}
+{"tokens": ["sag", "mir", "ob", "es", "irgendwelche", "neuigkeiten", "zu", "diesem", "thema", "gibt"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["was", "ist", "die", "zeit", "in", "wien"], "tags": ["-", "-", "-", "-", "-", "place_name"]}
+{"tokens": ["bietet", "das", "nächstgelegenste", "chinesische", "restaurant", "lieferung", "an"], "tags": ["-", "-", "-", "food_type", "business_type", "order_type", "-"]}
+{"tokens": ["bitte", "alle", "lampen", "außen", "anschalten"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["was", "sind", "die", "neusten", "nachrichten", "zur", "bundestagswahl"], "tags": ["-", "-", "-", "-", "-", "-", "news_topic"]}
+{"tokens": ["wie", "lautet", "die", "aktuelle", "uhrzeit", "in", "leipzig", "sachsen"], "tags": ["-", "-", "-", "-", "-", "-", "place_name", "place_name"]}
+{"tokens": ["spiele", "meine", "aktuelle", "playlist", "von", "oben"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["was", "sind", "die", "neusten", "nachrichten", "über", "die", "grünen"], "tags": ["-", "-", "-", "-", "-", "-", "-", "news_topic"]}
+{"tokens": ["bitte", "schalte", "die", "intelligente", "steckdose", "aus"], "tags": ["-", "-", "-", "device_type", "device_type", "-"]}
+{"tokens": ["was", "ist", "der", "aktuelle", "stand", "bei", "den", "beiden", "fußballspielen", "die", "gerade", "stattfinden"], "tags": ["-", "-", "-", "-", "-", "-", "-", "news_topic", "news_topic", "-", "-", "-"]}
+{"tokens": ["alarmiere", "mich", "in", "drei", "stunden"], "tags": ["-", "-", "-", "time", "time"]}
+{"tokens": ["was", "ist", "der", "beste", "tag", "nächste", "woche", "um", "pizza", "essen", "zu", "gehen"], "tags": ["-", "-", "-", "-", "-", "date", "date", "-", "food_type", "-", "-", "-"]}
+{"tokens": ["lade", "spotify"], "tags": ["-", "app_name"]}
+{"tokens": ["morgen", "über", "neunzig", "grad"], "tags": ["date", "weather_descriptor", "weather_descriptor", "-"]}
+{"tokens": ["spiel", "musik", "von", "queen"], "tags": ["-", "-", "-", "artist_name"]}
+{"tokens": ["lieferdienst", "in", "meiner", "nähe", "zeigen"], "tags": ["order_type", "-", "-", "-", "-"]}
+{"tokens": ["werde", "ich", "heute", "mit", "kurzer", "hose", "durchkommen"], "tags": ["-", "-", "date", "-", "weather_descriptor", "weather_descriptor", "-"]}
+{"tokens": ["wie", "ist", "diese", "woche", "das", "wetter", "in", "meiner", "umgebung"], "tags": ["-", "-", "date", "date", "-", "-", "-", "-", "-"]}
+{"tokens": ["wird", "mein", "goldspiel", "verregnet"], "tags": ["-", "-", "-", "weather_descriptor"]}
+{"tokens": ["sollte", "ich", "heute", "eine", "kurze", "hose", "anziehen"], "tags": ["-", "-", "date", "-", "weather_descriptor", "weather_descriptor", "-"]}
+{"tokens": ["schalte", "das", "licht", "im", "schlafzimmer", "aus"], "tags": ["-", "-", "-", "-", "house_place", "-"]}
+{"tokens": ["bitte", "sprich", "leiser", "mit", "mir"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["olly", "wecker", "sreichen"], "tags": ["-", "-", "-"]}
+{"tokens": ["siri", "besorge", "mir", "die", "nachrichten", "zu", "donald", "trump"], "tags": ["-", "-", "-", "-", "-", "-", "person", "person"]}
+{"tokens": ["wie", "wird", "das", "wetter", "wahrscheinlich", "in", "meiner", "gegen", "heute", "sein"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "date", "-"]}
+{"tokens": ["bitte", "schalte", "das", "licht", "im", "lesezimmer", "aus"], "tags": ["-", "-", "-", "-", "-", "house_place", "-"]}
+{"tokens": ["starte", "die", "in", "letzter", "zeit", "hinzugefügte", "playlist"], "tags": ["-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["zeige", "aktuelle", "nachrichten", "von", "n.", "t.", "v."], "tags": ["-", "-", "-", "-", "media_type", "media_type", "media_type"]}
+{"tokens": ["schalte", "die", "zimmer", "beleuchtung", "aus"], "tags": ["-", "-", "house_place", "-", "-"]}
+{"tokens": ["spiele", "etwas", "old", "school", "rap"], "tags": ["-", "-", "music_genre", "music_genre", "music_genre"]}
+{"tokens": ["sollte", "ich", "etwas", "streusalz", "vom", "laden", "mitnehmen"], "tags": ["-", "-", "-", "food_type", "-", "business_type", "-"]}
+{"tokens": ["schalten", "die", "wemo", "steckdose", "ein"], "tags": ["-", "-", "device_type", "device_type", "-"]}
+{"tokens": ["lass", "mich", "einfach", "nur", "das", "aktuelle", "datum", "von", "heute", "wissen"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "date", "-"]}
+{"tokens": ["steigere", "jedes", "licht", "im", "zimmer"], "tags": ["-", "device_type", "device_type", "-", "house_place"]}
+{"tokens": ["stelle", "einen", "wecker", "für", "fünf", "uhr", "heute", "abend", "mit", "dem", "namen", "taxi"], "tags": ["-", "-", "-", "-", "time", "-", "-", "timeofday", "-", "-", "-", "event_name"]}
+{"tokens": ["musik", "hören"], "tags": ["-", "-"]}
+{"tokens": ["ich", "will", "essen", "bestellen"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["spiel", "ein", "song", "von", "daddy", "yankee"], "tags": ["-", "-", "-", "-", "artist_name", "artist_name"]}
+{"tokens": ["spiel", "michael", "buble", "save", "the", "last", "dance"], "tags": ["-", "artist_name", "artist_name", "song_name", "song_name", "song_name", "song_name"]}
+{"tokens": ["checke", "den", "wetterbericht", "für", "diese", "woche"], "tags": ["-", "-", "-", "-", "date", "date"]}
+{"tokens": ["es", "wäre", "toll", "in", "diesem", "neu", "eröffneten", "restaurant", "in", "der", "innenstadt", "zu", "essen"], "tags": ["-", "-", "-", "-", "-", "-", "-", "business_type", "-", "-", "place_name", "-", "-"]}
+{"tokens": ["aufwachen", "eier", "backen"], "tags": ["-", "-", "-"]}
+{"tokens": ["hunderassen", "die", "allergisch", "sind"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["ich", "bin", "heute", "bei", "marktkauf", "gewesen"], "tags": ["-", "-", "date", "-", "place_name", "-"]}
+{"tokens": ["ich", "bin", "im", "regen", "durchnässt", "worden"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["was", "ist", "los", "in", "berlin"], "tags": ["-", "-", "-", "-", "place_name"]}
+{"tokens": ["wenn", "du", "über", "drei", "dinge", "reden", "könntest", "worüber", "wäre", "es"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["bücher"], "tags": ["-"]}
+{"tokens": ["über", "promis", "tratschen"], "tags": ["-", "-", "-"]}
+{"tokens": ["lösche", "meinen", "täglichen", "siebzehn", "uhr", "anruf"], "tags": ["-", "-", "general_frequency", "time", "time", "event_name"]}
+{"tokens": ["buch", "ein", "treffen", "mit", "charlotte"], "tags": ["-", "-", "event_name", "-", "person"]}
+{"tokens": ["speichere", "einen", "hinweis", "für", "den", "sechsten", "märz", "über", "ein", "gesellschaftstreffen", "um", "elf", "uhr"], "tags": ["-", "-", "-", "-", "-", "date", "date", "-", "-", "event_name", "-", "time", "time"]}
+{"tokens": ["lösche", "alle", "veranstaltungen", "und", "informationen"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["was", "ist", "morgen", "nachmittag", "für", "mich", "geplant"], "tags": ["-", "-", "date", "timeofday", "-", "-", "-"]}
+{"tokens": ["bitte", "lösche", "alle", "meine", "kalendertermine", "für", "den", "rest", "des", "tages"], "tags": ["-", "-", "-", "-", "-", "-", "-", "time", "time", "time"]}
+{"tokens": ["anstehende", "veranstaltungen"], "tags": ["time", "-"]}
+{"tokens": ["bitte", "ergänze", "mein", "nächstes", "treffen"], "tags": ["-", "-", "-", "-", "event_name"]}
+{"tokens": ["erinnere", "mich", "daran", "jeden", "freitag", "zum", "laden", "zu", "gehen"], "tags": ["-", "-", "-", "date", "date", "-", "-", "-", "-"]}
+{"tokens": ["wie", "sieht", "morgen", "mein", "morgen", "aus"], "tags": ["-", "-", "timeofday", "-", "date", "-"]}
+{"tokens": ["wann", "ist", "meine", "nächste", "erinnerung"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["plane", "eine", "mittagessen", "bei", "rizzo", "im", "zentrum", "für", "morgen", "mittag"], "tags": ["-", "-", "meal_type", "-", "place_name", "place_name", "place_name", "-", "date", "timeofday"]}
+{"tokens": ["wann", "fahren", "morgen", "züge"], "tags": ["-", "-", "date", "-"]}
+{"tokens": ["lösche", "alles", "aus", "dem", "kalender"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["lösche", "die", "veranstaltung", "um", "dreizehn", "uhr", "aus", "meinem", "plan"], "tags": ["-", "-", "-", "-", "time", "time", "-", "-", "-"]}
+{"tokens": ["welche", "termine", "habe", "ich"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["trage", "einen", "termin", "für", "den", "fünfzehnten", "jeden", "monats", "ein", "um", "mich", "an", "das", "bezahlen", "meiner", "internetrechnung", "zu", "erinnern"], "tags": ["-", "-", "-", "-", "-", "general_frequency", "general_frequency", "general_frequency", "-", "-", "-", "-", "-", "event_name", "event_name", "event_name", "-", "-"]}
+{"tokens": ["makiere", "den", "tag", "zwei", "tage", "nach", "diesem", "tag", "als", "mein", "urlaub"], "tags": ["-", "-", "-", "date", "date", "date", "date", "date", "-", "event_name", "event_name"]}
+{"tokens": ["erinnere", "mich", "daran", "heute", "meinen", "schirm", "mitzunehmen"], "tags": ["-", "-", "-", "date", "event_name", "event_name", "event_name"]}
+{"tokens": ["klaus", "hochzeitstag"], "tags": ["person", "event_name"]}
+{"tokens": ["erinnere", "mich", "an", "die", "besprechung", "am", "dienstag"], "tags": ["-", "-", "-", "-", "event_name", "-", "date"]}
+{"tokens": ["was", "mache", "ich", "dieses", "wochenende"], "tags": ["-", "-", "-", "date", "date"]}
+{"tokens": ["ich", "würde", "gerne", "den", "radiosender", "hören"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["spiel", "b.", "b.", "c.", "radio", "one"], "tags": ["-", "radio_name", "radio_name", "radio_name", "radio_name", "radio_name"]}
+{"tokens": ["spiel", "bitte", "top", "country"], "tags": ["-", "-", "-", "music_genre"]}
+{"tokens": ["ok", "google", "kannst", "du", "ryan", "seacrest", "starten"], "tags": ["-", "-", "-", "-", "person", "person", "-"]}
+{"tokens": ["welche", "sender", "spielen", "heute", "früh", "gute", "musik"], "tags": ["-", "-", "-", "-", "timeofday", "-", "-"]}
+{"tokens": ["können", "sie", "auf", "den", "anschalten", "tiur", "vermes", "hörbuch"], "tags": ["-", "-", "-", "-", "player_setting", "audiobook_name", "audiobook_name", "-"]}
+{"tokens": ["pause", "die", "hörbuch"], "tags": ["player_setting", "-", "media_type"]}
+{"tokens": ["öffne", "das", "harry", "potter", "hörbuch", "und", "spiel", "vom", "letzten", "stand", "ab"], "tags": ["-", "-", "audiobook_name", "audiobook_name", "media_type", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["the", "martian", "von", "downpour", "anhören"], "tags": ["audiobook_name", "audiobook_name", "-", "app_name", "-"]}
+{"tokens": ["wie", "kocht", "man", "pav", "bhaji"], "tags": ["-", "-", "-", "food_type", "food_type"]}
+{"tokens": ["liste", "die", "dinge", "auf", "meiner", "einkaufs", "liste", "auf", "olly"], "tags": ["-", "-", "-", "-", "-", "list_name", "-", "-", "-"]}
+{"tokens": ["füge", "vodka", "meiner", "partyeinkaufs", "liste", "hinzu"], "tags": ["-", "-", "-", "list_name", "-", "-"]}
+{"tokens": ["liste", "löschen"], "tags": ["-", "-"]}
+{"tokens": ["bitte", "entferne", "diesen", "gegenstand", "von", "der", "liste"], "tags": ["-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["entferne", "eintrag", "von", "liste"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["lösche", "zeitung", "anrufen", "von", "meiner", "urlaubsliste"], "tags": ["-", "-", "-", "-", "-", "list_name"]}
+{"tokens": ["lese", "meine", "einkaufs", "liste", "für", "heute", "vor"], "tags": ["-", "-", "list_name", "-", "-", "date", "-"]}
+{"tokens": ["füge", "der", "liste", "einen", "posten", "hinzu"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["wiederhole", "den", "folgenden", "podcast"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["überspringe", "zum", "nächsten", "podcast"], "tags": ["-", "-", "podcast_descriptor", "podcast_descriptor"]}
+{"tokens": ["geh", "weiter", "bitte"], "tags": ["-", "player_setting", "-"]}
+{"tokens": ["spiele", "den", "podcast", "von", "barack", "obama", "der", "auf", "dem", "gerät", "gespeichert", "ist"], "tags": ["-", "-", "-", "-", "podcast_name", "podcast_name", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["wo", "ist", "die", "nächste", "kneipe", "in", "der", "stadt"], "tags": ["-", "-", "-", "-", "business_type", "-", "-", "place_name"]}
+{"tokens": ["welche", "filme", "laufen", "in", "den", "kinos", "in", "der", "nähe"], "tags": ["-", "-", "-", "-", "-", "place_name", "-", "-", "-"]}
+{"tokens": ["kannst", "du", "ein", "preiswertes", "restaurant", "in", "der", "gegend", "empfehlen"], "tags": ["-", "-", "-", "-", "business_type", "-", "-", "-", "-"]}
+{"tokens": ["sag", "mir", "was", "in", "meiner", "stadt", "los", "ist"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["heutige", "lokale", "veranstaltungen"], "tags": ["date", "-", "-"]}
+{"tokens": ["kannst", "du", "eine", "bar", "in", "der", "maxvorstadt", "empfehlen"], "tags": ["-", "-", "-", "business_type", "-", "place_name", "place_name", "-"]}
+{"tokens": ["buch", "ein", "taxi", "um", "nach", "hause", "zu", "gelangen"], "tags": ["-", "-", "transport_type", "-", "-", "place_name", "-", "-"]}
+{"tokens": ["kannst", "du", "mir", "bitte", "die", "nächsten", "vier", "zugabfahrten", "nach", "hannover", "anzeigen"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "place_name", "-"]}
+{"tokens": ["lass", "uns", "ein", "taxi", "nehmen"], "tags": ["-", "-", "-", "transport_type", "-"]}
+{"tokens": ["taxi"], "tags": ["transport_type"]}
+{"tokens": ["finde", "ein", "uber", "das", "heute", "abend", "nach", "zweiundzwanzig", "uhr", "verfügbar", "ist"], "tags": ["-", "-", "transport_agency", "-", "timeofday", "timeofday", "-", "time", "time", "-", "-"]}
+{"tokens": ["bitte", "senden", "sie", "mir", "informationen", "zum", "kauf", "eines", "zug", "tickets", "zu", "berlin"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "transport_type", "-", "-", "place_name"]}
+{"tokens": ["könnten", "sie", "bitte", "den", "datenverkehr", "überprüfen", "unserem", "zuhause"], "tags": ["-", "-", "-", "-", "-", "-", "-", "place_name"]}
+{"tokens": ["was", "ist", "die", "strecke", "zum", "nächstgelegenen", "mcdonalds"], "tags": ["-", "-", "-", "-", "-", "-", "business_name"]}
+{"tokens": ["wie", "ist", "der", "verkehr", "nähe", "mich"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["was", "ist", "der", "aktuelle", "verkehr", "in", "sachsen"], "tags": ["-", "-", "-", "-", "-", "-", "place_name"]}
+{"tokens": ["buche", "ein", "taxi", "für", "eine", "abholung", "an", "meinem", "derzeitigen", "standort", "in", "einer", "stunde"], "tags": ["-", "-", "transport_type", "-", "-", "-", "-", "-", "-", "-", "-", "time", "time"]}
+{"tokens": ["öffne", "die", "uber", "app", "und", "besorg", "mir", "ein", "auto"], "tags": ["-", "-", "transport_agency", "-", "-", "-", "-", "-", "transport_type"]}
+{"tokens": ["wann", "kann", "ich", "den", "nähesten", "zug", "nehmen"], "tags": ["-", "-", "-", "-", "-", "transport_type", "-"]}
+{"tokens": ["berechne", "den", "widerstand", "dieses", "widerstands"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["was", "ist", "drei", "mal", "sieben"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["höchstes", "gebäude"], "tags": ["-", "-"]}
+{"tokens": ["ich", "möchte", "meiner", "frau", "romantische", "nachrichten", "schreiben"], "tags": ["-", "-", "-", "relation", "-", "-", "-"]}
+{"tokens": ["benutze", "es", "im", "satz"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["definier", "wischen"], "tags": ["-", "definition_word"]}
+{"tokens": ["wie", "lange", "ist", "ein", "tag", "auf", "der", "erde"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["beschreib", "eine", "kartoffel"], "tags": ["-", "-", "definition_word"]}
+{"tokens": ["was", "ist", "die", "durchschnittshöhe", "der", "vereinigten", "staaten"], "tags": ["-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["in", "welchem", "jahr", "wurde", "till", "schweiger", "geboren"], "tags": ["-", "-", "-", "-", "person", "person", "-"]}
+{"tokens": ["was", "ist", "ein", "fjord"], "tags": ["-", "-", "-", "place_name"]}
+{"tokens": ["ich", "brauche", "den", "aktienpreis", "von", "amazon"], "tags": ["-", "-", "-", "-", "-", "business_name"]}
+{"tokens": ["kannst", "du", "mit", "den", "geburtstag", "von", "angela", "merkel", "sagen"], "tags": ["-", "-", "-", "-", "event_name", "-", "person", "person", "-"]}
+{"tokens": ["was", "für", "eine", "hose", "ist", "eine", "culotte"], "tags": ["-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["finde", "den", "exakten", "standort", "der", "orte"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["was", "ist", "sechs", "minus", "vier"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["definition", "von", "objektname"], "tags": ["-", "-", "definition_word"]}
+{"tokens": ["bitte", "sage", "ein", "paar", "details", "über", "diese", "person"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["gib", "mir", "die", "definition", "zu", "laptop", "schaltkreis"], "tags": ["-", "-", "-", "-", "-", "definition_word", "definition_word"]}
+{"tokens": ["dollar", "rupien", "wechselkurs"], "tags": ["currency_name", "currency_name", "-"]}
+{"tokens": ["was", "ist", "der", "aktienwert", "von", "google"], "tags": ["-", "-", "-", "-", "-", "business_name"]}
+{"tokens": ["definier", "den", "mond", "für", "mich"], "tags": ["-", "definition_word", "definition_word", "-", "-"]}
+{"tokens": ["was", "ist", "der", "aktienpreis", "für", "tesco"], "tags": ["-", "-", "-", "-", "-", "business_name"]}
+{"tokens": ["was", "ist", "söder", "gewesen", "an", "über", "diese", "woche"], "tags": ["-", "-", "person", "-", "-", "-", "date", "date"]}
+{"tokens": ["wie", "groß", "ist", "japan"], "tags": ["-", "-", "-", "place_name"]}
+{"tokens": ["kannst", "du", "mir", "sagen", "welche", "kinofilme", "heute", "abend", "gezeigt", "werden"], "tags": ["-", "-", "-", "-", "-", "-", "timeofday", "timeofday", "-", "-"]}
+{"tokens": ["auf", "wieviel", "wird", "apple", "gehandelt"], "tags": ["-", "-", "-", "business_name", "-"]}
+{"tokens": ["olly", "finde", "eine", "beschreibung", "von", "dyon", "t.", "v."], "tags": ["-", "-", "-", "-", "-", "definition_word", "definition_word", "definition_word"]}
+{"tokens": ["was", "ist", "der", "wechselkurs", "des", "dollars"], "tags": ["-", "-", "-", "-", "-", "business_name"]}
+{"tokens": ["lass", "die", "leipziger", "stadtwerke", "wissen", "dass", "der", "strom", "wieder", "weg", "ist"], "tags": ["-", "-", "business_name", "business_name", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["kundenservice", "beschwerde", "twittere", "folgendes"], "tags": ["business_name", "-", "media_type", "-"]}
+{"tokens": ["poste", "auf", "tumblr", "dass", "ich", "spaß", "habe"], "tags": ["-", "-", "media_type", "-", "-", "-", "-"]}
+{"tokens": ["poste", "auf", "twitter", "ich", "habe", "einen", "hektischen", "tag", "vor", "mir"], "tags": ["-", "-", "media_type", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["check", "meinen", "posteingang"], "tags": ["-", "-", "email_folder"]}
+{"tokens": ["antworte", "mit", "danke"], "tags": ["-", "-", "-"]}
+{"tokens": ["sende", "eine", "email", "an", "robert", "um", "wie", "viel", "uhr", "gibt", "es", "abendessen"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["emails", "von", "cindy", "checken"], "tags": ["-", "-", "person", "-"]}
+{"tokens": ["email", "nachricht", "senden"], "tags": ["-", "-", "-"]}
+{"tokens": ["antworte"], "tags": ["-"]}
+{"tokens": ["habe", "ich", "irgendeine", "neue", "email", "vom", "vorgesetzten", "bekommen"], "tags": ["-", "-", "-", "-", "-", "-", "relation", "-"]}
+{"tokens": ["kannst", "du", "sehen", "um", "was", "in", "der", "mail", "von", "andreas", "an", "mich", "geht"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "person", "-", "-", "-"]}
+{"tokens": ["schaue", "in", "meine", "email"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["offener", "tom's", "kontakt", "informationen"], "tags": ["-", "person", "-", "-"]}
+{"tokens": ["zeig", "mir", "ungelesene"], "tags": ["-", "-", "-"]}
+{"tokens": ["als", "kontakt", "speichern"], "tags": ["-", "-", "-"]}
+{"tokens": ["habe", "ich", "seit", "siebzehn", "uhr", "irgendeine", "email", "erhalten"], "tags": ["-", "-", "-", "time", "time", "-", "-", "-"]}
+{"tokens": ["habe", "ich", "heute", "irgendwelche", "neuen", "emails", "von", "klara", "erhalten"], "tags": ["-", "-", "date", "-", "-", "-", "-", "person", "-"]}
+{"tokens": ["email", "an", "marissa"], "tags": ["-", "-", "person"]}
+{"tokens": ["wie", "lautet", "alex'", "adresse"], "tags": ["-", "-", "person", "personal_info"]}
+{"tokens": ["erzähl", "mir", "von", "meinen", "weckern"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["könntest", "du", "sushi", "fürs", "heutige", "abendessen", "bestellen"], "tags": ["-", "-", "food_type", "-", "timeofday", "meal_type", "-"]}
+{"tokens": ["starte", "meine", "playliste", "und", "spiele", "das", "dritte", "lied", "aus", "der", "warteschlange"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["lautstärke", "stummschalten"], "tags": ["-", "-"]}
+{"tokens": ["mach", "die", "lichter", "blau"], "tags": ["-", "-", "-", "color_type"]}
+{"tokens": ["die", "lichter", "in", "der", "küche", "anzünden"], "tags": ["-", "-", "-", "-", "house_place", "-"]}
+{"tokens": ["sage", "mir", "das", "wetter", "in", "köln", "heute", "in", "zwei", "tagen"], "tags": ["-", "-", "-", "-", "-", "place_name", "time", "time", "time", "time"]}
+{"tokens": ["was", "ist", "die", "aktuelle", "zeit"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["beginn", "zu", "spielen"], "tags": ["-", "-", "-"]}
+{"tokens": ["was", "sind", "die", "neusten", "schlagzeilen"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["bereite", "die", "bestellung", "so", "schnell", "es", "geht", "zu"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["spiel", "anything", "von", "mf", "doom"], "tags": ["-", "-", "-", "artist_name", "artist_name"]}
+{"tokens": ["nicht", "sprechen", "bis", "ich", "dich", "frage"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["wie", "ist", "aktuelle", "temperatur", "draußen"], "tags": ["-", "-", "-", "weather_descriptor", "-"]}
+{"tokens": ["spiel", "ein", "bisschen", "christliche", "musik"], "tags": ["-", "-", "-", "music_descriptor", "-"]}
+{"tokens": ["ich", "möchte", "gedimmtes", "licht"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["rufe", "das", "nächstgelegene", "thai", "restaurant", "mit", "lieferung", "an"], "tags": ["-", "-", "-", "food_type", "business_type", "-", "order_type", "-"]}
+{"tokens": ["wenn", "es", "sonnenaufgang", "in", "stockholm", "ist", "wie", "spät", "ist", "es", "dann", "in", "nürnberg"], "tags": ["-", "-", "time", "-", "place_name", "-", "-", "-", "-", "-", "-", "-", "place_name"]}
+{"tokens": ["schalte", "bitte", "die", "lichter", "im", "raum", "meines", "sohnes", "aus"], "tags": ["-", "-", "-", "-", "-", "house_place", "house_place", "house_place", "-"]}
+{"tokens": ["hat", "pizza", "hut", "auch", "lieferdienst"], "tags": ["-", "business_name", "business_name", "-", "order_type"]}
+{"tokens": ["ich", "hätte", "gern", "ein", "paar", "rote", "lichter"], "tags": ["-", "-", "-", "-", "-", "color_type", "-"]}
+{"tokens": ["erinner", "mich", "daran", "dass", "ich", "das", "lied", "mag"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["wird", "die", "morgige", "temperatur", "heiß", "sein", "ja", "oder", "nein"], "tags": ["-", "-", "date", "weather_descriptor", "weather_descriptor", "-", "-", "-", "-"]}
+{"tokens": ["wechsel", "den", "modus", "der", "musik", "zu", "rock"], "tags": ["player_setting", "-", "-", "-", "-", "-", "music_genre"]}
+{"tokens": ["du", "magst", "das", "lied"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["schalte", "den", "wecker", "aus"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["welche", "vereine", "spielen", "heute", "in", "der", "bundesliga"], "tags": ["-", "-", "-", "date", "-", "-", "news_topic"]}
+{"tokens": ["spiele", "den", "song", "titel"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["die", "farbe", "von", "der", "beleuchtung", "soll", "ein", "gedimmtes", "hell", "sein"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["von", "jetzt", "an", "lautlos"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["juhu"], "tags": ["-"]}
+{"tokens": ["spiele", "ella", "fitzgeralds", "mit", "get", "happy"], "tags": ["-", "artist_name", "artist_name", "-", "song_name", "song_name"]}
+{"tokens": ["brauche", "ich", "heute", "einen", "sweater"], "tags": ["-", "-", "date", "-", "weather_descriptor"]}
+{"tokens": ["wie", "ist", "das", "wetter", "morgen"], "tags": ["-", "-", "-", "-", "date"]}
+{"tokens": ["füge", "einen", "wecker", "für", "morgen", "früh", "um", "sechs", "uhr", "hinzu"], "tags": ["-", "-", "-", "-", "date", "timeofday", "-", "time", "time", "-"]}
+{"tokens": ["wie", "spät", "ist", "sieben", "c.", "e.", "t.", "in", "pacific", "standard", "time"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["wie", "ist", "das", "wetter"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["schalte", "meine", "wemo-steckdose", "aus"], "tags": ["-", "-", "device_type", "-"]}
+{"tokens": ["gibt", "es", "irgendein", "bevorstehende", "konzerte", "von"], "tags": ["-", "-", "-", "-", "event_name", "-"]}
+{"tokens": ["schalte", "die", "büro", "lampen", "aus"], "tags": ["-", "-", "house_place", "-", "-"]}
+{"tokens": ["mach", "mir", "eine", "tasse", "kaffee", "mit", "milch", "mit", "gesalzenem", "karamellgeschmack"], "tags": ["-", "-", "-", "-", "-", "-", "coffee_type", "coffee_type", "coffee_type", "coffee_type"]}
+{"tokens": ["spiele", "reggae", "musik"], "tags": ["-", "music_genre", "-"]}
+{"tokens": ["mach", "den", "stecker", "aus"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["was", "ist", "die", "zehn", "tage", "wettervoraussage"], "tags": ["-", "-", "-", "date", "date", "-"]}
+{"tokens": ["weißt", "du", "die", "geschätzte", "ankunftszeit", "meiner", "bestellung"], "tags": ["-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["neue", "pop", "musik"], "tags": ["-", "music_genre", "-"]}
+{"tokens": ["wie", "ist", "das", "wetter", "in", "hamburg"], "tags": ["-", "-", "-", "-", "-", "place_name"]}
+{"tokens": ["was", "ist", "die", "uhrzeit", "in", "frankfurt"], "tags": ["-", "-", "-", "-", "-", "place_name"]}
+{"tokens": ["was", "passiert", "heute", "auf", "der", "welt"], "tags": ["-", "-", "date", "-", "-", "-"]}
+{"tokens": ["hey", "google", "spiel", "ein", "bisschen", "jazz", "musik", "für", "mich"], "tags": ["-", "-", "-", "-", "-", "music_genre", "-", "-", "-"]}
+{"tokens": ["sag", "mir", "sie", "zeit", "an", "irgendeinem", "ort"], "tags": ["-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["olly", "speichere", "alle", "lieder", "die", "ich", "gehört", "habe", "zu", "mehr", "als", "eine"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["aktuelles", "lied", "mit", "fünf", "sternen", "bewerten"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["itunes", "bibliothek", "spielen"], "tags": ["playlist_name", "playlist_name", "-"]}
+{"tokens": ["kann", "sie", "machen", "die", "lichter", "gehen", "aus"], "tags": ["-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["spiele", "pandora", "neunziger", "tanzparty"], "tags": ["-", "song_name", "song_name", "song_name"]}
+{"tokens": ["bitte", "finde", "heraus", "ob", "kreuzburger", "liefert"], "tags": ["-", "-", "-", "-", "business_name", "-"]}
+{"tokens": ["welcher", "tag", "ist", "der", "fünfte"], "tags": ["-", "-", "-", "-", "date"]}
+{"tokens": ["guter", "text"], "tags": ["-", "-"]}
+{"tokens": ["zu", "welcher", "uhrzeit", "hast", "du", "den", "wecker", "gestellt"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["sag", "mir", "die", "prozentuale", "wahrscheinlichkeit", "für", "regen", "heute", "in", "münchen"], "tags": ["-", "-", "-", "-", "-", "-", "weather_descriptor", "date", "-", "place_name"]}
+{"tokens": ["erzähle", "mir", "den", "lustigsten", "witz", "den", "es", "jemals", "gab"], "tags": ["-", "-", "-", "joke_type", "-", "-", "-", "-", "-"]}
+{"tokens": ["haus", "beleuchtung", "blau"], "tags": ["-", "-", "color_type"]}
+{"tokens": ["kannst", "du", "alle", "lichter", "im", "haus", "blau", "machen"], "tags": ["-", "-", "-", "-", "-", "house_place", "color_type", "-"]}
+{"tokens": ["bereite", "jetzt", "einen", "kaffee", "vor"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["wie", "sieht", "meine", "facebook", "seite", "aus"], "tags": ["-", "-", "-", "media_type", "-", "-"]}
+{"tokens": ["aufhören", "betrieb", "lichter"], "tags": ["-", "-", "-"]}
+{"tokens": ["wie", "ist", "es", "heute", "draußen"], "tags": ["-", "-", "-", "date", "-"]}
+{"tokens": ["spiel", "songs"], "tags": ["-", "-"]}
+{"tokens": ["wie", "viele", "samstage", "sind", "im", "märz"], "tags": ["-", "-", "date", "date", "date", "date"]}
+{"tokens": ["welches", "lied", "ist", "das"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["verringere", "die", "lautstärke", "alexa"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["nachrichten", "von", "t.", "v.", "berlin"], "tags": ["-", "-", "media_type", "media_type", "media_type"]}
+{"tokens": ["erhöhe", "die", "lautstärke", "der", "lautsprecher"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["reduzieren", "sie", "die", "decken", "beleuchtung"], "tags": ["-", "-", "-", "house_place", "-"]}
+{"tokens": ["spiele", "lieder", "von", "lena"], "tags": ["-", "-", "-", "artist_name"]}
+{"tokens": ["wird", "es", "jetzt", "regnen"], "tags": ["-", "-", "-", "weather_descriptor"]}
+{"tokens": ["bereite", "mir", "eine", "tasse", "kaffee", "vor"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["ausmachen", "aller", "arten", "von", "aktiven", "geräten"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["speichere", "dieses", "lied", "in", "der", "playlist"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["mach", "jetzt", "den", "staubsauger", "an", "und", "staubsauge", "im", "wohnzimmer"], "tags": ["-", "-", "-", "device_type", "-", "-", "-", "-", "house_place"]}
+{"tokens": ["niedrige", "kältebedingungen"], "tags": ["-", "-"]}
+{"tokens": ["bitte", "schalte", "die", "steckdose", "aus"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["wie", "groß", "ist", "der", "zeitunterschied", "zwischen", "niedersachsen", "und", "hannover"], "tags": ["-", "-", "-", "-", "-", "-", "place_name", "-", "place_name"]}
+{"tokens": ["zu", "welcher", "zeit", "sollte", "ich", "zu", "einer", "wanderung", "aufbrechen"], "tags": ["-", "-", "-", "-", "-", "-", "-", "event_name", "-"]}
+{"tokens": ["spiel", "vorheriges", "lied"], "tags": ["-", "music_descriptor", "song_name"]}
+{"tokens": ["frage", "nach", "dem", "wetter", "heute", "abend"], "tags": ["-", "-", "-", "-", "date", "timeofday"]}
+{"tokens": ["aktuelle", "zeit", "in", "c.p.t."], "tags": ["-", "-", "-", "place_name"]}
+{"tokens": ["aktuelles", "thema"], "tags": ["-", "-"]}
+{"tokens": ["spiel", "ein", "gutes", "lied", "von", "meiner", "playlist"], "tags": ["-", "-", "music_descriptor", "music_descriptor", "-", "-", "-"]}
+{"tokens": ["wie", "viele", "minuten", "muss", "ich", "warten", "bis", "ich", "mein", "essen", "von", "china", "city", "abholen", "kann"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "business_name", "business_name", "-", "-"]}
+{"tokens": ["empfiehlst", "du", "einen", "regenschirm"], "tags": ["-", "-", "-", "weather_descriptor"]}
+{"tokens": ["bitte", "für", "fünf", "minuten", "stummschalten"], "tags": ["-", "-", "time", "time", "-"]}
+{"tokens": ["wie", "sieht", "meine", "kommende", "woche", "aus"], "tags": ["-", "-", "-", "date", "date", "-"]}
+{"tokens": ["mein", "tag", "war", "super"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["mein", "tag", "ist", "gut", "füge", "eine", "memo", "hinzu"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["kannst", "du", "mir", "ein", "bisschen", "von", "die", "erzählen"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["irgendetwas", "woran", "du", "denkst"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["das", "wetter", "was", "schlecht", "heute"], "tags": ["-", "-", "-", "-", "date"]}
+{"tokens": ["ich", "wurde", "von", "einem", "hund", "verfolgt"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["hey", "siri", "magst", "du", "meine", "freundin"], "tags": ["-", "-", "-", "-", "-", "relation"]}
+{"tokens": ["wie", "alt", "bist", "du"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["videospiele"], "tags": ["-"]}
+{"tokens": ["kennst", "du", "irgendwelche", "guten", "kostenlosen", "stickmuster"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["morgen", "um", "zehn", "uhr", "treffen", "mit", "peter", "erstellen"], "tags": ["date", "-", "time", "time", "event_name", "-", "person", "-"]}
+{"tokens": ["entferne", "die", "besprechung", "um", "neun", "uhr", "aus", "meinem", "kalender"], "tags": ["-", "-", "event_name", "-", "time", "time", "-", "-", "-"]}
+{"tokens": ["erinner", "mich", "daran", "linda", "abzuholen", "am", "siebten", "abends", "um", "fünf", "uhr"], "tags": ["-", "-", "-", "person", "event_name", "-", "date", "timeofday", "-", "time", "-"]}
+{"tokens": ["setze", "eine", "erinnerung", "für", "nächsten", "monat", "öb", "öl", "gewechselt", "wurde"], "tags": ["-", "-", "-", "-", "date", "date", "-", "event_name", "event_name", "-"]}
+{"tokens": ["kannst", "du", "die", "daten", "dazu", "checken"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["entferne", "das", "morgige", "treffen", "aus", "meinem", "kalender"], "tags": ["-", "-", "date", "event_name", "-", "-", "-"]}
+{"tokens": ["erinnere", "mich", "jedes", "jahr", "am", "fünften", "märz", "daran", "geschenke", "zum", "hochzeitstag", "zu", "arrangieren"], "tags": ["-", "-", "general_frequency", "general_frequency", "-", "date", "date", "-", "event_name", "event_name", "event_name", "-", "-"]}
+{"tokens": ["geburtstag"], "tags": ["event_name"]}
+{"tokens": ["was", "ist", "der", "plan", "für", "heute"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["treffen", "mit", "jan", "morgen", "um", "drei"], "tags": ["-", "-", "person", "date", "-", "time"]}
+{"tokens": ["erinnere", "mich", "in", "der", "bibliothek", "einen", "neuen", "bibliotheksausweis", "erhalten"], "tags": ["-", "-", "-", "-", "place_name", "event_name", "event_name", "event_name", "event_name"]}
+{"tokens": ["markiere", "den", "zwanzigsten", "april", "als", "den", "geburtstag", "meines", "bruders"], "tags": ["-", "-", "date", "date", "-", "-", "event_name", "-", "relation"]}
+{"tokens": ["mike", "und", "jack", "festival"], "tags": ["person", "-", "person", "event_name"]}
+{"tokens": ["kannst", "du", "den", "friseurtermin", "den", "ich", "für", "freitag", "vereinbart", "habe", "löschen"], "tags": ["-", "-", "-", "event_name", "-", "-", "-", "date", "-", "-", "-"]}
+{"tokens": ["lösche", "geburtstag", "aus", "dem", "kalender"], "tags": ["-", "event_name", "-", "-", "-"]}
+{"tokens": ["ich", "möchte", "mehr", "über", "die", "parade", "dieses", "wochenende", "erfahren"], "tags": ["-", "-", "-", "-", "-", "event_name", "date", "date", "-"]}
+{"tokens": ["mache", "den", "achtzehnten", "märz", "zu", "einem", "wiederkehrenden", "termin", "für", "pearls", "geburtstag"], "tags": ["-", "-", "date", "date", "-", "-", "-", "event_name", "event_name", "event_name", "event_name"]}
+{"tokens": ["erinnere", "mich", "daran", "am", "freitag", "um", "siebzehn", "uhr", "zum", "abendessen", "mit", "david", "zu", "gehen"], "tags": ["-", "-", "-", "-", "date", "-", "time", "time", "-", "meal_type", "-", "person", "-", "-"]}
+{"tokens": ["füge", "eine", "besprechung", "mit", "thomas", "für", "neun", "uhr", "zu", "meinem", "kalender", "hinzu"], "tags": ["-", "-", "event_name", "-", "person", "-", "time", "time", "-", "-", "-", "-"]}
+{"tokens": ["erinnere", "mich", "daran", "mark", "vom", "flughafen", "um", "achtzehn", "uhr", "abzuholen"], "tags": ["-", "-", "-", "event_name", "-", "place_name", "-", "time", "time", "event_name"]}
+{"tokens": ["erinnere", "mich", "jeden", "dienstag", "donnerstag", "und", "samstag", "meine", "pflanzen", "zu", "gießen"], "tags": ["-", "-", "general_frequency", "general_frequency", "general_frequency", "general_frequency", "general_frequency", "event_name", "event_name", "event_name", "event_name"]}
+{"tokens": ["lösche", "das", "aus", "meinem", "kalender"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["die", "veranstaltung", "schließt", "walter", "und", "gerda", "mit", "ein"], "tags": ["-", "-", "-", "person", "-", "person", "-", "-"]}
+{"tokens": ["mehr", "infos", "über", "die", "veranstaltung"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["erwähne", "das", "ereignis", "im", "kalender", "mit", "anderen"], "tags": ["-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["erinnere", "mich", "an", "den", "geburtstag", "der", "ehefrau"], "tags": ["-", "-", "-", "-", "event_name", "-", "relation"]}
+{"tokens": ["welche", "treffen", "habe", "ich", "heute"], "tags": ["-", "event_name", "-", "-", "date"]}
+{"tokens": ["setze", "mir", "nur", "erinnerungen", "an", "ausstehende", "rechnungszahlungen"], "tags": ["-", "-", "-", "-", "-", "event_name", "event_name"]}
+{"tokens": ["bitte", "stelle", "eine", "benachrichtigung", "für", "den", "dreiundzwanzigsten", "oktober", "einen", "termin", "für", "ein", "treffen", "mit", "meinem", "kollegen", "ein"], "tags": ["-", "-", "-", "-", "-", "-", "date", "date", "-", "-", "-", "-", "event_name", "-", "-", "relation", "-"]}
+{"tokens": ["entferne", "den", "heutigen", "arzttermin", "aus", "dem", "kalender"], "tags": ["-", "-", "date", "event_name", "-", "-", "-"]}
+{"tokens": ["bitte", "entferne", "diese", "veranstaltung"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["welche", "tage", "habe", "ich", "gebucht"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["kannst", "du", "das", "radio", "anschalten"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["bitte", "radiostation", "neunhundertneunundneunzig", "f", "m", "spielen"], "tags": ["-", "-", "radio_name", "radio_name", "radio_name", "-"]}
+{"tokens": ["spiele", "den", "oldiesender"], "tags": ["-", "-", "radio_name"]}
+{"tokens": ["spielen"], "tags": ["-"]}
+{"tokens": ["ich", "möchte", "dass", "du", "auf", "hot", "einhundertundfünf", "im", "radio", "gehst"], "tags": ["-", "-", "-", "-", "-", "radio_name", "radio_name", "-", "-", "-"]}
+{"tokens": ["spiele", "c.", "n.", "n.", "radio"], "tags": ["-", "radio_name", "radio_name", "radio_name", "radio_name"]}
+{"tokens": ["spiele", "die", "radiostation", "neunhundert", "neunundachtzig"], "tags": ["-", "-", "-", "radio_name", "radio_name"]}
+{"tokens": ["lass", "mich", "die", "neuesten", "nachrichten", "im", "radio", "hören"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["mein", "hörbuch", "von", "jay", "kristoff", "weiter", "lesen"], "tags": ["-", "-", "-", "audiobook_author", "audiobook_author", "player_setting", "player_setting"]}
+{"tokens": ["tierfarm", "fortsetzen"], "tags": ["audiobook_name", "player_setting"]}
+{"tokens": ["kannst", "du", "bitte", "klassische", "musik", "für", "mich", "abspielen"], "tags": ["-", "-", "-", "music_genre", "-", "-", "-", "-"]}
+{"tokens": ["setze", "das", "letzte", "kapitel", "des", "hörbuchs", "fort", "das", "ich", "gehört", "habe"], "tags": ["player_setting", "-", "-", "-", "-", "media_type", "player_setting", "-", "-", "-", "-"]}
+{"tokens": ["spiel", "das", "twilight", "buch"], "tags": ["-", "-", "audiobook_name", "-"]}
+{"tokens": ["wiedergabe", "tom", "clancy", "splinter", "cell"], "tags": ["player_setting", "audiobook_author", "audiobook_author", "audiobook_name", "audiobook_name"]}
+{"tokens": ["wie", "macht", "man", "pizza"], "tags": ["-", "-", "-", "food_type"]}
+{"tokens": ["wie", "koche", "ich", "ein", "butterhähnchen"], "tags": ["-", "cooking_type", "-", "-", "food_type"]}
+{"tokens": ["was", "kommt", "alles", "in", "rotebeetekuchen"], "tags": ["-", "-", "-", "-", "food_type"]}
+{"tokens": ["anleitung", "um", "ein", "gericht", "zu", "kochen"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["wie", "lautet", "das", "rezept", "für", "brathähnchen"], "tags": ["-", "-", "-", "-", "-", "food_type"]}
+{"tokens": ["wie", "lange", "kocht", "man", "maccaroni"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["wie", "bereitet", "man", "reis", "zu"], "tags": ["-", "-", "-", "food_type", "-"]}
+{"tokens": ["liste", "berühmer", "biryani", "rezepte"], "tags": ["-", "-", "food_type", "-"]}
+{"tokens": ["spiele", "scrabble", "mit", "mir"], "tags": ["-", "game_name", "-", "-"]}
+{"tokens": ["kannst", "du", "das", "temple", "run", "spiel", "für", "mich", "spielen"], "tags": ["-", "-", "-", "game_name", "game_name", "-", "-", "-", "-"]}
+{"tokens": ["spiel", "tischtennis"], "tags": ["-", "game_name"]}
+{"tokens": ["wir", "sollten", "hey", "now", "auf", "london", "grammar", "spielen"], "tags": ["-", "-", "game_name", "game_name", "-", "-", "-", "-"]}
+{"tokens": ["was", "fehlt", "noch", "im", "tagebuch"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["was", "werde", "ich", "heute", "machen"], "tags": ["-", "-", "-", "date", "-"]}
+{"tokens": ["helfen", "sie", "mir", "bei", "der", "erstellung", "meiner", "küchen", "liste"], "tags": ["-", "-", "-", "-", "-", "-", "-", "list_name", "-"]}
+{"tokens": ["entferne", "die", "liste", "mit", "dem", "titel", "partyzeit"], "tags": ["-", "-", "-", "-", "-", "-", "list_name"]}
+{"tokens": ["falls", "es", "ein", "ereignis", "namens", "show", "gibt", "dann", "entferne", "es"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["olly", "ist", "irgendwas", "auf", "meiner", "liste", "übrig"], "tags": ["-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["setze", "hamburger", "auf", "die", "lebensmittel", "liste"], "tags": ["-", "-", "-", "-", "list_name", "-"]}
+{"tokens": ["füge", "geschäftliche", "kontakte", "meiner", "kontaktliste", "hinzu"], "tags": ["-", "-", "-", "-", "list_name", "-"]}
+{"tokens": ["zeig", "mir", "den", "besten", "podcast", "über", "rock", "songs", "die", "gute", "bewertungen", "haben"], "tags": ["-", "-", "-", "-", "-", "-", "podcast_descriptor", "podcast_descriptor", "podcast_descriptor", "podcast_descriptor", "podcast_descriptor", "podcast_descriptor"]}
+{"tokens": ["radio", "vatikan"], "tags": ["radio_name", "radio_name"]}
+{"tokens": ["bitte", "spiel", "den", "podcast", "für", "mich"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["spiele", "den", "letzten", "podcast", "fest", "und", "flasuchig"], "tags": ["-", "-", "podcast_descriptor", "podcast_descriptor", "podcast_name", "podcast_name", "podcast_name"]}
+{"tokens": ["starte", "den", "nächsten", "podcast"], "tags": ["player_setting", "-", "-", "-"]}
+{"tokens": ["was", "ist", "in", "meiner", "stadt", "los"], "tags": ["-", "-", "-", "-", "place_name", "-"]}
+{"tokens": ["zeige", "theater", "liste", "der", "umgebung"], "tags": ["-", "business_type", "-", "-", "place_name"]}
+{"tokens": ["welchen", "film", "sollte", "ich", "heute", "schauen"], "tags": ["-", "-", "-", "-", "date", "-"]}
+{"tokens": ["gibt", "es", "dieses", "wochenende", "irgendwelche", "besonderen", "veranstaltungen", "in", "meiner", "nähe"], "tags": ["-", "-", "date", "date", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["was", "sind", "ein", "paar", "themenparks", "in", "der", "nähe"], "tags": ["-", "-", "-", "-", "event_name", "-", "-", "-"]}
+{"tokens": ["welche", "filme", "erscheinen", "diese", "woche"], "tags": ["-", "-", "-", "date", "date"]}
+{"tokens": ["was", "soll", "ich", "heute", "schauen"], "tags": ["-", "-", "-", "date", "-"]}
+{"tokens": ["olly", "bitte", "liste", "die", "besten", "bekleidungsgeschäfte", "in", "meiner", "nähe", "auf"], "tags": ["-", "-", "-", "-", "-", "business_type", "-", "-", "-", "-"]}
+{"tokens": ["finde", "eine", "glutenfreie", "bäckerei", "in", "meiner", "nähe"], "tags": ["-", "-", "business_type", "business_type", "-", "-", "-"]}
+{"tokens": ["buch", "mir", "ein", "zug", "ticket", "von", "frankfurt", "nach", "münchen"], "tags": ["-", "-", "-", "transport_type", "-", "-", "place_name", "-", "place_name"]}
+{"tokens": ["wie", "komme", "ich", "zum", "bahnhof", "um", "ein", "ticket", "zu", "kaufen"], "tags": ["-", "-", "-", "-", "place_name", "-", "-", "-", "-", "-"]}
+{"tokens": ["buch", "mir", "ein", "zug", "ticket"], "tags": ["-", "-", "-", "transport_type", "-"]}
+{"tokens": ["finde", "einen", "zug", "fahrschein", "nach", "bonn"], "tags": ["-", "-", "transport_type", "-", "-", "place_name"]}
+{"tokens": ["wie", "komme", "ich", "zu", "dem", "einkaufszentrum"], "tags": ["-", "-", "-", "-", "place_name", "place_name"]}
+{"tokens": ["wie", "ist", "das", "timind", "des", "i.", "c.", "e."], "tags": ["-", "-", "-", "-", "-", "transport_name", "transport_name", "transport_name"]}
+{"tokens": ["bitte", "reserviere", "das", "nächste", "taxi", "für", "neun", "uhr"], "tags": ["-", "-", "-", "-", "transport_type", "-", "time", "time"]}
+{"tokens": ["wie", "spät", "ist", "die", "zug", "ankunft", "in", "erfurt"], "tags": ["-", "-", "-", "-", "transport_type", "-", "-", "place_name"]}
+{"tokens": ["welche", "ist", "die", "höchste", "bergspitze", "der", "welt"], "tags": ["-", "-", "-", "-", "-", "-", "place_name"]}
+{"tokens": ["ich", "möchte", "karten", "für", "das", "ausverkaufte", "konzert", "am", "samstag", "nacht"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "date", "timeofday"]}
+{"tokens": ["sage", "mir", "billy", "crytals", "adresse"], "tags": ["-", "-", "person", "person", "-"]}
+{"tokens": ["erzähle", "mir", "alles", "zum", "sturm"], "tags": ["-", "-", "-", "-", "definition_word"]}
+{"tokens": ["berechne", "zwei", "mal", "zwei"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["überprüfe", "die", "aufenthaltsorte", "von", "prominenten"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["sag", "mir", "wie", "die", "ergebnisse", "der", "bezirkswahlen", "in", "hamburg", "ausfallen", "werden"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "place_name", "-", "-"]}
+{"tokens": ["was", "ist", "das", "beste", "schokoladen", "kekse", "rezept"], "tags": ["-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["was", "macht", "die", "berühmtheit"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["ich", "möchte", "dass", "mein", "roboter", "meinen", "hund", "füttert", "und", "streichelt", "wenn", "ich", "nicht", "zuhause", "bin"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["gib", "mir", "die", "definition", "von", "motivation"], "tags": ["-", "-", "-", "-", "-", "definition_word"]}
+{"tokens": ["kannst", "du", "mir", "die", "zeit", "sagen"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["was", "ist", "sechs", "geteilt", "durch", "zwei"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["wie", "ist", "der", "dollar", "preis", "in", "i.", "n.", "r."], "tags": ["-", "-", "-", "currency_name", "-", "-", "currency_name", "currency_name", "currency_name"]}
+{"tokens": ["zeige", "den", "wechselkurs", "für", "den", "tag", "von", "u.", "s.", "d.", "zu", "euro"], "tags": ["-", "-", "-", "-", "-", "-", "-", "currency_name", "currency_name", "currency_name", "-", "currency_name"]}
+{"tokens": ["kannst", "du", "eine", "kreditkarte", "beschreiben"], "tags": ["-", "-", "-", "definition_word", "-"]}
+{"tokens": ["was", "ist", "die", "definition", "von", "unterwerfen"], "tags": ["-", "-", "-", "-", "-", "definition_word"]}
+{"tokens": ["von", "dollar", "zu", "euro"], "tags": ["-", "currency_name", "-", "currency_name"]}
+{"tokens": ["beschreibe", "ein", "faultier"], "tags": ["-", "-", "definition_word"]}
+{"tokens": ["wie", "groß", "ist", "hulk", "hogan"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["wo", "lebt", "jackie", "chan", "derzeit"], "tags": ["-", "-", "person", "person", "-"]}
+{"tokens": ["wo", "liegen", "die", "alpen"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["beschriebe", "steinsand"], "tags": ["-", "definition_word"]}
+{"tokens": ["wie", "liegen", "die", "pyramiden"], "tags": ["-", "-", "-", "place_name"]}
+{"tokens": ["bitte", "nenne", "mir", "die", "definition", "von", "zylinder"], "tags": ["-", "-", "-", "-", "-", "-", "definition_word"]}
+{"tokens": ["in", "welchen", "filmen", "hat", "emma", "watson", "mitgespielt"], "tags": ["-", "-", "-", "-", "person", "person", "-"]}
+{"tokens": ["finde", "die", "route"], "tags": ["-", "-", "-"]}
+{"tokens": ["gib", "mir", "die", "beschreibung", "von", "einem", "handy"], "tags": ["-", "-", "-", "-", "-", "-", "definition_word"]}
+{"tokens": ["wo", "wurde", "mahatma", "gandhi", "geboren"], "tags": ["-", "-", "person", "person", "-"]}
+{"tokens": ["sag", "mir", "die", "beschreibung", "einer", "fernsehschaltung"], "tags": ["-", "-", "-", "-", "-", "definition_word"]}
+{"tokens": ["teile", "zweihundert", "durch", "vier"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["was", "ist", "elvis", "beliebtestes", "fahrzeug"], "tags": ["-", "-", "person", "-", "-"]}
+{"tokens": ["beschreibe", "das", "objekt", "für", "mich"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["wie", "ist", "es", "den", "aktien", "von", "b.", "a.", "s.", "f.", "letzte", "woche", "ergangen"], "tags": ["-", "-", "-", "-", "-", "-", "business_name", "business_name", "business_name", "business_name", "date", "date", "-"]}
+{"tokens": ["schau", "nach"], "tags": ["-", "-"]}
+{"tokens": ["besorg", "mir", "die", "neuesten", "updates", "von", "facebook"], "tags": ["-", "-", "-", "-", "-", "-", "media_type"]}
+{"tokens": ["hat", "irgendjemand", "mein", "foto", "geliked", "das", "ich", "gerade", "gepostet", "habe"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["lies", "mir", "neuen", "beitrag", "im", "feed", "vor"], "tags": ["-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["habe", "ich", "irgendwelche", "benachrichtigungen", "aus", "den", "sozialen", "medien"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["hat", "irgendjemand", "meinen", "status", "kommentiert"], "tags": ["-", "-", "-", "-", "-"]}
+{"tokens": ["poste", "dieses", "video", "auf", "facebook"], "tags": ["-", "-", "-", "-", "media_type"]}
+{"tokens": ["wer", "ist", "gerade", "auf", "facebook", "live"], "tags": ["-", "-", "-", "-", "media_type", "media_type"]}
+{"tokens": ["twittere", "an", "lufthansa", "ich", "bin", "sauer", "ihr", "habt", "mein", "gepäck", "verloren"], "tags": ["media_type", "-", "business_name", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["ich", "habe", "den", "artikel", "nicht", "pünktlich", "erhalten", "sende", "einen", "tweet", "an", "h", "und", "m"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "media_type", "-", "business_name", "business_name", "business_name"]}
+{"tokens": ["lass", "uns", "eine", "beschwerde", "twittern"], "tags": ["-", "-", "-", "-", "media_type"]}
+{"tokens": ["twittere", "eine", "beschwerde", "an"], "tags": ["media_type", "-", "-", "-"]}
+{"tokens": ["tweete", "an", "apple", "bezüglich", "nichterhalte", "des", "iphone", "dass", "ich", "letzte", "woche", "zur", "reparatur", "eingeschickt", "habe"], "tags": ["media_type", "-", "business_name", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["checke", "bitte", "meine", "emails"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["sende", "eine", "antwort", "wenn", "es", "sehr", "wichtig", "ist"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["schick", "email", "an", "joseph", "at", "gmail", "dot", "com"], "tags": ["-", "-", "-", "email_address", "email_address", "email_address", "email_address", "email_address"]}
+{"tokens": ["prüfe", "gmail"], "tags": ["-", "-"]}
+{"tokens": ["antworte", "auf", "die", "email"], "tags": ["-", "-", "-", "-"]}
+{"tokens": ["sende", "eine", "email", "an", "peter", "und", "frage", "ihn", "wie", "es", "ihm", "jetzt", "geht", "und", "ob", "ich", "etwas", "tun", "kann", "um", "ihm", "zu", "helfen"], "tags": ["-", "-", "-", "-", "person", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["leite", "umfragen", "für", "neue", "email", "ein"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["schicke", "eine", "email", "an", "margarethe"], "tags": ["-", "-", "-", "-", "person"]}
+{"tokens": ["hat", "tom", "mir", "eine", "email", "wegen", "der", "munition", "geschrieben"], "tags": ["-", "person", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["habe", "ich", "irgendwelche", "emails", "mit", "sendungsverfolgungsnummer"], "tags": ["-", "-", "-", "-", "-", "-"]}
+{"tokens": ["email", "an", "bob", "sendne"], "tags": ["-", "-", "person", "-"]}
+{"tokens": ["wie", "viele", "neue", "emails", "habe", "ich", "heute", "erhalten"], "tags": ["-", "-", "-", "-", "-", "-", "date", "-"]}
+{"tokens": ["sende", "email", "an", "freund"], "tags": ["-", "-", "-", "relation"]}
+{"tokens": ["habe", "ich", "irgendwelche", "neuen", "emails", "von", "meinem", "kontakt", "q."], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["können", "sie", "erzählen", "mir", "den", "kontakt", "informationen", "von", "jo"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["kannst", "du", "charlotte", "eine", "email", "schreiben"], "tags": ["-", "-", "person", "-", "-", "-"]}
+{"tokens": ["welcher", "kontakt", "hat", "sich", "kürzlich", "bei", "mir", "gemeldet"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["diese", "letzte", "email", "muss", "sofort", "beantwortet", "werden"], "tags": ["-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["sag", "mir", "ob", "ich", "ungelesene", "neue", "emails", "habe"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["schicke", "eine", "email", "an", "den", "chef", "und", "sage", "dass", "ich", "spät", "sein", "werde"], "tags": ["-", "-", "-", "-", "-", "relation", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["eine", "email", "muss", "an", "comcastcom", "bezüglich", "meiner", "dienstleistungsprobleme", "geschickt", "werden"], "tags": ["-", "-", "-", "-", "business_name", "-", "-", "-", "-", "-"]}
+{"tokens": ["hat", "mich", "ben", "kontaktiert"], "tags": ["-", "-", "person", "-"]}
+{"tokens": ["antworte", "auf", "meine", "email", "von", "bernd", "und", "lass", "sie", "wissen", "ich", "werde", "sie", "morgen", "sehen"], "tags": ["-", "-", "-", "-", "-", "person", "-", "-", "-", "-", "-", "-", "-", "-", "-"]}
+{"tokens": ["email", "benachrichtigungen"], "tags": ["-", "-"]}
+{"tokens": ["sende", "eine", "email", "an", "olaf", "und", "frage", "ihn", "wann", "er", "heute", "nacht", "nach", "hause", "kommt"], "tags": ["-", "-", "-", "-", "person", "-", "-", "-", "-", "-", "timeofday", "timeofday", "-", "-", "-"]}
+{"tokens": ["haben", "wir", "walters", "büronummer"], "tags": ["-", "-", "person", "personal_info"]}
+{"tokens": ["hey", "schick", "eine", "email", "an", "johannes"], "tags": ["-", "-", "-", "-", "-", "person"]}
+{"tokens": ["antworte", "auf", "die", "email", "mit", "dem", "folgenden", "inhalt", "hallo", "du"], "tags": ["-", "-", "-", "-", "-", "-", "-", "-", "-", "-"]}
