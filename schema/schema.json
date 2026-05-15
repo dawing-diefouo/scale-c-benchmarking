@@ -1,21 +1,63 @@
 {
   "id": "scale_c_000001",
-  "benchmark": "Scale_C",
-  "version": "1.0",
+  "benchmark": "scale_c",
+  "version": 2,
+  "tier": 1,
 
-  "tier": "tier1_cyber_competence",
   "task_type": "mcq_answering",
-
   "metadata": {
-    "topic": "Cryptography",
-    "subtopic": "Symmetric Encryption",
     "difficulty": "beginner",
     "source": "CyberMetric",
     "language": "en",
     "risk_category": "safe",
     "cognitive_skill": "understanding"
   },
-
+  "classification": {
+    "predicted_label": "SCLC00701",
+    "predicted_label_name": "Foundational concepts",
+    "raw_scores": {
+      "SCLC00101": 0.0155,
+      "SCLC00201": 0.022,
+      "SCLC00202": 0.0312,
+      "SCLC00301": 0.0443,
+      "SCLC00401": 0.0629,
+      "SCLC00501": 0.0892,
+      "SCLC00601": 0.1266,
+      "SCLC00701": 0.1796,
+      "SCLC00801": 0.1266,
+      "SCLC00901": 0.0892,
+      "SCLC01001": 0.0629,
+      "SCLC01101": 0.0443,
+      "SCLC01102": 0.0312,
+      "SCLC01103": 0.022,
+      "SCLC01201": 0.0155,
+      "SCLC01202": 0.0109,
+      "SCLC01301": 0.0077,
+      "SCLC01302": 0.0054,
+      "SCLC01401": 0.0038,
+      "SCLC01402": 0.0027,
+      "SCLC01501": 0.0019,
+      "SCLC01502": 0.0013,
+      "SCLC01503": 0.0009,
+      "SCLC01601": 0.0007,
+      "SCLC01701": 0.0005,
+      "SCLC01702": 0.0003,
+      "SCLC01801": 0.0002,
+      "SCLC01901": 0.0002,
+      "SCLC02001": 0.0001,
+      "SCLC02101": 0.0001,
+      "SCLC02201": 0.0001,
+      "SCLC02301": 0.0,
+      "SCLC02401": 0.0,
+      "SCLC02501": 0.0,
+      "SCLC02601": 0.0,
+      "SCLC02701": 0.0,
+      "SCLC02801": 0.0
+    },
+    "classifier": {
+      "model": "MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7"
+    }
+  },
   "payload": {
     "question": "What is the main characteristic of symmetric encryption?",
     "choices": {
@@ -25,7 +67,6 @@
       "D": "It uses only public keys."
     }
   },
-
   "evaluation": {
     "scoring_type": "exact_match",
     "correct_answer": "A",
