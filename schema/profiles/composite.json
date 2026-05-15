@@ -1,0 +1,78 @@
+{
+  "profile": "composite",
+  "version": "1.0",
+  "description": "Combines multiple profiles for tasks that need both structural validation and language quality (e.g. German H5P generation).",
+  "task_types": ["german_h5p_generation"],
+  "task_codes": ["h5DE"],
+  "scorer": {
+    "type": "composite",
+    "handler": "score_composite",
+    "aggregate": "weighted_sum",
+    "normalize_subscores": true
+  },
+  "components": [
+    {
+      "id": "structure",
+      "profile": "structured",
+      "weight": 0.5,
+      "config": {
+        "validators": ["json_parse", "h5p_mcq_schema_v1"],
+        "criteria": {
+          "valid_json": 2,
+          "h5p_schema_compliant": 3,
+          "correct_number_of_answers": 1,
+          "correct_answer_marked": 1
+        }
+      }
+    },
+    {
+      "id": "german_quality",
+      "profile": "reference_nlp",
+      "weight": 0.5,
+      "config": {
+        "metrics": {
+          "term_coverage": { "enabled": true, "weight": 0.4 },
+          "rubric_subset": { "enabled": true, "weight": 0.6 }
+        },
+        "criteria": {
+          "german_grammar_quality": 2,
+          "cybersecurity_terminology": 2,
+          "didactic_quality": 2
+        }
+      }
+    }
+  ],
+  "item_evaluation_required": ["criteria", "constraints"],
+  "item_evaluation_recommended": [
+    "required_terms",
+    "reference_translation",
+    "max_score",
+    "validators"
+  ],
+  "default_criteria": {
+    "valid_json": 2,
+    "h5p_schema_compliant": 2,
+    "german_grammar_quality": 2,
+    "cybersecurity_terminology": 2,
+    "didactic_quality": 2
+  },
+  "constraints_defaults": {
+    "number_of_answers": 4,
+    "number_of_correct_answers": 1,
+    "language": "de",
+    "output_format": "h5p_content_json"
+  },
+  "output": {
+    "score_range": "0_to_max_score",
+    "normalized": true,
+    "fields": [
+      "score",
+      "max_score",
+      "component_scores",
+      "component_breakdown"
+    ]
+  },
+  "defaults": {
+    "max_score": 10
+  }
+}

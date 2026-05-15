@@ -1,0 +1,49 @@
+{
+  "profile": "exact",
+  "version": "1.0",
+  "description": "Deterministic scoring for fixed answers: MCQ letters, cloze blanks, normalized short text.",
+  "task_types": ["mcq_answering", "cloze_generation", "short_answer"],
+  "task_codes": ["MCQ", "Cl", "FT"],
+  "scorer": {
+    "type": "deterministic",
+    "handler": "score_exact"
+  },
+  "normalization": {
+    "trim": true,
+    "collapse_whitespace": true,
+    "lowercase": false,
+    "strip_punctuation": false
+  },
+  "modes": {
+    "mcq_answering": {
+      "match_field": "correct_answer",
+      "response_format": "single_letter",
+      "valid_keys": ["A", "B", "C", "D", "E"]
+    },
+    "cloze_generation": {
+      "match_field": "blanks",
+      "response_format": "blank_map",
+      "per_blank_scoring": "any_acceptable",
+      "notes": "Each blank: { \"id\": \"1\", \"acceptable\": [\"TLS\", \"SSL/TLS\"] }"
+    },
+    "short_answer": {
+      "match_field": "acceptable_answers",
+      "response_format": "string",
+      "per_blank_scoring": "any_acceptable"
+    }
+  },
+  "item_evaluation_required": {
+    "mcq_answering": ["correct_answer"],
+    "cloze_generation": ["blanks"],
+    "short_answer": ["acceptable_answers"]
+  },
+  "item_evaluation_optional": ["normalization_override"],
+  "output": {
+    "score_range": [0, 1],
+    "normalized": true,
+    "fields": ["score", "matched", "predicted", "gold"]
+  },
+  "defaults": {
+    "max_score": 1
+  }
+}

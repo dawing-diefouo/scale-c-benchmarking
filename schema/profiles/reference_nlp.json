@@ -1,0 +1,96 @@
+{
+  "profile": "reference_nlp",
+  "version": "1.0",
+  "description": "Reference-based scoring for translation and localized free text: overlap metrics plus terminology coverage.",
+  "task_types": ["translated_en_de", "native_german"],
+  "task_codes": ["trDE", "de"],
+  "scorer": {
+    "type": "reference_nlp",
+    "handler": "score_reference_nlp"
+  },
+  "metrics": {
+    "chrf": {
+      "enabled": true,
+      "weight": 0.4,
+      "config": { "word_order": 2 }
+    },
+    "term_coverage": {
+      "enabled": true,
+      "weight": 0.3,
+      "description": "Fraction of required glossary terms present in output."
+    },
+    "rubric_subset": {
+      "enabled": true,
+      "weight": 0.3,
+      "description": "Optional LLM/human rubric for grammar and register."
+    }
+  },
+  "modes": {
+    "translated_en_de": {
+      "requires_reference": true,
+      "reference_field": "reference_translation",
+      "source_field": "source_text"
+    },
+    "native_german": {
+      "requires_reference": false,
+      "reference_field": "reference_answer",
+      "use_rubric_only_if_no_reference": true
+    }
+  },
+  "terminology": {
+    "required_terms_field": "required_terms",
+    "glossary_field": "glossary_id",
+    "case_sensitive": false,
+    "allow_lemmatization": false
+  },
+  "default_criteria": {
+    "translation_accuracy": 3,
+    "terminology": 2,
+    "fluency": 2,
+    "grammar": 2
+  },
+  "preset_criteria": {
+    "translated_en_de": {
+      "translation_accuracy": 3,
+      "terminology": 2,
+      "fluency": 2,
+      "no_meaning_drift": 2
+    },
+    "native_german": {
+      "cybersecurity_terminology": 2,
+      "german_grammar_quality": 2,
+      "didactic_quality": 2,
+      "register_appropriate": 1
+    }
+  },
+  "item_evaluation_required": {
+    "translated_en_de": ["reference_translation"],
+    "native_german": []
+  },
+  "item_evaluation_recommended": [
+    "required_terms",
+    "criteria",
+    "max_score",
+    "source_text"
+  ],
+  "normalization": {
+    "unicode_nfkc": true,
+    "trim": true,
+    "collapse_whitespace": true
+  },
+  "output": {
+    "score_range": "0_to_max_score",
+    "normalized": true,
+    "fields": [
+      "score",
+      "max_score",
+      "chrf",
+      "term_coverage",
+      "criteria_scores",
+      "metric_breakdown"
+    ]
+  },
+  "defaults": {
+    "max_score": 10
+  }
+}

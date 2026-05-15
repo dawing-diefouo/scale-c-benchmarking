@@ -1,0 +1,95 @@
+{
+  "profile": "structured",
+  "version": "1.0",
+  "description": "Pipeline scoring for generated structured content: JSON validity, schema compliance, field rules, optional pedagogy rubric.",
+  "task_types": [
+    "mcq_generation",
+    "cloze_generation",
+    "h5p_structured_generation",
+    "h5p_mcq_generation"
+  ],
+  "task_codes": ["Mq", "Cl", "H5P"],
+  "scorer": {
+    "type": "pipeline",
+    "handler": "score_structured",
+    "stages": [
+      { "id": "json_parse", "type": "deterministic", "on_fail": "abort" },
+      { "id": "schema_validate", "type": "deterministic", "on_fail": "abort" },
+      { "id": "field_rules", "type": "deterministic" },
+      { "id": "pedagogy_rubric", "type": "rubric", "optional": true }
+    ]
+  },
+  "validators": {
+    "json_parse": {
+      "description": "Response must be valid JSON when output_format requires it."
+    },
+    "h5p_mcq_schema_v1": {
+      "description": "H5P Multiple Choice content shape.",
+      "required_fields": ["question", "answers"],
+      "rules": {
+        "min_answers": 2,
+        "max_answers": 10,
+        "exactly_one_correct": true,
+        "no_extra_top_level_keys": true
+      }
+    },
+    "mcq_generation_v1": {
+      "description": "Generated MCQ object.",
+      "required_fields": ["question", "choices", "correct_answer"],
+      "rules": {
+        "choice_count": 4,
+        "correct_answer_in_choices": true
+      }
+    },
+    "cloze_generation_v1": {
+      "description": "Generated cloze item.",
+      "required_fields": ["text_with_blanks", "blanks"],
+      "rules": {
+        "blank_count_matches_markers": true
+      }
+    }
+  },
+  "default_criteria": {
+    "valid_json": 2,
+    "schema_compliant": 3,
+    "constraint_adherence": 2,
+    "single_correct_answer": 1,
+    "distractor_quality": 2
+  },
+  "h5p_mcq_generation_criteria": {
+    "valid_json": 2,
+    "h5p_schema_compliant": 3,
+    "correct_number_of_answers": 1,
+    "correct_answer_marked": 1,
+    "distractor_quality": 2,
+    "no_extra_explanation": 1
+  },
+  "item_evaluation_required": ["criteria"],
+  "item_evaluation_recommended": [
+    "validators",
+    "constraints",
+    "max_score",
+    "output_format"
+  ],
+  "constraints_schema": {
+    "number_of_answers": { "type": "integer" },
+    "number_of_correct_answers": { "type": "integer", "default": 1 },
+    "language": { "type": "string" },
+    "output_format": { "type": "string", "enum": ["json", "h5p_content_json"] }
+  },
+  "output": {
+    "score_range": "0_to_max_score",
+    "normalized": true,
+    "fields": [
+      "score",
+      "max_score",
+      "stage_results",
+      "validation_errors",
+      "criteria_scores"
+    ]
+  },
+  "defaults": {
+    "max_score": 10,
+    "validators": ["json_parse", "h5p_mcq_schema_v1"]
+  }
+}
