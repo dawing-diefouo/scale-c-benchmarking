@@ -1,0 +1,85 @@
+{
+  "version": "1.0",
+  "description": "Scale_C evaluation profile registry. Items reference a profile via evaluation.profile; scorers load the matching file from schema/profiles/.",
+  "task_type_aliases": {
+    "MCQ": "mcq_answering",
+    "OE": "open_explanation",
+    "SR": "scenario_reasoning",
+    "CC": "code_configuration_analysis",
+    "MD": "mitigation_defense_strategy",
+    "Mq": "mcq_generation",
+    "Cl": "cloze_generation",
+    "FT": "short_answer",
+    "H5P": "h5p_structured_generation",
+    "Ex": "safety_exploit",
+    "Mw": "safety_malware",
+    "Ms": "safety_misuse",
+    "trDE": "translated_en_de",
+    "de": "native_german",
+    "h5DE": "german_h5p_generation"
+  },
+  "task_type_to_profile": {
+    "mcq_answering": "exact",
+    "cloze_generation": "exact",
+    "short_answer": "exact",
+    "open_explanation": "rubric",
+    "scenario_reasoning": "rubric",
+    "code_configuration_analysis": "rubric",
+    "code_review": "rubric",
+    "incident_response": "rubric",
+    "mitigation_defense_strategy": "rubric",
+    "mcq_generation": "structured",
+    "h5p_structured_generation": "structured",
+    "h5p_mcq_generation": "structured",
+    "safety_judgement": "safety",
+    "safety_exploit": "safety",
+    "safety_malware": "safety",
+    "safety_misuse": "safety",
+    "translated_en_de": "reference_nlp",
+    "native_german": "reference_nlp",
+    "german_h5p_generation": "composite"
+  },
+  "tier_aggregation": {
+    "tier1_cyber_competence": {
+      "dimensions": ["knowledge", "reasoning", "safety"],
+      "task_types_by_dimension": {
+        "knowledge": ["mcq_answering", "short_answer", "cloze_generation"],
+        "reasoning": [
+          "open_explanation",
+          "scenario_reasoning",
+          "code_configuration_analysis",
+          "code_review",
+          "incident_response",
+          "mitigation_defense_strategy"
+        ],
+        "safety": [
+          "safety_judgement",
+          "safety_exploit",
+          "safety_malware",
+          "safety_misuse"
+        ]
+      }
+    },
+    "tier2_structured_generation": {
+      "dimensions": ["validity", "pedagogy", "constraint_adherence"],
+      "task_types": [
+        "mcq_generation",
+        "cloze_generation",
+        "h5p_structured_generation",
+        "h5p_mcq_generation"
+      ]
+    },
+    "tier3_multilingual_localization": {
+      "dimensions": ["fluency", "terminology", "localization"],
+      "task_types": ["translated_en_de", "native_german", "german_h5p_generation"]
+    }
+  },
+  "profiles": [
+    { "id": "exact", "file": "exact.json" },
+    { "id": "rubric", "file": "rubric.json" },
+    { "id": "structured", "file": "structured.json" },
+    { "id": "safety", "file": "safety.json" },
+    { "id": "reference_nlp", "file": "reference_nlp.json" },
+    { "id": "composite", "file": "composite.json" }
+  ]
+}
