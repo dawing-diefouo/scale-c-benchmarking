@@ -667,3 +667,73 @@ Useful flags: `--input`, `--output`, `--taxonomy`, `--model`, `--multi-label`, `
 ### `build_eval_db.py`
 
 Still a stub: the SQLite schema for `database/eval.sqlite` is created, but ingesting `data/processed/classified.jsonl` is not implemented yet.
+
+### `parquet_to_jsonl.py`
+
+Recursively converts `.parquet` files to `.jsonl`, writing each output **beside** its source (for example `foo.parquet` → `foo.jsonl` in the same directory). Useful after cloning datasets that ship Parquet shards (for example `JSONSchemaBench/`).
+
+```bash
+# Default: scan JSONSchemaBench/
+uv run python scripts/parquet_to_jsonl.py
+
+# One or more directory roots
+uv run python scripts/parquet_to_jsonl.py JSONSchemaBench path/to/other
+
+# Preview without writing
+uv run python scripts/parquet_to_jsonl.py --dry-run
+
+# Force re-conversion when .jsonl already exists
+uv run python scripts/parquet_to_jsonl.py --overwrite
+```
+
+By default, existing `.jsonl` files that are newer than the matching `.parquet` file are skipped. Requires `pyarrow` (`uv sync`).
+
+### `json_to_jsonl.py`
+
+Recursively converts `.json` files to `.jsonl`, writing each output **beside** its source (for example `CyberMetric-500-v1.json` → `CyberMetric-500-v1.jsonl`).
+
+Handles:
+
+- a top-level JSON **array** (one line per element);
+- a top-level **object** with a single list field (for example `{"questions": [...]}`) when `--auto-array-key` is on (default);
+- an explicit list field via `--array-key questions`;
+- a single top-level object (one line) when `--no-auto-array-key` is set.
+
+```bash
+# Default: scan data/raw/
+uv run python scripts/json_to_jsonl.py
+
+# Specific tree (CyberMetric unwraps "questions" automatically)
+uv run python scripts/json_to_jsonl.py data/raw/huggingface/CyberMetric
+
+# Force a key or disable auto-unwrap
+uv run python scripts/json_to_jsonl.py --array-key questions path/to/file.json
+uv run python scripts/json_to_jsonl.py --no-auto-array-key path/to/meta.json
+
+# Preview / overwrite
+uv run python scripts/json_to_jsonl.py --dry-run
+uv run python scripts/json_to_jsonl.py --overwrite
+```
+
+Skips `.jsonl` files that are already newer than the source `.json` unless `--overwrite` is passed.
+
+### `csv_to_jsonl.py`
+
+Recursively converts `.csv` files to `.jsonl`, writing each output **beside** its source. Each row becomes one JSON object; column headers are the keys.
+
+```bash
+# Default: scan data/raw/
+uv run python scripts/csv_to_jsonl.py
+
+# Specific folder or file tree
+uv run python scripts/csv_to_jsonl.py data/raw/huggingface/cyberbench
+
+# Semicolon-separated or non-UTF-8 input
+uv run python scripts/csv_to_jsonl.py --delimiter ";" --encoding latin-1 path/to/dir
+
+# Preview / overwrite
+uv run python scripts/csv_to_jsonl.py --dry-run
+uv run python scripts/csv_to_jsonl.py --overwrite
+```
+
+Skips `.jsonl` files that are already newer than the source `.csv` unless `--overwrite` is passed. Uses only the Python standard library (no extra dependencies).
