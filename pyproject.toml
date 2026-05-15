@@ -5,6 +5,7 @@ description = "Scale C benchmark"
 requires-python = ">=3.12"
 dependencies = [
     "datasets>=4.8.5",
+    "pyarrow>=18.0",
     "torch>=2.2",
     "transformers>=4.40",
 ]
