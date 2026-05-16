@@ -2,7 +2,8 @@
 
 Reads label names from ``schema/taxonomy.json``, classifies text derived from any
 JSONL row shape, and writes Scale_C records (see ``schema/schema.json``) to
-``data/processed/classified.jsonl``.
+``data/processed/``. Edit the ``DEFAULT_*`` run configuration block at the top of
+this file, then run with no CLI arguments; flags still override those defaults.
 
 Model: https://huggingface.co/MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7
 """
@@ -18,10 +19,19 @@ from typing import Any, Iterator
 ROOT = Path(__file__).resolve().parents[1]
 SCHEMA = ROOT / "schema" / "taxonomy.json"
 PROCESSED = ROOT / "data" / "processed"
-DEFAULT_OUT = PROCESSED / "classified.jsonl"
 RAW_ROOT = ROOT / "data" / "raw"
 
+# --- Run configuration (edit these, then: python scripts/classify_zero_shot.py) ---
+DEFAULT_INPUT = ROOT / "data" / "raw" / "huggingface" / "mmlu" / "computer_security" / "test.jsonl"
+DEFAULT_TAXONOMY = SCHEMA
+DEFAULT_OUTPUT = PROCESSED / "classified_mmlu_ccs_.jsonl"
 DEFAULT_MODEL = "NDugar/deberta-v2-xlarge-mnli"
+DEFAULT_MULTI_LABEL = False
+DEFAULT_TRUNCATE = False
+DEFAULT_MAX_ROWS: int | None = None
+DEFAULT_START = 0
+DEFAULT_ID_PREFIX = "scale_c"
+
 BENCHMARK = "scale_c"
 SCHEMA_VERSION = 2
 DEFAULT_TIER = 1
@@ -253,52 +263,54 @@ def main() -> None:
     parser.add_argument(
         "--input",
         type=Path,
-        default=ROOT / "data" / "raw" / "huggingface" / "mmlu" / "computer_security" / "test.jsonl",
-        help="JSONL file or directory tree (only *.jsonl files are processed).",
+        default=DEFAULT_INPUT,
+        help=f"JSONL file or directory tree (default: {DEFAULT_INPUT}).",
     )
     parser.add_argument(
         "--taxonomy",
         type=Path,
-        default=SCHEMA,
-        help="JSON file with { labels: [ { id, name, description? }, ... ] }.",
+        default=DEFAULT_TAXONOMY,
+        help=f"Label taxonomy JSON (default: {DEFAULT_TAXONOMY}).",
     )
     parser.add_argument(
         "--output",
         type=Path,
-        default=DEFAULT_OUT,
-        help="Append-only JSONL with Scale_C records (set --truncate to overwrite).",
+        default=DEFAULT_OUTPUT,
+        help=f"Append-only Scale_C JSONL (default: {DEFAULT_OUTPUT}; use --truncate to overwrite).",
     )
     parser.add_argument(
         "--model",
         default=DEFAULT_MODEL,
-        help="HF model id for zero-shot-classification.",
+        help=f"HF zero-shot-classification model id (default: {DEFAULT_MODEL}).",
     )
     parser.add_argument(
         "--multi-label",
-        action="store_true",
-        help="If set, allow multiple labels above 0.5 * top score (HF multi_label semantics).",
+        action=argparse.BooleanOptionalAction,
+        default=DEFAULT_MULTI_LABEL,
+        help="Allow multiple labels above 0.5 * top score (HF multi_label semantics).",
     )
     parser.add_argument(
         "--truncate",
-        action="store_true",
+        action=argparse.BooleanOptionalAction,
+        default=DEFAULT_TRUNCATE,
         help="Overwrite output instead of appending.",
     )
     parser.add_argument(
         "--max-rows",
         type=int,
-        default=None,
+        default=DEFAULT_MAX_ROWS,
         help="Process at most this many non-empty JSONL rows (after --start), across all inputs.",
     )
     parser.add_argument(
         "--start",
         type=int,
-        default=0,
+        default=DEFAULT_START,
         help="Skip the first N non-empty JSONL rows (global across all input files).",
     )
     parser.add_argument(
         "--id-prefix",
-        default="scale_c",
-        help="Prefix for generated record ids (e.g. scale_c_000001).",
+        default=DEFAULT_ID_PREFIX,
+        help=f"Prefix for generated record ids (default: {DEFAULT_ID_PREFIX}).",
     )
     args = parser.parse_args()
 
