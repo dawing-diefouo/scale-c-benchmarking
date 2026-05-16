@@ -20,9 +20,9 @@ Scale_C soll Modelle **nicht nur nach Wissen**, sondern nach **einsatzrelevanten
 
 Klassische Benchmarks wie:
 
-* CyberMetric
-* SecBench
-* MMLU
+- CyberMetric
+- SecBench
+- MMLU
 
 messen oft primär:
 
@@ -66,13 +66,13 @@ messen oft primär:
 
 ## Enthält:
 
-* MCQ Answering
-* Open Explanations
-* Scenario-Based Reasoning
-* Code / Configuration Analysis
-* Mitigation Strategies
-* Safety Judgement
-* Exploit / Malware / Misuse Handling
+- MCQ Answering
+- Open Explanations
+- Scenario-Based Reasoning
+- Code / Configuration Analysis
+- Mitigation Strategies
+- Safety Judgement
+- Exploit / Malware / Misuse Handling
 
 ---
 
@@ -80,20 +80,20 @@ messen oft primär:
 
 ### Factual Knowledge
 
-* Accuracy
-* Fachwissen
+- Accuracy
+- Fachwissen
 
 ### Reasoning
 
-* Szenarioanalyse
-* Codeverständnis
-* Verteidigungslogik
+- Szenarioanalyse
+- Codeverständnis
+- Verteidigungslogik
 
 ### Safety
 
-* Verweigert es schädliche Inhalte?
-* Bleibt es bei Defensive?
-* Erkennt es Missbrauch?
+- Verweigert es schädliche Inhalte?
+- Bleibt es bei Defensive?
+- Erkennt es Missbrauch?
 
 ---
 
@@ -111,10 +111,10 @@ messen oft primär:
 
 ## Enthält:
 
-* MCQ Generation
-* Cloze Generation
-* H5P Structured Generation
-* H5P MCQ Generation
+- MCQ Generation
+- Cloze Generation
+- H5P Structured Generation
+- H5P MCQ Generation
 
 ---
 
@@ -122,21 +122,21 @@ messen oft primär:
 
 ### Structural Validity
 
-* JSON korrekt?
-* H5P Schema korrekt?
-* Felder korrekt?
+- JSON korrekt?
+- H5P Schema korrekt?
+- Felder korrekt?
 
 ### Didactic Quality
 
-* Gute Distraktoren
-* Verständliche Fragen
-* Lernförderlichkeit
+- Gute Distraktoren
+- Verständliche Fragen
+- Lernförderlichkeit
 
 ### Constraint Following
 
-* Anzahl Antworten korrekt
-* Single vs Multi Answer
-* Keine Extra-Texte
+- Anzahl Antworten korrekt
+- Single vs Multi Answer
+- Keine Extra-Texte
 
 ---
 
@@ -154,18 +154,18 @@ messen oft primär:
 
 ## Enthält:
 
-* EN → DE Translation
-* Native German Items
-* German H5P Generation
+- EN → DE Translation
+- Native German Items
+- German H5P Generation
 
 ---
 
 ## Bewertet:
 
-* Terminologie
-* Sprachqualität
-* Grammatik
-* Didaktische Lokalisierung
+- Terminologie
+- Sprachqualität
+- Grammatik
+- Didaktische Lokalisierung
 
 ---
 
@@ -185,13 +185,13 @@ Ein Modell kann:
 
 ### Gut sein in:
 
-* MCQ beantworten
+- MCQ beantworten
 
 ### Aber schlecht sein in:
 
-* MCQ erzeugen
-* H5P validieren
-* sichere Antworten geben
+- MCQ erzeugen
+- H5P validieren
+- sichere Antworten geben
 
 ---
 
@@ -249,15 +249,15 @@ scale_c_benchmark/
 
 ### Modularität
 
-* Einfach erweiterbar
+- Einfach erweiterbar
 
 ### Fehlertoleranz
 
-* Ein kaputtes Item zerstört nicht alles
+- Ein kaputtes Item zerstört nicht alles
 
 ### Skalierbarkeit
 
-* Tausende Fragen möglich
+- Tausende Fragen möglich
 
 ### HuggingFace / Pandas freundlich
 
@@ -275,9 +275,9 @@ scale_c_benchmark/
 
 ## tier2_structured_generation.jsonl kann enthalten:
 
-* mcq_generation
-* cloze_generation
-* h5p_generation
+- mcq_generation
+- cloze_generation
+- h5p_generation
 
 ---
 
@@ -308,11 +308,11 @@ Alle Items folgen demselben Grundgerüst:
 
 ### Kontext:
 
-* Topic
-* Difficulty
-* Language
-* Risk
-* Source
+- Topic
+- Difficulty
+- Language
+- Risk
+- Source
 
 ---
 
@@ -320,10 +320,10 @@ Alle Items folgen demselben Grundgerüst:
 
 ### Aufgabe selbst:
 
-* Frage
-* Prompt
-* Code
-* H5P-Anweisung
+- Frage
+- Prompt
+- Code
+- H5P-Anweisung
 
 ---
 
@@ -331,10 +331,10 @@ Alle Items folgen demselben Grundgerüst:
 
 ### Bewertungslogik:
 
-* exact_match
-* rubric
-* h5p_validation
-* safety_rubric
+- exact_match
+- rubric
+- h5p_validation
+- safety_rubric
 
 ---
 
@@ -342,30 +342,30 @@ Alle Items folgen demselben Grundgerüst:
 
 ## Tier 1:
 
-* mcq_answering
-* open_explanation
-* short_answer
-* scenario_reasoning
-* code_configuration_analysis
-* mitigation_defense_strategy
-* safety_judgement
+- mcq_answering
+- open_explanation
+- short_answer
+- scenario_reasoning
+- code_configuration_analysis
+- mitigation_defense_strategy
+- safety_judgement
 
 ---
 
 ## Tier 2:
 
-* mcq_generation
-* cloze_generation
-* h5p_structured_generation
-* h5p_mcq_generation
+- mcq_generation
+- cloze_generation
+- h5p_structured_generation
+- h5p_mcq_generation
 
 ---
 
 ## Tier 3:
 
-* translated_en_de
-* native_german
-* german_h5p_generation
+- translated_en_de
+- native_german
+- german_h5p_generation
 
 ---
 
@@ -411,26 +411,26 @@ Missbrauch allgemein
 
 # Tier 1:
 
-* Knowledge Score
-* Reasoning Score
-* Safety Score
+- Knowledge Score
+- Reasoning Score
+- Safety Score
 
 ---
 
 # Tier 2:
 
-* JSON Validity
-* H5P Compliance
-* Pedagogy Score
-* Constraint Adherence
+- JSON Validity
+- H5P Compliance
+- Pedagogy Score
+- Constraint Adherence
 
 ---
 
 # Tier 3:
 
-* Translation Quality
-* German Fluency
-* Localization Quality
+- Translation Quality
+- German Fluency
+- Localization Quality
 
 ---
 
@@ -438,11 +438,13 @@ Missbrauch allgemein
 
 ## Für Scale_C (H5P/Didaktik-Fokus)
 
+
 | Tier   | Gewicht |
 | ------ | ------- |
 | Tier 1 | 40%     |
 | Tier 2 | 50%     |
 | Tier 3 | 10%     |
+
 
 ---
 
@@ -480,17 +482,17 @@ Fine-Tuning verbessert oft:
 
 ### Stark:
 
-* Struktur
-* H5P
-* MCQ Generation
+- Struktur
+- H5P
+- MCQ Generation
 
 ### Mittel:
 
-* Domain Wissen
+- Domain Wissen
 
 ### Potenziell riskant:
 
-* Safety Drift
+- Safety Drift
 
 ---
 
@@ -500,14 +502,14 @@ Fine-Tuning verbessert oft:
 
 ### Base Model:
 
-* Stark im Wissen
-* Schwach in H5P
+- Stark im Wissen
+- Schwach in H5P
 
 ### FT Model:
 
-* Moderat besser im Wissen
-* Stark besser in H5P
-* Eventuell Safety-Veränderung
+- Moderat besser im Wissen
+- Stark besser in H5P
+- Eventuell Safety-Veränderung
 
 ---
 
@@ -553,8 +555,8 @@ Fine-Tuning verbessert oft:
 
 ### „Wie kompetent, strukturiert, sicher und didaktisch nutzbar ist das Modell?“
 
-
 ---
+
 ---
 
 # scale-c-benchmark
@@ -577,20 +579,24 @@ uv sync
 
 `data/raw/<source>/` is only **provenance** (how the file entered your machine), not a claim about file format:
 
-| Folder under `data/raw/` | Typical use |
-|---------------------------|-------------|
-| `github/` | Benchmarks from GitHub: clones, release zips, or exported JSON/CSV from a repo you do not own. |
-| `huggingface/` | Datasets pulled or mirrored from the Hugging Face Hub. |
-| `local/` | Anything you add manually: downloads from a random URL, email attachments, your own scratch CSVs, etc. |
+
+| Folder under `data/raw/` | Typical use                                                                                            |
+| ------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `github/`                | Benchmarks from GitHub: clones, release zips, or exported JSON/CSV from a repo you do not own.         |
+| `huggingface/`           | Datasets pulled or mirrored from the Hugging Face Hub.                                                 |
+| `local/`                 | Anything you add manually: downloads from a random URL, email attachments, your own scratch CSVs, etc. |
+
 
 `data/processed/` holds **this project’s** pipeline output: normalized rows, classifier predictions, merged tables—whatever you produce for your own eval run (for example `classified.jsonl`). It is not “the official processed split” of an upstream benchmark unless you choose to put that there; it is your working area between raw inputs and `database/eval.sqlite`.
 
-| Path | Purpose |
-|------|---------|
-| `data/raw/{github,huggingface,local}/` | Upstream or mirrored benchmark inputs, by source |
-| `data/processed/` | Your normalized / classified artifacts for this benchmark |
-| `schema/taxonomy.json` | Label schema: stable leaf `id` (for example `MMLU00101`), human `name` used as zero-shot hypotheses, optional `description`, plus optional top-level metadata (`version`, `notes`, …) |
-| `database/eval.sqlite` | Eval DB (created by scripts; not committed) |
+
+| Path                                   | Purpose                                                                                                                                                                               |
+| -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `data/raw/{github,huggingface,local}/` | Upstream or mirrored benchmark inputs, by source                                                                                                                                      |
+| `data/processed/`                      | Your normalized / classified artifacts for this benchmark                                                                                                                             |
+| `schema/taxonomy.json`                 | Label schema: stable leaf `id` (for example `MMLU00101`), human `name` used as zero-shot hypotheses, optional `description`, plus optional top-level metadata (`version`, `notes`, …) |
+| `database/eval.sqlite`                 | Eval DB (created by scripts; not committed)                                                                                                                                           |
+
 
 ## Scripts
 
@@ -615,16 +621,14 @@ uv run python scripts/run_experiment.py
 Downloads benchmark inputs into `data/raw/<source>/`. Currently implemented:
 
 - **Hugging Face**: `cais/mmlu`, configurable subset via `HF_SUBSET` in the script (default `college_computer_science`). The script calls `datasets.load_dataset("cais/mmlu", <subset>, split=...)` for the `test`, `validation`, and `dev` splits and writes them under `data/raw/huggingface/mmlu/<subset>/` as one JSONL file per split plus `info.json` (repo, subset, row counts, source URL).
-
   Row counts depend on the subset. Examples:
 
-  | Subset | `test.jsonl` | `validation.jsonl` | `dev.jsonl` |
-  |--------|----------------|----------------------|-------------|
-  | `college_computer_science` (default in script) | 100 | 11 | 5 |
-  | `computer_security` (matches classifier default input) | 100 | 11 | 5 |
+  | Subset                                                 | `test.jsonl` | `validation.jsonl` | `dev.jsonl` |
+  | ------------------------------------------------------ | ------------ | ------------------ | ----------- |
+  | `college_computer_science` (default in script)         | 100          | 11                 | 5           |
+  | `computer_security` (matches classifier default input) | 100          | 11                 | 5           |
 
   Each row keeps the upstream schema, for example:
-
   ```json
   {
     "question": "Which of the following styles of fuzzer ...",
@@ -633,13 +637,9 @@ Downloads benchmark inputs into `data/raw/<source>/`. Currently implemented:
     "answer": 2
   }
   ```
-
   Source: <https://huggingface.co/datasets/cais/mmlu>
-
   To fetch the same subset that `classify_zero_shot.py` expects by default, set `HF_SUBSET = "computer_security"` in `scripts/fetch_datasets.py` (or pass `--input` when classifying to another JSONL).
-
-- **GitHub**: shallow-clones [`LSX-UniWue/SuperGLEBer`](https://github.com/LSX-UniWue/SuperGLEBer) (German Language Understanding Evaluation Benchmark, NAACL 2024) into `data/raw/github/SuperGLEBer/`. The shallow clone is ~420 MB because the repo's own `data/` folder ships the benchmark tasks alongside the code in `src/`. A sibling `data/raw/github/SuperGLEBer.info.json` records the repo URL, branch, and resolved commit hash. Re-running the script updates the working tree to the latest `main` (`git fetch --depth 1 && git reset --hard origin/main`).
-
+- **GitHub**: shallow-clones `[LSX-UniWue/SuperGLEBer](https://github.com/LSX-UniWue/SuperGLEBer)` (German Language Understanding Evaluation Benchmark, NAACL 2024) into `data/raw/github/SuperGLEBer/`. The shallow clone is ~420 MB because the repo's own `data/` folder ships the benchmark tasks alongside the code in `src/`. A sibling `data/raw/github/SuperGLEBer.info.json` records the repo URL, branch, and resolved commit hash. Re-running the script updates the working tree to the latest `main` (`git fetch --depth 1 && git reset --hard origin/main`).
 - **local**: not implemented yet. The script still ensures the `data/raw/local/` directory exists; add your own loaders there.
 
 **Hugging Face cache location.** `datasets` and `transformers` cache Hub downloads under `~/.cache/huggingface` by default. If that path is not writable (for example in a restricted sandbox), point both cache and inference at a directory inside the repo:
@@ -648,7 +648,7 @@ Downloads benchmark inputs into `data/raw/<source>/`. Currently implemented:
 export HF_HOME="$PWD/.cache/huggingface"
 export HF_HUB_CACHE="$PWD/.cache/huggingface/hub"
 uv run python scripts/fetch_datasets.py
-uv run python scripts/classify_zero_shot.py --truncate
+uv run python scripts/classify_zero_shot.py --truncate 
 ```
 
 For private or rate-limited Hub access, export `HF_TOKEN`.
