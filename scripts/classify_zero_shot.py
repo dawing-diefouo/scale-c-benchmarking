@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import re
 from pathlib import Path
 from typing import Any, Iterator
@@ -57,12 +58,29 @@ TEXT_KEYS = (
 )
 
 
-def pick_device() -> int | str:
+def pick_device(requested: str) -> int | str:
+    """Map CLI device choice to Transformers pipeline ``device`` (-1 = CPU)."""
     import torch
 
+    if requested == "cpu":
+        return -1
+    if requested == "cuda":
+        if not torch.cuda.is_available():
+            raise SystemExit(
+                "CUDA was requested (--device cuda) but is not available. "
+                "Update the NVIDIA driver, install a matching PyTorch build, or use --device cpu."
+            )
+        return 0
+    if requested == "mps":
+        mps = getattr(torch.backends, "mps", None)
+        if mps is None or not mps.is_available():
+            raise SystemExit("--device mps was requested but Apple MPS is not available.")
+        return "mps"
+    # auto: prefer CUDA, then MPS, else CPU
     if torch.cuda.is_available():
         return 0
-    if getattr(torch.backends, "mps", None) is not None and torch.backends.mps.is_available():
+    mps = getattr(torch.backends, "mps", None)
+    if mps is not None and mps.is_available():
         return "mps"
     return -1
 
@@ -312,7 +330,19 @@ def main() -> None:
         default=DEFAULT_ID_PREFIX,
         help=f"Prefix for generated record ids (default: {DEFAULT_ID_PREFIX}).",
     )
+    parser.add_argument(
+        "--device",
+        choices=("auto", "cpu", "cuda", "mps"),
+        default="auto",
+        help=(
+            "Inference device. Use cpu when the NVIDIA driver is older than the PyTorch CUDA build "
+            "(avoids CUDA init warnings). Default: auto (cuda if available, else mps, else cpu)."
+        ),
+    )
     args = parser.parse_args()
+
+    if args.device == "cpu":
+        os.environ["CUDA_VISIBLE_DEVICES"] = ""
 
     if not args.input.exists():
         raise SystemExit(
@@ -331,7 +361,7 @@ def main() -> None:
 
     from transformers import pipeline
 
-    device = pick_device()
+    device = pick_device(args.device)
     classifier = pipeline(
         "zero-shot-classification",
         model=args.model,
