@@ -25,7 +25,7 @@ RAW_ROOT = ROOT / "data" / "raw"
 # --- Run configuration (edit these, then: python scripts/classify_zero_shot.py) ---
 DEFAULT_INPUT = ROOT / "data" / "raw" / "huggingface" / "mmlu" / "computer_security" / "test.jsonl"
 DEFAULT_TAXONOMY = SCHEMA
-DEFAULT_OUTPUT = PROCESSED / "classified_mmlu_ccs_.jsonl"
+DEFAULT_OUTPUT = PROCESSED / "classified_mmlu_cs_test.jsonl"
 DEFAULT_MODEL = "NDugar/deberta-v2-xlarge-mnli"
 DEFAULT_MULTI_LABEL = False
 DEFAULT_TRUNCATE = False
