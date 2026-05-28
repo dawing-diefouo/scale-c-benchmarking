@@ -28,7 +28,7 @@ from sentence_transformers.util import cos_sim
 ROOT = Path(__file__).resolve().parents[1]
 
 # Multilingual default (fits German/English benchmark data); override with --model.
-DEFAULT_MODEL = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+DEFAULT_MODEL = "nvidia/llama-nemotron-embed-vl-1b-v2"
 DEFAULT_THRESHOLD = 0.5
 
 
@@ -75,7 +75,7 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
 def main(argv: list[str] | None = None) -> int:
     args = parse_args(argv)
 
-    model = SentenceTransformer(args.model)
+    model = SentenceTransformer(args.model, trust_remote_code=True)
     emb_a = encode(model, args.sentence_a)
     emb_b = encode(model, args.sentence_b)
     score = cosine_similarity(emb_a, emb_b)

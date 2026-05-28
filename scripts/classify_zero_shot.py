@@ -26,7 +26,7 @@ RAW_ROOT = ROOT / "data" / "raw"
 DEFAULT_INPUT = ROOT / "data" / "raw" / "huggingface" / "mmlu" / "computer_security" / "test.jsonl"
 DEFAULT_TAXONOMY = SCHEMA
 DEFAULT_OUTPUT = PROCESSED / "classified_mmlu_cs_test.jsonl"
-DEFAULT_MODEL = "sknow-lab/Qwen2.5-14B-CIC-SciCite"
+DEFAULT_MODEL = "microsoft/LLM2CLIP-Llama-3-8B-Instruct-CC-Finetuned"
 DEFAULT_MULTI_LABEL = False
 DEFAULT_TRUNCATE = False
 DEFAULT_MAX_ROWS: int | None = None
@@ -107,6 +107,23 @@ def iter_jsonl_files(path: Path) -> list[Path]:
             raise ValueError(f"No .jsonl files under: {path}")
         return files
     raise FileNotFoundError(path)
+
+
+def resolve_output_path(*, input_root: Path, input_path: Path, output_arg: Path) -> Path:
+    """
+    If classifying a directory tree, mirror the input structure under an output directory.
+
+    - input_root is the --input argument (a directory)
+    - input_path is a concrete .jsonl file within that tree
+    - output_arg is the --output argument (interpreted as a directory or file)
+    """
+    # If output looks like a file path (has a suffix), derive a directory from it.
+    # This keeps CLI backwards compatibility when users forget to switch --output to a dir.
+    out_base = output_arg
+    if out_base.suffix:
+        out_base = out_base.parent / out_base.stem
+    rel = input_path.relative_to(input_root)
+    return out_base / rel
 
 
 def iter_jsonl_rows(path: Path) -> Iterator[tuple[int, dict[str, Any]]]:
@@ -294,7 +311,12 @@ def main() -> None:
         "--output",
         type=Path,
         default=DEFAULT_OUTPUT,
-        help=f"Append-only Scale_C JSONL (default: {DEFAULT_OUTPUT}; use --truncate to overwrite).",
+        help=(
+            f"Output path. If --input is a file, this is a JSONL file (default: {DEFAULT_OUTPUT}). "
+            "If --input is a directory, this is treated as an output directory and the input tree is "
+            "mirrored under it (one output .jsonl per input .jsonl). If a file path is provided in "
+            "directory mode, its stem is used as the output directory name."
+        ),
     )
     parser.add_argument(
         "--model",
@@ -369,59 +391,119 @@ def main() -> None:
     )
 
     PROCESSED.mkdir(parents=True, exist_ok=True)
-    mode = "w" if args.truncate else "a"
     seen = 0
     written = 0
     next_id = 1
 
-    with args.output.open(mode, encoding="utf-8") as out_f:
+    if args.input.is_dir():
+        out_base = args.output
+        if out_base.suffix:
+            out_base = out_base.parent / out_base.stem
+        out_base.mkdir(parents=True, exist_ok=True)
+
+        output_paths: list[Path] = []
         for input_path in input_files:
-            for line_no, row in iter_jsonl_rows(input_path):
-                if args.start > 0 and seen < args.start:
+            out_path = resolve_output_path(input_root=args.input, input_path=input_path, output_arg=args.output)
+            out_path.parent.mkdir(parents=True, exist_ok=True)
+            output_paths.append(out_path)
+            mode = "w" if args.truncate else "a"
+            with out_path.open(mode, encoding="utf-8") as out_f:
+                for line_no, row in iter_jsonl_rows(input_path):
+                    if args.start > 0 and seen < args.start:
+                        seen += 1
+                        continue
+                    if args.max_rows is not None and written >= args.max_rows:
+                        break
+
+                    text = text_for_classification(row)
+                    result = classifier(
+                        text,
+                        candidate_names,
+                        multi_label=args.multi_label,
+                    )
+
+                    labels_out = result["labels"]
+                    scores_out = result["scores"]
+                    raw_scores = {
+                        name_to_id[name]: float(score)
+                        for name, score in zip(labels_out, scores_out, strict=True)
+                    }
+                    top_name = labels_out[0]
+                    pred_id = name_to_id[top_name]
+
+                    record_id = f"{args.id_prefix}_{next_id:06d}"
+                    next_id += 1
+                    record = build_record(
+                        record_id=record_id,
+                        row=row,
+                        input_path=input_path,
+                        model=args.model,
+                        pred_id=pred_id,
+                        pred_name=top_name,
+                        raw_scores=raw_scores,
+                    )
+                    out_f.write(json.dumps(record, ensure_ascii=False) + "\n")
                     seen += 1
-                    continue
+                    written += 1
+
                 if args.max_rows is not None and written >= args.max_rows:
                     break
 
-                text = text_for_classification(row)
-                result = classifier(
-                    text,
-                    candidate_names,
-                    multi_label=args.multi_label,
-                )
+        out_display = out_base.relative_to(ROOT) if out_base.is_relative_to(ROOT) else out_base
+        print(
+            f"Wrote {written} record(s) under {out_display} "
+            f"from {len(input_files)} file(s) (model={args.model}, device={device})"
+        )
+    else:
+        mode = "w" if args.truncate else "a"
+        with args.output.open(mode, encoding="utf-8") as out_f:
+            for input_path in input_files:
+                for line_no, row in iter_jsonl_rows(input_path):
+                    if args.start > 0 and seen < args.start:
+                        seen += 1
+                        continue
+                    if args.max_rows is not None and written >= args.max_rows:
+                        break
 
-                labels_out = result["labels"]
-                scores_out = result["scores"]
-                raw_scores = {
-                    name_to_id[name]: float(score)
-                    for name, score in zip(labels_out, scores_out, strict=True)
-                }
-                top_name = labels_out[0]
-                pred_id = name_to_id[top_name]
+                    text = text_for_classification(row)
+                    result = classifier(
+                        text,
+                        candidate_names,
+                        multi_label=args.multi_label,
+                    )
 
-                record_id = f"{args.id_prefix}_{next_id:06d}"
-                next_id += 1
-                record = build_record(
-                    record_id=record_id,
-                    row=row,
-                    input_path=input_path,
-                    model=args.model,
-                    pred_id=pred_id,
-                    pred_name=top_name,
-                    raw_scores=raw_scores,
-                )
-                out_f.write(json.dumps(record, ensure_ascii=False) + "\n")
-                seen += 1
-                written += 1
+                    labels_out = result["labels"]
+                    scores_out = result["scores"]
+                    raw_scores = {
+                        name_to_id[name]: float(score)
+                        for name, score in zip(labels_out, scores_out, strict=True)
+                    }
+                    top_name = labels_out[0]
+                    pred_id = name_to_id[top_name]
 
-            if args.max_rows is not None and written >= args.max_rows:
-                break
+                    record_id = f"{args.id_prefix}_{next_id:06d}"
+                    next_id += 1
+                    record = build_record(
+                        record_id=record_id,
+                        row=row,
+                        input_path=input_path,
+                        model=args.model,
+                        pred_id=pred_id,
+                        pred_name=top_name,
+                        raw_scores=raw_scores,
+                    )
+                    out_f.write(json.dumps(record, ensure_ascii=False) + "\n")
+                    seen += 1
+                    written += 1
 
-    out_display = args.output.relative_to(ROOT) if args.output.is_relative_to(ROOT) else args.output
-    print(
-        f"Wrote {written} record(s) to {out_display} "
-        f"from {len(input_files)} file(s) (model={args.model}, device={device})"
-    )
+                if args.max_rows is not None and written >= args.max_rows:
+                    break
+
+        out_display = args.output.relative_to(ROOT) if args.output.is_relative_to(ROOT) else args.output
+        print(
+            f"Wrote {written} record(s) to {out_display} "
+            f"from {len(input_files)} file(s) (model={args.model}, device={device})"
+        )
 
 
 if __name__ == "__main__":
