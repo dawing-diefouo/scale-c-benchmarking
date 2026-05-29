@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "description": "Scale_C Difficulty Taxonomy",
+
+  "labels": [
+    {
+      "name": "beginner",
+      "description": "Requires basic recall or elementary cybersecurity knowledge."
+    },
+    {
+      "name": "intermediate",
+      "description": "Requires understanding and simple application of cybersecurity concepts."
+    },
+    {
+      "name": "advanced",
+      "description": "Requires analysis, diagnosis, or multi-step reasoning."
+    },
+    {
+      "name": "expert",
+      "description": "Requires deep expertise, complex reasoning, or sophisticated generation."
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "description": "Scale_C Cognitive Taxonomy",
+
+  "labels": [
+    {
+      "name": "recognition",
+      "description": "Recall or identify a known fact."
+    },
+    {
+      "name": "understanding",
+      "description": "Explain or interpret a concept."
+    },
+    {
+      "name": "application",
+      "description": "Apply knowledge to a practical situation."
+    },
+    {
+      "name": "analysis",
+      "description": "Break down, investigate, or diagnose a situation."
+    },
+    {
+      "name": "evaluation",
+      "description": "Assess, compare, prioritize, or judge alternatives."
+    },
+    {
+      "name": "generation",
+      "description": "Create new content, questions, or structured outputs."
+    },
+    {
+      "name": "ethical_boundary_detection",
+      "description": "Recognize harmful intent and respond appropriately."
+    }
+  ]
+}
