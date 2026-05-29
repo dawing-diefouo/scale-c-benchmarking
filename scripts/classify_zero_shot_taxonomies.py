@@ -4,15 +4,17 @@ This is a taxonomy-aware variant of ``scripts/classify_zero_shot.py``. It keeps
 the original leaf-topic classification from ``schema/taxonomy.json`` and can
 also classify records against the newer taxonomy files in ``schema/taxonomies/``:
 
-* tasks.json -> record["task_type"]
+* tasks.json -> diagnostic scores when explicitly requested
 * risks.json -> record["metadata"]["risk_category"]
 * difficulty.json -> record["metadata"]["difficulty"]
 * cognitive.json -> record["metadata"]["cognitive_skill"]
-* tiers.json -> record["tier"]
+* tiers.json -> diagnostic scores when explicitly requested
 
 Detailed scores for the extra taxonomy passes are written to
-``record["classification"]["taxonomies"]``. Edit the ``DEFAULT_*`` block below
-or override it with CLI flags.
+``record["classification"]["taxonomies"]``. By default, ``task_type`` and
+``tier`` are inferred structurally because the row shape is more reliable than
+zero-shot classification for those fields. Edit the ``DEFAULT_*`` block below or
+override it with CLI flags.
 """
 
 from __future__ import annotations
@@ -41,7 +43,7 @@ DEFAULT_TRUNCATE = False
 DEFAULT_MAX_ROWS: int | None = None
 DEFAULT_START = 0
 DEFAULT_ID_PREFIX = "scale_c"
-DEFAULT_EXTRA_TAXONOMIES = ("tasks", "risks", "difficulty", "cognitive", "tiers")
+DEFAULT_EXTRA_TAXONOMIES = ("risks", "difficulty", "cognitive")
 
 BENCHMARK = "scale_c"
 SCHEMA_VERSION = 2
@@ -66,6 +68,10 @@ TEXT_KEYS = (
     "claim",
     "statement",
 )
+
+CLOZE_MARKERS = ("____", "___", "[MASK]", "<mask>", "<blank>", "{blank}", "[blank]", "{{blank}}")
+GENERATION_WORDS = ("generate", "create", "write", "draft", "produce", "build")
+TRANSLATION_WORDS = ("translate", "translation", "localize", "localise", "german", "deutsch")
 
 
 @dataclass(frozen=True)
@@ -197,6 +203,54 @@ def text_for_classification(row: dict[str, Any]) -> str:
     return json.dumps(row, ensure_ascii=False)
 
 
+def row_text(row: dict[str, Any]) -> str:
+    values: list[str] = []
+    for key in TEXT_KEYS + ("task_type", "subject", "category", "type"):
+        value = row.get(key)
+        if isinstance(value, str) and value.strip():
+            values.append(value.strip())
+    return "\n".join(values).lower()
+
+
+def has_choices(row: dict[str, Any]) -> bool:
+    choices = row.get("choices")
+    options = row.get("options")
+    if isinstance(choices, (list, dict)) and bool(choices):
+        return True
+    if isinstance(options, (list, dict)) and bool(options):
+        return True
+    return any(row.get(f"option_{letter}") is not None for letter in "abcdefghijklmnopqrstuvwxyz")
+
+
+def has_answer(row: dict[str, Any]) -> bool:
+    return row.get("answer") is not None or row.get("answers") is not None or row.get("target") is not None
+
+
+def looks_like_cloze(row: dict[str, Any]) -> bool:
+    text = row_text(row)
+    if any(marker.lower() in text for marker in CLOZE_MARKERS):
+        return True
+    return any(key in row for key in ("blank", "blanks", "cloze", "completion"))
+
+
+def looks_like_generation_request(row: dict[str, Any]) -> bool:
+    text = row_text(row)
+    if any(key in row for key in ("output_schema", "generation_type", "instructions")):
+        return True
+    return any(word in text for word in GENERATION_WORDS)
+
+
+def looks_like_translation_request(row: dict[str, Any]) -> bool:
+    text = row_text(row)
+    if any(key in row for key in ("source_language", "target_language", "translation")):
+        return True
+    return any(word in text for word in TRANSLATION_WORDS) or ("english" in text and "german" in text)
+
+
+def looks_like_h5p_request(row: dict[str, Any]) -> bool:
+    return "h5p" in row_text(row) or any(key.startswith("h5p") for key in row)
+
+
 def infer_source(input_path: Path) -> str:
     try:
         rel = input_path.relative_to(RAW_ROOT)
@@ -226,21 +280,63 @@ def infer_language(input_path: Path, row: dict[str, Any]) -> str:
 
 
 def infer_task_type(row: dict[str, Any]) -> str:
+    existing = row.get("task_type")
+    if isinstance(existing, str) and existing.strip():
+        return existing.strip()
+    if looks_like_translation_request(row):
+        return "translation_en_de"
+    if looks_like_generation_request(row):
+        text = row_text(row)
+        if looks_like_h5p_request(row):
+            if "german" in text or "deutsch" in text:
+                return "german_h5p_generation"
+            if has_choices(row) or "multiple-choice" in text or "multiple choice" in text:
+                return "h5p_mcq_generation"
+            return "h5p_structured_generation"
+        if looks_like_cloze(row):
+            return "cloze_generation"
+        if has_choices(row) or "multiple-choice" in text or "multiple choice" in text:
+            return "mcq_generation"
+        if "german" in text or "deutsch" in text:
+            return "german_content_generation"
     if "json_schema" in row and "question" not in row:
         return "code_configuration_analysis"
     if row.get("sentence_1") and row.get("sentence_2"):
         return "scenario_reasoning"
     if row.get("context") and row.get("question") and row.get("answers"):
         return "short_answer"
-    if row.get("question") and (
-        row.get("choices") or row.get("options") or row.get("option_a") or row.get("answer") is not None
-    ):
+    if row.get("question") and has_choices(row):
         return "mcq_answering"
+    if looks_like_cloze(row) and has_answer(row):
+        return "short_answer"
+    if row.get("question") and has_answer(row):
+        return "short_answer"
     if row.get("prompt") and row.get("code"):
+        return "code_configuration_analysis"
+    if row.get("code") or row.get("json_schema"):
         return "code_configuration_analysis"
     if row.get("question") or row.get("prompt"):
         return "open_explanation"
     return "open_explanation"
+
+
+def infer_tier(task_type: str, input_path: Path, row: dict[str, Any]) -> int:
+    language = infer_language(input_path, row)
+    if task_type in {"translation_en_de", "german_content_generation", "german_h5p_generation"}:
+        return 3
+    if language == "de":
+        return 3
+    if task_type in {"mcq_generation", "cloze_generation", "h5p_structured_generation", "h5p_mcq_generation"}:
+        return 2
+    return DEFAULT_TIER
+
+
+def tier_label_name(tier: int) -> str:
+    return {
+        1: "tier1_cyber_competence",
+        2: "tier2_structured_generation",
+        3: "tier3_multilingual_localization",
+    }.get(tier, f"tier{tier}")
 
 
 def _index_to_letter(index: int) -> str | None:
@@ -285,26 +381,29 @@ def classify_taxonomy(
     labels_out = result["labels"]
     scores_out = result["scores"]
     raw_scores: dict[str, float] = {}
-    raw_scores_by_name: dict[str, float] = {}
     for candidate, score in zip(labels_out, scores_out, strict=True):
         label = by_candidate[candidate]
         raw_scores[label.key] = float(score)
-        raw_scores_by_name[label.name] = float(score)
 
     top_label = by_candidate[labels_out[0]]
+    top_score = float(scores_out[0])
+    runner_up_score = float(scores_out[1]) if len(scores_out) > 1 else 0.0
+    margin = top_score - runner_up_score
+    if top_score >= 0.6 and margin >= 0.2:
+        confidence = "high"
+    elif top_score >= 0.35 and margin >= 0.1:
+        confidence = "medium"
+    else:
+        confidence = "low"
     return {
         "predicted_label": top_label.key,
         "predicted_label_name": top_label.name,
         "raw_scores": raw_scores,
-        "raw_scores_by_name": raw_scores_by_name,
+        "top_score": top_score,
+        "margin": margin,
+        "confidence": confidence,
+        "method": "zero_shot",
     }
-
-
-def tier_number(label_name: str) -> int:
-    match = re.match(r"tier(\d+)_", label_name)
-    if match:
-        return int(match.group(1))
-    return DEFAULT_TIER
 
 
 def build_record(
@@ -316,12 +415,11 @@ def build_record(
     topic_result: dict[str, Any],
     taxonomy_results: dict[str, dict[str, Any]],
 ) -> dict[str, Any]:
-    task_type = taxonomy_results.get("tasks", {}).get("predicted_label_name") or infer_task_type(row)
+    task_type = infer_task_type(row)
     difficulty = taxonomy_results.get("difficulty", {}).get("predicted_label_name", PLACEHOLDER)
     risk_category = taxonomy_results.get("risks", {}).get("predicted_label_name", PLACEHOLDER)
     cognitive_skill = taxonomy_results.get("cognitive", {}).get("predicted_label_name", PLACEHOLDER)
-    tier_name = taxonomy_results.get("tiers", {}).get("predicted_label_name")
-    tier = tier_number(tier_name) if isinstance(tier_name, str) else DEFAULT_TIER
+    tier = infer_tier(task_type, input_path, row)
 
     record: dict[str, Any] = {
         "id": record_id,
@@ -340,7 +438,24 @@ def build_record(
             "predicted_label": topic_result["predicted_label"],
             "predicted_label_name": topic_result["predicted_label_name"],
             "raw_scores": topic_result["raw_scores"],
+            "top_score": topic_result["top_score"],
+            "margin": topic_result["margin"],
+            "confidence": topic_result["confidence"],
             "classifier": {"model": model},
+            "taxonomy_decisions": {
+                "tasks": {
+                    "predicted_label": task_type,
+                    "predicted_label_name": task_type,
+                    "confidence": "high",
+                    "method": "structural",
+                },
+                "tiers": {
+                    "predicted_label": tier_label_name(tier),
+                    "predicted_label_name": tier_label_name(tier),
+                    "confidence": "high",
+                    "method": "structural",
+                },
+            },
         },
         "payload": row,
     }
