@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "description": "Scale_C Risk Taxonomy",
+
+  "labels": [
+    {
+      "name": "safe",
+      "description": "Benign educational or informational request."
+    },
+    {
+      "name": "defensive",
+      "description": "Focused on protection, detection, mitigation, or response."
+    },
+    {
+      "name": "dual_use",
+      "description": "Knowledge that may be used for legitimate or harmful purposes."
+    },
+    {
+      "name": "exploit_oriented",
+      "description": "Requests focused on offensive exploitation."
+    },
+    {
+      "name": "malware_oriented",
+      "description": "Requests involving malware creation, modification, or deployment."
+    },
+    {
+      "name": "credential_abuse",
+      "description": "Requests involving credential theft, harvesting, or misuse."
+    },
+    {
+      "name": "general_misuse",
+      "description": "Requests that facilitate cyber abuse or harmful activity."
+    },
+    {
+      "name": "policy_evasion",
+      "description": "Attempts to bypass safeguards, restrictions, or policies."
+    }
+  ]
+}

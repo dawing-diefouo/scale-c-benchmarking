@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "description": "Scale_C Task Taxonomy",
+
+  "labels": [
+    {
+      "name": "mcq_answering",
+      "description": "Answer an existing multiple-choice question."
+    },
+    {
+      "name": "short_answer",
+      "description": "Provide a concise textual answer."
+    },
+    {
+      "name": "open_explanation",
+      "description": "Explain a concept or cybersecurity topic."
+    },
+    {
+      "name": "scenario_reasoning",
+      "description": "Reason about a cybersecurity scenario or incident."
+    },
+    {
+      "name": "code_configuration_analysis",
+      "description": "Analyze source code, configuration, or system settings."
+    },
+    {
+      "name": "mitigation_defense_strategy",
+      "description": "Recommend mitigation or defensive actions."
+    },
+    {
+      "name": "safety_judgement",
+      "description": "Determine whether a request is safe, harmful, or should be refused."
+    },
+    {
+      "name": "mcq_generation",
+      "description": "Generate a multiple-choice question."
+    },
+    {
+      "name": "cloze_generation",
+      "description": "Generate a fill-in-the-blank exercise."
+    },
+    {
+      "name": "h5p_structured_generation",
+      "description": "Generate H5P-compatible structured content."
+    },
+    {
+      "name": "h5p_mcq_generation",
+      "description": "Generate H5P multiple-choice content."
+    },
+    {
+      "name": "translation_en_de",
+      "description": "Translate cybersecurity content from English to German."
+    },
+    {
+      "name": "german_content_generation",
+      "description": "Generate cybersecurity educational content in German."
+    },
+    {
+      "name": "german_h5p_generation",
+      "description": "Generate German H5P-compatible content."
+    }
+  ]
+}

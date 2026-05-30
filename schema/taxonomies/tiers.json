@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "description": "Scale_C Capability Tiers",
+
+  "labels": [
+    {
+      "name": "tier1_cyber_competence",
+      "description": "Cybersecurity knowledge, reasoning, and safety capabilities."
+    },
+    {
+      "name": "tier2_structured_generation",
+      "description": "Generation of structured educational cybersecurity content."
+    },
+    {
+      "name": "tier3_multilingual_localization",
+      "description": "Multilingual and localization capabilities."
+    }
+  ]
+}
