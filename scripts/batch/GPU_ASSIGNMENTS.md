@@ -20,21 +20,22 @@ Example: `data/raw/huggingface/mmlu/computer_security/test.jsonl` → `data/proc
 Override the GPU per run:
 
 ```bash
-GPU=2 ./scripts/batch/classify_qwen_mmlu.sh
+CUDA_VISIBLE_DEVICES=2 ./scripts/batch/classify_qwen_mmlu.sh
 ```
 
 ## Launch all 8 at once (background)
 
 ```bash
-GPU=0 ./scripts/batch/classify_qwen_cyberbench.sh > logs/qwen_cyberbench.log 2>&1 &
-GPU=0 ./scripts/batch/classify_qwen_CyberMetric.sh > logs/qwen_CyberMetric.log 2>&1 &
-GPU=1 ./scripts/batch/classify_qwen_cybersoceval.sh > logs/qwen_cybersoceval.log 2>&1 &
-GPU=1 ./scripts/batch/classify_qwen_SEC-bench.sh > logs/qwen_SEC-bench.log 2>&1 &
-GPU=2 ./scripts/batch/classify_qwen_mmlu.sh > logs/qwen_mmlu.log 2>&1 &
-GPU=2 ./scripts/batch/classify_qwen_Global-MMLU.sh > logs/qwen_Global-MMLU.log 2>&1 &
-GPU=3 ./scripts/batch/classify_qwen_JSONSchemaBench.sh > logs/qwen_JSONSchemaBench.log 2>&1 &
-GPU=3 ./scripts/batch/classify_qwen_superGLEBer.sh > logs/qwen_superGLEBer.log 2>&1 &
+mkdir -p logs
+CUDA_VISIBLE_DEVICES=0 ./scripts/batch/classify_qwen_cyberbench.sh > logs/qwen_cyberbench.log 2>&1 &
+CUDA_VISIBLE_DEVICES=0 ./scripts/batch/classify_qwen_CyberMetric.sh > logs/qwen_CyberMetric.log 2>&1 &
+CUDA_VISIBLE_DEVICES=1 ./scripts/batch/classify_qwen_cybersoceval.sh > logs/qwen_cybersoceval.log 2>&1 &
+CUDA_VISIBLE_DEVICES=1 ./scripts/batch/classify_qwen_SEC-bench.sh > logs/qwen_SEC-bench.log 2>&1 &
+CUDA_VISIBLE_DEVICES=2 ./scripts/batch/classify_qwen_mmlu.sh > logs/qwen_mmlu.log 2>&1 &
+CUDA_VISIBLE_DEVICES=2 ./scripts/batch/classify_qwen_Global-MMLU.sh > logs/qwen_Global-MMLU.log 2>&1 &
+CUDA_VISIBLE_DEVICES=3 ./scripts/batch/classify_qwen_JSONSchemaBench.sh > logs/qwen_JSONSchemaBench.log 2>&1 &
+CUDA_VISIBLE_DEVICES=3 ./scripts/batch/classify_qwen_superGLEBer.sh > logs/qwen_superGLEBer.log 2>&1 &
 wait
 ```
 
-Create `logs/` first: `mkdir -p logs`
+Each script exports `CUDA_VISIBLE_DEVICES` if not already set; pass it on the command line to override.

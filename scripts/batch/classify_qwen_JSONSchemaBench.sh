@@ -3,8 +3,8 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 cd "$ROOT"
 
-# Suggested GPU: 3
-GPU="${GPU:-3}"
+# Suggested: CUDA_VISIBLE_DEVICES=3
+export CUDA_VISIBLE_DEVICES="${CUDA_VISIBLE_DEVICES:-3}"
 
 exec .venv/bin/python scripts/classify_zero_shot.py \
   --method generative \
@@ -12,5 +12,4 @@ exec .venv/bin/python scripts/classify_zero_shot.py \
   --input data/raw/huggingface/JSONSchemaBench \
   --output-root qwen \
   --truncate \
-  --device cuda \
-  --gpu "$GPU"
+  --device cuda
