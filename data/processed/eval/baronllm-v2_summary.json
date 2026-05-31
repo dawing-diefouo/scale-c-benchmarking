@@ -1,0 +1,33 @@
+{
+  "model_alias": "baronllm-v2",
+  "model": "Trendyol/Qwen3-14B-BaronLLM-v2-Q8",
+  "display_name": "BaronLLM v2.0",
+  "backend": "openai",
+  "totals": {
+    "scorable": 20
+  },
+  "accuracy": 0.0,
+  "by_task_type": {
+    "open_explanation": {
+      "total": 20,
+      "correct": 0
+    }
+  },
+  "by_source": {
+    "huggingface/CyberMetric": {
+      "total": 20,
+      "correct": 0
+    }
+  },
+  "by_topic": {
+    "SCLC00101": {
+      "total": 10,
+      "correct": 0
+    },
+    "SCLC00201": {
+      "total": 10,
+      "correct": 0
+    }
+  },
+  "output_file": "/home/foyet/scale-c-benchmarking/data/processed/eval/baronllm-v2.jsonl"
+}

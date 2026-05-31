@@ -1,21 +1,32 @@
-"""Zero-shot classification with MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7.
+"""Zero-shot topic classification for Scale_C benchmark rows.
 
 Reads label names from ``schema/taxonomy.json``, classifies text derived from any
 JSONL row shape, and writes Scale_C records (see ``schema/schema.json``) to
 ``data/processed/``. Edit the ``DEFAULT_*`` run configuration block at the top of
 this file, then run with no CLI arguments; flags still override those defaults.
 
-Model: https://huggingface.co/MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7
+Supported backends (``--method``):
+
+* ``nli`` — Hugging Face ``zero-shot-classification`` pipeline (MNLI / XNLI models).
+* ``embedding`` — cosine similarity between text and label embeddings
+  (``microsoft/LLM2CLIP-Llama-3-8B-Instruct-CC-Finetuned`` via mean-pooled
+  Llama encoder, or any Sentence-Transformer model).
+* ``generative`` — prompt a causal LM to pick one taxonomy label
+  (``sknow-lab/Qwen2.5-14B-CIC-ACLARC``; GGUF ids are mapped to the transformers
+  checkpoint automatically).
 """
 
 from __future__ import annotations
 
 import argparse
 import json
+import math
 import os
 import re
+import sys
+from dataclasses import dataclass
 from pathlib import Path
-from typing import Any, Iterator
+from typing import Any, Iterator, Protocol
 
 ROOT = Path(__file__).resolve().parents[1]
 SCHEMA = ROOT / "schema" / "taxonomy.json"
@@ -25,13 +36,22 @@ RAW_ROOT = ROOT / "data" / "raw"
 # --- Run configuration (edit these, then: python scripts/classify_zero_shot.py) ---
 DEFAULT_INPUT = ROOT / "data" / "raw" / "huggingface" / "mmlu" / "computer_security" / "test.jsonl"
 DEFAULT_TAXONOMY = SCHEMA
-DEFAULT_OUTPUT = PROCESSED / "classified_mmlu_cs_test.jsonl"
-DEFAULT_MODEL = "microsoft/LLM2CLIP-Llama-3-8B-Instruct-CC-Finetuned"
+DEFAULT_OUTPUT = PROCESSED / "cyberbech.jsonl"
+DEFAULT_OUTPUT_ROOT = "qwen"
+DEFAULT_METHOD = "generative"
+DEFAULT_MODEL = "sknow-lab/Qwen2.5-14B-CIC-ACLARC"
 DEFAULT_MULTI_LABEL = False
 DEFAULT_TRUNCATE = False
 DEFAULT_MAX_ROWS: int | None = None
 DEFAULT_START = 0
 DEFAULT_ID_PREFIX = "scale_c"
+DEFAULT_GPU: int | None = None
+
+METHOD_DEFAULT_MODELS = {
+    "nli": "MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7",
+    "embedding": "microsoft/LLM2CLIP-Llama-3-8B-Instruct-CC-Finetuned",
+    "generative": "sknow-lab/Qwen2.5-14B-CIC-ACLARC",
+}
 
 BENCHMARK = "scale_c"
 SCHEMA_VERSION = 2
@@ -58,6 +78,26 @@ TEXT_KEYS = (
 )
 
 
+@dataclass(frozen=True)
+class TaxonomyEntry:
+    id: str
+    name: str
+    candidate: str
+
+
+class ClassifierBackend(Protocol):
+    method: str
+    model_id: str
+
+    def classify(
+        self,
+        text: str,
+        entries: list[TaxonomyEntry],
+        *,
+        multi_label: bool,
+    ) -> tuple[list[str], list[float]]: ...
+
+
 def pick_device(requested: str) -> int | str:
     """Map CLI device choice to Transformers pipeline ``device`` (-1 = CPU)."""
     import torch
@@ -76,7 +116,6 @@ def pick_device(requested: str) -> int | str:
         if mps is None or not mps.is_available():
             raise SystemExit("--device mps was requested but Apple MPS is not available.")
         return "mps"
-    # auto: prefer CUDA, then MPS, else CPU
     if torch.cuda.is_available():
         return 0
     mps = getattr(torch.backends, "mps", None)
@@ -85,15 +124,56 @@ def pick_device(requested: str) -> int | str:
     return -1
 
 
-def load_taxonomy(path: Path) -> tuple[list[str], dict[str, str]]:
+def torch_device(device: int | str) -> str:
+    if device == -1:
+        return "cpu"
+    if device == "mps":
+        return "mps"
+    return "cuda"
+
+
+def resolve_model_id(model: str, method: str) -> str:
+    if "gguf" not in model.casefold():
+        return model
+    if method != "generative":
+        raise SystemExit(
+            f"Model {model!r} is a GGUF checkpoint and is not supported by --method {method!r}. "
+            "Use --method generative (maps to the transformers checkpoint) or run GGUF via llama.cpp."
+        )
+    resolved = re.sub(r"-gguf$", "", model, flags=re.I)
+    if resolved != model:
+        print(
+            f"Note: GGUF weights are not loaded here; using transformers checkpoint {resolved!r}.",
+            file=sys.stderr,
+        )
+    return resolved
+
+
+def infer_method(model: str) -> str | None:
+    folded = model.casefold()
+    if "llm2clip" in folded:
+        return "embedding"
+    if "cic-aclarc" in folded or ("qwen" in folded and "cic" in folded):
+        return "generative"
+    if folded.endswith("-gguf"):
+        return "generative"
+    return None
+
+
+def load_taxonomy(path: Path) -> list[TaxonomyEntry]:
     data = json.loads(path.read_text(encoding="utf-8"))
-    labels = data["labels"]
-    names = [str(x["name"]) for x in labels]
-    ids = [str(x["id"]) for x in labels]
-    if len(names) != len(set(names)):
-        raise ValueError("taxonomy label names must be unique for this pipeline mapping")
-    name_to_id = dict(zip(names, ids, strict=True))
-    return names, name_to_id
+    entries: list[TaxonomyEntry] = []
+    seen_candidates: set[str] = set()
+    for raw in data["labels"]:
+        name = str(raw["name"])
+        label_id = str(raw["id"])
+        description = str(raw.get("description", "")).strip()
+        candidate = f"{name}: {description}" if description else name
+        if candidate in seen_candidates:
+            raise ValueError(f"{path}: taxonomy candidate labels must be unique")
+        seen_candidates.add(candidate)
+        entries.append(TaxonomyEntry(id=label_id, name=name, candidate=candidate))
+    return entries
 
 
 def iter_jsonl_files(path: Path) -> list[Path]:
@@ -109,21 +189,30 @@ def iter_jsonl_files(path: Path) -> list[Path]:
     raise FileNotFoundError(path)
 
 
-def resolve_output_path(*, input_root: Path, input_path: Path, output_arg: Path) -> Path:
-    """
-    If classifying a directory tree, mirror the input structure under an output directory.
-
-    - input_root is the --input argument (a directory)
-    - input_path is a concrete .jsonl file within that tree
-    - output_arg is the --output argument (interpreted as a directory or file)
-    """
-    # If output looks like a file path (has a suffix), derive a directory from it.
-    # This keeps CLI backwards compatibility when users forget to switch --output to a dir.
-    out_base = output_arg
-    if out_base.suffix:
-        out_base = out_base.parent / out_base.stem
+def resolve_output_path(*, input_root: Path, input_path: Path, output_base: Path) -> Path:
     rel = input_path.relative_to(input_root)
-    return out_base / rel
+    return output_base / rel
+
+
+def resolve_output_base(*, input_path: Path, output_root: str | None, output_arg: Path) -> Path:
+    """Map --output-root to data/processed/<root>/<input-dir-name>/…"""
+    if output_root:
+        base = Path(output_root)
+        if not base.is_absolute():
+            base = PROCESSED / base
+        if input_path.is_dir():
+            return base / input_path.name
+        return base / input_path.parent.name
+    if input_path.is_dir():
+        out_base = output_arg
+        if out_base.suffix:
+            out_base = out_base.parent / out_base.stem
+        return out_base
+    return output_arg.parent if output_arg.suffix else output_arg
+
+
+def resolve_input_root(input_path: Path) -> Path:
+    return input_path if input_path.is_dir() else input_path.parent
 
 
 def iter_jsonl_rows(path: Path) -> Iterator[tuple[int, dict[str, Any]]]:
@@ -256,12 +345,394 @@ def build_evaluation(row: dict[str, Any]) -> dict[str, Any] | None:
     return None
 
 
+def rank_scores(
+    labels: list[str],
+    scores: list[float],
+    *,
+    multi_label: bool,
+) -> tuple[list[str], list[float]]:
+    pairs = sorted(zip(labels, scores, strict=True), key=lambda item: item[1], reverse=True)
+    if not multi_label:
+        return [pairs[0][0]], [pairs[0][1]]
+    top_score = pairs[0][1]
+    threshold = 0.5 * top_score
+    selected = [(label, score) for label, score in pairs if score >= threshold]
+    return [label for label, _ in selected], [score for _, score in selected]
+
+
+def softmax(values: list[float]) -> list[float]:
+    if not values:
+        return []
+    max_val = max(values)
+    exp_vals = [math.exp(v - max_val) for v in values]
+    total = sum(exp_vals)
+    return [v / total for v in exp_vals]
+
+
+def _flash_attention_available() -> bool:
+    try:
+        import flash_attn  # noqa: F401
+
+        return True
+    except ImportError:
+        return False
+
+
+def _patch_llama_encoder_class(model_cls: type) -> None:
+    """Allow Microsoft's LLM2CLIP encoder to load without flash-attn (sdpa fallback)."""
+    if getattr(model_cls, "_scale_c_sdpa_patched", False):
+        return
+
+    import torch.nn as nn
+    from transformers.modeling_layers import GradientCheckpointingLayer
+    from transformers.models.llama.modeling_llama import (
+        LlamaAttention,
+        LlamaDecoderLayer,
+        LlamaMLP,
+        LlamaPreTrainedModel,
+        LlamaRMSNorm,
+        LlamaRotaryEmbedding,
+    )
+
+    class ModifiedLlamaAttention(LlamaAttention):
+        def __init__(self, *args, **kwargs):
+            super().__init__(*args, **kwargs)
+            self.is_causal = False
+
+    class ModifiedLlamaDecoderLayer(LlamaDecoderLayer):
+        def __init__(self, config, layer_idx: int):
+            GradientCheckpointingLayer.__init__(self)
+            self.hidden_size = config.hidden_size
+            self.self_attn = ModifiedLlamaAttention(config=config, layer_idx=layer_idx)
+            self.mlp = LlamaMLP(config)
+            self.input_layernorm = LlamaRMSNorm(config.hidden_size, eps=config.rms_norm_eps)
+            self.post_attention_layernorm = LlamaRMSNorm(
+                config.hidden_size, eps=config.rms_norm_eps
+            )
+
+    def patched_init(self, config) -> None:
+        LlamaPreTrainedModel.__init__(self, config)
+        self.padding_idx = config.pad_token_id
+        self.vocab_size = config.vocab_size
+        self.embed_tokens = nn.Embedding(
+            config.vocab_size, config.hidden_size, self.padding_idx
+        )
+        self.layers = nn.ModuleList(
+            [
+                ModifiedLlamaDecoderLayer(config, layer_idx)
+                for layer_idx in range(config.num_hidden_layers)
+            ]
+        )
+        self._use_sdpa = config._attn_implementation == "sdpa"
+        self._use_flash_attention_2 = config._attn_implementation == "flash_attention_2"
+        self.norm = LlamaRMSNorm(config.hidden_size, eps=config.rms_norm_eps)
+        self.rotary_emb = LlamaRotaryEmbedding(config=config)
+        self.gradient_checkpointing = False
+        self.post_init()
+
+    model_cls.__init__ = patched_init
+    model_cls._scale_c_sdpa_patched = True
+
+
+class _LlamaEncoderSdpaFallback:
+    """Patch HF dynamic import so LLM2CLIP loads with SDPA when flash-attn is missing."""
+
+    _PATCH_TARGETS = (
+        "transformers.dynamic_module_utils",
+        "transformers.models.auto.auto_factory",
+    )
+
+    def __init__(self) -> None:
+        self._originals: dict[str, Any] = {}
+
+    def __enter__(self) -> None:
+        if _flash_attention_available():
+            return
+
+        def get_class_patched(*args, **kwargs):
+            original = self._originals["transformers.dynamic_module_utils"]
+            cls = original(*args, **kwargs)
+            if getattr(cls, "__name__", "") == "LlamaEncoderModel":
+                _patch_llama_encoder_class(cls)
+            return cls
+
+        import importlib
+
+        for target in self._PATCH_TARGETS:
+            mod = importlib.import_module(target)
+            self._originals[target] = mod.get_class_from_dynamic_module
+            mod.get_class_from_dynamic_module = get_class_patched
+
+    def __exit__(self, exc_type, exc, tb) -> None:
+        if not self._originals:
+            return
+        import importlib
+
+        for target, original in self._originals.items():
+            importlib.import_module(target).get_class_from_dynamic_module = original
+
+
+class Llm2ClipTextEncoder:
+    """Minimal LLM2Vec-style mean pooling for LLM2CLIP text checkpoints."""
+
+    def __init__(self, model, tokenizer, *, device: str, max_length: int = 512) -> None:
+        self.model = model
+        self.tokenizer = tokenizer
+        self.max_length = max_length
+        self.device = device
+        self.tokenizer.pad_token = self.tokenizer.eos_token
+        self.tokenizer.padding_side = "left"
+        self.model.config._name_or_path = "meta-llama/Meta-Llama-3-8B-Instruct"
+        self.model.eval()
+
+    def _format_text(self, text: str) -> str:
+        messages = [{"role": "user", "content": text.strip()}]
+        return self.tokenizer.apply_chat_template(
+            messages,
+            tokenize=False,
+            add_generation_prompt=False,
+        )
+
+    def encode(self, texts: list[str], *, batch_size: int = 8):
+        import torch
+
+        formatted = [self._format_text(text) for text in texts]
+        embeddings: list[torch.Tensor] = []
+        with torch.no_grad():
+            for start in range(0, len(formatted), batch_size):
+                batch_texts = formatted[start : start + batch_size]
+                features = self.tokenizer(
+                    batch_texts,
+                    return_tensors="pt",
+                    padding=True,
+                    truncation=True,
+                    max_length=self.max_length,
+                ).to(self.device)
+                hidden = self.model(**features).last_hidden_state
+                lengths = features["attention_mask"].sum(dim=-1)
+                batch_emb = torch.stack(
+                    [hidden[i, -length:, :].mean(dim=0) for i, length in enumerate(lengths)],
+                    dim=0,
+                )
+                batch_emb = torch.nn.functional.normalize(batch_emb, p=2, dim=1)
+                embeddings.append(batch_emb)
+        return torch.cat(embeddings, dim=0)
+
+
+def load_llm2clip_text_encoder(model_id: str, device: str) -> Llm2ClipTextEncoder:
+    import torch
+    from transformers import AutoConfig, AutoModel, AutoTokenizer
+
+    attn = "flash_attention_2" if _flash_attention_available() else "sdpa"
+    config = AutoConfig.from_pretrained(model_id, trust_remote_code=True)
+    load_kwargs = {
+        "torch_dtype": torch.bfloat16 if device != "cpu" else torch.float32,
+        "config": config,
+        "trust_remote_code": True,
+        "attn_implementation": attn,
+    }
+    with _LlamaEncoderSdpaFallback():
+        model = AutoModel.from_pretrained(model_id, **load_kwargs)
+    model = model.to(device)
+    tokenizer = AutoTokenizer.from_pretrained(model_id)
+    if attn == "sdpa" and not _flash_attention_available():
+        print(
+            "Note: flash-attn is not installed; loaded LLM2CLIP with SDPA attention.",
+            file=sys.stderr,
+        )
+    return Llm2ClipTextEncoder(model, tokenizer, device=device)
+
+
+class NLIBackend:
+    method = "nli"
+
+    def __init__(self, model_id: str, device: int | str) -> None:
+        from transformers import pipeline
+
+        self.model_id = model_id
+        self._classifier = pipeline(
+            "zero-shot-classification",
+            model=model_id,
+            device=device,
+        )
+
+    def classify(
+        self,
+        text: str,
+        entries: list[TaxonomyEntry],
+        *,
+        multi_label: bool,
+    ) -> tuple[list[str], list[float]]:
+        candidates = [entry.candidate for entry in entries]
+        result = self._classifier(text, candidates, multi_label=multi_label)
+        return list(result["labels"]), [float(x) for x in result["scores"]]
+
+
+class EmbeddingBackend:
+    method = "embedding"
+
+    def __init__(self, model_id: str, device: int | str) -> None:
+        self.model_id = model_id
+        self._device = torch_device(device)
+        if "llm2clip" in model_id.casefold():
+            self._encoder = load_llm2clip_text_encoder(model_id, self._device)
+            self._kind = "llm2clip"
+        else:
+            from sentence_transformers import SentenceTransformer
+
+            self._encoder = SentenceTransformer(model_id, trust_remote_code=True, device=self._device)
+            self._kind = "sbert"
+
+    def _encode(self, texts: list[str]):
+        if self._kind == "llm2clip":
+            return self._encoder.encode(texts)
+        return self._encoder.encode(texts, convert_to_tensor=True, normalize_embeddings=True)
+
+    def classify(
+        self,
+        text: str,
+        entries: list[TaxonomyEntry],
+        *,
+        multi_label: bool,
+    ) -> tuple[list[str], list[float]]:
+        from sentence_transformers.util import cos_sim
+
+        candidates = [entry.candidate for entry in entries]
+        text_emb = self._encode([text])
+        label_embs = self._encode(candidates)
+        scores = cos_sim(text_emb, label_embs)[0].tolist()
+        labels_out, scores_out = rank_scores(candidates, scores, multi_label=multi_label)
+        if multi_label:
+            return labels_out, scores_out
+        ordered = sorted(zip(candidates, scores, strict=True), key=lambda item: item[1], reverse=True)
+        return [label for label, _ in ordered], [score for _, score in ordered]
+
+
+class GenerativeBackend:
+    method = "generative"
+
+    def __init__(self, model_id: str, device: int | str) -> None:
+        import torch
+        from transformers import AutoModelForCausalLM, AutoTokenizer
+
+        self.model_id = model_id
+        self._device = torch_device(device)
+        dtype = torch.bfloat16 if self._device != "cpu" else torch.float32
+        self._tokenizer = AutoTokenizer.from_pretrained(model_id, trust_remote_code=True)
+        self._model = AutoModelForCausalLM.from_pretrained(
+            model_id,
+            torch_dtype=dtype,
+            trust_remote_code=True,
+        ).to(self._device)
+        self._model.eval()
+
+    @staticmethod
+    def _system_prompt(entries: list[TaxonomyEntry]) -> str:
+        lines = [
+            "You are an expert tasked with classifying cybersecurity education content.",
+            "",
+            "# CLASS DEFINITIONS #",
+            "",
+            f"The {len(entries)} possible classes are:",
+        ]
+        for index, entry in enumerate(entries, start=1):
+            description = entry.candidate.split(": ", 1)[-1]
+            lines.append(f"{index} - {entry.name}: {description}")
+        lines.extend(
+            [
+                "",
+                "# RULES #",
+                "- Assign exactly one class to the content.",
+                "- Respond only with the exact label name (no explanation).",
+            ]
+        )
+        return "\n".join(lines)
+
+    def _chat_prefix(self, text: str, entries: list[TaxonomyEntry]) -> str:
+        messages = [
+            {"role": "system", "content": self._system_prompt(entries)},
+            {
+                "role": "user",
+                "content": (
+                    "Classify the following content into one taxonomy label.\n\n"
+                    f"Content:\n{text}\n\n"
+                    "Answer with the exact label name only."
+                ),
+            },
+        ]
+        return self._tokenizer.apply_chat_template(
+            messages,
+            tokenize=False,
+            add_generation_prompt=True,
+        )
+
+    def _label_logprob(self, prefix: str, label: str) -> float:
+        import torch
+
+        suffix = label if prefix.endswith("\n") else f" {label}"
+        full = prefix + suffix
+        prefix_ids = self._tokenizer(prefix, add_special_tokens=False)["input_ids"]
+        full_ids = self._tokenizer(full, add_special_tokens=False)["input_ids"]
+        if len(full_ids) <= len(prefix_ids):
+            return float("-inf")
+        input_ids = torch.tensor([full_ids], device=self._device)
+        with torch.no_grad():
+            logits = self._model(input_ids=input_ids).logits[0]
+        total = 0.0
+        for pos in range(len(prefix_ids), len(full_ids)):
+            token_id = full_ids[pos]
+            total += torch.log_softmax(logits[pos - 1], dim=-1)[token_id].item()
+        return total / max(len(full_ids) - len(prefix_ids), 1)
+
+    def classify(
+        self,
+        text: str,
+        entries: list[TaxonomyEntry],
+        *,
+        multi_label: bool,
+    ) -> tuple[list[str], list[float]]:
+        prefix = self._chat_prefix(text, entries)
+        logprobs = [self._label_logprob(prefix, entry.name) for entry in entries]
+        probs = softmax(logprobs)
+        candidates = [entry.candidate for entry in entries]
+        labels_out, scores_out = rank_scores(candidates, probs, multi_label=multi_label)
+        if multi_label:
+            return labels_out, scores_out
+        ordered = sorted(zip(candidates, probs, strict=True), key=lambda item: item[1], reverse=True)
+        return [label for label, _ in ordered], [score for _, score in ordered]
+
+
+def build_backend(method: str, model_id: str, device: int | str) -> ClassifierBackend:
+    if method == "nli":
+        return NLIBackend(model_id, device)
+    if method == "embedding":
+        return EmbeddingBackend(model_id, device)
+    if method == "generative":
+        return GenerativeBackend(model_id, device)
+    raise ValueError(f"Unknown method: {method}")
+
+
+def prediction_from_result(
+    entries: list[TaxonomyEntry],
+    labels_out: list[str],
+    scores_out: list[float],
+) -> tuple[str, str, dict[str, float]]:
+    by_candidate = {entry.candidate: entry for entry in entries}
+    raw_scores: dict[str, float] = {}
+    for candidate, score in zip(labels_out, scores_out, strict=True):
+        entry = by_candidate[candidate]
+        raw_scores[entry.id] = float(score)
+    top = by_candidate[labels_out[0]]
+    return top.id, top.name, raw_scores
+
+
 def build_record(
     *,
     record_id: str,
     row: dict[str, Any],
     input_path: Path,
     model: str,
+    method: str,
     pred_id: str,
     pred_name: str,
     raw_scores: dict[str, float],
@@ -283,7 +754,7 @@ def build_record(
             "predicted_label": pred_id,
             "predicted_label_name": pred_name,
             "raw_scores": raw_scores,
-            "classifier": {"model": model},
+            "classifier": {"model": model, "method": method},
         },
         "payload": row,
     }
@@ -291,6 +762,55 @@ def build_record(
     if evaluation is not None:
         record["evaluation"] = evaluation
     return record
+
+
+def classify_files(
+    *,
+    input_files: list[Path],
+    input_root: Path,
+    output_writer,
+    backend: ClassifierBackend,
+    entries: list[TaxonomyEntry],
+    args: argparse.Namespace,
+    next_id: int,
+) -> tuple[int, int, int]:
+    seen = 0
+    written = 0
+    for input_path in input_files:
+        for _line_no, row in iter_jsonl_rows(input_path):
+            if args.start > 0 and seen < args.start:
+                seen += 1
+                continue
+            if args.max_rows is not None and written >= args.max_rows:
+                return seen, written, next_id
+
+            text = text_for_classification(row)
+            labels_out, scores_out = backend.classify(
+                text,
+                entries,
+                multi_label=args.multi_label,
+            )
+            pred_id, pred_name, raw_scores = prediction_from_result(entries, labels_out, scores_out)
+
+            record_id = f"{args.id_prefix}_{next_id:06d}"
+            next_id += 1
+            record = build_record(
+                record_id=record_id,
+                row=row,
+                input_path=input_path,
+                model=backend.model_id,
+                method=backend.method,
+                pred_id=pred_id,
+                pred_name=pred_name,
+                raw_scores=raw_scores,
+            )
+            output_writer(record, input_path)
+            seen += 1
+            written += 1
+
+        if args.max_rows is not None and written >= args.max_rows:
+            break
+    return seen, written, next_id
 
 
 def main() -> None:
@@ -312,22 +832,41 @@ def main() -> None:
         type=Path,
         default=DEFAULT_OUTPUT,
         help=(
-            f"Output path. If --input is a file, this is a JSONL file (default: {DEFAULT_OUTPUT}). "
-            "If --input is a directory, this is treated as an output directory and the input tree is "
-            "mirrored under it (one output .jsonl per input .jsonl). If a file path is provided in "
-            "directory mode, its stem is used as the output directory name."
+            f"Output JSONL file when --input is a single file without --output-root "
+            f"(default: {DEFAULT_OUTPUT})."
+        ),
+    )
+    parser.add_argument(
+        "--output-root",
+        default=DEFAULT_OUTPUT_ROOT,
+        help=(
+            "Write under data/processed/<output-root>/<input-folder-name>/, mirroring the "
+            f"directory tree passed to --input (default: {DEFAULT_OUTPUT_ROOT}). "
+            "Pass an empty string to disable and use --output instead."
+        ),
+    )
+    parser.add_argument(
+        "--method",
+        choices=tuple(METHOD_DEFAULT_MODELS),
+        default=DEFAULT_METHOD,
+        help=(
+            "Classification backend: nli (MNLI pipeline), embedding (cosine similarity), "
+            f"or generative (prompted LLM). Default: {DEFAULT_METHOD}."
         ),
     )
     parser.add_argument(
         "--model",
-        default=DEFAULT_MODEL,
-        help=f"HF zero-shot-classification model id (default: {DEFAULT_MODEL}).",
+        default=None,
+        help=(
+            "Model id for the selected --method. Defaults: "
+            + ", ".join(f"{method}={model}" for method, model in METHOD_DEFAULT_MODELS.items())
+        ),
     )
     parser.add_argument(
         "--multi-label",
         action=argparse.BooleanOptionalAction,
         default=DEFAULT_MULTI_LABEL,
-        help="Allow multiple labels above 0.5 * top score (HF multi_label semantics).",
+        help="Allow multiple labels above 0.5 * top score.",
     )
     parser.add_argument(
         "--truncate",
@@ -361,7 +900,19 @@ def main() -> None:
             "(avoids CUDA init warnings). Default: auto (cuda if available, else mps, else cpu)."
         ),
     )
+    parser.add_argument(
+        "--gpu",
+        type=int,
+        default=DEFAULT_GPU,
+        help=(
+            "Physical GPU index for CUDA_VISIBLE_DEVICES (for example 0-3). "
+            "The process always uses logical cuda:0 after masking."
+        ),
+    )
     args = parser.parse_args()
+
+    if args.gpu is not None:
+        os.environ["CUDA_VISIBLE_DEVICES"] = str(args.gpu)
 
     if args.device == "cpu":
         os.environ["CUDA_VISIBLE_DEVICES"] = ""
@@ -374,135 +925,96 @@ def main() -> None:
     if not args.taxonomy.is_file():
         raise SystemExit(f"Taxonomy not found: {args.taxonomy}")
 
+    method = args.method
+    model = args.model or METHOD_DEFAULT_MODELS[method]
+    inferred = infer_method(model)
+    if inferred and inferred != method and args.model is not None:
+        print(
+            f"Note: model {model!r} looks like --method {inferred!r}; continuing with {method!r}.",
+            file=sys.stderr,
+        )
+    model = resolve_model_id(model, method)
+
     try:
         input_files = iter_jsonl_files(args.input)
     except (FileNotFoundError, ValueError) as exc:
         raise SystemExit(str(exc)) from exc
 
-    candidate_names, name_to_id = load_taxonomy(args.taxonomy)
-
-    from transformers import pipeline
-
+    entries = load_taxonomy(args.taxonomy)
     device = pick_device(args.device)
-    classifier = pipeline(
-        "zero-shot-classification",
-        model=args.model,
-        device=device,
+    backend = build_backend(method, model, device)
+
+    output_root = args.output_root.strip() if args.output_root else None
+    input_root = resolve_input_root(args.input)
+    output_base = resolve_output_base(
+        input_path=args.input,
+        output_root=output_root,
+        output_arg=args.output,
     )
 
     PROCESSED.mkdir(parents=True, exist_ok=True)
-    seen = 0
-    written = 0
     next_id = 1
 
-    if args.input.is_dir():
-        out_base = args.output
-        if out_base.suffix:
-            out_base = out_base.parent / out_base.stem
-        out_base.mkdir(parents=True, exist_ok=True)
+    use_tree_output = args.input.is_dir() or bool(output_root)
 
-        output_paths: list[Path] = []
-        for input_path in input_files:
-            out_path = resolve_output_path(input_root=args.input, input_path=input_path, output_arg=args.output)
+    if use_tree_output:
+        output_base.mkdir(parents=True, exist_ok=True)
+
+        handles: dict[Path, Any] = {}
+
+        def output_writer(record: dict[str, Any], input_path: Path) -> None:
+            if output_root or args.input.is_dir():
+                out_path = resolve_output_path(
+                    input_root=input_root,
+                    input_path=input_path,
+                    output_base=output_base,
+                )
+            else:
+                out_path = args.output
             out_path.parent.mkdir(parents=True, exist_ok=True)
-            output_paths.append(out_path)
-            mode = "w" if args.truncate else "a"
-            with out_path.open(mode, encoding="utf-8") as out_f:
-                for line_no, row in iter_jsonl_rows(input_path):
-                    if args.start > 0 and seen < args.start:
-                        seen += 1
-                        continue
-                    if args.max_rows is not None and written >= args.max_rows:
-                        break
+            if out_path not in handles:
+                mode = "w" if args.truncate else "a"
+                handles[out_path] = out_path.open(mode, encoding="utf-8")
+            handles[out_path].write(json.dumps(record, ensure_ascii=False) + "\n")
 
-                    text = text_for_classification(row)
-                    result = classifier(
-                        text,
-                        candidate_names,
-                        multi_label=args.multi_label,
-                    )
+        _, written, _ = classify_files(
+            input_files=input_files,
+            input_root=input_root,
+            output_writer=output_writer,
+            backend=backend,
+            entries=entries,
+            args=args,
+            next_id=next_id,
+        )
+        for handle in handles.values():
+            handle.close()
 
-                    labels_out = result["labels"]
-                    scores_out = result["scores"]
-                    raw_scores = {
-                        name_to_id[name]: float(score)
-                        for name, score in zip(labels_out, scores_out, strict=True)
-                    }
-                    top_name = labels_out[0]
-                    pred_id = name_to_id[top_name]
-
-                    record_id = f"{args.id_prefix}_{next_id:06d}"
-                    next_id += 1
-                    record = build_record(
-                        record_id=record_id,
-                        row=row,
-                        input_path=input_path,
-                        model=args.model,
-                        pred_id=pred_id,
-                        pred_name=top_name,
-                        raw_scores=raw_scores,
-                    )
-                    out_f.write(json.dumps(record, ensure_ascii=False) + "\n")
-                    seen += 1
-                    written += 1
-
-                if args.max_rows is not None and written >= args.max_rows:
-                    break
-
-        out_display = out_base.relative_to(ROOT) if out_base.is_relative_to(ROOT) else out_base
+        out_display = output_base.relative_to(ROOT) if output_base.is_relative_to(ROOT) else output_base
         print(
             f"Wrote {written} record(s) under {out_display} "
-            f"from {len(input_files)} file(s) (model={args.model}, device={device})"
+            f"from {len(input_files)} file(s) (method={method}, model={model}, device={device})"
         )
     else:
         mode = "w" if args.truncate else "a"
+
+        def output_writer(record: dict[str, Any], _input_path: Path) -> None:
+            out_f.write(json.dumps(record, ensure_ascii=False) + "\n")
+
         with args.output.open(mode, encoding="utf-8") as out_f:
-            for input_path in input_files:
-                for line_no, row in iter_jsonl_rows(input_path):
-                    if args.start > 0 and seen < args.start:
-                        seen += 1
-                        continue
-                    if args.max_rows is not None and written >= args.max_rows:
-                        break
-
-                    text = text_for_classification(row)
-                    result = classifier(
-                        text,
-                        candidate_names,
-                        multi_label=args.multi_label,
-                    )
-
-                    labels_out = result["labels"]
-                    scores_out = result["scores"]
-                    raw_scores = {
-                        name_to_id[name]: float(score)
-                        for name, score in zip(labels_out, scores_out, strict=True)
-                    }
-                    top_name = labels_out[0]
-                    pred_id = name_to_id[top_name]
-
-                    record_id = f"{args.id_prefix}_{next_id:06d}"
-                    next_id += 1
-                    record = build_record(
-                        record_id=record_id,
-                        row=row,
-                        input_path=input_path,
-                        model=args.model,
-                        pred_id=pred_id,
-                        pred_name=top_name,
-                        raw_scores=raw_scores,
-                    )
-                    out_f.write(json.dumps(record, ensure_ascii=False) + "\n")
-                    seen += 1
-                    written += 1
-
-                if args.max_rows is not None and written >= args.max_rows:
-                    break
+            _, written, _ = classify_files(
+                input_files=input_files,
+                input_root=args.input,
+                output_writer=output_writer,
+                backend=backend,
+                entries=entries,
+                args=args,
+                next_id=next_id,
+            )
 
         out_display = args.output.relative_to(ROOT) if args.output.is_relative_to(ROOT) else args.output
         print(
             f"Wrote {written} record(s) to {out_display} "
-            f"from {len(input_files)} file(s) (model={args.model}, device={device})"
+            f"from {len(input_files)} file(s) (method={method}, model={model}, device={device})"
         )
 
 
