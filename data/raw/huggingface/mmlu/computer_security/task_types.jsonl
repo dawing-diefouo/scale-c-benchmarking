@@ -1,0 +1,6 @@
+{"question":"What is phishing?","answer":"A social engineering attack that tricks users into revealing information."}
+{"prompt":"Complete the sentence: A firewall is used to _____.","answer":"filter network traffic"}
+{"instruction":"Generate a fill-in-the-blank exercise about phishing.","text":"Use one blank marker."}
+{"instruction":"Generate an H5P multiple-choice question about password safety.","choices":["A","B","C","D"]}
+{"instruction":"Translate this cybersecurity question from English to German.","text":"What is two-factor authentication?"}
+{"json_schema":{"type":"object","properties":{"port":{"type":"integer"}}},"prompt":"Review this schema for validation issues."}
