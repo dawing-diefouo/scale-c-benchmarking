@@ -3,36 +3,84 @@
     "display_name": "Foundation-Sec-8B",
     "model_id": "fdtn-ai/Foundation-Sec-8B",
     "backend": "huggingface",
-    "notes": "Cisco Foundation AI base model (Llama 3.1 8B). Use plain MCQ completion prompt."
+    "base_model_alias": "llama-3.1-8b",
+    "notes": "Cisco Foundation AI domain-adapted base model (continued pretrain on Llama 3.1 8B). Use plain MCQ completion prompt."
+  },
+  "llama-3.1-8b": {
+    "display_name": "Llama 3.1 8B (base)",
+    "model_id": "meta-llama/Llama-3.1-8B",
+    "backend": "huggingface",
+    "is_base": true,
+    "notes": "General-purpose base model; parent of Foundation-Sec-8B for base-vs-domain-adapted comparison."
   },
   "lily-cyber-7b": {
     "display_name": "Lily Cyber. 7B v0.2",
     "model_id": "segolilylabs/Lily-Cybersecurity-7B-v0.2",
     "backend": "huggingface",
+    "base_model_alias": "mistral-7b-instruct-v0.2",
     "notes": "Mistral-7B instruct fine-tuned on cybersecurity QA."
+  },
+  "mistral-7b-instruct-v0.2": {
+    "display_name": "Mistral 7B Instruct v0.2 (base)",
+    "model_id": "mistralai/Mistral-7B-Instruct-v0.2",
+    "backend": "huggingface",
+    "is_base": true,
+    "notes": "Instruction-tuned Mistral 7B; parent of Lily-Cybersecurity-7B-v0.2."
   },
   "zysec-7b": {
     "display_name": "ZySec-7B",
     "model_id": "ZySec-AI/SecurityLLM",
     "backend": "huggingface",
+    "base_model_alias": "zephyr-7b-beta",
     "notes": "Zephyr-7B DPO-tuned for cybersecurity (30+ domains)."
+  },
+  "zephyr-7b-beta": {
+    "display_name": "Zephyr 7B Beta (base)",
+    "model_id": "HuggingFaceH4/zephyr-7b-beta",
+    "backend": "huggingface",
+    "is_base": true,
+    "notes": "Aligned Mistral-7B chat model; parent of ZySec-7B."
   },
   "baronllm-v2": {
     "display_name": "BaronLLM v2.0",
     "model_id": "Trendyol/Qwen3-14B-BaronLLM-v2-Q8",
     "backend": "openai",
+    "base_model_alias": "qwen3-14b",
     "notes": "GGUF-only (~16GB). Requires a running OpenAI-compatible server at --api-base-url. Not usable without vLLM/Ollama/llama.cpp server."
+  },
+  "qwen3-14b": {
+    "display_name": "Qwen3 14B (base)",
+    "model_id": "Qwen/Qwen3-14B",
+    "backend": "huggingface",
+    "is_base": true,
+    "notes": "Instruction-tuned Qwen3 14B; parent of BaronLLM v2.0."
   },
   "trendyol-cyber-70b": {
     "display_name": "Trendyol Cyber. LLM v2 (70B)",
     "model_id": "Trendyol/Trendyol-Cybersecurity-LLM-v2-70B-Q4_K_M",
     "backend": "openai",
+    "base_model_alias": "llama-3.3-70b-instruct",
     "notes": "GGUF-only (~40GB+). Requires a running OpenAI-compatible server at --api-base-url. Too large for typical home-cache HF download."
+  },
+  "llama-3.3-70b-instruct": {
+    "display_name": "Llama 3.3 70B Instruct (base)",
+    "model_id": "meta-llama/Llama-3.3-70B-Instruct",
+    "backend": "huggingface",
+    "is_base": true,
+    "notes": "Meta instruct model; parent of Trendyol Cybersecurity LLM v2-70B. Very large — plan GPU/memory accordingly."
   },
   "cybertuned": {
     "display_name": "CyBERTuned",
     "model_id": "s2w-ai/CyBERTuned-SecurityLLM",
     "backend": "choice_ranking",
+    "base_model_alias": "roberta-base",
     "notes": "BERT-style encoder (not generative). Ranks MCQ options by masked-LM score; not comparable to generative LLM accuracy."
+  },
+  "roberta-base": {
+    "display_name": "RoBERTa Base (base)",
+    "model_id": "roberta-base",
+    "backend": "choice_ranking",
+    "is_base": true,
+    "notes": "General RoBERTa encoder; architectural parent of CyBERTuned for encoder baseline comparison."
   }
 }

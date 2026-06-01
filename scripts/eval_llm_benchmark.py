@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Run cyber LLMs on Scale_C embedding benchmark records and score against payload gold answers."""
+"""Run cyber LLMs on Scale_C benchmark records and score against payload gold answers.
+
+Results are written under data/eval/<corpus>/ (embedding or nli), matching the corpus
+under data/final/<corpus>/ used as --input.
+"""
 
 from __future__ import annotations
 
@@ -15,9 +19,68 @@ from pathlib import Path
 from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_INPUT = ROOT / "data" / "final" / "embedding"
-DEFAULT_OUTPUT_DIR = ROOT / "data" / "processed" / "eval"
+FINAL_DATA_ROOT = ROOT / "data" / "final"
+EVAL_DATA_ROOT = ROOT / "data" / "eval"
+CORPUS_CHOICES = ("embedding", "nli")
+DEFAULT_CORPUS = "embedding"
 DEFAULT_MODELS_CONFIG = ROOT / "config" / "eval_models.json"
+
+
+def corpus_input_dir(corpus: str) -> Path:
+    if corpus not in CORPUS_CHOICES:
+        raise ValueError(f"Unknown corpus {corpus!r}; expected one of {CORPUS_CHOICES}")
+    return FINAL_DATA_ROOT / corpus
+
+
+def corpus_output_dir(corpus: str) -> Path:
+    return EVAL_DATA_ROOT / corpus
+
+
+def infer_corpus_from_path(path: Path) -> str | None:
+    resolved = path.resolve()
+    for name in CORPUS_CHOICES:
+        corpus_root = corpus_input_dir(name).resolve()
+        if resolved == corpus_root or corpus_root in resolved.parents:
+            return name
+    return None
+
+
+def resolve_eval_paths(
+    *,
+    corpus: str | None,
+    input_path: Path | None,
+    output_dir: Path | None,
+) -> tuple[str, Path, Path]:
+    if corpus is not None and corpus not in CORPUS_CHOICES:
+        raise SystemExit(f"Unknown --corpus {corpus!r}; choose from: {', '.join(CORPUS_CHOICES)}")
+
+    if input_path is not None:
+        resolved_input = input_path.expanduser().resolve()
+        inferred = infer_corpus_from_path(resolved_input)
+        if corpus is not None and inferred is not None and inferred != corpus:
+            raise SystemExit(
+                f"--corpus {corpus!r} does not match --input {resolved_input} (looks like {inferred!r})."
+            )
+        active_corpus = corpus or inferred
+        if active_corpus is None:
+            raise SystemExit(
+                "Could not infer corpus from --input. Pass --corpus embedding or --corpus nli, "
+                "or use data/final/embedding or data/final/nli as input."
+            )
+        active_input = resolved_input
+    elif corpus is not None:
+        active_corpus = corpus
+        active_input = corpus_input_dir(corpus)
+    else:
+        active_corpus = DEFAULT_CORPUS
+        active_input = corpus_input_dir(DEFAULT_CORPUS)
+
+    active_output = (
+        output_dir.expanduser().resolve()
+        if output_dir is not None
+        else corpus_output_dir(active_corpus)
+    )
+    return active_corpus, active_input, active_output
 
 LETTER_RE = re.compile(r"\b([A-Z])\b")
 MULTI_LETTER_RE = re.compile(r"\b([A-Z])\b")
@@ -30,6 +93,8 @@ class ModelSpec:
     model_id: str
     backend: str
     notes: str = ""
+    is_base: bool = False
+    base_model_alias: str = ""
 
 
 @dataclass(frozen=True)
@@ -55,6 +120,8 @@ def load_model_registry(path: Path) -> dict[str, ModelSpec]:
             model_id=entry["model_id"],
             backend=entry["backend"],
             notes=entry.get("notes", ""),
+            is_base=entry.get("is_base", False),
+            base_model_alias=entry.get("base_model_alias", ""),
         )
     return registry
 
@@ -670,11 +737,13 @@ def evaluate_record(
     record: dict[str, Any],
     *,
     spec: ModelSpec,
+    corpus: str,
     generator: HuggingFaceGenerator | OpenAICompatibleGenerator | ChoiceRankingGenerator,
 ) -> dict[str, Any]:
     gold = extract_gold_answer(record)
     base = dict(record)
     evaluation_block: dict[str, Any] = {
+        "corpus": corpus,
         "model_alias": spec.alias,
         "model": spec.model_id,
         "display_name": spec.display_name,
@@ -736,7 +805,13 @@ def evaluate_record(
     return base
 
 
-def summarize_results(output_path: Path, spec: ModelSpec) -> dict[str, Any]:
+def summarize_results(
+    output_path: Path,
+    spec: ModelSpec,
+    *,
+    corpus: str,
+    input_dir: Path,
+) -> dict[str, Any]:
     totals = Counter()
     correct = Counter()
     by_task = defaultdict(lambda: {"total": 0, "correct": 0})
@@ -769,10 +844,14 @@ def summarize_results(output_path: Path, spec: ModelSpec) -> dict[str, Any]:
 
     accuracy = (totals["correct"] / totals["scorable"]) if totals["scorable"] else 0.0
     return {
+        "corpus": corpus,
+        "input_dir": str(input_dir),
         "model_alias": spec.alias,
         "model": spec.model_id,
         "display_name": spec.display_name,
         "backend": spec.backend,
+        "is_base": spec.is_base,
+        "base_model_alias": spec.base_model_alias or None,
         "totals": dict(totals),
         "accuracy": accuracy,
         "by_task_type": dict(by_task),
@@ -786,6 +865,8 @@ def run_model_eval(
     records: list[dict[str, Any]],
     *,
     spec: ModelSpec,
+    corpus: str,
+    input_dir: Path,
     output_dir: Path,
     device: str,
     max_new_tokens: int,
@@ -819,7 +900,7 @@ def run_model_eval(
             record_id = record.get("id")
             if record_id and record_id in completed:
                 continue
-            result = evaluate_record(record, spec=spec, generator=generator)
+            result = evaluate_record(record, spec=spec, corpus=corpus, generator=generator)
             handle.write(json.dumps(result, ensure_ascii=False) + "\n")
             processed += 1
             if processed % 25 == 0:
@@ -828,7 +909,7 @@ def run_model_eval(
     if hasattr(generator, "unload"):
         generator.unload()
 
-    summary = summarize_results(output_path, spec)
+    summary = summarize_results(output_path, spec, corpus=corpus, input_dir=input_dir)
     summary_path.write_text(json.dumps(summary, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(
         f"{spec.display_name}: accuracy={summary['accuracy']:.1%} "
@@ -850,13 +931,22 @@ def write_comparison(summary_paths: list[Path], output_dir: Path) -> Path:
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Evaluate cyber LLMs on Scale_C embedding benchmark records.",
+        description="Evaluate cyber LLMs on Scale_C records from data/final/embedding or data/final/nli.",
+    )
+    parser.add_argument(
+        "--corpus",
+        choices=CORPUS_CHOICES,
+        default=None,
+        help=(
+            "Corpus variant under data/final/ (embedding or nli). "
+            "Inferred from --input when omitted; default input/output corpus is embedding."
+        ),
     )
     parser.add_argument(
         "--input",
         type=Path,
-        default=DEFAULT_INPUT,
-        help="JSONL file or directory (default: data/final/embedding).",
+        default=None,
+        help="JSONL file or directory (default: data/final/<corpus>).",
     )
     parser.add_argument(
         "--models-config",
@@ -873,8 +963,8 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--output-dir",
         type=Path,
-        default=DEFAULT_OUTPUT_DIR,
-        help="Directory for per-model JSONL results and summaries.",
+        default=None,
+        help="Directory for per-model JSONL results (default: data/eval/<corpus>/).",
     )
     parser.add_argument(
         "--limit",
@@ -980,6 +1070,11 @@ def main() -> None:
         return
 
     model_paths = parse_model_paths(args.local_model_path)
+    corpus, input_dir, output_dir = resolve_eval_paths(
+        corpus=args.corpus,
+        input_path=args.input,
+        output_dir=args.output_dir,
+    )
     registry = load_model_registry(args.models_config)
     if args.models:
         selected = []
@@ -989,27 +1084,47 @@ def main() -> None:
                 raise SystemExit(f"Unknown model alias {alias!r}. Known: {known}")
             selected.append(registry[alias])
     else:
-        selected = [spec for spec in registry.values() if spec.backend == "huggingface"]
+        selected = [
+            spec
+            for spec in registry.values()
+            if spec.backend == "huggingface" and not spec.is_base
+        ]
 
     task_types = set(args.task_types) if args.task_types else None
     records = iter_records(
-        args.input,
+        input_dir,
         limit=args.limit,
         task_types=task_types,
         include_by_topic=args.include_by_topic,
     )
     if not records:
-        raise SystemExit(f"No records found under {args.input}")
+        raise SystemExit(f"No records found under {input_dir}")
 
     scorable = sum(1 for record in records if is_mcq_scorable(record, extract_gold_answer(record)))
     print(
-        f"Loaded {len(records)} records from {args.input}; {scorable} MCQ-scorable with gold answers.",
+        f"Corpus: {corpus} | input: {input_dir} | output: {output_dir}",
+        file=sys.stderr,
+    )
+    print(
+        f"Loaded {len(records)} records; {scorable} MCQ-scorable with gold answers.",
         file=sys.stderr,
     )
 
     if args.dry_run:
         task_counts = Counter(record.get("task_type", "unknown") for record in records)
-        print(json.dumps({"records": len(records), "mcq_scorable": scorable, "task_types": dict(task_counts)}, indent=2))
+        print(
+            json.dumps(
+                {
+                    "corpus": corpus,
+                    "input_dir": str(input_dir),
+                    "output_dir": str(output_dir),
+                    "records": len(records),
+                    "mcq_scorable": scorable,
+                    "task_types": dict(task_counts),
+                },
+                indent=2,
+            )
+        )
         return
 
     device = pick_device(args.device)
@@ -1019,7 +1134,9 @@ def main() -> None:
         summary = run_model_eval(
             records,
             spec=spec,
-            output_dir=args.output_dir,
+            corpus=corpus,
+            input_dir=input_dir,
+            output_dir=output_dir,
             device=device,
             max_new_tokens=args.max_new_tokens,
             resume=args.resume,
@@ -1029,10 +1146,10 @@ def main() -> None:
             model_paths=model_paths,
             local_files_only=args.local_files_only,
         )
-        summaries.append(args.output_dir / f"{spec.alias}_summary.json")
+        summaries.append(output_dir / f"{spec.alias}_summary.json")
 
     if len(summaries) > 1:
-        comparison_path = write_comparison(summaries, args.output_dir)
+        comparison_path = write_comparison(summaries, output_dir)
         print(f"\nWrote comparison: {comparison_path}", file=sys.stderr)
 
 

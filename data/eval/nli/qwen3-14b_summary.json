@@ -1,0 +1,191 @@
+{
+  "corpus": "nli",
+  "input_dir": "/home/foyet/scale-c-benchmarking/data/final/nli",
+  "model_alias": "qwen3-14b",
+  "model": "Qwen/Qwen3-14B",
+  "display_name": "Qwen3 14B (base)",
+  "backend": "huggingface",
+  "is_base": true,
+  "base_model_alias": null,
+  "totals": {
+    "scorable": 573,
+    "correct": 68,
+    "skipped": 324
+  },
+  "accuracy": 0.11867364746945899,
+  "by_task_type": {
+    "open_explanation": {
+      "total": 251,
+      "correct": 42
+    },
+    "mcq_answering": {
+      "total": 322,
+      "correct": 26
+    }
+  },
+  "by_source": {
+    "CyberMetric-10000-v1": {
+      "total": 251,
+      "correct": 42
+    },
+    "test-00000-of-00001": {
+      "total": 69,
+      "correct": 8
+    },
+    "dev-00000-of-00001": {
+      "total": 17,
+      "correct": 2
+    },
+    "threat_intel_reasoning-00000-of-00001": {
+      "total": 95,
+      "correct": 2
+    },
+    "malware_analysis-00000-of-00001": {
+      "total": 51,
+      "correct": 0
+    },
+    "test": {
+      "total": 77,
+      "correct": 12
+    },
+    "validation": {
+      "total": 9,
+      "correct": 2
+    },
+    "dev": {
+      "total": 4,
+      "correct": 0
+    }
+  },
+  "by_topic": {
+    "SCLC00101": {
+      "total": 23,
+      "correct": 6
+    },
+    "SCLC00201": {
+      "total": 22,
+      "correct": 3
+    },
+    "SCLC00202": {
+      "total": 11,
+      "correct": 2
+    },
+    "SCLC00301": {
+      "total": 25,
+      "correct": 1
+    },
+    "SCLC00401": {
+      "total": 5,
+      "correct": 1
+    },
+    "SCLC00501": {
+      "total": 13,
+      "correct": 0
+    },
+    "SCLC00601": {
+      "total": 9,
+      "correct": 1
+    },
+    "SCLC00701": {
+      "total": 40,
+      "correct": 4
+    },
+    "SCLC00801": {
+      "total": 34,
+      "correct": 3
+    },
+    "SCLC00901": {
+      "total": 28,
+      "correct": 3
+    },
+    "SCLC01001": {
+      "total": 30,
+      "correct": 4
+    },
+    "SCLC01101": {
+      "total": 11,
+      "correct": 0
+    },
+    "SCLC01102": {
+      "total": 12,
+      "correct": 3
+    },
+    "SCLC01201": {
+      "total": 10,
+      "correct": 1
+    },
+    "SCLC01202": {
+      "total": 22,
+      "correct": 4
+    },
+    "SCLC01301": {
+      "total": 7,
+      "correct": 0
+    },
+    "SCLC01501": {
+      "total": 1,
+      "correct": 0
+    },
+    "SCLC01503": {
+      "total": 15,
+      "correct": 3
+    },
+    "SCLC01601": {
+      "total": 40,
+      "correct": 3
+    },
+    "SCLC01701": {
+      "total": 26,
+      "correct": 1
+    },
+    "SCLC01702": {
+      "total": 2,
+      "correct": 0
+    },
+    "SCLC01801": {
+      "total": 12,
+      "correct": 1
+    },
+    "SCLC01901": {
+      "total": 12,
+      "correct": 3
+    },
+    "SCLC02001": {
+      "total": 15,
+      "correct": 1
+    },
+    "SCLC02101": {
+      "total": 29,
+      "correct": 2
+    },
+    "SCLC02201": {
+      "total": 21,
+      "correct": 5
+    },
+    "SCLC02301": {
+      "total": 14,
+      "correct": 3
+    },
+    "SCLC02401": {
+      "total": 25,
+      "correct": 4
+    },
+    "SCLC02501": {
+      "total": 22,
+      "correct": 1
+    },
+    "SCLC02601": {
+      "total": 6,
+      "correct": 1
+    },
+    "SCLC02801": {
+      "total": 30,
+      "correct": 4
+    },
+    "SCLC02701": {
+      "total": 1,
+      "correct": 0
+    }
+  },
+  "output_file": "/home/foyet/scale-c-benchmarking/data/eval/nli/qwen3-14b.jsonl"
+}

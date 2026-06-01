@@ -1,0 +1,191 @@
+{
+  "corpus": "nli",
+  "input_dir": "/home/foyet/scale-c-benchmarking/data/final/nli",
+  "model_alias": "zephyr-7b-beta",
+  "model": "HuggingFaceH4/zephyr-7b-beta",
+  "display_name": "Zephyr 7B Beta (base)",
+  "backend": "huggingface",
+  "is_base": true,
+  "base_model_alias": null,
+  "totals": {
+    "scorable": 573,
+    "correct": 217,
+    "skipped": 324
+  },
+  "accuracy": 0.3787085514834206,
+  "by_task_type": {
+    "open_explanation": {
+      "total": 251,
+      "correct": 119
+    },
+    "mcq_answering": {
+      "total": 322,
+      "correct": 98
+    }
+  },
+  "by_source": {
+    "CyberMetric-10000-v1": {
+      "total": 251,
+      "correct": 119
+    },
+    "test-00000-of-00001": {
+      "total": 69,
+      "correct": 24
+    },
+    "dev-00000-of-00001": {
+      "total": 17,
+      "correct": 7
+    },
+    "threat_intel_reasoning-00000-of-00001": {
+      "total": 95,
+      "correct": 24
+    },
+    "malware_analysis-00000-of-00001": {
+      "total": 51,
+      "correct": 5
+    },
+    "test": {
+      "total": 77,
+      "correct": 32
+    },
+    "validation": {
+      "total": 9,
+      "correct": 4
+    },
+    "dev": {
+      "total": 4,
+      "correct": 2
+    }
+  },
+  "by_topic": {
+    "SCLC00101": {
+      "total": 23,
+      "correct": 6
+    },
+    "SCLC00201": {
+      "total": 22,
+      "correct": 7
+    },
+    "SCLC00202": {
+      "total": 11,
+      "correct": 7
+    },
+    "SCLC00301": {
+      "total": 25,
+      "correct": 7
+    },
+    "SCLC00401": {
+      "total": 5,
+      "correct": 1
+    },
+    "SCLC00501": {
+      "total": 13,
+      "correct": 5
+    },
+    "SCLC00601": {
+      "total": 9,
+      "correct": 4
+    },
+    "SCLC00701": {
+      "total": 40,
+      "correct": 17
+    },
+    "SCLC00801": {
+      "total": 34,
+      "correct": 13
+    },
+    "SCLC00901": {
+      "total": 28,
+      "correct": 11
+    },
+    "SCLC01001": {
+      "total": 30,
+      "correct": 15
+    },
+    "SCLC01101": {
+      "total": 11,
+      "correct": 3
+    },
+    "SCLC01102": {
+      "total": 12,
+      "correct": 6
+    },
+    "SCLC01201": {
+      "total": 10,
+      "correct": 6
+    },
+    "SCLC01202": {
+      "total": 22,
+      "correct": 9
+    },
+    "SCLC01301": {
+      "total": 7,
+      "correct": 4
+    },
+    "SCLC01501": {
+      "total": 1,
+      "correct": 1
+    },
+    "SCLC01503": {
+      "total": 15,
+      "correct": 5
+    },
+    "SCLC01601": {
+      "total": 40,
+      "correct": 12
+    },
+    "SCLC01701": {
+      "total": 26,
+      "correct": 7
+    },
+    "SCLC01702": {
+      "total": 2,
+      "correct": 1
+    },
+    "SCLC01801": {
+      "total": 12,
+      "correct": 4
+    },
+    "SCLC01901": {
+      "total": 12,
+      "correct": 7
+    },
+    "SCLC02001": {
+      "total": 15,
+      "correct": 4
+    },
+    "SCLC02101": {
+      "total": 29,
+      "correct": 14
+    },
+    "SCLC02201": {
+      "total": 21,
+      "correct": 9
+    },
+    "SCLC02301": {
+      "total": 14,
+      "correct": 5
+    },
+    "SCLC02401": {
+      "total": 25,
+      "correct": 8
+    },
+    "SCLC02501": {
+      "total": 22,
+      "correct": 8
+    },
+    "SCLC02601": {
+      "total": 6,
+      "correct": 3
+    },
+    "SCLC02801": {
+      "total": 30,
+      "correct": 8
+    },
+    "SCLC02701": {
+      "total": 1,
+      "correct": 0
+    }
+  },
+  "output_file": "/home/foyet/scale-c-benchmarking/data/eval/nli/zephyr-7b-beta.jsonl"
+}

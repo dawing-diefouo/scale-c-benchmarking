@@ -1,0 +1,189 @@
+{
+  "corpus": "nli",
+  "input_dir": "/home/foyet/scale-c-benchmarking/data/final/nli",
+  "model_alias": "foundation-sec-8b",
+  "model": "fdtn-ai/Foundation-Sec-8B",
+  "display_name": "Foundation-Sec-8B",
+  "backend": "huggingface",
+  "totals": {
+    "scorable": 573,
+    "correct": 299,
+    "skipped": 324
+  },
+  "accuracy": 0.5218150087260035,
+  "by_task_type": {
+    "open_explanation": {
+      "total": 251,
+      "correct": 182
+    },
+    "mcq_answering": {
+      "total": 322,
+      "correct": 117
+    }
+  },
+  "by_source": {
+    "CyberMetric-10000-v1": {
+      "total": 251,
+      "correct": 182
+    },
+    "test-00000-of-00001": {
+      "total": 69,
+      "correct": 28
+    },
+    "dev-00000-of-00001": {
+      "total": 17,
+      "correct": 7
+    },
+    "threat_intel_reasoning-00000-of-00001": {
+      "total": 95,
+      "correct": 25
+    },
+    "malware_analysis-00000-of-00001": {
+      "total": 51,
+      "correct": 2
+    },
+    "test": {
+      "total": 77,
+      "correct": 48
+    },
+    "validation": {
+      "total": 9,
+      "correct": 3
+    },
+    "dev": {
+      "total": 4,
+      "correct": 4
+    }
+  },
+  "by_topic": {
+    "SCLC00101": {
+      "total": 23,
+      "correct": 9
+    },
+    "SCLC00201": {
+      "total": 22,
+      "correct": 14
+    },
+    "SCLC00202": {
+      "total": 11,
+      "correct": 8
+    },
+    "SCLC00301": {
+      "total": 25,
+      "correct": 12
+    },
+    "SCLC00401": {
+      "total": 5,
+      "correct": 5
+    },
+    "SCLC00501": {
+      "total": 13,
+      "correct": 6
+    },
+    "SCLC00601": {
+      "total": 9,
+      "correct": 5
+    },
+    "SCLC00701": {
+      "total": 40,
+      "correct": 19
+    },
+    "SCLC00801": {
+      "total": 34,
+      "correct": 14
+    },
+    "SCLC00901": {
+      "total": 28,
+      "correct": 16
+    },
+    "SCLC01001": {
+      "total": 30,
+      "correct": 13
+    },
+    "SCLC01101": {
+      "total": 11,
+      "correct": 10
+    },
+    "SCLC01102": {
+      "total": 12,
+      "correct": 6
+    },
+    "SCLC01201": {
+      "total": 10,
+      "correct": 6
+    },
+    "SCLC01202": {
+      "total": 22,
+      "correct": 13
+    },
+    "SCLC01301": {
+      "total": 7,
+      "correct": 3
+    },
+    "SCLC01501": {
+      "total": 1,
+      "correct": 1
+    },
+    "SCLC01503": {
+      "total": 15,
+      "correct": 9
+    },
+    "SCLC01601": {
+      "total": 40,
+      "correct": 16
+    },
+    "SCLC01701": {
+      "total": 26,
+      "correct": 14
+    },
+    "SCLC01702": {
+      "total": 2,
+      "correct": 1
+    },
+    "SCLC01801": {
+      "total": 12,
+      "correct": 7
+    },
+    "SCLC01901": {
+      "total": 12,
+      "correct": 7
+    },
+    "SCLC02001": {
+      "total": 15,
+      "correct": 7
+    },
+    "SCLC02101": {
+      "total": 29,
+      "correct": 19
+    },
+    "SCLC02201": {
+      "total": 21,
+      "correct": 11
+    },
+    "SCLC02301": {
+      "total": 14,
+      "correct": 6
+    },
+    "SCLC02401": {
+      "total": 25,
+      "correct": 14
+    },
+    "SCLC02501": {
+      "total": 22,
+      "correct": 9
+    },
+    "SCLC02601": {
+      "total": 6,
+      "correct": 3
+    },
+    "SCLC02801": {
+      "total": 30,
+      "correct": 16
+    },
+    "SCLC02701": {
+      "total": 1,
+      "correct": 0
+    }
+  },
+  "output_file": "/home/foyet/scale-c-benchmarking/data/eval/nli/foundation-sec-8b.jsonl"
+}
