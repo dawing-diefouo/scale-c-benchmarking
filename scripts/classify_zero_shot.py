@@ -30,12 +30,14 @@ from typing import Any, Iterator, Protocol
 
 ROOT = Path(__file__).resolve().parents[1]
 SCHEMA = ROOT / "schema" / "taxonomy.json"
+TAXONOMY_ROOT = ROOT / "schema" / "taxonomies"
 PROCESSED = ROOT / "data" / "processed"
 RAW_ROOT = ROOT / "data" / "raw"
 
 # --- Run configuration (edit these, then: python scripts/classify_zero_shot.py) ---
 DEFAULT_INPUT = ROOT / "data" / "raw" / "huggingface" / "mmlu" / "computer_security" / "test.jsonl"
 DEFAULT_TAXONOMY = SCHEMA
+DEFAULT_TAXONOMY_DIR = TAXONOMY_ROOT
 DEFAULT_OUTPUT = PROCESSED / "cyberbech.jsonl"
 DEFAULT_OUTPUT_ROOT = "qwen"
 DEFAULT_METHOD = "generative"
@@ -46,6 +48,7 @@ DEFAULT_MAX_ROWS: int | None = None
 DEFAULT_START = 0
 DEFAULT_ID_PREFIX = "scale_c"
 DEFAULT_GPU: int | None = None
+DEFAULT_EXTRA_TAXONOMIES = ("tasks", "risks", "difficulty", "cognitive", "tiers")
 
 METHOD_DEFAULT_MODELS = {
     "nli": "MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7",
@@ -166,7 +169,7 @@ def load_taxonomy(path: Path) -> list[TaxonomyEntry]:
     seen_candidates: set[str] = set()
     for raw in data["labels"]:
         name = str(raw["name"])
-        label_id = str(raw["id"])
+        label_id = str(raw.get("id", name))
         description = str(raw.get("description", "")).strip()
         candidate = f"{name}: {description}" if description else name
         if candidate in seen_candidates:
@@ -726,6 +729,38 @@ def prediction_from_result(
     return top.id, top.name, raw_scores
 
 
+def taxonomy_prediction(
+    entries: list[TaxonomyEntry],
+    labels_out: list[str],
+    scores_out: list[float],
+) -> dict[str, Any]:
+    pred_id, pred_name, raw_scores = prediction_from_result(entries, labels_out, scores_out)
+    return {
+        "predicted_label": pred_id,
+        "predicted_label_name": pred_name,
+        "raw_scores": raw_scores,
+    }
+
+
+def load_extra_taxonomies(taxonomy_dir: Path, names: list[str]) -> dict[str, list[TaxonomyEntry]]:
+    taxonomies: dict[str, list[TaxonomyEntry]] = {}
+    for name in names:
+        path = taxonomy_dir / f"{name}.json"
+        if not path.is_file():
+            raise FileNotFoundError(f"Taxonomy not found: {path}")
+        taxonomies[name] = load_taxonomy(path)
+    return taxonomies
+
+
+def tier_number(label_name: Any) -> int:
+    if not isinstance(label_name, str):
+        return DEFAULT_TIER
+    match = re.match(r"tier(\d+)_", label_name)
+    if match:
+        return int(match.group(1))
+    return DEFAULT_TIER
+
+
 def build_record(
     *,
     record_id: str,
@@ -736,19 +771,27 @@ def build_record(
     pred_id: str,
     pred_name: str,
     raw_scores: dict[str, float],
+    taxonomy_results: dict[str, dict[str, Any]] | None = None,
 ) -> dict[str, Any]:
+    taxonomy_results = taxonomy_results or {}
+    task_type = taxonomy_results.get("tasks", {}).get("predicted_label_name") or infer_task_type(row)
+    difficulty = taxonomy_results.get("difficulty", {}).get("predicted_label_name", PLACEHOLDER)
+    risk_category = taxonomy_results.get("risks", {}).get("predicted_label_name", PLACEHOLDER)
+    cognitive_skill = taxonomy_results.get("cognitive", {}).get("predicted_label_name", PLACEHOLDER)
+    tier = tier_number(taxonomy_results.get("tiers", {}).get("predicted_label_name"))
+
     record: dict[str, Any] = {
         "id": record_id,
         "benchmark": BENCHMARK,
         "version": SCHEMA_VERSION,
-        "tier": DEFAULT_TIER,
-        "task_type": infer_task_type(row),
+        "tier": tier,
+        "task_type": task_type,
         "metadata": {
-            "difficulty": PLACEHOLDER,
+            "difficulty": difficulty,
             "source": infer_source(input_path),
             "language": infer_language(input_path, row),
-            "risk_category": PLACEHOLDER,
-            "cognitive_skill": PLACEHOLDER,
+            "risk_category": risk_category,
+            "cognitive_skill": cognitive_skill,
         },
         "classification": {
             "predicted_label": pred_id,
@@ -758,6 +801,8 @@ def build_record(
         },
         "payload": row,
     }
+    if taxonomy_results:
+        record["classification"]["taxonomies"] = taxonomy_results
     evaluation = build_evaluation(row)
     if evaluation is not None:
         record["evaluation"] = evaluation
@@ -771,6 +816,7 @@ def classify_files(
     output_writer,
     backend: ClassifierBackend,
     entries: list[TaxonomyEntry],
+    extra_taxonomies: dict[str, list[TaxonomyEntry]],
     args: argparse.Namespace,
     next_id: int,
 ) -> tuple[int, int, int]:
@@ -791,6 +837,21 @@ def classify_files(
                 multi_label=args.multi_label,
             )
             pred_id, pred_name, raw_scores = prediction_from_result(entries, labels_out, scores_out)
+            taxonomy_results: dict[str, dict[str, Any]] = {}
+            for taxonomy_name, taxonomy_entries in extra_taxonomies.items():
+                taxonomy_labels, taxonomy_scores = backend.classify(
+                    text,
+                    taxonomy_entries,
+                    multi_label=False,
+                )
+                taxonomy_results[taxonomy_name] = taxonomy_prediction(
+                    taxonomy_entries,
+                    taxonomy_labels,
+                    taxonomy_scores,
+                )
+            if taxonomy_results:
+                for result in taxonomy_results.values():
+                    result["classifier"] = {"model": backend.model_id, "method": backend.method}
 
             record_id = f"{args.id_prefix}_{next_id:06d}"
             next_id += 1
@@ -803,6 +864,7 @@ def classify_files(
                 pred_id=pred_id,
                 pred_name=pred_name,
                 raw_scores=raw_scores,
+                taxonomy_results=taxonomy_results,
             )
             output_writer(record, input_path)
             seen += 1
@@ -826,6 +888,22 @@ def main() -> None:
         type=Path,
         default=DEFAULT_TAXONOMY,
         help=f"Label taxonomy JSON (default: {DEFAULT_TAXONOMY}).",
+    )
+    parser.add_argument(
+        "--taxonomy-dir",
+        type=Path,
+        default=DEFAULT_TAXONOMY_DIR,
+        help=f"Directory with extra taxonomy JSON files (default: {DEFAULT_TAXONOMY_DIR}).",
+    )
+    parser.add_argument(
+        "--extra-taxonomies",
+        nargs="*",
+        choices=("tasks", "risks", "difficulty", "cognitive", "tiers"),
+        default=list(DEFAULT_EXTRA_TAXONOMIES),
+        help=(
+            "Extra taxonomies to classify into record fields. "
+            "Use --extra-taxonomies with no values to disable."
+        ),
     )
     parser.add_argument(
         "--output",
@@ -924,6 +1002,8 @@ def main() -> None:
         )
     if not args.taxonomy.is_file():
         raise SystemExit(f"Taxonomy not found: {args.taxonomy}")
+    if args.extra_taxonomies and not args.taxonomy_dir.is_dir():
+        raise SystemExit(f"Taxonomy directory not found: {args.taxonomy_dir}")
 
     method = args.method
     model = args.model or METHOD_DEFAULT_MODELS[method]
@@ -940,7 +1020,11 @@ def main() -> None:
     except (FileNotFoundError, ValueError) as exc:
         raise SystemExit(str(exc)) from exc
 
-    entries = load_taxonomy(args.taxonomy)
+    try:
+        entries = load_taxonomy(args.taxonomy)
+        extra_taxonomies = load_extra_taxonomies(args.taxonomy_dir, args.extra_taxonomies)
+    except (FileNotFoundError, ValueError) as exc:
+        raise SystemExit(str(exc)) from exc
     device = pick_device(args.device)
     backend = build_backend(method, model, device)
 
@@ -983,6 +1067,7 @@ def main() -> None:
             output_writer=output_writer,
             backend=backend,
             entries=entries,
+            extra_taxonomies=extra_taxonomies,
             args=args,
             next_id=next_id,
         )
@@ -992,7 +1077,9 @@ def main() -> None:
         out_display = output_base.relative_to(ROOT) if output_base.is_relative_to(ROOT) else output_base
         print(
             f"Wrote {written} record(s) under {out_display} "
-            f"from {len(input_files)} file(s) (method={method}, model={model}, device={device})"
+            f"from {len(input_files)} file(s) "
+            f"(method={method}, model={model}, device={device}, "
+            f"extra_taxonomies={','.join(extra_taxonomies) or 'none'})"
         )
     else:
         mode = "w" if args.truncate else "a"
@@ -1007,6 +1094,7 @@ def main() -> None:
                 output_writer=output_writer,
                 backend=backend,
                 entries=entries,
+                extra_taxonomies=extra_taxonomies,
                 args=args,
                 next_id=next_id,
             )
@@ -1014,7 +1102,9 @@ def main() -> None:
         out_display = args.output.relative_to(ROOT) if args.output.is_relative_to(ROOT) else args.output
         print(
             f"Wrote {written} record(s) to {out_display} "
-            f"from {len(input_files)} file(s) (method={method}, model={model}, device={device})"
+            f"from {len(input_files)} file(s) "
+            f"(method={method}, model={model}, device={device}, "
+            f"extra_taxonomies={','.join(extra_taxonomies) or 'none'})"
         )
 
 

@@ -8,6 +8,7 @@ under data/final/<corpus>/ used as --input.
 from __future__ import annotations
 
 import argparse
+import csv
 import gc
 import json
 import os
@@ -817,6 +818,10 @@ def summarize_results(
     by_task = defaultdict(lambda: {"total": 0, "correct": 0})
     by_source = defaultdict(lambda: {"total": 0, "correct": 0})
     by_topic = defaultdict(lambda: {"total": 0, "correct": 0})
+    by_difficulty = defaultdict(lambda: {"total": 0, "correct": 0})
+    by_risk = defaultdict(lambda: {"total": 0, "correct": 0})
+    by_cognitive = defaultdict(lambda: {"total": 0, "correct": 0})
+    by_tier = defaultdict(lambda: {"total": 0, "correct": 0})
 
     with output_path.open(encoding="utf-8") as handle:
         for line in handle:
@@ -830,17 +835,30 @@ def summarize_results(
                     totals["skipped"] += 1
                 continue
             totals["scorable"] += 1
+            metadata = record.get("metadata") or {}
             task = record.get("task_type", "unknown")
-            source = (record.get("metadata") or {}).get("source", "unknown")
+            source = metadata.get("source", "unknown")
             topic = ((record.get("classification") or {}).get("predicted_label")) or "unknown"
+            difficulty = metadata.get("difficulty") or metadata.get("difficulty.json") or "unknown"
+            risk = metadata.get("risk_category") or "unknown"
+            cognitive = metadata.get("cognitive_skill") or "unknown"
+            tier = f"tier{record.get('tier', 'unknown')}"
             by_task[task]["total"] += 1
             by_source[source]["total"] += 1
             by_topic[topic]["total"] += 1
+            by_difficulty[difficulty]["total"] += 1
+            by_risk[risk]["total"] += 1
+            by_cognitive[cognitive]["total"] += 1
+            by_tier[tier]["total"] += 1
             if me.get("is_correct"):
                 totals["correct"] += 1
                 by_task[task]["correct"] += 1
                 by_source[source]["correct"] += 1
                 by_topic[topic]["correct"] += 1
+                by_difficulty[difficulty]["correct"] += 1
+                by_risk[risk]["correct"] += 1
+                by_cognitive[cognitive]["correct"] += 1
+                by_tier[tier]["correct"] += 1
 
     accuracy = (totals["correct"] / totals["scorable"]) if totals["scorable"] else 0.0
     return {
@@ -857,6 +875,10 @@ def summarize_results(
         "by_task_type": dict(by_task),
         "by_source": dict(by_source),
         "by_topic": dict(by_topic),
+        "by_difficulty": dict(by_difficulty),
+        "by_risk_category": dict(by_risk),
+        "by_cognitive_skill": dict(by_cognitive),
+        "by_tier": dict(by_tier),
         "output_file": str(output_path),
     }
 
@@ -927,6 +949,101 @@ def write_comparison(summary_paths: list[Path], output_dir: Path) -> Path:
     comparison_path = output_dir / "comparison.json"
     comparison_path.write_text(json.dumps(rows, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     return comparison_path
+
+
+def group_accuracy(group: dict[str, Any]) -> float | None:
+    total = group.get("total", 0)
+    if not total:
+        return None
+    return group.get("correct", 0) / total
+
+
+def write_base_model_comparisons(output_dir: Path) -> tuple[Path | None, Path | None]:
+    summaries = [
+        json.loads(path.read_text(encoding="utf-8"))
+        for path in sorted(output_dir.glob("*_summary.json"))
+    ]
+    by_alias = {summary["model_alias"]: summary for summary in summaries}
+    overall_rows: list[dict[str, Any]] = []
+    category_rows: list[dict[str, Any]] = []
+    category_fields = {
+        "task_type": "by_task_type",
+        "difficulty": "by_difficulty",
+        "risk_category": "by_risk_category",
+        "cognitive_skill": "by_cognitive_skill",
+        "tier": "by_tier",
+        "topic": "by_topic",
+        "source": "by_source",
+    }
+
+    for ft in summaries:
+        base_alias = ft.get("base_model_alias")
+        if not base_alias or ft.get("is_base"):
+            continue
+        base = by_alias.get(base_alias)
+        if not base:
+            continue
+
+        ft_acc = ft.get("accuracy", 0.0)
+        base_acc = base.get("accuracy", 0.0)
+        overall_rows.append(
+            {
+                "corpus": ft.get("corpus"),
+                "ft_model": ft.get("model_alias"),
+                "base_model": base_alias,
+                "ft_accuracy": ft_acc,
+                "base_accuracy": base_acc,
+                "margin_pp": (ft_acc - base_acc) * 100,
+                "ft_correct": ft.get("totals", {}).get("correct", 0),
+                "ft_scorable": ft.get("totals", {}).get("scorable", 0),
+                "base_correct": base.get("totals", {}).get("correct", 0),
+                "base_scorable": base.get("totals", {}).get("scorable", 0),
+            }
+        )
+
+        for category_name, summary_key in category_fields.items():
+            ft_groups = ft.get(summary_key, {})
+            base_groups = base.get(summary_key, {})
+            for value in sorted(set(ft_groups) | set(base_groups)):
+                ft_group = ft_groups.get(value, {"total": 0, "correct": 0})
+                base_group = base_groups.get(value, {"total": 0, "correct": 0})
+                ft_group_acc = group_accuracy(ft_group)
+                base_group_acc = group_accuracy(base_group)
+                category_rows.append(
+                    {
+                        "corpus": ft.get("corpus"),
+                        "category": category_name,
+                        "value": value,
+                        "ft_model": ft.get("model_alias"),
+                        "base_model": base_alias,
+                        "ft_accuracy": ft_group_acc,
+                        "base_accuracy": base_group_acc,
+                        "margin_pp": (
+                            (ft_group_acc - base_group_acc) * 100
+                            if ft_group_acc is not None and base_group_acc is not None
+                            else None
+                        ),
+                        "ft_correct": ft_group.get("correct", 0),
+                        "ft_total": ft_group.get("total", 0),
+                        "base_correct": base_group.get("correct", 0),
+                        "base_total": base_group.get("total", 0),
+                    }
+                )
+
+    if not overall_rows:
+        return None, None
+
+    overall_path = output_dir / "base_vs_finetuned_margins.csv"
+    category_path = output_dir / "base_vs_finetuned_by_category.csv"
+    with overall_path.open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=list(overall_rows[0]))
+        writer.writeheader()
+        writer.writerows(overall_rows)
+    with category_path.open("w", encoding="utf-8", newline="") as handle:
+        writer = csv.DictWriter(handle, fieldnames=list(category_rows[0]))
+        writer.writeheader()
+        writer.writerows(category_rows)
+    return overall_path, category_path
 
 
 def parse_args() -> argparse.Namespace:
@@ -1151,6 +1268,10 @@ def main() -> None:
     if len(summaries) > 1:
         comparison_path = write_comparison(summaries, output_dir)
         print(f"\nWrote comparison: {comparison_path}", file=sys.stderr)
+    overall_comparison_path, category_comparison_path = write_base_model_comparisons(output_dir)
+    if overall_comparison_path and category_comparison_path:
+        print(f"Wrote base comparison: {overall_comparison_path}", file=sys.stderr)
+        print(f"Wrote category comparison: {category_comparison_path}", file=sys.stderr)
 
 
 if __name__ == "__main__":
