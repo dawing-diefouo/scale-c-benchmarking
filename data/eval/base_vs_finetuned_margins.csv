@@ -1,0 +1,13 @@
+corpus,ft_model,base_model,ft_accuracy,base_accuracy,margin_pp,ft_correct,ft_scorable,base_correct,base_scorable
+embedding,foundation-sec-8b,llama-3.1-8b,0.5218,0.6092,-8.74,442,847,516,847
+embedding,lily-cyber-7b,mistral-7b-instruct-v0.2,0.5372,0.4687,6.85,455,847,397,847
+embedding,zysec-7b,zephyr-7b-beta,0.3601,0.4321,-7.20,305,847,366,847
+embedding,baronllm-v2,qwen3-14b,0.3082,0.1393,16.89,258,837,118,847
+embedding,trendyol-cyber-70b,llama-3.3-70b-instruct,0.6848,NA,NA,580,847,NA,NA
+embedding,cybertuned,roberta-base,0.2704,0.2668,0.35,229,847,226,847
+nli,foundation-sec-8b,llama-3.1-8b,0.5218,0.5794,-5.76,299,573,332,573
+nli,lily-cyber-7b,mistral-7b-instruct-v0.2,0.5148,0.4450,6.98,295,573,255,573
+nli,zysec-7b,zephyr-7b-beta,0.2705,0.3787,-10.82,155,573,217,573
+nli,baronllm-v2,qwen3-14b,0.2619,0.1187,14.32,149,569,68,573
+nli,trendyol-cyber-70b,llama-3.3-70b-instruct,0.6510,NA,NA,373,573,NA,NA
+nli,cybertuned,roberta-base,0.2164,0.2112,0.52,124,573,121,573
