@@ -577,6 +577,7 @@ class EmbeddingBackend:
     def __init__(self, model_id: str, device: int | str) -> None:
         self.model_id = model_id
         self._device = torch_device(device)
+        self._label_embedding_cache: dict[tuple[str, ...], Any] = {}
         if "llm2clip" in model_id.casefold():
             self._encoder = load_llm2clip_text_encoder(model_id, self._device)
             self._kind = "llm2clip"
@@ -591,6 +592,12 @@ class EmbeddingBackend:
             return self._encoder.encode(texts)
         return self._encoder.encode(texts, convert_to_tensor=True, normalize_embeddings=True)
 
+    def _label_embeddings(self, candidates: list[str]):
+        cache_key = tuple(candidates)
+        if cache_key not in self._label_embedding_cache:
+            self._label_embedding_cache[cache_key] = self._encode(candidates)
+        return self._label_embedding_cache[cache_key]
+
     def classify(
         self,
         text: str,
@@ -602,7 +609,7 @@ class EmbeddingBackend:
 
         candidates = [entry.candidate for entry in entries]
         text_emb = self._encode([text])
-        label_embs = self._encode(candidates)
+        label_embs = self._label_embeddings(candidates)
         scores = cos_sim(text_emb, label_embs)[0].tolist()
         labels_out, scores_out = rank_scores(candidates, scores, multi_label=multi_label)
         if multi_label:
