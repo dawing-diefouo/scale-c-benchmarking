@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+title: "Scale_C Benchmarking — Phase 1"
+message: "If you use this software or the Phase 1 results, please cite it as below."
+type: software
+authors:
+  - name: "Scale-C benchmarking authors"
+repository-code: "https://github.com/foyet/scale-c-benchmarking"
+abstract: >-
+  Reproducible Phase 1 evaluation of base and cybersecurity fine-tuned language
+  models for the Scale-C H5P computer-security education project. Tier 1 MCQ
+  accuracy is reported on dual topic-classifier views (NLI and embedding) with
+  frozen denominators of 573 and 847 scorable items.
+keywords:
+  - cybersecurity
+  - LLM evaluation
+  - educational technology
+  - H5P
+  - fine-tuning
+license: MIT
+version: "0.1.0"

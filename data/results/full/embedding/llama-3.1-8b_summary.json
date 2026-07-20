@@ -1,0 +1,227 @@
+{
+  "corpus": "embedding",
+  "input_dir": "/home/foyet/scale-c-benchmarking/data/final_combined/embedding",
+  "model_alias": "llama-3.1-8b",
+  "model": "meta-llama/Llama-3.1-8B",
+  "display_name": "Llama 3.1 8B (base)",
+  "backend": "huggingface",
+  "is_base": true,
+  "base_model_alias": null,
+  "totals": {
+    "scorable": 37746,
+    "correct": 23046,
+    "skipped": 106022
+  },
+  "accuracy": 0.610554760769353,
+  "by_task_type": {
+    "open_explanation": {
+      "total": 12781,
+      "correct": 10229
+    },
+    "mcq_answering": {
+      "total": 24874,
+      "correct": 12754
+    },
+    "mcq_generation": {
+      "total": 1,
+      "correct": 1
+    },
+    "mitigation_defense_strategy": {
+      "total": 74,
+      "correct": 48
+    },
+    "code_configuration_analysis": {
+      "total": 6,
+      "correct": 6
+    },
+    "h5p_mcq_generation": {
+      "total": 6,
+      "correct": 6
+    },
+    "german_h5p_generation": {
+      "total": 1,
+      "correct": 0
+    },
+    "h5p_structured_generation": {
+      "total": 3,
+      "correct": 2
+    }
+  },
+  "by_source": {
+    "huggingface/CyberMetric": {
+      "total": 12780,
+      "correct": 10229
+    },
+    "huggingface/Global-MMLU/de": {
+      "total": 14327,
+      "correct": 6934
+    },
+    "huggingface/Global-MMLU/en": {
+      "total": 9091,
+      "correct": 5533
+    },
+    "huggingface/mmlu/computer_security": {
+      "total": 236,
+      "correct": 162
+    },
+    "huggingface/cybersoceval/cybersoceval-questions/data": {
+      "total": 1196,
+      "correct": 124
+    },
+    "huggingface/mmlu/college_computer_science": {
+      "total": 116,
+      "correct": 64
+    }
+  },
+  "by_topic": {
+    "SCLC00101": {
+      "total": 184,
+      "correct": 140
+    },
+    "SCLC00201": {
+      "total": 170,
+      "correct": 131
+    },
+    "SCLC00202": {
+      "total": 86,
+      "correct": 65
+    },
+    "SCLC00301": {
+      "total": 1863,
+      "correct": 1221
+    },
+    "SCLC00401": {
+      "total": 96,
+      "correct": 49
+    },
+    "SCLC00501": {
+      "total": 423,
+      "correct": 228
+    },
+    "SCLC00601": {
+      "total": 257,
+      "correct": 175
+    },
+    "SCLC00701": {
+      "total": 3158,
+      "correct": 2224
+    },
+    "SCLC00801": {
+      "total": 334,
+      "correct": 241
+    },
+    "SCLC00901": {
+      "total": 938,
+      "correct": 718
+    },
+    "SCLC01001": {
+      "total": 3511,
+      "correct": 1947
+    },
+    "SCLC01101": {
+      "total": 221,
+      "correct": 176
+    },
+    "SCLC01102": {
+      "total": 38,
+      "correct": 22
+    },
+    "SCLC01103": {
+      "total": 5,
+      "correct": 4
+    },
+    "SCLC01202": {
+      "total": 53,
+      "correct": 46
+    },
+    "SCLC01301": {
+      "total": 66,
+      "correct": 45
+    },
+    "SCLC01401": {
+      "total": 20,
+      "correct": 15
+    },
+    "SCLC01402": {
+      "total": 32,
+      "correct": 24
+    },
+    "SCLC01501": {
+      "total": 7978,
+      "correct": 4224
+    },
+    "SCLC01502": {
+      "total": 932,
+      "correct": 519
+    },
+    "SCLC01503": {
+      "total": 136,
+      "correct": 95
+    },
+    "SCLC01601": {
+      "total": 5547,
+      "correct": 3090
+    },
+    "SCLC01701": {
+      "total": 1051,
+      "correct": 512
+    },
+    "SCLC01702": {
+      "total": 10,
+      "correct": 6
+    },
+    "SCLC01801": {
+      "total": 14,
+      "correct": 8
+    },
+    "SCLC01901": {
+      "total": 240,
+      "correct": 179
+    },
+    "SCLC02001": {
+      "total": 1020,
+      "correct": 534
+    },
+    "SCLC02101": {
+      "total": 147,
+      "correct": 83
+    },
+    "SCLC02201": {
+      "total": 941,
+      "correct": 744
+    },
+    "SCLC02301": {
+      "total": 6614,
+      "correct": 4512
+    },
+    "SCLC02401": {
+      "total": 284,
+      "correct": 184
+    },
+    "SCLC02501": {
+      "total": 390,
+      "correct": 223
+    },
+    "SCLC02601": {
+      "total": 255,
+      "correct": 166
+    },
+    "SCLC02701": {
+      "total": 23,
+      "correct": 11
+    },
+    "SCLC02801": {
+      "total": 674,
+      "correct": 462
+    },
+    "SCLC01201": {
+      "total": 25,
+      "correct": 17
+    },
+    "SCLC01302": {
+      "total": 10,
+      "correct": 6
+    }
+  },
+  "output_file": "/home/foyet/scale-c-benchmarking/data/eval_combined/embedding/llama-3.1-8b.jsonl"
+}

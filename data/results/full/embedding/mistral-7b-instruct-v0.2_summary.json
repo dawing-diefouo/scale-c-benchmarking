@@ -1,0 +1,227 @@
+{
+  "corpus": "embedding",
+  "input_dir": "/home/foyet/scale-c-benchmarking/data/final_combined/embedding",
+  "model_alias": "mistral-7b-instruct-v0.2",
+  "model": "mistralai/Mistral-7B-Instruct-v0.2",
+  "display_name": "Mistral 7B Instruct v0.2 (base)",
+  "backend": "huggingface",
+  "is_base": true,
+  "base_model_alias": null,
+  "totals": {
+    "scorable": 37746,
+    "correct": 17316,
+    "skipped": 106022
+  },
+  "accuracy": 0.4587505960896519,
+  "by_task_type": {
+    "open_explanation": {
+      "total": 12781,
+      "correct": 8148
+    },
+    "mcq_answering": {
+      "total": 24874,
+      "correct": 9118
+    },
+    "mcq_generation": {
+      "total": 1,
+      "correct": 0
+    },
+    "mitigation_defense_strategy": {
+      "total": 74,
+      "correct": 42
+    },
+    "code_configuration_analysis": {
+      "total": 6,
+      "correct": 3
+    },
+    "h5p_mcq_generation": {
+      "total": 6,
+      "correct": 4
+    },
+    "german_h5p_generation": {
+      "total": 1,
+      "correct": 0
+    },
+    "h5p_structured_generation": {
+      "total": 3,
+      "correct": 1
+    }
+  },
+  "by_source": {
+    "huggingface/CyberMetric": {
+      "total": 12780,
+      "correct": 8148
+    },
+    "huggingface/Global-MMLU/de": {
+      "total": 14327,
+      "correct": 4891
+    },
+    "huggingface/Global-MMLU/en": {
+      "total": 9091,
+      "correct": 3937
+    },
+    "huggingface/mmlu/computer_security": {
+      "total": 236,
+      "correct": 124
+    },
+    "huggingface/cybersoceval/cybersoceval-questions/data": {
+      "total": 1196,
+      "correct": 184
+    },
+    "huggingface/mmlu/college_computer_science": {
+      "total": 116,
+      "correct": 32
+    }
+  },
+  "by_topic": {
+    "SCLC00101": {
+      "total": 184,
+      "correct": 113
+    },
+    "SCLC00201": {
+      "total": 170,
+      "correct": 108
+    },
+    "SCLC00202": {
+      "total": 86,
+      "correct": 56
+    },
+    "SCLC00301": {
+      "total": 1863,
+      "correct": 1005
+    },
+    "SCLC00401": {
+      "total": 96,
+      "correct": 27
+    },
+    "SCLC00501": {
+      "total": 423,
+      "correct": 156
+    },
+    "SCLC00601": {
+      "total": 257,
+      "correct": 136
+    },
+    "SCLC00701": {
+      "total": 3158,
+      "correct": 1677
+    },
+    "SCLC00801": {
+      "total": 334,
+      "correct": 195
+    },
+    "SCLC00901": {
+      "total": 938,
+      "correct": 590
+    },
+    "SCLC01001": {
+      "total": 3511,
+      "correct": 1606
+    },
+    "SCLC01101": {
+      "total": 221,
+      "correct": 136
+    },
+    "SCLC01102": {
+      "total": 38,
+      "correct": 15
+    },
+    "SCLC01103": {
+      "total": 5,
+      "correct": 5
+    },
+    "SCLC01202": {
+      "total": 53,
+      "correct": 36
+    },
+    "SCLC01301": {
+      "total": 66,
+      "correct": 26
+    },
+    "SCLC01401": {
+      "total": 20,
+      "correct": 12
+    },
+    "SCLC01402": {
+      "total": 32,
+      "correct": 20
+    },
+    "SCLC01501": {
+      "total": 7978,
+      "correct": 2866
+    },
+    "SCLC01502": {
+      "total": 932,
+      "correct": 337
+    },
+    "SCLC01503": {
+      "total": 136,
+      "correct": 76
+    },
+    "SCLC01601": {
+      "total": 5547,
+      "correct": 2192
+    },
+    "SCLC01701": {
+      "total": 1051,
+      "correct": 414
+    },
+    "SCLC01702": {
+      "total": 10,
+      "correct": 6
+    },
+    "SCLC01801": {
+      "total": 14,
+      "correct": 6
+    },
+    "SCLC01901": {
+      "total": 240,
+      "correct": 135
+    },
+    "SCLC02001": {
+      "total": 1020,
+      "correct": 452
+    },
+    "SCLC02101": {
+      "total": 147,
+      "correct": 73
+    },
+    "SCLC02201": {
+      "total": 941,
+      "correct": 588
+    },
+    "SCLC02301": {
+      "total": 6614,
+      "correct": 3407
+    },
+    "SCLC02401": {
+      "total": 284,
+      "correct": 151
+    },
+    "SCLC02501": {
+      "total": 390,
+      "correct": 186
+    },
+    "SCLC02601": {
+      "total": 255,
+      "correct": 139
+    },
+    "SCLC02701": {
+      "total": 23,
+      "correct": 8
+    },
+    "SCLC02801": {
+      "total": 674,
+      "correct": 347
+    },
+    "SCLC01201": {
+      "total": 25,
+      "correct": 12
+    },
+    "SCLC01302": {
+      "total": 10,
+      "correct": 2
+    }
+  },
+  "output_file": "/home/foyet/scale-c-benchmarking/data/eval_combined/embedding/mistral-7b-instruct-v0.2.jsonl"
+}

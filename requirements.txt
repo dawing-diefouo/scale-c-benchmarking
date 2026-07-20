@@ -1,13 +1,14 @@
-# Generated from pyproject.toml + uv.lock
-# Python: >=3.12
-
-datasets==4.8.5
-pyarrow==24.0.0
-torch==2.11.0
-transformers==5.8.0
-tiktoken==0.13.0
-sentencepiece==0.2.1
-protobuf==7.34.1
-sentence-transformers==5.5.0
-pillow==12.2.0
-torchvision==0.26.0
+# Scale_C benchmarking — Python dependencies
+# Prefer: uv sync  (uses pyproject.toml + uv.lock)
+datasets>=4.8.5
+pyarrow>=18.0
+torch>=2.2
+transformers>=4.40
+tiktoken>=0.13.0
+sentencepiece>=0.2.0
+protobuf>=5.0
+sentence-transformers>=3.4
+pillow
+torchvision
+matplotlib>=3.8
+numpy>=1.26

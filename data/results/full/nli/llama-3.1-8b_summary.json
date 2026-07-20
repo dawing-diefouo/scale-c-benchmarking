@@ -1,0 +1,195 @@
+{
+  "corpus": "nli",
+  "input_dir": "/home/foyet/scale-c-benchmarking/data/final_combined/nli",
+  "model_alias": "llama-3.1-8b",
+  "model": "meta-llama/Llama-3.1-8B",
+  "display_name": "Llama 3.1 8B (base)",
+  "backend": "huggingface",
+  "is_base": true,
+  "base_model_alias": null,
+  "totals": {
+    "scorable": 9916,
+    "correct": 4990,
+    "skipped": 17456
+  },
+  "accuracy": 0.5032271077047197,
+  "by_task_type": {
+    "open_explanation": {
+      "total": 1749,
+      "correct": 1402
+    },
+    "mcq_answering": {
+      "total": 8167,
+      "correct": 3588
+    }
+  },
+  "by_source": {
+    "CyberMetric-10000-v1": {
+      "total": 1749,
+      "correct": 1402
+    },
+    "test-00000-of-00001": {
+      "total": 6496,
+      "correct": 3197
+    },
+    "dev-00000-of-00001": {
+      "total": 243,
+      "correct": 123
+    },
+    "threat_intel_reasoning-00000-of-00001": {
+      "total": 588,
+      "correct": 100
+    },
+    "malware_analysis-00000-of-00001": {
+      "total": 608,
+      "correct": 24
+    },
+    "test": {
+      "total": 200,
+      "correct": 128
+    },
+    "validation": {
+      "total": 22,
+      "correct": 10
+    },
+    "dev": {
+      "total": 10,
+      "correct": 6
+    }
+  },
+  "by_topic": {
+    "SCLC00101": {
+      "total": 64,
+      "correct": 40
+    },
+    "SCLC00201": {
+      "total": 63,
+      "correct": 41
+    },
+    "SCLC00202": {
+      "total": 31,
+      "correct": 22
+    },
+    "SCLC00301": {
+      "total": 237,
+      "correct": 128
+    },
+    "SCLC00401": {
+      "total": 8,
+      "correct": 6
+    },
+    "SCLC00501": {
+      "total": 181,
+      "correct": 105
+    },
+    "SCLC00601": {
+      "total": 9,
+      "correct": 5
+    },
+    "SCLC00701": {
+      "total": 684,
+      "correct": 450
+    },
+    "SCLC00801": {
+      "total": 230,
+      "correct": 156
+    },
+    "SCLC00901": {
+      "total": 193,
+      "correct": 146
+    },
+    "SCLC01001": {
+      "total": 386,
+      "correct": 218
+    },
+    "SCLC01101": {
+      "total": 29,
+      "correct": 26
+    },
+    "SCLC01102": {
+      "total": 13,
+      "correct": 8
+    },
+    "SCLC01201": {
+      "total": 12,
+      "correct": 10
+    },
+    "SCLC01202": {
+      "total": 121,
+      "correct": 95
+    },
+    "SCLC01301": {
+      "total": 15,
+      "correct": 12
+    },
+    "SCLC01501": {
+      "total": 1,
+      "correct": 1
+    },
+    "SCLC01503": {
+      "total": 34,
+      "correct": 26
+    },
+    "SCLC01601": {
+      "total": 676,
+      "correct": 309
+    },
+    "SCLC01701": {
+      "total": 82,
+      "correct": 27
+    },
+    "SCLC01702": {
+      "total": 2,
+      "correct": 1
+    },
+    "SCLC01801": {
+      "total": 16,
+      "correct": 8
+    },
+    "SCLC01901": {
+      "total": 16,
+      "correct": 12
+    },
+    "SCLC02001": {
+      "total": 249,
+      "correct": 46
+    },
+    "SCLC02101": {
+      "total": 422,
+      "correct": 61
+    },
+    "SCLC02201": {
+      "total": 51,
+      "correct": 40
+    },
+    "SCLC02301": {
+      "total": 21,
+      "correct": 12
+    },
+    "SCLC02401": {
+      "total": 97,
+      "correct": 31
+    },
+    "SCLC02501": {
+      "total": 72,
+      "correct": 42
+    },
+    "SCLC02601": {
+      "total": 9,
+      "correct": 7
+    },
+    "SCLC02801": {
+      "total": 5888,
+      "correct": 2899
+    },
+    "SCLC01302": {
+      "total": 3,
+      "correct": 0
+    },
+    "SCLC02701": {
+      "total": 1,
+      "correct": 0
+    }
+  },
+  "output_file": "/home/foyet/scale-c-benchmarking/data/eval_combined/nli/llama-3.1-8b.jsonl"
+}

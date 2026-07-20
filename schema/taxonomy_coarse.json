@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "id_scheme": "scale_c_coarse_a",
+  "parent_taxonomy": "schema/taxonomy.json",
+  "notes": [
+    "Option A: eight coarse groups for evaluation and reporting.",
+    "Each label lists fine-grained SCLC leaf ids from taxonomy.json via members."
+  ],
+  "labels": [
+    {
+      "id": "SLCA001",
+      "name": "Fundamentals & governance",
+      "description": "Core vocabulary, theory, compliance, and professional security context.",
+      "members": ["SCLC00701", "SCLC01601", "SCLC01001", "SCLC02301"]
+    },
+    {
+      "id": "SLCA002",
+      "name": "Identity & access",
+      "description": "Credentials, authentication, authorization, and account hygiene.",
+      "members": ["SCLC00101", "SCLC00901", "SCLC01201", "SCLC01401", "SCLC01402"]
+    },
+    {
+      "id": "SLCA003",
+      "name": "Human & social threats",
+      "description": "Social engineering, phishing, deception, and user-targeted abuse.",
+      "members": ["SCLC00201", "SCLC00202", "SCLC00501", "SCLC02501", "SCLC01302", "SCLC01501", "SCLC01502", "SCLC01503"]
+    },
+    {
+      "id": "SLCA004",
+      "name": "Defensive controls & hygiene",
+      "description": "Preventive controls, safe habits, endpoint hygiene, and resilience.",
+      "members": ["SCLC00301", "SCLC00401", "SCLC01101", "SCLC01102", "SCLC01103", "SCLC01801", "SCLC01901"]
+    },
+    {
+      "id": "SLCA005",
+      "name": "Network & secure comms",
+      "description": "Infrastructure hardening, TLS, and protected communications.",
+      "members": ["SCLC00801", "SCLC01202", "SCLC02201"]
+    },
+    {
+      "id": "SLCA006",
+      "name": "Malware & advanced threats",
+      "description": "Malware families, advanced campaigns, and sophisticated attack types.",
+      "members": ["SCLC01701", "SCLC01702", "SCLC02001", "SCLC02101"]
+    },
+    {
+      "id": "SLCA007",
+      "name": "Applications & workplace",
+      "description": "Application security, insider risk, remote work, and location privacy.",
+      "members": ["SCLC02401", "SCLC00601", "SCLC02601", "SCLC02701", "SCLC01301"]
+    },
+    {
+      "id": "SLCA008",
+      "name": "Other",
+      "description": "Topics outside the coarse cyber groups above.",
+      "members": ["SCLC02801"]
+    }
+  ]
+}

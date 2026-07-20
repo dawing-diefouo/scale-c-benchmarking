@@ -44,30 +44,39 @@
   "baronllm-v2": {
     "display_name": "BaronLLM v2.0",
     "model_id": "Trendyol/Qwen3-14B-BaronLLM-v2-Q8",
+    "api_model_id": "baronllm-v2",
     "backend": "openai",
     "base_model_alias": "qwen3-14b",
-    "notes": "GGUF-only (~16GB). Requires a running OpenAI-compatible server at --api-base-url. Not usable without vLLM/Ollama/llama.cpp server."
+    "notes": "GGUF-only (~16GB). Requires a running OpenAI-compatible server at --api-base-url. For Ollama, pull/create as baronllm-v2 (api_model_id) or pass --api-model."
   },
   "qwen3-14b": {
     "display_name": "Qwen3 14B (base)",
     "model_id": "Qwen/Qwen3-14B",
+    "api_model_id": "qwen/qwen3-14b",
+    "api_max_new_tokens": 2048,
+    "api_reasoning": {
+      "effort": "medium",
+      "exclude": true
+    },
     "backend": "huggingface",
     "is_base": true,
-    "notes": "Instruction-tuned Qwen3 14B; parent of BaronLLM v2.0."
+    "notes": "Instruction-tuned Qwen3 14B; parent of BaronLLM v2.0. OpenRouter: --api-base-url https://openrouter.ai/api with api_reasoning effort xhigh."
   },
   "trendyol-cyber-70b": {
     "display_name": "Trendyol Cyber. LLM v2 (70B)",
     "model_id": "Trendyol/Trendyol-Cybersecurity-LLM-v2-70B-Q4_K_M",
+    "api_model_id": "trendyol-cyber-70b",
     "backend": "openai",
     "base_model_alias": "llama-3.3-70b-instruct",
-    "notes": "GGUF-only (~40GB+). Requires a running OpenAI-compatible server at --api-base-url. Too large for typical home-cache HF download."
+    "notes": "GGUF-only (~42GB Q4_K_M). Pull: ollama pull hf.co/Trendyol/Trendyol-Cybersecurity-LLM-v2-70B-Q4_K_M then ollama cp ... trendyol-cyber-70b. Needs ~45GB VRAM per GPU instance."
   },
   "llama-3.3-70b-instruct": {
     "display_name": "Llama 3.3 70B Instruct (base)",
     "model_id": "meta-llama/Llama-3.3-70B-Instruct",
+    "api_model_id": "meta-llama/llama-3.3-70b-instruct",
     "backend": "huggingface",
     "is_base": true,
-    "notes": "Meta instruct model; parent of Trendyol Cybersecurity LLM v2-70B. Very large — plan GPU/memory accordingly."
+    "notes": "Meta instruct model; parent of Trendyol Cybersecurity LLM v2-70B. Local: HuggingFace. API: pass --api-base-url https://openrouter.ai/api and OPENROUTER_API_KEY."
   },
   "cybertuned": {
     "display_name": "CyBERTuned",

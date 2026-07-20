@@ -1,0 +1,195 @@
+{
+  "corpus": "nli",
+  "input_dir": "/home/foyet/scale-c-benchmarking/data/final_combined/nli",
+  "model_alias": "zysec-7b",
+  "model": "ZySec-AI/SecurityLLM",
+  "display_name": "ZySec-7B",
+  "backend": "huggingface",
+  "is_base": false,
+  "base_model_alias": "zephyr-7b-beta",
+  "totals": {
+    "scorable": 9916,
+    "correct": 2672,
+    "skipped": 17456
+  },
+  "accuracy": 0.26946349334409037,
+  "by_task_type": {
+    "open_explanation": {
+      "total": 1749,
+      "correct": 579
+    },
+    "mcq_answering": {
+      "total": 8167,
+      "correct": 2093
+    }
+  },
+  "by_source": {
+    "CyberMetric-10000-v1": {
+      "total": 1749,
+      "correct": 579
+    },
+    "test-00000-of-00001": {
+      "total": 6496,
+      "correct": 1844
+    },
+    "dev-00000-of-00001": {
+      "total": 243,
+      "correct": 72
+    },
+    "threat_intel_reasoning-00000-of-00001": {
+      "total": 588,
+      "correct": 68
+    },
+    "malware_analysis-00000-of-00001": {
+      "total": 608,
+      "correct": 25
+    },
+    "test": {
+      "total": 200,
+      "correct": 74
+    },
+    "validation": {
+      "total": 22,
+      "correct": 7
+    },
+    "dev": {
+      "total": 10,
+      "correct": 3
+    }
+  },
+  "by_topic": {
+    "SCLC00101": {
+      "total": 64,
+      "correct": 22
+    },
+    "SCLC00201": {
+      "total": 63,
+      "correct": 17
+    },
+    "SCLC00202": {
+      "total": 31,
+      "correct": 16
+    },
+    "SCLC00301": {
+      "total": 237,
+      "correct": 56
+    },
+    "SCLC00401": {
+      "total": 8,
+      "correct": 3
+    },
+    "SCLC00501": {
+      "total": 181,
+      "correct": 61
+    },
+    "SCLC00601": {
+      "total": 9,
+      "correct": 3
+    },
+    "SCLC00701": {
+      "total": 684,
+      "correct": 191
+    },
+    "SCLC00801": {
+      "total": 230,
+      "correct": 75
+    },
+    "SCLC00901": {
+      "total": 193,
+      "correct": 63
+    },
+    "SCLC01001": {
+      "total": 386,
+      "correct": 96
+    },
+    "SCLC01101": {
+      "total": 29,
+      "correct": 12
+    },
+    "SCLC01102": {
+      "total": 13,
+      "correct": 3
+    },
+    "SCLC01201": {
+      "total": 12,
+      "correct": 5
+    },
+    "SCLC01202": {
+      "total": 121,
+      "correct": 44
+    },
+    "SCLC01301": {
+      "total": 15,
+      "correct": 6
+    },
+    "SCLC01501": {
+      "total": 1,
+      "correct": 0
+    },
+    "SCLC01503": {
+      "total": 34,
+      "correct": 12
+    },
+    "SCLC01601": {
+      "total": 676,
+      "correct": 136
+    },
+    "SCLC01701": {
+      "total": 82,
+      "correct": 23
+    },
+    "SCLC01702": {
+      "total": 2,
+      "correct": 0
+    },
+    "SCLC01801": {
+      "total": 16,
+      "correct": 7
+    },
+    "SCLC01901": {
+      "total": 16,
+      "correct": 6
+    },
+    "SCLC02001": {
+      "total": 249,
+      "correct": 27
+    },
+    "SCLC02101": {
+      "total": 422,
+      "correct": 43
+    },
+    "SCLC02201": {
+      "total": 51,
+      "correct": 20
+    },
+    "SCLC02301": {
+      "total": 21,
+      "correct": 5
+    },
+    "SCLC02401": {
+      "total": 97,
+      "correct": 24
+    },
+    "SCLC02501": {
+      "total": 72,
+      "correct": 26
+    },
+    "SCLC02601": {
+      "total": 9,
+      "correct": 5
+    },
+    "SCLC02801": {
+      "total": 5888,
+      "correct": 1664
+    },
+    "SCLC01302": {
+      "total": 3,
+      "correct": 1
+    },
+    "SCLC02701": {
+      "total": 1,
+      "correct": 0
+    }
+  },
+  "output_file": "/home/foyet/scale-c-benchmarking/data/eval_combined/nli/zysec-7b.jsonl"
+}

@@ -1,7 +1,7 @@
 [project]
 name = "scale-c-benchmark"
 version = "0.1.0"
-description = "Scale C benchmark"
+description = "Reproducible Scale_C Phase 1 LLM evaluation for cybersecurity education"
 requires-python = ">=3.12"
 dependencies = [
     "datasets>=4.8.5",
@@ -14,4 +14,6 @@ dependencies = [
     "sentence-transformers>=3.4",
     "pillow",
     "torchvision",
+    "matplotlib>=3.8",
+    "numpy>=1.26",
 ]

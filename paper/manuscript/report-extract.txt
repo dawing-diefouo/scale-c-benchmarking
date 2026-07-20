@@ -1,0 +1,415 @@
+
+TECHNISCHE HOCHSCHULE BRANDENBURG
+Department of Computer Science and Media
+SCALE-C
+Benchmarking Cybersecurity Language Models
+
+
+M.Sc. Informatics · Third Semester
+Brandenburg an der Havel · 2026
+
+Abstract
+This report presents Scale-C, a reproducible benchmarking pipeline for evaluating cybersecurity-specialized language models. The central question motivating the project is straightforward, yet surprisingly unresolved in the literature: does fine-tuning a language model on cybersecurity data make it better at cybersecurity tasks, or does it merely change its surface style?
+To answer this question, Scale-C evaluates six base-versus-fine-tuned model pairs, ranging from lightweight 7B-parameter models to 70B-parameter systems. Two independent classification families—natural language inference (NLI) and dense embedding similarity—are used to ensure that findings do not depend on a single automatic metric. Results are broken down across 28 fine-grained cybersecurity topics grouped into eight course-level categories, enabling a nuanced picture of where fine-tuning helps, where it hurts, and where even the best models consistently struggle.
+The main finding is that cybersecurity fine-tuning is not universally beneficial. Two model pairs (Mistral→Lily and Qwen3→Baron) show consistent gains across both classifiers. Two others (Llama 3.1→Foundation-Sec and Zephyr→ZySec) show consistent regressions. The 70B pair (Llama 3.3→Trendyol) yields a classifier-dependent split. Malware and advanced threat topics remain the hardest category across all models, pointing to a genuine gap in current cybersecurity language modeling rather than a benchmark artifact.
+
+1. Introduction
+The past few years have witnessed an explosion of language models marketed specifically for cybersecurity. From open-source releases with names like CyBERTuned, Foundation-Sec, and Lily-Cybersecurity to large commercial offerings, the implicit promise is consistent: fine-tuning on security data should yield a model that reasons better about threats, vulnerabilities, configurations, and defense strategies. Yet this promise is rarely tested rigorously. Evaluations are often performed in isolation, without a meaningful base-model baseline, or on cherry-picked prompts that happen to favor the evaluated system.
+Scale-C takes a different approach. Rather than asking whether a cybersecurity model achieves an impressive absolute score, it asks a more informative question: does cybersecurity specialization improve over the best available base model, under the same evaluation conditions, across a broad and topic-diverse benchmark? This pairwise design forces a genuine test of whether fine-tuning adds value, or whether perceived gains simply reflect the capabilities of the underlying architecture.
+The benchmark combines multiple established sources—MMLU cybersecurity subsets, CyberBench, CyberMetric, CyberSOCEval, SEC-bench, and others—with custom multilingual and German-language content. Items are classified into a structured taxonomy of 28 fine topics and 8 broader course groups using both NLI-based and embedding-based classifiers. This multi-view design turns classifier disagreement into a methodological finding rather than a nuisance to be suppressed.
+The report is organized as follows. Section 2 provides the background for fine-tuning. Section 3 presents the research objectives. Section 4 describes dataset construction and taxonomy. Section 5 explains model selection. Sections 6 through 11 report the results. Section 12 discusses the findings, Section 13 covers limitations, and Section 14 concludes.
+
+2. Fine-Tuning
+At its core, fine-tuning is a practice of constrained optimization in a high-dimensional parameter space. Rather than treating a model as a blank slate, fine-tuning uses the optimal parameter configuration found during pre-training as the starting position, call it W₀ and shifts it slightly to adapt to a new target task distribution. The following four components form the mathematical framework that governs this process.
+
+1.  Warm-Start Optimization
+During training from scratch, model weights W are initialized using random Gaussian noise or techniques such as He or Xavier initialization. Fine-tuning bypasses this entirely by setting the initial boundary condition to the pre-trained weights:
+Wᴵⁿᴵᵗᴵᵃᱬ  =  W₀
+W₀ represents a highly optimized local minimum within the loss landscape shaped by the massive pre-training corpus. The subsequent fine-tuning optimization is therefore not a search across the full parameter space but rather an exploration of the neighborhood surrounding this stable minimum, a region where general language representations are already well-formed and only domain-specific adjustments are needed.
+
+2.  Empirical Risk Minimization (ERM)
+Fine-tuning operates on a task-specific dataset 𝒟 = {(x₁, y₁), ..., (xₙ, yₙ)}. The objective is to minimize the empirical risk—the average loss over this dataset—using Cross-Entropy Loss for classification or text generation:
+ℒ(𝒟 ; W) =  − ¹⁄ₙ  ∑ᵢ  ∑ⱼ  yᵢⱼ · log( f(xᵢ ; W)ⱼ )
+The weights are then updated using Gradient Descent:
+Wₜ₊₁  =  Wₜ  −  η · ∇_W ℒ(𝒟 ; Wₜ)
+Here η is the learning rate. Critically, the learning rate for fine-tuning is set orders of magnitude smaller than in pre-training. Large gradient steps would destroy the learned global representations that make the starting point valuable in the first place. Fine-tuning works precisely because the steps are small and targeted.
+
+3.  KL Divergence Regularization
+A known risk during fine-tuning is catastrophic forgetting: the model gains task-specific precision but loses the general reasoning capabilities encoded during pre-training. To counter this, the loss function is mathematically regularized with a penalty that tracks the probability distribution shift between the base model P_base and the updating model P_θ, measured via Kullback-Leibler (KL) Divergence:
+ℒ_total  =  ℒ(𝒟 ; W)  +  β · D_KL( P_base(x) ‖ P_θ(x) )
+The coefficient β acts as a spring constant: it prevents the fine-tuned parameters from straying too far from W₀. A higher β preserves more of the original behavior; a lower β gives the optimizer more freedom to specialize. This regularization is especially relevant for cybersecurity models, where overfitting to narrow domain vocabulary can degrade multiple-choice answer reliability and general semantic reasoning—exactly the failure modes observed in Foundation-Sec and ZySec in this study.
+
+4.  Low-Rank Adaptation (LoRA)
+In Parameter-Efficient Fine-Tuning (PEFT), updating billions of parameters is mathematically abstracted into a low-rank bottleneck. Instead of modifying the massive pre-trained weight matrix W₀ ∈ ℝ^{d×k} directly, it is frozen, and a weight delta ΔW is introduced:
+W  =  W₀  +  ΔW
+The key mathematical assumption behind LoRA is that weight updates have a low intrinsic dimension: the meaningful adjustments required for domain adaptation lie in a much smaller subspace than the full parameter count suggests. Therefore, ΔW is decomposed into the product of two compressed matrices, A ∈ ℝ^{d×r} and B ∈ ℝ^{r×k}, where the rank r ≪ min(d, k):
+ΔW  =  B · A
+This changes the optimization complexity from d × k down to r × (d + k), slashing memory and compute requirements substantially. For a model with d = k = 4096 and a rank of r = 8, the parameter count for a given layer drops from roughly 16.8 million to about 65,000—a reduction of over 99%. This is why LoRA-based fine-tuning is practical even on consumer-grade hardware, and why it is the dominant adaptation strategy for the cybersecurity models evaluated in this study.
+
+2.5 Varieties of Specialization in This Study
+Not all cybersecurity models in this project use the same training recipe. The mathematical framework above manifests differently across four specialization strategies:
+	•	Continued domain pretraining: the full pre-training objective is applied to additional cybersecurity text. W₀ shifts toward a domain-enriched minimum without explicit answer supervision.
+	•	Supervised instruction fine-tuning: the ERM objective is applied to labeled cybersecurity prompt-answer pairs. The model learns the format and vocabulary of expected answers.
+	•	Preference optimization (DPO/RLHF): the model is trained to widen the probability margin between preferred (y_w) and rejected (y_l) cybersecurity responses, directly shaping the output distribution rather than optimizing token-level cross-entropy.
+	•	Encoder domain adaptation: an encoder-only model is fine-tuned to produce better cybersecurity representations. Evaluation proceeds by ranking answer choices through similarity, not by generating text.
+
+The central empirical question Scale-C is designed to answer is whether any of these mathematical adjustments actually improve benchmark performance relative to the unmodified base model. As the results in Sections 6 through 11 show, the answer depends heavily on the specific model pair, the fine-tuning strategy, and the topic distribution of the evaluation.
+
+[F1] - Fine-tuning intuition diagram
+
+3. Research Objective and Guiding Questions
+The core objective of Scale-C is to determine whether cybersecurity fine-tuning improves language model performance on a broad, topic-diverse cybersecurity benchmark. Scale-C is designed to measure cybersecurity competence beyond generic factual recall. It contains cybersecurity knowledge questions, scenario and mitigation reasoning, safety judgment, code or configuration analysis, structured educational generation, H5P-oriented generation, and German or multilingual content.
+The central research question is not whether a cybersecurity model can score highly in isolation, but whether the fine-tuned model improves over its closest available base model under the same evaluation protocol. This pairwise design is important because model size, architecture, instruction tuning, and serving backend can otherwise hide the actual effect of cybersecurity specialization.
+The newest evaluation phase raises four specific research questions:
+RQ1: Does cybersecurity domain fine-tuning consistently improve benchmark performance, or is the effect pair-dependent?
+RQ2: Do NLI-based and embedding-based classifiers agree on model quality, or do they produce different rankings?
+RQ3: Does scale (particularly 70B parameters) dominate the benchmark, or can well-tuned 7B/8B models compete on selected topics?
+RQ4: Does a reasoning-oriented architecture such as Qwen3/Baron outperform larger but less reasoning-focused models on theory and threat topics?
+The current answer is mixed rather than uniform. Fine-tuning helps for some pairs and hurts for others. Classifiers often agree but diverge notably on the 70B pair. Scale helps on some topics but not universally. And reasoning architecture provides a lift over a weak base, but does not dominate larger models on most slices.
+[F2] Figure placeholder — Research design overview: central comparison logic showing base model, fine-tuned model, shared Scale-C benchmark, NLI/embedding views, and pairwise performance delta.
+
+4. Dataset Construction and Taxonomy
+Scale-C combines multiple benchmark sources rather than relying on a single authored question bank. An earlier snapshot processed 1,777 records, of which 961 were scorable in the multiple-choice question format. The newest evaluation reflects a more recent pipeline run; exact record-level counts should be taken from the most recent manifest files once they become available locally.
+4.1 Benchmark Sources and Associated Frameworks
+Scale-C is built from several benchmark sources, and those sources are interpreted through relevant cybersecurity and educational frameworks. This distinction matters: the framework associations help explain coverage, but they are not the classifier labels used by the current pipeline.
+
+Benchmark Source
+Main Scale-C Contribution
+Associated Framework
+Why It Is Relevant
+MMLU computer security
+General computer-security knowledge and MCQ reasoning
+NICE, revised Bloom's taxonomy
+Measures knowledge and cognitive level rather than adversary techniques.
+CyberBench
+Cybersecurity knowledge, threat analysis, and reasoning
+MITRE ATT&CK, NIST CSF 2.0, NICE
+Covers attacker behavior, defensive outcomes, and practitioner skills.
+CyberMetric
+Expert-validated cybersecurity knowledge
+NIST CSF 2.0, NICE
+Represents standards-oriented cybersecurity knowledge and practice.
+CyberSOCEval
+SOC tasks, threat intelligence, and malware analysis
+MITRE ATT&CK, NIST CSF 2.0, NICE
+SOC reasoning maps naturally to adversary tactics, detection, response, and work-role skills.
+SEC-bench
+CVE, open-source software, and application-security evaluation
+MITRE CWE, OWASP ASVS
+Focuses on software weaknesses, vulnerabilities, and application-security verification.
+Global-MMLU
+Multilingual and localized knowledge evaluation
+NICE, revised Bloom's taxonomy
+Extends knowledge evaluation across languages, including German.
+JSONSchemaBench
+Structured output generation
+JSON Schema
+Evaluates whether models can produce schema-conformant structured outputs.
+superGLEBer
+German-language and multilingual NLP capability
+Scale-C multilingual/localization tier
+Supports German and multilingual language behavior rather than a cybersecurity framework directly.
+
+These framework associations give the report a scientific basis for explaining why the benchmark covers both technical security knowledge and broader educational capability. MITRE ATT&CK supports adversary-behavior interpretation, NIST CSF supports defensive and governance outcomes, NICE supports cybersecurity work-role knowledge and skills, CWE and OWASP ASVS support application-security weakness analysis, Bloom's taxonomy supports cognitive-demand interpretation, and JSON Schema supports structured-output evaluation.
+4.2 How the Dataset Is Classified
+The raw benchmark records are organized into Scale-C topics using the main taxonomy in schema/taxonomy.json. This taxonomy contains fine-grained labels such as credential management, social engineering, defensive measures, authentication/authorization, SSL certificates, advanced cyber threats, advanced malware types, application security, and other.
+Two zero-shot classification methods are used:
+	•	Embedding classification: each benchmark item and each topic description are converted into vectors. The pipeline computes cosine similarity and assigns the topic whose description is closest to the item. This is fast and scalable because label embeddings can be cached once and reused.
+	•	NLI classification: the item and each candidate topic are framed as an entailment problem. The classifier estimates whether the item implies the candidate topic. This is slower because each item-topic pair must be scored independently, but it gives a second and independent view of topic assignment.
+
+After classification, each record receives a Scale-C topic label and metadata such as classifier method and confidence. The dataset builder then creates a balanced working dataset by grouping records by benchmark source, deduplicating them, keeping records with valid topic predictions, and limiting the number of records per topic/source so that very large sources do not dominate the evaluation.
+
+[F5] - Dataset composition
+
+4.3 How the Models Are Evaluated
+The evaluation step uses the classified and balanced dataset as input. Each model receives the same benchmark item under the same scoring setup. For multiple-choice questions, the model answer is compared with the gold answer, and the main automatic metric is accuracy:
+accuracy = correct answers / scorable questions
+This is currently the most reliable automatic score because MCQ items have a clear gold answer. Non-MCQ records—open explanations, structured H5P generation, German localization, or longer reasoning tasks—require a different evaluation method and should be judged later with a rubric, human evaluation, or a carefully validated judge model.
+The final comparison is pairwise. Each fine-tuned cybersecurity model is compared with its closest available base model. This makes the evaluation scientifically cleaner because it asks whether the fine-tuning step itself helped:
+fine-tuning delta = accuracy(fine-tuned model) − accuracy(base model)
+Positive deltas mean the fine-tuned model outperformed its base. Negative deltas mean the base model was stronger. The newest results show that both cases occur, which is why the result is scientifically interesting.
+4.4 Pipeline Overview
+The evaluation process follows an end-to-end pipeline from raw benchmark sources to category-level analysis:
+
+[F4] - End-to-end Scale-C evaluation pipeline
+[F6] Figure placeholder — Taxonomy structure: 28 fine Scale-C topics grouped into 8 coarse courses. Proposed dimensions (task type, risk, difficulty, cognitive skill, tier) should be visually separated from validated labels.
+
+5. Model Selection and Evaluation Design
+5.1 Pairwise Design Rationale
+The evaluation is organized around base/fine-tuned pairs rather than a simple leaderboard. If the goal is to understand the effect of cybersecurity fine-tuning, the comparison must be made against the same or closest available base architecture. Without this control, an observed performance difference between two models is as likely to reflect architecture, scale, or training data volume as it is to reflect cybersecurity specialization.
+The two classifier families—NLI and embedding—are applied consistently across all pairs. The six evaluated pairs are:
+
+Base Model
+Fine-Tuned / Domain Model
+Interpretation
+RoBERTa Base
+CyBERTuned
+Encoder baseline vs. cybersecurity encoder adaptation
+Llama 3.1 8B
+Foundation-Sec-8B
+General base vs. cybersecurity domain-adapted LLM
+Mistral-7B-Instruct-v0.2
+Lily-Cybersecurity-7B-v0.2
+Instruct base vs. cybersecurity instruction-tuned
+Zephyr-7B-Beta
+ZySec-7B
+Aligned base vs. cybersecurity assistant tuning
+Qwen3 14B
+BaronLLM v2
+Reasoning-oriented base vs. cybersecurity/reasoning fine-tune
+Llama 3.3 70B Instruct
+Trendyol Cybersecurity LLM v2 70B
+Large general vs. large cybersecurity model
+
+5.2 Why These Pairs?
+The encoder pair (RoBERTa/CyBERTuned) provides a lower-bound control—encoder models are not designed for generative answering, so this pair isolates the contribution of cybersecurity encoder adaptation within a fundamentally different architecture class.
+The 7B/8B pairs (Llama 3.1/Foundation-Sec, Mistral/Lily, Zephyr/ZySec) represent the most common practical deployment scenario: a modestly-sized instruction-tuned model adapted for a specific domain.
+The Qwen3/Baron pair is particularly interesting because Qwen3 14B underperforms relative to its parameter count on the Scale-C benchmark format, creating conditions where fine-tuning has maximum room to demonstrate its value.
+The 70B pair (Llama 3.3/Trendyol) asks whether cybersecurity fine-tuning adds value when the base model is already large and broadly trained—or whether fine-tuning introduces regressions that outweigh domain-specific gains.
+[F3] Figure placeholder — Model-pair overview: compact table or visual showing each base model, its fine-tuned counterpart, family, parameter count, training type, and evaluation backend.
+
+6. Global Results
+The headline result of the Scale-C evaluation is that the global leader depends on which classifier is used. Under NLI classification, Trendyol Cybersecurity LLM v2 70B leads with 65.1%. Under embedding classification, Llama 3.3 70B Instruct leads with 75.7%. The Llama 3.3 NLI result is noted as partial in the presentation, and the embedding comparison uses a somewhat larger denominator.
+
+Model / Group
+Classifier
+Accuracy
+Interpretation
+Trendyol Cybersecurity LLM v2 70B
+NLI
+65.1%
+Current NLI leader among reported models
+Llama 3.3 70B Instruct
+Embedding
+75.7%
+Current embedding leader; larger denominator noted
+RoBERTa / CyBERTuned
+NLI + Embedding
+~21–27%
+Encoder ceiling; far below generative models
+Llama 3.1 8B (representative 8B)
+NLI + Embedding
+~30–35 pp above encoder
+Main architecture-level jump
+
+One result stands out as unambiguous regardless of classifier: the encoder models (RoBERTa and CyBERTuned) score around 21–27%, far below any generative model. CyBERTuned adds very little over RoBERTa at the global level. The architectural jump from encoder-based ranking to generative LLM answering accounts for roughly 30–35 percentage points, with Llama 3.1 8B already far above the encoder ceiling. Cybersecurity-specific encoder adaptation is not a competitive approach for direct benchmark answering.
+[F7] Figure placeholder — Global model leaderboard: side-by-side NLI and embedding bars using presentation percentages. If exact correct/scorable counts become available, annotate each bar. Otherwise state in caption that values are from the presentation.
+[F9] Figure placeholder — Encoder versus generative gap: grouped plot with RoBERTa, CyBERTuned, representative 7B/8B models, and 70B models under NLI and embedding.
+
+7. Pairwise Fine-Tuning Effects
+The pairwise analysis delivers the most practically relevant findings of Scale-C. Looking at global fine-tuning deltas, a clear pattern emerges: fine-tuning is neither uniformly beneficial nor uniformly harmful.
+
+Model Pair
+NLI Δ
+Embedding Δ
+Interpretation
+Mistral → Lily
++7.0 pp
++6.9 pp
+Consistent gain across both classifiers
+Qwen3 → Baron
++14.3 pp
++16.9 pp
+Large lift from a weak base
+Llama 3.3 → Trendyol
++9.4 pp
+−7.2 pp
+Classifier-split: NLI gains, embedding regresses
+Llama 3.1 → Foundation-Sec
+−5.8 pp
+−8.7 pp
+Consistent regression
+Zephyr → ZySec
+−10.8 pp
+−7.2 pp
+Consistent and substantial regression
+RoBERTa → CyBERTuned
++0.5 pp
++3.4 pp
+Marginal gain within encoder class
+
+The two clear positive cases are Mistral→Lily and Qwen3→Baron. Lily improves on its Mistral base by approximately 7 percentage points on both classifiers. Baron's improvement over Qwen3 is substantially larger (+14.3 pp NLI, +16.9 pp embedding), partly because Qwen3's baseline performance is unusually weak, leaving more room for the fine-tuning to add value.
+The two clear negative cases are Foundation-Sec and ZySec. Foundation-Sec regresses by 5.8 pp (NLI) and 8.7 pp (embedding). ZySec regresses by 10.8 pp (NLI) and 7.2 pp (embedding). These represent genuine degradation following cybersecurity fine-tuning—the fine-tuning likely imparted domain vocabulary while disrupting the answer selection patterns the base models had developed.
+The Trendyol case is the most interesting: +9.4 pp under NLI but −7.2 pp under embedding. This classifier-split result is discussed in detail in Section 10.
+The scientific lesson from the negative deltas is as important as the lesson from the positive ones. The label "cybersecurity fine-tuned" is not sufficient evidence that a model will perform better on a cybersecurity benchmark.
+[F8] Figure placeholder — Fine-tuning delta chart: grouped bars for every pair with NLI and embedding deltas side-by-side. Color positive deltas green, negative red. Label the classifier-split Trendyol result explicitly.
+
+8. Course-Level and Topic-Level Patterns
+8.1 Course-Level Strengths and Weaknesses
+At the 70B embedding level, the strongest course groups are Identity and Access Management (89.4%) and Network and Secure Communications (89.5%). These topics are well-represented in general pretraining data and involve structured factual knowledge that aligns closely with multiple-choice question formats.
+By contrast, malware analysis and advanced threats form the weakest area across all models. Malware and advanced threat questions often require reasoning about attacker behavior, exploit chains, artifact interpretation, and ambiguous operational contexts—cognitive demands that go well beyond pattern-matching on cybersecurity terminology.
+[F10] Figure placeholder — Course-level heatmap: coarse course group accuracy by model, separately for NLI and embedding.
+8.2 Topic-Level Fine-Tuning Gains and Losses
+At the fine-grained topic level, the heterogeneity of fine-tuning effects becomes even more pronounced:
+	•	Qwen3→Baron: +73.5 pp on safe browsing and +60.0 pp on general hygiene under NLI—extremely large gains reflecting direct coverage in the fine-tuning data.
+	•	Mistral→Lily: +27.6 pp on advanced malware and +27.3 pp on SSL certificates under NLI—notable because advanced malware is otherwise a difficult category.
+	•	Llama 3.3→Trendyol: +40.0 pp on "Other" and +32.0 pp on defensive measures under NLI, but −26.4 pp on social engineering under embedding.
+	•	Zephyr→ZySec: −36.4 pp on email-related topics and −32.5 pp on foundational concepts under NLI; −40.0 pp on regulatory/legal under embedding. ZySec's regression is severe and widespread.
+
+These topic-level results prevent any oversimplified summary. A fine-tuned model may improve substantially on some cybersecurity subdomains while simultaneously degrading on others. The final report should therefore avoid characterizing any model as simply "better at cybersecurity" without specifying the classifier, the topic slice, and the base comparison.
+[F11] Figure placeholder — Topic-by-model embedding heatmap: Llama 3.3 bright on identity/network, Qwen3 near-dark across the board, malware/threat rows consistently low.
+[F12] Figure placeholder — Topic-level fine-tuning gains and losses: two panels showing top positive and top negative deltas by pair and classifier. Include support counts.
+
+9. Classifier Divergence
+One of the more methodologically significant findings in Scale-C is that the NLI and embedding classifiers do not always agree—and their disagreements are not random. The most dramatic example is the 70B pair, where the two classifiers reach opposite conclusions about whether Trendyol's cybersecurity fine-tuning improves over Llama 3.3.
+Across the 28 fine-grained topics, the 70B pair shows 11 topics where both classifiers agree on the direction of the fine-tuning effect, and 15 topics where they disagree. This is the highest level of disagreement observed among all pairs.
+A plausible interpretation: NLI-based classification may favor Trendyol because its cybersecurity fine-tuning produces phrasing and response patterns that align more directly with entailment-style topic matching. Embedding classification rewards models that preserve broad semantic coverage—a strength that Llama 3.3, as a large and broadly trained model, may retain better than a heavily fine-tuned variant.
+This is not a verdict that one classifier is correct and the other is wrong. It is a finding that they measure related but meaningfully different properties of model behavior. If a ranking changes when the classifier changes, that ranking should not be reported with confidence. Model selection for practical applications should therefore not rely on a single automatic classifier.
+[F13] Figure placeholder — Classifier agreement matrix: slope chart comparing NLI and embedding rankings for all models, highlighting the 70B inversion.
+[F14] Figure placeholder — Per-topic classifier agreement: signed heatmap showing where NLI and embedding agree or disagree on the direction of each base-vs-fine-tuned delta.
+
+10. Reasoning Architecture Versus Scale
+A recurring question in the language model literature is whether specialized reasoning architectures can compensate for smaller model size. The Qwen3/Baron pair provides a useful test case within Scale-C.
+Qwen3 14B performs unusually poorly on Scale-C relative to its parameter count—NLI and embedding scores on theory and threat topics are often in single digits or low teens. Baron's fine-tuning addresses this substantially, producing competitive performance on several topic slices. The comparison across all four models (values shown as NLI / Embedding) is:
+
+Topic
+Qwen3 14B
+Baron LLM v2
+Llama 3.3 70B
+Llama 3.1 8B
+General theory
+7.5% / 6.5%
+20.5% / 25.8%
+20.0% / 58.5%
+47.5% / 58.1%
+Advanced cyber threats
+6.7% / 15.6%
+20.0% / 28.1%
+54.5% / 50.0%
+40.0% / 62.5%
+Advanced malware
+6.9% / 9.1%
+27.6% / 15.6%
+58.8% / 58.2%
+69.0% / 39.4%
+
+Baron substantially improves over Qwen3 on all three topic slices and on several embedding metrics approaches Llama 3.1 8B. However, Baron does not consistently dominate the 70B models. Llama 3.3 70B and Llama 3.1 8B are competitive or superior on most slices, with the gap widening on advanced threats and malware under NLI.
+The answer to RQ4 is nuanced: reasoning architecture provides a meaningful lift when the base model is underperforming, but at the current state of development, scale and broad pretraining still dominate on the hardest topic areas.
+[F15] Figure placeholder — Reasoning architecture versus scale: grouped bar chart for general theory, advanced cyber threats, and advanced malware, with NLI and embedding shown separately for all four models.
+
+11. The Hardest Benchmark Areas
+Across all models and both classifiers, malware analysis and advanced cyber threats emerge as the weakest area in the Scale-C benchmark. This finding is robust—it appears in encoder models, in 7B/8B fine-tuned models, and even in 70B models with cybersecurity specialization.
+Malware and advanced threat questions often require reasoning about attacker behavior, exploit chains, artifacts, defensive implications, and ambiguous operational contexts. Several factors may contribute to the consistently low scores:
+	•	Insufficient domain knowledge: fine-tuning data may not adequately cover advanced malware techniques or sophisticated threat actor tactics.
+	•	Benchmark wording: some questions may be phrased in ways that are ambiguous or unfamiliar to models trained primarily on structured cybersecurity tutorials.
+	•	Answer format problems: advanced threat questions may require multi-step reasoning that is difficult to encode in a single multiple-choice selection.
+	•	Classifier disagreement: some malware/threat items may be difficult to classify reliably, reducing effective support counts and making accuracy estimates noisier.
+	•	High difficulty and adversarial distractors: questions about advanced malware often include plausible-but-incorrect options that require genuine technical understanding to eliminate.
+	•	Low support counts in some topic slices: when a topic has few benchmark items, accuracy estimates are more sensitive to individual errors.
+
+Identifying the relative contribution of each factor requires qualitative error analysis. This analysis represents one of the most valuable scientific contributions the final report can make beyond a leaderboard comparison. The most informative finding is not which model scores highest overall, but where and why cybersecurity adaptation consistently fails.
+[F16] Figure placeholder — Hardest topics: ranked plot of lowest average topic/course accuracy across models, with separate NLI and embedding panels.
+[F17] Figure placeholder — Error examples: qualitative table with representative failure cases from malware/threat topics. Include prompt, gold answer, model answer, and hypothesized failure mode.
+
+12. Discussion
+Taken together, the Scale-C results support five claims that are substantive enough to anchor the final report's contribution.
+12.1 Fine-Tuning Efficacy Is Pair-Dependent
+The single most important finding is that the label "cybersecurity fine-tuned" does not reliably predict benchmark improvement. Lily and Baron improve consistently. Foundation-Sec and ZySec regress consistently. Trendyol's improvement depends on which classifier is used. This variability is the answer to the research question—the effect of cybersecurity fine-tuning is strongly mediated by base model, fine-tuning objective, training data distribution, and evaluation setup.
+12.2 The Architecture Jump Dominates Encoder Fine-Tuning
+CyBERTuned improves only marginally over RoBERTa (+0.5 pp NLI, +3.4 pp embedding). The far larger effect is the jump from encoder-based classification to generative LLM answering—approximately 30–35 percentage points. For benchmark answering tasks, investing in encoder fine-tuning is a much weaker strategy than switching to a generative model, even a small 7B one.
+12.3 Classifier Choice Affects Rankings
+The 70B pair's classifier split demonstrates that Scale-C's evaluation is sensitive to measurement approach. NLI and embedding are not interchangeable: they respond to different properties of model output and can assign different winners to the same pairwise comparison. This is an argument for multi-view evaluation.
+12.4 Scale Helps but Does Not Explain Everything
+Large 70B models are strong on identity/access and network topics, but 7B/8B models can be competitive on selected slices when fine-tuned with data that aligns well with the benchmark's topic and format. Topic-level analysis is essential for understanding where the scaling law holds and where it does not.
+12.5 Malware and Advanced Threats Reveal a Genuine Gap
+The consistent difficulty of malware and advanced threat topics across all models gives Scale-C diagnostic value. A benchmark where every model scores 80%+ tells us little. A benchmark that identifies specific areas where even large, fine-tuned models fail at 20–30% points to where the field needs to improve.
+
+13. Limitations
+The following methodological constraints should be explicitly acknowledged in the final report:
+	•	Data source for newest results: the most recent training and evaluation results are drawn from the college presentation rather than from locally available summary files. All presentation-level percentages should be clearly labeled as such.
+	•	Denominator transparency: exact correct/scorable counts for the newest leaderboard are not available locally. Where the presentation provides them, they should be reported; otherwise, percentages should be flagged as presentation-level estimates.
+	•	Avoiding source mixing: old local repository summaries should not be mixed with new presentation results as if they came from the same evaluation run.
+	•	Implemented vs. proposed taxonomy: only validated implemented labels should be presented as classification results. Proposed dimensions—risk, difficulty, cognitive skill, and capability tier—should be clearly marked as unvalidated.
+	•	Support counts for topic-level analysis: topic-level and course-level deltas are more interpretable with support counts attached. These should be added when recent summary files become available.
+	•	Classifier complementarity: NLI and embedding classifiers measure related but different properties and should be treated as complementary views, not interchangeable or redundant metrics.
+	•	Absence of qualitative error analysis: a full analysis of failure cases in malware and advanced threat topics has not been completed. This analysis would substantially strengthen the scientific contribution and should be included before final submission.
+[F18] Figure placeholder — Reproducibility table: dataset version, model revision, backend, GPU/server, decoding parameters, classifier, and evaluation script commit.
+
+14. Conclusion
+Scale-C set out to answer a deceptively simple question: does cybersecurity fine-tuning make language models better at cybersecurity tasks? After evaluating six base-versus-fine-tuned model pairs across 28 fine-grained topics, two classifier families, and multiple benchmark sources, the answer is both more nuanced and more informative than a simple yes or no.
+Fine-tuning helps when it is well-matched to the benchmark format and topic distribution (Lily, Baron). It hurts when it disrupts the base model's answer selection patterns or narrows its semantic coverage (Foundation-Sec, ZySec). It can split across classifiers when fine-tuning changes response style in ways that interact differently with entailment-based and embedding-based evaluation (Trendyol). And it provides diminishing returns when the base model is already large and broadly capable.
+Beyond the pairwise findings, Scale-C establishes three broader methodological points. First, global accuracy hides as much as it reveals—topic-level analysis is essential. Second, a ranking that reverses when the classifier changes is not a stable ranking, and multi-view evaluation is necessary. Third, the hardest topic areas—malware analysis and advanced cyber threats—have diagnostic value precisely because they remain difficult even for the strongest models evaluated.
+Future work should focus on expanding qualitative error analysis for the hardest topics, validating the proposed taxonomy dimensions, incorporating newer models as they become available, and extending the German-language and multilingual evaluation components. The goal is a benchmark that continues to give informative answers as the field of cybersecurity language modeling matures.
+
+15. Figure and Graph Checklist
+The following figures are required to complete the final report. All placeholders in the main text correspond to entries in this table.
+
+ID
+Figure / Graph
+Purpose
+Data Source
+F1
+Fine-tuning intuition diagram
+Explain mathematical adaptation visually
+New conceptual figure
+F2
+Research design overview
+Show base-vs-fine-tuned comparison logic
+New conceptual figure
+F3
+Model-pair overview
+Clarify base/fine-tuned comparison design
+Model config and presentation
+F4
+End-to-end Scale-C evaluation pipeline
+Show raw sources through classification, dataset building, evaluation, and analysis
+DOCX pipeline image or redraw
+F5
+Dataset composition
+Show source/course coverage
+Presentation or recent manifest
+F6
+Taxonomy structure
+Show 28 fine topics and 8 course groups
+Taxonomy files and presentation
+F7
+Global model leaderboard
+Compare all models under NLI and embedding
+Presentation
+F8
+Fine-tuning delta chart
+Show pairwise gains/regressions
+Presentation
+F9
+Encoder versus generative gap
+Show architecture-level effect
+Presentation
+F10
+Course-level heatmap
+Show coarse topic strengths/weaknesses
+Presentation
+F11
+Topic-by-model heatmap
+Show detailed topic behavior
+Presentation
+F12
+Top gains/losses
+Identify where fine-tuning helps/hurts
+Presentation
+F13
+Classifier ranking divergence
+Compare NLI and embedding rankings
+Presentation
+F14
+Per-topic classifier agreement
+Show where classifiers agree/disagree
+Presentation
+F15
+Reasoning architecture versus scale
+Compare Qwen3/Baron/70B/8B slices
+Presentation and final summaries
+F16
+Hardest topics
+Identify benchmark weak spots
+Final topic/course averages
+F17
+Error examples
+Add qualitative evidence
+Evaluation JSONL outputs
+F18
+Reproducibility table
+Make methods auditable
+Presentation plus any metadata later provided
+
+References
+References to be inserted in IEEE format before final submission. Key sources include: MMLU (Hendrycks et al., 2021), CyberBench, CyberMetric, CyberSOCEval, SEC-bench, Foundation-Sec-8B, Lily-Cybersecurity-7B-v0.2, ZySec-7B, BaronLLM, Trendyol Cybersecurity LLM v2, CyBERTuned, Direct Preference Optimization (Rafailov et al., 2023), MITRE ATT&CK, NIST CSF 2.0, NICE framework, OWASP ASVS, MITRE CWE, and related cybersecurity NLP literature.

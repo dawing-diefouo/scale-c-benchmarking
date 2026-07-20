@@ -1,0 +1,167 @@
+{
+  "corpus": "nli",
+  "input_dir": "/home/foyet/scale-c-benchmarking/data/final_1/nli",
+  "model_alias": "llama-3.3-70b-instruct",
+  "model": "meta-llama/Llama-3.3-70B-Instruct",
+  "display_name": "Llama 3.3 70B Instruct (base)",
+  "backend": "huggingface",
+  "is_base": true,
+  "base_model_alias": null,
+  "totals": {
+    "scorable": 327,
+    "correct": 182,
+    "skipped": 415
+  },
+  "accuracy": 0.5565749235474006,
+  "by_task_type": {
+    "mcq_answering": {
+      "total": 327,
+      "correct": 182
+    }
+  },
+  "by_source": {
+    "test-00000-of-00001": {
+      "total": 174,
+      "correct": 139
+    },
+    "dev-00000-of-00001": {
+      "total": 7,
+      "correct": 7
+    },
+    "threat_intel_reasoning-00000-of-00001": {
+      "total": 95,
+      "correct": 31
+    },
+    "malware_analysis-00000-of-00001": {
+      "total": 51,
+      "correct": 5
+    }
+  },
+  "by_topic": {
+    "SCLC00101": {
+      "total": 13,
+      "correct": 5
+    },
+    "SCLC00201": {
+      "total": 16,
+      "correct": 11
+    },
+    "SCLC00202": {
+      "total": 6,
+      "correct": 6
+    },
+    "SCLC00301": {
+      "total": 15,
+      "correct": 6
+    },
+    "SCLC00401": {
+      "total": 4,
+      "correct": 4
+    },
+    "SCLC00501": {
+      "total": 10,
+      "correct": 9
+    },
+    "SCLC00601": {
+      "total": 3,
+      "correct": 2
+    },
+    "SCLC00701": {
+      "total": 20,
+      "correct": 7
+    },
+    "SCLC00801": {
+      "total": 20,
+      "correct": 12
+    },
+    "SCLC00901": {
+      "total": 20,
+      "correct": 12
+    },
+    "SCLC01001": {
+      "total": 20,
+      "correct": 12
+    },
+    "SCLC01101": {
+      "total": 2,
+      "correct": 2
+    },
+    "SCLC01102": {
+      "total": 4,
+      "correct": 2
+    },
+    "SCLC01201": {
+      "total": 1,
+      "correct": 1
+    },
+    "SCLC01202": {
+      "total": 6,
+      "correct": 5
+    },
+    "SCLC01301": {
+      "total": 11,
+      "correct": 9
+    },
+    "SCLC01302": {
+      "total": 3,
+      "correct": 1
+    },
+    "SCLC01503": {
+      "total": 5,
+      "correct": 1
+    },
+    "SCLC01601": {
+      "total": 20,
+      "correct": 4
+    },
+    "SCLC01701": {
+      "total": 20,
+      "correct": 9
+    },
+    "SCLC01801": {
+      "total": 2,
+      "correct": 2
+    },
+    "SCLC01901": {
+      "total": 3,
+      "correct": 2
+    },
+    "SCLC02001": {
+      "total": 11,
+      "correct": 6
+    },
+    "SCLC02101": {
+      "total": 17,
+      "correct": 10
+    },
+    "SCLC02201": {
+      "total": 8,
+      "correct": 5
+    },
+    "SCLC02301": {
+      "total": 14,
+      "correct": 9
+    },
+    "SCLC02401": {
+      "total": 20,
+      "correct": 8
+    },
+    "SCLC02501": {
+      "total": 17,
+      "correct": 11
+    },
+    "SCLC02601": {
+      "total": 5,
+      "correct": 4
+    },
+    "SCLC02701": {
+      "total": 1,
+      "correct": 1
+    },
+    "SCLC02801": {
+      "total": 10,
+      "correct": 4
+    }
+  },
+  "output_file": "/home/foyet/scale-c-benchmarking/data/eval_1/nli/llama-3.3-70b-instruct.jsonl"
+}

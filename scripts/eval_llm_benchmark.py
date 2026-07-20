@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Run cyber LLMs on Scale_C benchmark records and score against payload gold answers.
+"""Run cyber LLMs on Scale_C Phase 1 records and score against payload gold answers.
 
-Results are written under data/eval/<corpus>/ (embedding or nli), matching the corpus
-under data/final/<corpus>/ used as --input.
+Default input:  data/phase1/<corpus>/   (embedding or nli)
+Default output: data/results/phase1/<corpus>/
 """
 
 from __future__ import annotations
@@ -14,14 +14,16 @@ import json
 import os
 import re
 import sys
+import threading
 from collections import Counter, defaultdict
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
-FINAL_DATA_ROOT = ROOT / "data" / "final"
-EVAL_DATA_ROOT = ROOT / "data" / "eval"
+FINAL_DATA_ROOT = ROOT / "data" / "phase1"
+EVAL_DATA_ROOT = ROOT / "data" / "results" / "phase1"
 CORPUS_CHOICES = ("embedding", "nli")
 DEFAULT_CORPUS = "embedding"
 DEFAULT_MODELS_CONFIG = ROOT / "config" / "eval_models.json"
@@ -66,7 +68,7 @@ def resolve_eval_paths(
         if active_corpus is None:
             raise SystemExit(
                 "Could not infer corpus from --input. Pass --corpus embedding or --corpus nli, "
-                "or use data/final/embedding or data/final/nli as input."
+                "or use data/phase1/embedding or data/phase1/nli as input."
             )
         active_input = resolved_input
     elif corpus is not None:
@@ -96,6 +98,9 @@ class ModelSpec:
     notes: str = ""
     is_base: bool = False
     base_model_alias: str = ""
+    api_model_id: str = ""
+    api_max_new_tokens: int | None = None
+    api_reasoning: dict[str, Any] | None = None
 
 
 @dataclass(frozen=True)
@@ -123,6 +128,9 @@ def load_model_registry(path: Path) -> dict[str, ModelSpec]:
             notes=entry.get("notes", ""),
             is_base=entry.get("is_base", False),
             base_model_alias=entry.get("base_model_alias", ""),
+            api_model_id=entry.get("api_model_id", ""),
+            api_max_new_tokens=entry.get("api_max_new_tokens"),
+            api_reasoning=entry.get("api_reasoning"),
         )
     return registry
 
@@ -548,27 +556,40 @@ class OpenAICompatibleGenerator:
         self,
         model_id: str,
         *,
-        api_base_url: str,
+        api_base_urls: list[str],
         api_key: str,
         max_new_tokens: int,
+        reasoning: dict[str, Any] | None = None,
     ) -> None:
         self.model_id = model_id
-        self.api_base_url = api_base_url.rstrip("/")
+        self.api_base_urls = [url.rstrip("/") for url in api_base_urls]
         self.api_key = api_key
         self.max_new_tokens = max_new_tokens
+        self.reasoning = reasoning
+        self._url_index = 0
+        self._url_lock = threading.Lock()
+
+    def _next_base_url(self) -> str:
+        with self._url_lock:
+            base_url = self.api_base_urls[self._url_index % len(self.api_base_urls)]
+            self._url_index += 1
+            return base_url
 
     def generate(self, prompt: str) -> str:
         import urllib.error
         import urllib.request
 
-        payload = {
+        api_base_url = self._next_base_url()
+        payload: dict[str, Any] = {
             "model": self.model_id,
             "messages": [{"role": "user", "content": prompt}],
             "max_tokens": self.max_new_tokens,
             "temperature": 0,
         }
+        if self.reasoning:
+            payload["reasoning"] = self.reasoning
         request = urllib.request.Request(
-            f"{self.api_base_url}/v1/chat/completions",
+            f"{api_base_url}/v1/chat/completions",
             data=json.dumps(payload).encode("utf-8"),
             headers={
                 "Content-Type": "application/json",
@@ -581,42 +602,54 @@ class OpenAICompatibleGenerator:
                 body = json.loads(response.read().decode("utf-8"))
         except urllib.error.HTTPError as exc:
             detail = exc.read().decode("utf-8", errors="replace")
-            raise RuntimeError(f"API request failed ({exc.code}): {detail}") from exc
+            raise RuntimeError(f"API request failed ({exc.code}) at {api_base_url}: {detail}") from exc
         except urllib.error.URLError as exc:
-            raise RuntimeError(f"API unreachable at {self.api_base_url}: {exc.reason}") from exc
+            raise RuntimeError(f"API unreachable at {api_base_url}: {exc.reason}") from exc
         return body["choices"][0]["message"]["content"].strip()
 
 
-def verify_openai_api(api_base_url: str, api_key: str, model_id: str) -> None:
+def verify_openai_api(api_base_urls: list[str], api_key: str, model_id: str) -> None:
     import urllib.error
     import urllib.request
 
-    base = api_base_url.rstrip("/")
-    request = urllib.request.Request(
-        f"{base}/v1/models",
-        headers={"Authorization": f"Bearer {api_key}"},
-        method="GET",
-    )
-    try:
-        with urllib.request.urlopen(request, timeout=10) as response:
-            if response.status != 200:
-                raise RuntimeError(f"Unexpected status {response.status}")
-    except urllib.error.URLError as exc:
-        raise SystemExit(
-            "\n".join(
-                [
-                    f"Cannot reach OpenAI-compatible API at {base}.",
-                    f"Reason: {exc.reason}",
-                    "",
-                    "Nothing is serving that URL, so models like BaronLLM/Trendyol 70B cannot run this way.",
-                    "In a limited environment without Ollama/vLLM, use HuggingFace-backed models instead:",
-                    "  python3 scripts/eval_llm_benchmark.py --model lily-cyber-7b",
-                    "  python3 scripts/eval_llm_benchmark.py --model foundation-sec-8b",
-                    "  python3 scripts/eval_llm_benchmark.py --model zysec-7b",
-                ]
-            )
-        ) from exc
-    print(f"API reachable at {base} (model id sent as {model_id!r}).", file=sys.stderr)
+    for base in api_base_urls:
+        base = base.rstrip("/")
+        request = urllib.request.Request(
+            f"{base}/v1/models",
+            headers={"Authorization": f"Bearer {api_key}"},
+            method="GET",
+        )
+        try:
+            with urllib.request.urlopen(request, timeout=10) as response:
+                if response.status != 200:
+                    raise RuntimeError(f"Unexpected status {response.status}")
+        except urllib.error.URLError as exc:
+            raise SystemExit(
+                "\n".join(
+                    [
+                        f"Cannot reach OpenAI-compatible API at {base}.",
+                        f"Reason: {exc.reason}",
+                        "",
+                        "Nothing is serving that URL, so models like BaronLLM/Trendyol 70B cannot run this way.",
+                        "In a limited environment without Ollama/vLLM, use HuggingFace-backed models instead:",
+                        "  python3 scripts/eval_llm_benchmark.py --model lily-cyber-7b",
+                        "  python3 scripts/eval_llm_benchmark.py --model foundation-sec-8b",
+                        "  python3 scripts/eval_llm_benchmark.py --model zysec-7b",
+                    ]
+                )
+            ) from exc
+    if len(api_base_urls) == 1:
+        print(
+            f"API reachable at {api_base_urls[0]} (model id sent as {model_id!r}).",
+            file=sys.stderr,
+        )
+    else:
+        joined = ", ".join(api_base_urls)
+        print(
+            f"API reachable at {len(api_base_urls)} endpoints: {joined} "
+            f"(model id sent as {model_id!r}).",
+            file=sys.stderr,
+        )
 
 
 class ChoiceRankingGenerator:
@@ -678,18 +711,63 @@ class ChoiceRankingGenerator:
             torch.cuda.empty_cache()
 
 
+def resolve_api_model_id(spec: ModelSpec, api_model: str | None) -> str:
+    return (api_model or spec.api_model_id or spec.model_id).strip()
+
+
+def resolve_api_max_new_tokens(spec: ModelSpec, max_new_tokens: int) -> int:
+    if spec.api_max_new_tokens is not None:
+        return spec.api_max_new_tokens
+    return max_new_tokens
+
+
+def build_openai_compatible_generator(
+    spec: ModelSpec,
+    *,
+    api_model: str | None,
+    api_base_urls: list[str],
+    api_key: str,
+    max_new_tokens: int,
+) -> OpenAICompatibleGenerator:
+    api_model_id = resolve_api_model_id(spec, api_model)
+    verify_openai_api(api_base_urls, api_key, api_model_id)
+    resolved_max_tokens = resolve_api_max_new_tokens(spec, max_new_tokens)
+    if spec.api_reasoning:
+        print(
+            f"  API reasoning for {spec.alias}: {json.dumps(spec.api_reasoning)} "
+            f"(max_tokens={resolved_max_tokens})",
+            file=sys.stderr,
+        )
+    return OpenAICompatibleGenerator(
+        api_model_id,
+        api_base_urls=api_base_urls,
+        api_key=api_key,
+        max_new_tokens=resolved_max_tokens,
+        reasoning=spec.api_reasoning,
+    )
+
+
 def build_generator(
     spec: ModelSpec,
     *,
     device: str,
     max_new_tokens: int,
-    api_base_url: str | None,
+    api_base_urls: list[str],
     api_key: str,
+    api_model: str | None,
     hub_cache: Path,
     model_paths: dict[str, Path],
     local_files_only: bool,
 ) -> HuggingFaceGenerator | OpenAICompatibleGenerator | ChoiceRankingGenerator:
     if spec.backend == "huggingface":
+        if api_base_urls:
+            return build_openai_compatible_generator(
+                spec,
+                api_model=api_model,
+                api_base_urls=api_base_urls,
+                api_key=api_key,
+                max_new_tokens=max_new_tokens,
+            )
         model_source = str(model_paths.get(spec.alias, spec.model_id))
         return HuggingFaceGenerator(
             model_source,
@@ -699,17 +777,17 @@ def build_generator(
             local_files_only=local_files_only,
         )
     if spec.backend == "openai":
-        if not api_base_url:
+        if not api_base_urls:
             raise SystemExit(
                 f"Model {spec.alias!r} ({spec.display_name}) requires an OpenAI-compatible server.\n"
                 f"Serve {spec.model_id} with vLLM or Ollama, then pass --api-base-url.\n"
                 "Without a local server, use a HuggingFace-backed model instead "
                 "(lily-cyber-7b, foundation-sec-8b, zysec-7b, cybertuned)."
             )
-        verify_openai_api(api_base_url, api_key, spec.model_id)
-        return OpenAICompatibleGenerator(
-            spec.model_id,
-            api_base_url=api_base_url,
+        return build_openai_compatible_generator(
+            spec,
+            api_model=api_model,
+            api_base_urls=api_base_urls,
             api_key=api_key,
             max_new_tokens=max_new_tokens,
         )
@@ -893,8 +971,10 @@ def run_model_eval(
     device: str,
     max_new_tokens: int,
     resume: bool,
-    api_base_url: str | None,
+    api_base_urls: list[str],
     api_key: str,
+    api_model: str | None,
+    workers: int,
     hub_cache: Path,
     model_paths: dict[str, Path],
     local_files_only: bool,
@@ -909,24 +989,52 @@ def run_model_eval(
         spec,
         device=device,
         max_new_tokens=max_new_tokens,
-        api_base_url=api_base_url,
+        api_base_urls=api_base_urls,
         api_key=api_key,
+        api_model=api_model,
         hub_cache=hub_cache,
         model_paths=model_paths,
         local_files_only=local_files_only,
     )
 
+    pending = [
+        record
+        for record in records
+        if not (record.get("id") and record.get("id") in completed)
+    ]
     processed = 0
+    write_lock = threading.Lock()
+    use_parallel = workers > 1 and spec.backend == "openai"
+
+    if use_parallel:
+        print(f"  {spec.alias}: {workers} parallel workers across {len(api_base_urls)} API endpoint(s).", file=sys.stderr)
+
     with output_path.open(mode, encoding="utf-8") as handle:
-        for record in records:
-            record_id = record.get("id")
-            if record_id and record_id in completed:
-                continue
-            result = evaluate_record(record, spec=spec, corpus=corpus, generator=generator)
-            handle.write(json.dumps(result, ensure_ascii=False) + "\n")
-            processed += 1
-            if processed % 25 == 0:
-                print(f"  {spec.alias}: wrote {processed} new rows...", file=sys.stderr)
+        if use_parallel:
+            with ThreadPoolExecutor(max_workers=workers) as pool:
+                futures = [
+                    pool.submit(evaluate_record, record, spec=spec, corpus=corpus, generator=generator)
+                    for record in pending
+                ]
+                for future in as_completed(futures):
+                    result = future.result()
+                    with write_lock:
+                        handle.write(json.dumps(result, ensure_ascii=False) + "\n")
+                        processed += 1
+                        if processed % 25 == 0:
+                            print(f"  {spec.alias}: wrote {processed} new rows...", file=sys.stderr)
+        else:
+            if workers > 1 and spec.backend != "openai":
+                print(
+                    f"  {spec.alias}: --workers ignored for backend {spec.backend!r} (sequential eval).",
+                    file=sys.stderr,
+                )
+            for record in pending:
+                result = evaluate_record(record, spec=spec, corpus=corpus, generator=generator)
+                handle.write(json.dumps(result, ensure_ascii=False) + "\n")
+                processed += 1
+                if processed % 25 == 0:
+                    print(f"  {spec.alias}: wrote {processed} new rows...", file=sys.stderr)
 
     if hasattr(generator, "unload"):
         generator.unload()
@@ -1048,14 +1156,14 @@ def write_base_model_comparisons(output_dir: Path) -> tuple[Path | None, Path | 
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Evaluate cyber LLMs on Scale_C records from data/final/embedding or data/final/nli.",
+        description="Evaluate cyber LLMs on Scale_C Phase 1 records from data/phase1/{embedding,nli}.",
     )
     parser.add_argument(
         "--corpus",
         choices=CORPUS_CHOICES,
         default=None,
         help=(
-            "Corpus variant under data/final/ (embedding or nli). "
+            "Corpus variant under data/phase1/ (embedding or nli). "
             "Inferred from --input when omitted; default input/output corpus is embedding."
         ),
     )
@@ -1063,7 +1171,7 @@ def parse_args() -> argparse.Namespace:
         "--input",
         type=Path,
         default=None,
-        help="JSONL file or directory (default: data/final/<corpus>).",
+        help="JSONL file or directory (default: data/phase1/<corpus>).",
     )
     parser.add_argument(
         "--models-config",
@@ -1081,7 +1189,7 @@ def parse_args() -> argparse.Namespace:
         "--output-dir",
         type=Path,
         default=None,
-        help="Directory for per-model JSONL results (default: data/eval/<corpus>/).",
+        help="Directory for per-model JSONL results (default: data/results/phase1/<corpus>/).",
     )
     parser.add_argument(
         "--limit",
@@ -1109,13 +1217,37 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--api-base-url",
+        action="append",
         default=None,
-        help="OpenAI-compatible base URL for GGUF-served models (vLLM/Ollama).",
+        metavar="URL",
+        help=(
+            "OpenAI-compatible base URL for GGUF-served models (vLLM/Ollama). "
+            "Repeat for multiple endpoints, or pass a comma-separated list. "
+            "Use one Ollama instance per GPU (see _archive/scripts/ops/ollama_4gpu_serve.sh)."
+        ),
     )
     parser.add_argument(
         "--api-key",
         default="local",
         help="Bearer token for --api-base-url (default: local).",
+    )
+    parser.add_argument(
+        "--api-model",
+        default=None,
+        help=(
+            "Model name sent to the OpenAI-compatible API (Ollama/vLLM). "
+            "Defaults to api_model_id in config, else model_id. "
+            "For Ollama, use the local tag (e.g. baronllm-v2), not the Hugging Face id."
+        ),
+    )
+    parser.add_argument(
+        "--workers",
+        type=int,
+        default=1,
+        help=(
+            "Concurrent API requests for openai backend (default: 1). "
+            "Match this to the number of Ollama GPU instances for best throughput."
+        ),
     )
     parser.add_argument(
         "--hf-cache-dir",
@@ -1169,6 +1301,16 @@ def parse_model_paths(values: list[str]) -> dict[str, Path]:
             raise SystemExit(f"Local model path for {alias!r} not found: {path}")
         mapping[alias.strip()] = path
     return mapping
+
+
+def parse_api_base_urls(values: list[str] | None) -> list[str]:
+    urls: list[str] = []
+    for item in values or []:
+        for part in item.split(","):
+            part = part.strip()
+            if part:
+                urls.append(part.rstrip("/"))
+    return urls
 
 
 def main() -> None:
@@ -1245,6 +1387,15 @@ def main() -> None:
         return
 
     device = pick_device(args.device)
+    api_base_urls = parse_api_base_urls(args.api_base_url)
+    if args.workers < 1:
+        raise SystemExit("--workers must be >= 1")
+    if args.workers > 1 and len(api_base_urls) > 1 and args.workers != len(api_base_urls):
+        print(
+            f"Note: --workers {args.workers} with {len(api_base_urls)} API endpoints; "
+            "requests are round-robin load-balanced.",
+            file=sys.stderr,
+        )
     summaries: list[Path] = []
     for spec in selected:
         print(f"\n=== Evaluating {spec.display_name} ({spec.model_id}) ===", file=sys.stderr)
@@ -1257,8 +1408,10 @@ def main() -> None:
             device=device,
             max_new_tokens=args.max_new_tokens,
             resume=args.resume,
-            api_base_url=args.api_base_url,
+            api_base_urls=api_base_urls,
             api_key=args.api_key,
+            api_model=args.api_model,
+            workers=args.workers,
             hub_cache=hub_cache,
             model_paths=model_paths,
             local_files_only=args.local_files_only,

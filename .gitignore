@@ -11,7 +11,6 @@ __pycache__/
 dist/
 build/
 develop-eggs/
-dist/
 downloads/
 eggs/
 .eggs/
@@ -28,8 +27,6 @@ share/python-wheels/
 MANIFEST
 
 # PyInstaller
-#   Usually these files are written by a python script from a template
-#   before PyInstaller builds the exe, so as to inject date/other infos into it.
 *.manifest
 *.spec
 
@@ -53,12 +50,16 @@ coverage.xml
 .pytest_cache/
 cover/
 
-# env / IDE
+# env / IDE / secrets
 .env
 .env.*
 !.env.example
+openrouter
+**/openrouter
+*.pem
 .idea/
 .vscode/
+.cursor/
 
 # uv
 .venv/
@@ -66,6 +67,42 @@ cover/
 # experiment outputs
 database/*.sqlite
 database/*.db
+logs/
+
+# local archive of bulky intermediate dumps (not part of the published tree)
+_archive/
 
 # vendored dependencies (clone separately)
 llama.cpp/
+
+# Hugging Face / model caches inside the repo
+.cache/
+
+# Per-item model predictions (regenerable; summaries stay tracked)
+data/results/**/predictions/
+data/results/**/*.jsonl
+
+# Intermediate classification dumps (regenerable via scripts)
+data/processed/**/*.jsonl
+!data/gold_standard/**
+
+# Optional full uncapped run leftovers if recreated under data/
+data/eval_combined/
+data/final_combined/
+data/final_1/
+data/eval_1/
+data/eval_1_openrouter/
+data/eval_combine/
+
+# Keep frozen Phase 1 corpora and gold standard trackable
+!data/phase1/
+!data/phase1/**/
+!data/gold_standard/
+!data/gold_standard/**/
+!data/results/phase1/**/*_summary.json
+!data/results/phase1/**/*.csv
+
+# Oversized non-Tier-1 Phase 1 trees (regenerable; exceed GitHub 100MB limit)
+data/phase1/**/JSONSchemaBench/
+data/phase1/**/cyberbech/
+data/phase1/**/superGLEBer/
